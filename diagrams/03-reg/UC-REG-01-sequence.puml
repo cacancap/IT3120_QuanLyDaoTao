@@ -1,0 +1,56 @@
+@startuml UC-REG-01-sequence
+title Biểu đồ Trình tự: UC-REG-01 - Đăng ký Học phần (Module REG)
+
+actor "Sinh viên" as Student
+boundary "RegistrationPage" as Page
+control "RegistrationController" as Ctrl
+control "RegistrationService" as Service
+entity "Registration" as RegEntity
+
+' Khai báo tương tác Interface với các Module khác
+control "CUR_Module" as CUR
+control "SCH_Module" as SCH
+control "GRD_Module" as GRD
+
+Student -> Page: 1. Chọn Lớp HP cần đăng ký (sectionId)
+activate Page
+
+Page -> Ctrl: 2. submitRegistration(studentId, sectionId)
+activate Ctrl
+
+Ctrl -> Service: 3. processRegistration(studentId, sectionId)
+activate Service
+
+' Kiểm tra điều kiện qua các Module
+Service -> CUR: getCourseInfo(courseCode)
+activate CUR
+CUR --> Service: {credits, prerequisites[]}
+deactivate CUR
+
+Service -> GRD: hasPassed(studentId, prerequisiteCode)
+activate GRD
+GRD --> Service: boolean (BR-01 Check)
+deactivate GRD
+
+Service -> GRD: getWarningLevel(studentId, semesterId)
+activate GRD
+GRD --> Service: warningLevel (BR-02 Check)
+deactivate GRD
+
+alt Vi phạm Quy tắc Nghiệp vụ (BR-01 hoặc BR-02 hoặc BR-03/04)
+    Service --> Ctrl: Throw RegistrationException(Reason)
+    Ctrl --> Page: Hiển thị thông báo lỗi
+else Đủ điều kiện đăng ký
+    Service -> RegEntity: create(studentId, sectionId, status='REGISTERED')
+    activate RegEntity
+    RegEntity --> Service: registrationObj
+    deactivate RegEntity
+    
+    Service --> Ctrl: RegistrationSuccess
+    Ctrl --> Page: Cập nhật giao diện (Đăng ký thành công)
+end
+
+deactivate Service
+deactivate Ctrl
+deactivate Page
+@endstyle
