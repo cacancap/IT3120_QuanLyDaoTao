@@ -1,0 +1,13 @@
+# Temporary Microsoft Office files
+~$*.docx
+~$*.xlsx
+~$*.pptx
+*.tmp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# PlantUML image cache
+*.png.cache
+*.puml.bak  

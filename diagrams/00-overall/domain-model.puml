@@ -1,0 +1,197 @@
+@startuml domain-model
+skinparam classAttributeIconSize 0
+title Biểu đồ Lớp Miền Tổng thể (Domain Model) - Hệ thống Quản lý Đào tạo
+
+package "Module CUR (Danh mục & Hệ thống)" #EFEFFF {
+    class User {
+        +id: String
+        +email: String
+        +passwordHash: String
+        +fullName: String
+        +status: String
+    }
+    class Role {
+        +id: String
+        +roleName: String
+    }
+    class Faculty {
+        +id: String
+        +code: String
+        +name: String
+    }
+    class Major {
+        +id: String
+        +code: String
+        +name: String
+    }
+    class Program {
+        +id: String
+        +name: String
+        +cohortYear: Int
+        +totalCredits: Int
+    }
+    class Course {
+        +id: String
+        +courseCode: String
+        +name: String
+        +credits: Int
+        +tuitionFactor: Float
+    }
+    class Prerequisite {
+        +id: String
+        +type: String
+    }
+    class Student {
+        +id: String
+        +studentCode: String
+        +cohort: Int
+    }
+    class Instructor {
+        +id: String
+        +staffCode: String
+        +academicRank: String
+    }
+    class AdminClass {
+        +id: String
+        +classCode: String
+        +name: String
+    }
+}
+
+package "Module SCH (Tổ chức Giảng dạy)" #EFFFFF {
+    class Semester {
+        +id: String
+        +code: String
+        +name: String
+        +startDate: Date
+        +endDate: Date
+    }
+    class ClassSection {
+        +id: String
+        +sectionCode: String
+        +maxCapacity: Int
+        +currentEnrollment: Int
+        +status: SectionStatus
+    }
+    class Room {
+        +id: String
+        +roomCode: String
+        +building: String
+        +capacity: Int
+    }
+    class ScheduleSlot {
+        +id: String
+        +dayOfWeek: Int
+        +startPeriod: Int
+        +endPeriod: Int
+        +weeks: String
+    }
+    class InstructorAssignment {
+        +id: String
+        +roleInSection: String
+    }
+}
+
+package "Module REG (Đăng ký HP & Học phí)" #FFFFEF {
+    class RegistrationPeriod {
+        +id: String
+        +startTime: DateTime
+        +endTime: DateTime
+        +status: PeriodStatus
+    }
+    class Registration {
+        +id: String
+        +registeredAt: DateTime
+        +status: RegStatus
+    }
+    class TuitionRate {
+        +id: String
+        +amountPerCredit: Decimal
+        +effectiveYear: Int
+    }
+    class Invoice {
+        +id: String
+        +totalAmount: Decimal
+        +dueDate: Date
+        +status: InvoiceStatus
+    }
+    class Payment {
+        +id: String
+        +amount: Decimal
+        +paidAt: DateTime
+        +transactionRef: String
+    }
+}
+
+package "Module GRD (Kết quả Học tập)" #FFEFEF {
+    class GradeComponent {
+        +id: String
+        +name: String
+        +weight: Float
+    }
+    class Grade {
+        +id: String
+        +processScore: Float
+        +finalScore: Float
+        +totalScore10: Float
+        +letterGrade: String
+        +score4: Float
+        +status: GradeStatus
+    }
+    class GradeAppeal {
+        +id: String
+        +reason: String
+        +status: String
+    }
+    class AcademicRecord {
+        +id: String
+        +gpa: Float
+        +cpa: Float
+        +accumulatedCredits: Int
+        +debtCredits: Int
+    }
+    class AcademicWarning {
+        +id: String
+        +warningLevel: Int
+        +reason: String
+    }
+}
+
+' Quan hệ trong CUR
+User "1" -- "1..*" Role
+User <|-- Student
+User <|-- Instructor
+Faculty "1" -- "1..*" Major
+Major "1" -- "1..*" Program
+Program "1..*" -- "1..*" Course
+Course "1" -- "0..*" Prerequisite : has >
+Prerequisite "0..*" -- "1" Course : requires >
+AdminClass "1" -- "0..*" Student
+
+' Quan hệ trong SCH
+Semester "1" -- "0..*" ClassSection
+Course "1" -- "0..*" ClassSection
+ClassSection "1" -- "1..*" ScheduleSlot
+ScheduleSlot "0..*" -- "1" Room
+ClassSection "1" -- "1..*" InstructorAssignment
+Instructor "1" -- "0..*" InstructorAssignment
+
+' Quan hệ trong REG
+Semester "1" -- "1..*" RegistrationPeriod
+Student "1" -- "0..*" Registration
+ClassSection "1" -- "0..*" Registration
+Student "1" -- "0..*" Invoice
+Semester "1" -- "0..*" Invoice
+Invoice "1" -- "0..*" Payment
+
+' Quan hệ trong GRD
+Course "1" -- "1..*" GradeComponent
+Registration "1" -- "0..1" Grade
+Grade "1" -- "0..*" GradeAppeal
+Student "1" -- "0..*" AcademicRecord
+Semester "1" -- "0..*" AcademicRecord
+Student "1" -- "0..*" AcademicWarning
+Semester "1" -- "0..*" AcademicWarning
+
+@enduml
+

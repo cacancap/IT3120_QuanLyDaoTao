@@ -1,0 +1,73 @@
+@startuml UC-GRD-01-sequence
+autonumber
+title Biểu đồ Trình tự: UC-GRD-01 - Nhập điểm, Tính GPA/CPA & Cảnh báo học vụ
+
+actor "Giảng viên" as GV
+actor "Cán bộ Đào tạo" as PDT
+boundary "GradeManagementPage" as UI
+control "GradeController" as Ctrl
+control "GradeService" as GrdSvc
+control "SCH_Service" as SchSvc
+control "REG_Service" as RegSvc
+entity "Grade" as GrdEnt
+entity "AcademicRecord" as RecEnt
+entity "AcademicWarning" as WarnEnt
+
+== Giai đoạn 1: Giảng viên nhập và công bố điểm ==
+GV -> UI : Chọn Lớp học phần cần nhập điểm (sectionId)
+activate UI
+UI -> Ctrl : openGradeSheet(instructorId, sectionId)
+activate Ctrl
+Ctrl -> GrdSvc : verifyAndLoadStudents(instructorId, sectionId)
+activate GrdSvc
+
+GrdSvc -> SchSvc : getSectionInstructor(sectionId)
+SchSvc --> GrdSvc : assignedInstructorId
+
+alt instructorId != assignedInstructorId (Vi phạm BR-10)
+    GrdSvc --> Ctrl : AccessDeniedException
+    Ctrl --> UI : Báo lỗi "Không có quyền nhập điểm lớp này"
+else Đúng giảng viên phụ trách
+    GrdSvc -> RegSvc : getRegisteredStudents(sectionId)
+    RegSvc --> GrdSvc : List<studentId>
+    GrdSvc --> Ctrl : GradeSheetForm
+    Ctrl --> UI : Hiển thị danh sách SV và cột điểm thành phần
+end
+deactivate GrdSvc
+deactivate Ctrl
+
+GV -> UI : Nhập điểm thành phần & Nhấn "Công bố điểm"
+UI -> Ctrl : publishGrades(sectionId, gradeListDTO)
+activate Ctrl
+Ctrl -> GrdSvc : calculateAndPublish(sectionId, gradeListDTO)
+activate GrdSvc
+GrdSvc -> GrdSvc : calculateTotalAndLetterGrade(gradeListDTO) (BR-07)
+GrdSvc -> GrdEnt : saveAll(status = PUBLISHED)
+GrdEnt --> GrdSvc : success
+GrdSvc --> Ctrl : PublishResult
+deactivate GrdSvc
+Ctrl --> UI : Thông báo công bố điểm thành công
+deactivate Ctrl
+deactivate UI
+
+== Giai đoạn 2: Phòng Đào tạo khóa điểm & xét Cảnh báo học vụ ==
+PDT -> UI : Chọn "Khóa điểm & Xét học vụ học kỳ" (semesterId)
+activate UI
+UI -> Ctrl : finalizeSemesterGrades(semesterId)
+activate Ctrl
+Ctrl -> GrdSvc : lockGradesAndEvaluateAcademicStatus(semesterId)
+activate GrdSvc
+
+GrdSvc -> GrdEnt : updateStatusBySemester(semesterId, LOCKED)
+GrdSvc -> GrdSvc : computeGPAandCPA(semesterId) (BR-08)
+GrdSvc -> RecEnt : upsertAcademicRecords(semesterId)
+GrdSvc -> GrdSvc : evaluateWarningLevel(gpa, cpa, debtCredits) (BR-09)
+GrdSvc -> WarnEnt : createAcademicWarnings(semesterId)
+
+GrdSvc --> Ctrl : EvaluationSummaryDTO
+deactivate GrdSvc
+Ctrl --> UI : Hiển thị kết quả khóa điểm & thống kê cảnh báo học vụ
+deactivate Ctrl
+deactivate UI
+@enduml
+

@@ -1,0 +1,33 @@
+@startuml state-grade
+title Biểu đồ Trạng thái Thực thể Grade (Điểm học phần)
+
+[*] --> DRAFT : Giảng viên tạo bảng điểm / Nhập điểm tạm
+
+state "DRAFT (Nháp)" as DRAFT {
+    DRAFT : Giảng viên được phép sửa tự do
+    DRAFT : Sinh viên chưa nhìn thấy điểm
+}
+
+state "PUBLISHED (Đã công bố)" as PUBLISHED {
+    PUBLISHED : Sinh viên xem được điểm
+    PUBLISHED : Cho phép gửi đơn Phúc khảo (GradeAppeal)
+}
+
+state "UNDER_APPEAL (Đang phúc khảo)" as APPEAL {
+    APPEAL : Chờ Giảng viên chấm phúc khảo
+    APPEAL : Cần Phòng Đào tạo phê duyệt điều chỉnh
+}
+
+state "LOCKED (Đã khóa)" as LOCKED {
+    LOCKED : Đã tính vào GPA/CPA chính thức
+    LOCKED : Không thể chỉnh sửa trực tiếp
+}
+
+DRAFT --> PUBLISHED : Giảng viên nhấn "Công bố điểm"\n[Điểm hợp lệ 0..10 (BR-07)]
+PUBLISHED --> LOCKED : Hết hạn phúc khảo /\nPhòng Đào tạo khóa bảng điểm
+PUBLISHED --> APPEAL : Sinh viên gửi đơn phúc khảo hợp lệ
+APPEAL --> LOCKED : Xử lý xong phúc khảo &\nCập nhật điểm (nếu có)
+LOCKED --> [*]
+
+@enduml
+
