@@ -20,7 +20,14 @@ Write-Host "====================================================" -ForegroundCol
 if (Test-Path $PlantUmlJar) {
     Write-Host "[INFO] Tìm thấy file plantuml.jar tại: $PlantUmlJar" -ForegroundColor Green
     Write-Host "[INFO] Tiến hành render toàn bộ diagrams..." -ForegroundColor Yellow
-    java -jar $PlantUmlJar -tpng -o "$RendersDir" "$DiagramsDir\**\*.puml"
+    $resolvedDiagrams = (Resolve-Path $DiagramsDir).Path
+    $resolvedRenders = (Resolve-Path $RendersDir).Path
+    Get-ChildItem -Path $DiagramsDir -Recurse -Filter *.puml | ForEach-Object {
+        $relDir = $_.DirectoryName.Substring($resolvedDiagrams.Length).TrimStart('\', '/')
+        $targetDir = if ($relDir) { Join-Path $resolvedRenders $relDir } else { $resolvedRenders }
+        if (!(Test-Path $targetDir)) { New-Item -ItemType Directory -Force -Path $targetDir | Out-Null }
+        java -jar $PlantUmlJar -tpng -o $targetDir $_.FullName
+    }
     Write-Host "[SUCCESS] Hoàn thành xuất ảnh biểu đồ vào $RendersDir" -ForegroundColor Green
 } else {
     Write-Host "[NOTE] Chưa tìm thấy $PlantUmlJar cục bộ." -ForegroundColor Yellow

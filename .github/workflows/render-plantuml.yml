@@ -4,7 +4,11 @@ on:
   push:
     paths:
       - 'diagrams/**'
+      - '.github/workflows/render-plantuml.yml'
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   render:
@@ -28,7 +32,18 @@ jobs:
 
       - name: Render Diagrams to PNG
         run: |
-          java -jar plantuml.jar -r -tpng -o "../renders" "diagrams/*.puml"
+          find diagrams -name "*.puml" -exec dirname {} + | sort -u | while read -r dir; do
+            rel="${dir#diagrams}"
+            rel="${rel#/}"
+            if [ -z "$rel" ]; then
+              out_dir="renders"
+            else
+              out_dir="renders/$rel"
+            fi
+            mkdir -p "$out_dir"
+            echo "Rendering $dir/*.puml into $out_dir..."
+            java -jar plantuml.jar -tpng -o "$PWD/$out_dir" "$dir"/*.puml
+          done
 
       - name: Commit & Push Rendered Images
         run: |

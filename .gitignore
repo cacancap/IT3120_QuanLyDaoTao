@@ -8,6 +8,7 @@
 .DS_Store
 Thumbs.db
 
-# PlantUML image cache
+# PlantUML image cache & binaries
 *.png.cache
-*.puml.bak  
+*.puml.bak
+*.jar
