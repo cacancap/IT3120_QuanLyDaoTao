@@ -22,6 +22,7 @@
 | 📊 **Mã nguồn Biểu đồ PlantUML** | [`diagrams/`](./diagrams/) | Mã `.puml` cho Domain Model, Sequence, Use Case, State Machine |
 | 🖼️ **Ảnh Biểu đồ đã kết xuất** | [`renders/`](./renders/) | Thư mục chứa ảnh `.png` phục vụ chèn trực tiếp vào báo cáo |
 | 📑 **Khung Mục lục Báo cáo** | [`report/report-outline.md`](./report/report-outline.md) | Cấu trúc chuẩn 6 chương nộp bài tập lớn |
+| 🐙 **Quy trình Git & GitHub** | [`docs/git-workflow.md`](./docs/git-workflow.md) | Quy chuẩn tạo nhánh, commit, mở Pull Request và xử lý CI/CD |
 
 ---
 
