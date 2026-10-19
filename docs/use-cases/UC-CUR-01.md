@@ -128,6 +128,3 @@ Toàn bộ các biểu đồ mô hình hóa cho ca sử dụng `UC-CUR-01` đã 
 3. **Biểu đồ Trình tự Phân tích (BCE Sequence Diagram):**
    * Mã nguồn: [`diagrams/01-cur/UC-CUR-01-sequence.puml`](../../diagrams/01-cur/UC-CUR-01-sequence.puml)
    * Ảnh kết xuất: [`renders/01-cur/UC-CUR-01-sequence.png`](../../renders/01-cur/UC-CUR-01-sequence.png)
-4. **Biểu đồ Máy Trạng thái Vòng đời Lớp học phần (`ClassSection` Lifecycle):**
-   * Mã nguồn: [`diagrams/01-cur/state-class-section.puml`](../../diagrams/01-cur/state-class-section.puml)
-   * Ảnh kết xuất: [`renders/01-cur/state-class-section.png`](../../renders/01-cur/state-class-section.png)
