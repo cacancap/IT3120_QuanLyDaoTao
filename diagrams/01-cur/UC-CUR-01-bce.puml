@@ -1,0 +1,76 @@
+@startuml UC-CUR-01-bce
+allowmixing
+skinparam handwritten false
+skinparam shadowing false
+skinparam defaultFontName "Arial"
+skinparam defaultFontSize 12
+skinparam roundcorner 8
+
+title Biểu đồ Lớp Phân tích (BCE Class Diagram): UC-CUR-01 Quản lý Khung CTĐT
+
+actor "Cán bộ Phòng Đào tạo" as AcademicStaff
+
+package "Boundary (Lớp Biên)" #FEF9E7 {
+    class CurriculumManagementPage <<boundary>> {
+        +displayProgramList(programs: List): void
+        +showProgramDetails(program: Program, courses: List): void
+        +onSelectProgram(programId: String): void
+        +onAddCourseToProgram(courseId: String, semesterIndex: Int): void
+        +onSetPrerequisite(courseId: String, prereqCourseId: String): void
+        +onSaveCurriculum(): void
+        +showSuccessMessage(message: String): void
+        +showCycleErrorMessage(cyclePath: List): void
+    }
+}
+
+package "Control (Lớp Điều khiển & Dịch vụ)" #E8F8F5 {
+    class CurriculumController <<control>> {
+        -curriculumService: CurriculumService
+        -dagService: DAGCycleDetectorService
+        +getProgramDetails(programId: String): ProgramDetailsDTO
+        +saveCurriculum(programId: String, courseMappings: List, prereqs: List): OperationResult
+    }
+
+    class DAGCycleDetectorService <<control>> {
+        +buildAdjacencyList(prereqs: List): Map
+        +detectCycle(adjacencyList: Map): CycleCheckResult
+        -dfsVisit(node: String, color: Map, path: List): Boolean
+    }
+}
+
+package "Entity (Lớp Thực thể)" #EBF5FB {
+    class Program <<entity>> {
+        -id: String
+        -name: String
+        -cohortYear: Int
+        -totalCredits: Int
+        +calculateTotalCredits(): Int
+    }
+
+    class Course <<entity>> {
+        -id: String
+        -courseCode: String
+        -name: String
+        -credits: Int
+        -tuitionFactor: Float
+    }
+
+    class Prerequisite <<entity>> {
+        -id: String
+        -courseId: String
+        -prerequisiteCourseId: String
+        -type: String
+    }
+}
+
+' Quan hệ phân tích BCE
+AcademicStaff --> CurriculumManagementPage : Tương tác
+CurriculumManagementPage --> CurriculumController : Gửi yêu cầu thao tác
+CurriculumController --> DAGCycleDetectorService : Ủy quyền kiểm tra chu trình DAG
+CurriculumController ..> Program : Thao tác & Quản lý
+CurriculumController ..> Course : Tham chiếu học phần
+CurriculumController ..> Prerequisite : Tạo & Ràng buộc điều kiện
+Program "1" o-- "0..*" Course : Chứa trong khung CTĐT
+Course "1" *-- "0..*" Prerequisite : Có điều kiện tiên quyết
+
+@enduml

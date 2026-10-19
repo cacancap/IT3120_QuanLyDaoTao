@@ -1,0 +1,42 @@
+@startuml use-case-cur
+left to right direction
+skinparam packageStyle rectangle
+skinparam handwritten false
+skinparam shadowing false
+skinparam defaultFontName "Arial"
+skinparam defaultFontSize 12
+skinparam roundcorner 8
+
+title Biểu đồ Ca Sử dụng Phân hệ CUR (Danh mục & Hệ thống)
+
+actor "Cán bộ Phòng Đào tạo" as AcademicStaff
+actor "Cán bộ Khoa/Viện" as FacultyStaff
+actor "Sinh viên" as Student
+actor "Quản trị hệ thống" as Admin
+
+package "Phân hệ CUR (Danh mục & Hệ thống)" {
+    usecase "UC-CUR-01: Quản lý Khung CTĐT" as UC_CUR_01
+    usecase "Thiết lập Điều kiện Tiên quyết" as UC_Prereq
+    usecase "Kiểm tra Chu trình Đồ thị DAG" as UC_DAG
+    usecase "UC-CUR-02: Tra cứu Khung CTĐT" as UC_CUR_02
+    usecase "UC-CUR-03: Quản lý Danh mục Học phần" as UC_CUR_03
+    usecase "UC-CUR-04: Quản lý Hồ sơ Sinh viên & Lớp HC" as UC_CUR_04
+    usecase "UC-CUR-05: Quản lý Tài khoản & Phân quyền" as UC_CUR_05
+}
+
+' Quan hệ phân cấp Use Cases
+UC_CUR_01 ..> UC_Prereq : <<include>>
+UC_CUR_01 ..> UC_DAG : <<include>>
+
+' Liên kết Actors với Use cases
+AcademicStaff --> UC_CUR_01
+AcademicStaff --> UC_CUR_03
+AcademicStaff --> UC_CUR_04
+
+FacultyStaff --> UC_CUR_03 : <<đề xuất học phần>>
+FacultyStaff --> UC_CUR_01 : <<góp ý khung>>
+
+Student --> UC_CUR_02
+
+Admin --> UC_CUR_05
+@enduml

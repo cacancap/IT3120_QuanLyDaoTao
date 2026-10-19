@@ -1,0 +1,69 @@
+@startuml UC-CUR-01-activity
+title Biểu đồ Hoạt động: UC-CUR-01 Xây dựng & Cập nhật Khung CTĐT (Kiểm tra Chu trình DAG)
+skinparam handwritten false
+skinparam shadowing false
+skinparam defaultFontName "Arial"
+skinparam defaultFontSize 12
+skinparam roundcorner 8
+
+|#EBF5FB|Cán bộ Phòng Đào tạo|
+start
+:Truy cập chức năng "Quản lý Khung CTĐT";
+:Chọn Ngành đào tạo và Khóa tuyển sinh (Program);
+
+|#FEF9E7|Giao diện (CurriculumPage)|
+:Hiển thị cấu trúc khung CTĐT hiện tại\n(học kỳ dự kiến, danh mục môn học, cây tiên quyết);
+
+|#EBF5FB|Cán bộ Phòng Đào tạo|
+:Thêm/sửa học phần vào khung học kỳ;
+:Thiết lập danh sách học phần tiên quyết cho từng môn;
+:Nhấn nút "Lưu Khung CTĐT";
+
+|#FEF9E7|Giao diện (CurriculumPage)|
+:Gửi yêu cầu lưu cấu hình kèm danh sách\nmôn học và quan hệ tiên quyết;
+
+|#E8F8F5|Hệ thống (CurriculumController & DAGService)|
+:Kiểm tra tính hợp lệ dữ liệu cơ sở\n(Số tín chỉ > 0, học kỳ gợi ý 1..10);
+
+if (Dữ liệu hợp lệ?) then (Không)
+    :Tạo thông báo lỗi dữ liệu đầu vào;
+    |#FEF9E7|Giao diện (CurriculumPage)|
+    :Hiển thị cảnh báo lỗi nhập liệu;
+    |#EBF5FB|Cán bộ Phòng Đào tạo|
+    :Chỉnh sửa lại thông tin;
+    stop
+else (Hợp lệ)
+    |#E8F8F5|Hệ thống (CurriculumController & DAGService)|
+    :Xây dựng Đồ thị có hướng G = (V, E)\n(Đỉnh V: Các học phần; Cạnh có hướng E: Quan hệ tiên quyết);
+    :Chạy thuật toán kiểm tra chu trình DAG (DFS 3-Coloring);
+
+    if (Phát hiện chu trình lặp tiên quyết?) then (Có chu trình)
+        :Xác định vết chu trình (Cycle Trace Path:\nVD: IT3011 -> IT3020 -> IT3040 -> IT3011);
+        :Tạo thông báo lỗi vi phạm cấu trúc đồ thị;
+        |#FEF9E7|Giao diện (CurriculumPage)|
+        :Hiển thị thông báo lỗi chi tiết\nvà làm nổi bật các cạnh gây vòng lặp;
+        |#EBF5FB|Cán bộ Phòng Đào tạo|
+        :Điều chỉnh lại điều kiện tiên quyết;
+        stop
+    else (Không có chu trình - Hợp lệ)
+        |#E8F8F5|Hệ thống (CurriculumController & DAGService)|
+        :Mở Transaction ghi dữ liệu;
+        
+        |#F4F6F6|Cơ sở dữ liệu (PostgreSQL)|
+        :Cập nhật bảng programs & program_courses;
+        :Xóa quan hệ tiên quyết cũ và ghi mới vào prerequisites;
+        :Commit Transaction;
+
+        |#E8F8F5|Hệ thống (CurriculumController & DAGService)|
+        :Ghi log thao tác hệ thống;
+        :Trả về thông báo cập nhật thành công;
+
+        |#FEF9E7|Giao diện (CurriculumPage)|
+        :Làm mới giao diện và hiển thị cây CTĐT chuẩn hóa;
+        |#EBF5FB|Cán bộ Phòng Đào tạo|
+        :Xem kết quả khung CTĐT đã lưu;
+        stop
+    endif
+endif
+
+@enduml

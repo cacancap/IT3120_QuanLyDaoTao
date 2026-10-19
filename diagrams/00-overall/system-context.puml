@@ -1,0 +1,42 @@
+@startuml system-context
+skinparam handwritten false
+skinparam shadowing false
+skinparam defaultFontName "Arial"
+skinparam defaultFontSize 12
+skinparam roundcorner 8
+
+title Biểu đồ Ngữ cảnh Hệ thống (System Context Diagram) - IT3120
+
+actor "Sinh viên\n(Student)" as Student #LightBlue
+actor "Giảng viên\n(Instructor)" as Instructor #LightGreen
+actor "Cán bộ Phòng Đào tạo\n(Academic Affairs Staff)" as AcademicStaff #LightYellow
+actor "Cán bộ Khoa/Viện\n(Faculty Staff / Advisor)" as FacultyStaff #LightGoldenRodYellow
+actor "Cán bộ Tài chính\n(Finance Staff)" as FinanceStaff #LightSalmon
+actor "Quản trị hệ thống\n(System Admin)" as Admin #LightGray
+
+rectangle "HỆ THỐNG QUẢN LÝ ĐÀO TẠO ĐẠI HỌC (IT3120)\n[Học chế Tín chỉ]" as System #AliceBlue {
+    note as CoreNote
+        <b>4 Phân hệ Lõi:</b>
+        * CUR: Danh mục & Khung CTĐT
+        * SCH: Tổ chức Giảng dạy & Xếp TKB
+        * REG: Đăng ký Học phần & Học phí
+        * GRD: Kết quả Học tập & Cảnh báo Học vụ
+    end note
+}
+
+actor "Cổng Thanh toán Trực tuyến\n(Payment Gateway)" as PaymentGateway <<External System>> #SandyBrown
+actor "Dịch vụ Thông báo Email\n(Email Service)" as EmailService <<External System>> #Plum
+
+' Tương tác giữa tác nhân người dùng và hệ thống
+Student --> System : Tra cứu CTĐT, Đăng ký/Rút học phần,\nThanh toán học phí, Xem điểm/CPA/Cảnh báo,\nNộp đơn phúc khảo
+Instructor --> System : Xem lịch dạy, Quản lý lớp học phần,\nNhập điểm thành phần & Công bố điểm,\nXử lý đơn phúc khảo
+AcademicStaff --> System : Quản lý khung CTĐT, Mở đợt đăng ký,\nMở lớp học phần & Xếp TKB,\nKhóa bảng điểm & Xét cảnh báo học vụ
+FacultyStaff --> System : Đề xuất danh mục học phần,\nPhân công giảng viên giảng dạy
+FinanceStaff --> System : Thiết lập định mức học phí tín chỉ,\nQuản lý công nợ hóa đơn & Miễn giảm
+Admin --> System : Quản lý tài khoản, Phân quyền Role-based,\nGiám sát nhật ký hệ thống
+
+' Tương tác với hệ thống bên ngoài
+System --> PaymentGateway : Gửi yêu cầu thanh toán học phí
+PaymentGateway --> System : Trả về kết quả giao dịch (Thành công/Thất bại)
+System --> EmailService : Gửi thông báo đợt ĐKHP, hóa đơn học phí,\nkết quả học tập, thông báo cảnh báo học vụ
+@enduml

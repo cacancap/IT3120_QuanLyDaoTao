@@ -1,0 +1,51 @@
+@startuml state-class-section
+title Biểu đồ Máy Trạng thái: Vòng đời Lớp Học phần (ClassSection Lifecycle)
+skinparam handwritten false
+skinparam shadowing false
+skinparam defaultFontName "Arial"
+skinparam defaultFontSize 12
+skinparam roundcorner 8
+
+[*] --> DRAFT : Khởi tạo lớp học phần\n(Phòng Đào tạo xếp TKB sơ bộ)
+
+DRAFT : - sectionCode, courseId, semesterId
+DRAFT : - Sĩ số maxCapacity, chưa có sinh viên đăng ký
+DRAFT : - Đang gán phòng học và phân công GV
+
+DRAFT --> OPEN_FOR_REG : Kích hoạt đợt đăng ký\n[RegistrationPeriod.status == OPEN]
+DRAFT --> CANCELLED : Hủy kế hoạch mở lớp
+
+OPEN_FOR_REG : - Cho phép sinh viên đăng ký (BR-04, BR-05)
+OPEN_FOR_REG : - Sĩ số hiện tại (currentEnrollment) tăng/giảm theo thời gian thực
+
+OPEN_FOR_REG --> CLOSED_FOR_REG : Hết thời hạn đăng ký học phần\n[RegistrationPeriod.status == CLOSED]
+OPEN_FOR_REG --> CANCELLED : Hủy lớp đột xuất do bất khả kháng
+
+CLOSED_FOR_REG : - Đóng cổng đăng ký
+CLOSED_FOR_REG : - Chốt danh sách sinh viên chính thức
+CLOSED_FOR_REG : - Kiểm tra điều kiện sĩ số tối thiểu (Min Capacity)
+
+CLOSED_FOR_REG --> CANCELLED : Sĩ số không đạt tối thiểu\n[currentEnrollment < MIN_CAPACITY]
+note on link
+  Khi lớp bị hủy (CANCELLED):
+  - Tự động hủy các bản ghi Registration liên quan
+  - Hoàn trả công nợ học phí cho sinh viên
+  - Gửi email thông báo hủy lớp
+end note
+
+CLOSED_FOR_REG --> IN_PROGRESS : Bắt đầu học kỳ mới\n[CurrentDate >= Semester.startDate]
+
+IN_PROGRESS : - Lớp đang diễn ra giảng dạy
+IN_PROGRESS : - Sinh viên học tập và thi giữa kỳ
+IN_PROGRESS : - Giảng viên quản lý điểm chuyên cần và quá trình
+
+IN_PROGRESS --> COMPLETED : Kết thúc tuần thi học kỳ & Khóa sổ\n[Tất cả bảng điểm chuyển sang LOCKED]
+
+COMPLETED : - Hoàn thành tổ chức giảng dạy
+COMPLETED : - Toàn bộ điểm số đã chốt và lưu trữ vĩnh viễn
+COMPLETED : - Dữ liệu phục vụ tính GPA/CPA và xét tốt nghiệp
+
+COMPLETED --> [*]
+CANCELLED --> [*]
+
+@enduml

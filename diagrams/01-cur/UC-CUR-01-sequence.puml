@@ -1,0 +1,71 @@
+@startuml UC-CUR-01-sequence
+title Biểu đồ Trình tự: UC-CUR-01 Xây dựng & Cập nhật Khung CTĐT (BCE Pattern)
+autonumber
+skinparam handwritten false
+skinparam shadowing false
+skinparam defaultFontName "Arial"
+skinparam defaultFontSize 12
+skinparam roundcorner 8
+skinparam responseMessageBelowArrow true
+
+actor "Cán bộ Phòng Đào tạo" as Staff
+boundary "CurriculumPage" as Page <<boundary>>
+control "CurriculumController" as Ctrl <<control>>
+control "DAGCycleDetectorService" as DAG <<control>>
+entity "Program" as Prog <<entity>>
+entity "Prerequisite" as Prereq <<entity>>
+database "PostgreSQL" as DB
+
+Staff -> Page : Chọn CTĐT cần cấu hình (programId)
+activate Page
+Page -> Ctrl : getProgramDetails(programId)
+activate Ctrl
+Ctrl -> DB : SELECT * FROM programs, program_courses, prerequisites WHERE program_id = ?
+activate DB
+DB --> Ctrl : Dữ liệu môn học & điều kiện tiên quyết
+deactivate DB
+Ctrl --> Page : Trả về ProgramDetailsDTO
+deactivate Ctrl
+Page --> Staff : Hiển thị cây CTĐT và các môn học gợi ý theo kỳ
+
+Staff -> Page : Thêm môn học & Thiết lập học phần tiên quyết
+Staff -> Page : Nhấn nút "Lưu Khung CTĐT"
+Page -> Ctrl : saveCurriculum(programId, courseList, prereqList)
+activate Ctrl
+
+Ctrl -> DAG : detectCycle(prereqList)
+activate DAG
+note over DAG
+  Thuật toán DFS 3-Coloring:
+  Duyệt đồ thị có hướng G=(V,E).
+  Nếu gặp đỉnh đang tô màu GRAY
+  -> Tồn tại cạnh ngược (Back-edge)
+  -> Chu trình lặp tiên quyết!
+end note
+DAG -> DAG : Kiểm tra Back-edge và lần vết chu trình
+
+alt Phát hiện chu trình (Vòng lặp tiên quyết)
+    DAG --> Ctrl : CycleCheckResult(hasCycle=true, cycleTrace=["IT3011", "IT3020", "IT3040", "IT3011"])
+    Ctrl --> Page : Trả về lỗi vi phạm cấu trúc đồ thị kèm danh sách mã môn gây lặp
+    Page --> Staff : Hiển thị cảnh báo đỏ và đánh dấu các môn vi phạm trên giao diện
+else Cấu trúc hợp lệ (Đồ thị DAG không chu trình)
+    DAG --> Ctrl : CycleCheckResult(hasCycle=false)
+    deactivate DAG
+
+    Ctrl -> DB : BEGIN TRANSACTION
+    activate DB
+    Ctrl -> DB : DELETE FROM prerequisites WHERE course_id IN (...)
+    Ctrl -> DB : INSERT INTO program_courses (...)
+    Ctrl -> DB : INSERT INTO prerequisites (course_id, prerequisite_course_id, type) VALUES (...)
+    Ctrl -> DB : UPDATE programs SET total_credits = ?, updated_at = NOW() WHERE id = ?
+    Ctrl -> DB : COMMIT TRANSACTION
+    DB --> Ctrl : Xác nhận ghi thành công
+    deactivate DB
+
+    Ctrl --> Page : Trả về thông báo thành công
+    deactivate Ctrl
+    Page --> Staff : Hiển thị thông báo "Cập nhật Khung CTĐT thành công" và làm mới giao diện
+end
+
+deactivate Page
+@enduml
