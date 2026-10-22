@@ -11,6 +11,7 @@
 
 | Danh mục | Đường dẫn thư mục / Tệp tin | Mô tả nội dung |
 |---|---|---|
+| 🌟 **Bức tranh Toàn cảnh & Sợi chỉ đỏ** | [`docs/big-picture-and-red-thread.md`](./docs/big-picture-and-red-thread.md) | Xâu chuỗi 5 tầng chuyển đổi từ bài giảng L01..L10 đến kiến trúc kỹ thuật |
 | 📋 **Tài liệu Bối cảnh & Phạm vi** | [`docs/context-and-scope.md`](./docs/context-and-scope.md) | Bối cảnh, mục tiêu, In/Out-of-scope, Actors, Glossary |
 | 🏷️ **Quy ước & Định danh** | [`docs/conventions-and-naming.md`](./docs/conventions-and-naming.md) | Quy ước đặt tên mã `FR`, `UC`, `BR`, `SCR`, PascalCase, camelCase |
 | ⚖️ **10 Quy tắc Nghiệp vụ** | [`docs/business-rules.md`](./docs/business-rules.md) | Đặc tả logic kiểm tra chi tiết từ `BR-01` đến `BR-10` |
@@ -22,6 +23,8 @@
 | 📊 **Mã nguồn Biểu đồ PlantUML** | [`diagrams/`](./diagrams/) | Mã `.puml` cho Domain Model, Sequence, Use Case, State Machine |
 | 🖼️ **Ảnh Biểu đồ đã kết xuất** | [`renders/`](./renders/) | Thư mục chứa ảnh `.png` phục vụ chèn trực tiếp vào báo cáo |
 | 📑 **Khung Mục lục Báo cáo** | [`report/report-outline.md`](./report/report-outline.md) | Cấu trúc chuẩn 6 chương nộp bài tập lớn |
+| 🎤 **Kịch bản Thuyết trình Thực hành** | [`docs/lab-presentation-draft.md`](./docs/lab-presentation-draft.md) | Dàn ý 9 slide, lời thoại chi tiết (Speaker Script) & phân công thuyết trình |
+| 🖥️ **Slide LaTeX Beamer (PDF)** | [`slides/`](./slides/) | [Mã nguồn `.tex`](./slides/IT3120_UserProblem_LeanUX_Slides.tex) & [Bản in thuyết trình `.pdf`](./slides/IT3120_UserProblem_LeanUX_Slides.pdf) |
 | 🐙 **Quy trình Git & GitHub** | [`docs/git-workflow.md`](./docs/git-workflow.md) | Quy chuẩn tạo nhánh, commit, mở Pull Request và xử lý CI/CD |
 
 ---
