@@ -1,0 +1,663 @@
+%!TEX program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[aspectratio=169, 10pt]{beamer}
+
+% ==============================================================================
+% IT3120 - PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG (SOICT - ĐHBK HÀ NỘI)
+% ĐỀ TÀI: HỆ THỐNG QUẢN LÝ ĐÀO TẠO ĐẠI HỌC THEO HỌC CHẾ TÍN CHỈ
+% SLIDE MASTER BÀI THỰC HÀNH 1 - 5 (PROBLEM DISCOVERY & SYSTEM REQUEST)
+% ==============================================================================
+
+\usepackage{iftex}
+\ifXeTeX
+  \usepackage{fontspec}
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+  \setmonofont{Consolas}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[vietnamese]{babel}
+  \usepackage[T5]{fontenc}
+\fi
+
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows.meta,positioning,calc}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+
+% ------------------------- BẢNG MÀU CHUẨN SOICT - ĐHBK HÀ NỘI -----------------
+\definecolor{HustRed}{RGB}{185, 28, 28}        % #b91c1c
+\definecolor{NavyDark}{RGB}{15, 43, 72}        % #0f2b48
+\definecolor{SecondaryTeal}{RGB}{13, 148, 136} % #0d9488
+\definecolor{PrimaryBlue}{RGB}{37, 99, 235}    % #2563eb
+\definecolor{WarningAmber}{RGB}{194, 98, 14}   % #c2620e
+\definecolor{LightBg}{RGB}{248, 250, 252}      % #f8fafc
+\definecolor{BorderGray}{RGB}{203, 213, 225}   % #cbd5e1
+\definecolor{DarkText}{RGB}{30, 41, 59}        % #1e293b
+\definecolor{MutedText}{RGB}{100, 116, 139}    % #64748b
+
+% ------------------------- CẤU HÌNH GIAO DIỆN BEAMER -------------------------
+\useinnertheme{default}
+\useoutertheme{default}
+\usefonttheme{professionalfonts}
+
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{normal text}{fg=DarkText}
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{subtitle}{fg=SecondaryTeal}
+\setbeamercolor{frametitle}{fg=NavyDark}
+\setbeamercolor{framesubtitle}{fg=SecondaryTeal}
+
+\setbeamertemplate{navigation symbols}{}
+
+% Header & Footer
+\setbeamertemplate{headline}{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1ex,leftskip=1.2cm,rightskip=1.2cm]{section in head/foot}
+    \tiny\color{MutedText}\textbf{IT3120 - PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG} \hfill \textbf{SOICT - ĐHBK HÀ NỘI}
+    \vspace{0.08cm}
+    {\color{SecondaryTeal}\hrule height 0.6pt}
+  \end{beamercolorbox}%
+}
+
+\setbeamertemplate{footline}{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.8ex,dp=1.2ex,leftskip=1.2cm,rightskip=1.2cm]{page number in head/foot}
+    {\color{BorderGray}\hrule height 0.4pt}
+    \vspace{0.08cm}
+    \tiny\color{MutedText}Bài thực hành 1--5: Khám phá Vấn đề \& Đề xuất Dự án \hfill Nhóm [4 Thành viên] \hfill Trang \insertframenumber/\inserttotalframenumber
+  \end{beamercolorbox}%
+}
+
+% Định nghĩa Frametitle hai dòng thanh lịch
+\setbeamertemplate{frametitle}{%
+  \vspace{0.1cm}%
+  \begin{beamercolorbox}[wd=\linewidth,leftskip=0pt]{frametitle}%
+    {\usebeamerfont{frametitle}\color{NavyDark}\bfseries\insertframetitle}%
+    \ifx\insertframesubtitle\@empty\else%
+      \\[0.05cm]{\usebeamerfont{framesubtitle}\color{SecondaryTeal}\footnotesize\insertframesubtitle}%
+    \fi%
+  \end{beamercolorbox}%
+  \vspace{-0.15cm}%
+}
+
+% Cấu hình tcolorbox
+\tcbset{
+  baseBox/.style={
+    arc=1.5mm, boxrule=0.6pt, left=2.5mm, right=2.5mm, top=2mm, bottom=2mm,
+    fonttitle=\bfseries\footnotesize
+  }
+}
+
+\newtcolorbox{infoCard}[1]{
+  baseBox, colback=SecondaryTeal!5!white, colframe=SecondaryTeal, coltitle=white, title=#1
+}
+\newtcolorbox{alertCard}[1]{
+  baseBox, colback=HustRed!5!white, colframe=HustRed, coltitle=white, title=#1
+}
+\newtcolorbox{accentCard}[1]{
+  baseBox, colback=PrimaryBlue!5!white, colframe=PrimaryBlue, coltitle=white, title=#1
+}
+\newtcolorbox{neutralBox}{
+  baseBox, colback=LightBg, colframe=BorderGray
+}
+
+% Định nghĩa cột tự co giãn cho tabularx
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+
+% ==============================================================================
+% SLIDE 1: BÌA
+% ==============================================================================
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture, overlay]
+    % Banner xanh đậm phía trên
+    \fill[NavyDark] (current page.north west) rectangle ($(current page.north east) + (0, -3.4cm)$);
+    % Vạch đỏ HUST
+    \fill[HustRed] ($(current page.north west) + (0, -3.4cm)$) rectangle ($(current page.north east) + (0, -3.55cm)$);
+    
+    % Logo & Tiêu đề chính
+    \node[anchor=north west, text=white] at ($(current page.north west) + (1.2cm, -0.6cm)$) {
+      \scriptsize\textbf{ĐẠI HỌC BÁCH KHOA HÀ NỘI} $\bullet$ \textbf{VIỆN CÔNG NGHỆ THÔNG TIN VÀ TRUYỀN THÔNG (SOICT)}
+    };
+    \node[anchor=north west, text=white] at ($(current page.north west) + (1.2cm, -1.2cm)$) {
+      \fontsize{15}{18}\selectfont\textbf{TỪ KHÁM PHÁ VẤN ĐỀ ĐẾN ĐỀ XUẤT DỰ ÁN HỢP NHẤT}
+    };
+    \node[anchor=north west, text=SecondaryTeal!40!white] at ($(current page.north west) + (1.2cm, -2.1cm)$) {
+      \footnotesize\textbf{Ứng dụng User Need, Problem Statement Canvas, Lean UX Canvas \& System Request}
+    };
+    \node[anchor=north west, text=white] at ($(current page.north west) + (1.2cm, -2.7cm)$) {
+      \scriptsize\textbf{Đề tài:} Hệ thống Quản lý Đào tạo Đại học theo Học chế Tín chỉ (SOICT - ĐHBK Hà Nội)
+    };
+    
+    % Nội dung nhóm phía dưới
+    \node[anchor=north west] at ($(current page.north west) + (1.2cm, -4.0cm)$) {
+      \begin{minipage}{0.92\paperwidth}
+        \footnotesize
+        \textbf{Mô hình làm việc:} \textcolor{PrimaryBlue}{\textbf{Funnel Parallel Model (Phễu Song song 4 Thành viên)}}\\
+        \textbf{Bộ tài liệu chuẩn hóa:} 
+        \textcolor{DarkText}{Báo cáo Master (61+ KB) $\bullet$ Marp Deck (22 slide) $\bullet$ Slide LaTeX Beamer (XeLaTeX)}\\[0.25cm]
+        \scriptsize
+        \begin{tabularx}{\linewidth}{@{}p{3.2cm}p{3.2cm}p{3.2cm}p{3.5cm}@{}}
+          \toprule
+          \textbf{Thành viên A (Lead)} & \textbf{Thành viên B} & \textbf{Thành viên C} & \textbf{Thành viên D} \\
+          \midrule
+          \textcolor{PrimaryBlue}{\textbf{Module REG}} & \textcolor{SecondaryTeal}{\textbf{Module GRD}} & \textcolor{WarningAmber}{\textbf{Module SCH}} & \textcolor{NavyDark}{\textbf{Module CUR}} \\
+          Đăng ký HP \& Học phí & Kết quả Điểm \& Học vụ & Tổ chức Giảng dạy \& TKB & Khung CTĐT \& Thuật toán DAG \\
+          Persona: Sinh viên & Persona: Giảng viên & Persona: Cán bộ Lập lịch & Persona: Cán bộ Khoa/CTĐT \\
+          \bottomrule
+        \end{tabularx}
+      \end{minipage}
+    };
+  \end{tikzpicture}
+\end{frame}
+
+% ==============================================================================
+% SLIDE 2: MỤC TIÊU & CHUỖI CHUYỂN ĐỔI 5 BÀI THỰC HÀNH
+% ==============================================================================
+\begin{frame}[t]{Tổng quan Mục tiêu \& Chuỗi Chuyển đổi Logic}{Kế thừa trọn vẹn 5 Chuyên đề Bài thực hành môn IT3120}
+  \vspace{-0.1cm}
+  \begin{columns}[T]
+    \column{0.50\linewidth}
+      \begin{infoCard}{5 Bài thực hành cốt lõi (Slide 2 \& Slide 53)}
+        \scriptsize
+        \begin{enumerate}\itemsep1.5pt
+          \item \textbf{Bài TH 1:} Phân biệt User Needs, Problem Statement \& Business Problem. Viết Problem Statement dựa trên bằng chứng.
+          \item \textbf{Bài TH 2:} Sử dụng User Problem Statement Canvas (6 ô) làm rõ bối cảnh, rào cản và 4 góc độ nguyên nhân.
+          \item \textbf{Bài TH 3:} Xác định Business Problem, chuỗi nhân quả và kỹ thuật 5 Whys (tránh ngụy biện giải pháp).
+          \item \textbf{Bài TH 4:} Xây dựng Lean UX Canvas (8 ô) kết nối giải pháp với kết quả kinh doanh và giả thuyết kiểm chứng.
+          \item \textbf{Bài TH 5:} Lập Experiment Plan, thiết kế MVP, thang đo SUS \& Khung đề xuất dự án (System Request 11 mục).
+        \end{enumerate}
+      \end{infoCard}
+
+    \column{0.48\linewidth}
+      \begin{accentCard}{Sợi chỉ đỏ xuyên suốt (Red Thread)}
+        \centering\scriptsize
+        \textbf{Chuỗi logic không thể phá vỡ (Slide 4 \& 53):}\\[0.15cm]
+        \begin{tcolorbox}[colback=white, colframe=NavyDark!40, arc=1mm, boxrule=0.4pt, left=2mm, right=2mm, top=1.5mm, bottom=1.5mm]
+          \tiny
+          \textbf{User Needs} $\to$ Người dùng cần làm gì? (Động từ)\\[0.05cm]
+          $\downarrow$\\[0.05cm]
+          \textbf{User Problem} $\to$ Rào cản \& Nỗi đau thực tế là gì?\\[0.05cm]
+          $\downarrow$\\[0.05cm]
+          \textbf{Problem Canvas} $\to$ Vì sao vấn đề xảy ra? (Bối cảnh/Evidence)\\[0.05cm]
+          $\downarrow$\\[0.05cm]
+          \textbf{Business Problem} $\to$ Nhà trường chịu tổn thất gì? (Cầu nối nhân quả)\\[0.05cm]
+          $\downarrow$\\[0.05cm]
+          \textbf{Lean UX Canvas} $\to$ Giải pháp nào đáng thử? (Outcomes/Giả thuyết)\\[0.05cm]
+          $\downarrow$\\[0.05cm]
+          \textbf{Experiment \& MVP} $\to$ Làm sao kiểm chứng rủi ro lớn nhất?\\[0.05cm]
+          $\downarrow$\\[0.05cm]
+          \textbf{System Request} $\to$ Có đáng đầu tư phát triển hệ thống không?
+        \end{tcolorbox}
+      \end{accentCard}
+  \end{columns}
+\end{frame}
+
+% ==============================================================================
+% SLIDE 3: PHÂN BIỆT 3 KHÁI NIỆM NỀN TẢNG
+% ==============================================================================
+\begin{frame}[t]{Phân biệt 3 Khái niệm Nền tảng}{Mục tiêu 1: Tránh bẫy tư duy đánh đồng người dùng với tổ chức (Slide 3 \& 23--28)}
+  \vspace{-0.15cm}
+  \begin{columns}[T]
+    \column{0.32\linewidth}
+      \begin{neutralBox}
+        \scriptsize
+        \textbf{\color{PrimaryBlue}1. User Needs (Nhu cầu)}\\[0.06cm]
+        $\bullet$ \textbf{Bản chất:} Mục tiêu tích cực, hành động mà người dùng muốn hoàn thành.\\
+        $\bullet$ \textbf{Chủ thể:} Cá nhân người dùng.\\
+        $\bullet$ \textbf{Ví dụ ĐHBK Hà Nội:}\\\textit{``Sinh viên cần đăng ký các học phần đúng lộ trình kỳ này mà không bị trùng lịch.''}\\[0.1cm]
+        \begin{tcolorbox}[colback=red!5!white, colframe=HustRed!50, arc=1mm, boxrule=0.4pt, left=1mm, right=1mm, top=1mm, bottom=1mm]
+          \tiny\textbf{Bẫy sai lầm:}\ Nhầm Nhu cầu với Tính năng phần mềm (VD: ``Cần app mobile'' $\to$ Sai, app là giải pháp!).
+        \end{tcolorbox}
+      \end{neutralBox}
+
+    \column{0.34\linewidth}
+      \begin{alertCard}{2. User Problem (Nỗi đau)}
+        \scriptsize
+        $\bullet$ \textbf{Bản chất:} Rào cản, khó khăn cản trở đạt nhu cầu + cảm xúc tiêu cực.\\
+        $\bullet$ \textbf{Chủ thể:} Trải nghiệm người dùng.\\
+        $\bullet$ \textbf{Ví dụ ĐHBK Hà Nội:}\\\textit{``Sinh viên K67 bị nghẽn mạng, văng khỏi cổng đăng ký và mất lượt chọn lớp cốt lõi, đối mặt nguy cơ chậm tiến độ ra trường.''}\\[0.05cm]
+        \begin{tcolorbox}[colback=white, colframe=HustRed!50, arc=1mm, boxrule=0.4pt, left=1mm, right=1mm, top=1mm, bottom=1mm]
+          \tiny\textbf{Bẫy sai lầm:}\ Ép người dùng gánh vấn đề của trường (VD: ``SV gặp vấn đề là trường thiếu phòng'' $\to$ Sai!).
+        \end{tcolorbox}
+      \end{alertCard}
+
+    \column{0.32\linewidth}
+      \begin{infoCard}{3. Business Problem (Nhà trường)}
+        \scriptsize
+        $\bullet$ \textbf{Bản chất:} Tổn thất chi phí, nhân lực, chậm tiến độ hoặc rủi ro pháp lý/uy tín.\\
+        $\bullet$ \textbf{Chủ thể:} Tổ chức vận hành (Nhà trường).\\
+        $\bullet$ \textbf{Ví dụ ĐHBK Hà Nội:}\\\textit{``Phòng Đào tạo tốn 120 giờ công xử lý 3.000 đơn xin mở lớp thủ công, làm chậm tiến độ thu học phí.''}\\[0.1cm]
+        \begin{tcolorbox}[colback=teal!5!white, colframe=SecondaryTeal!50, arc=1mm, boxrule=0.4pt, left=1mm, right=1mm, top=1mm, bottom=1mm]
+          \tiny\textbf{Bẫy sai lầm:}\ Nhầm Triệu chứng với Vấn đề (VD: ``SV nộp đơn đông'' chỉ là triệu chứng).
+        \end{tcolorbox}
+      \end{infoCard}
+  \end{columns}
+\end{frame}
+
+% ==============================================================================
+% SLIDE 4: TUYÊN BỐ VỀ NHU CẦU NGƯỜI DÙNG (USER NEED STATEMENT / POV)
+% ==============================================================================
+\begin{frame}[t]{Tuyên bố Nhu cầu Người dùng (POV Statement)}{Chuẩn hóa Slide 8: Tập trung vào ĐỘNG TỪ thay vì DANH TỪ (Giải pháp)}
+  \vspace{-0.15cm}
+  \begin{tcolorbox}[colback=NavyDark!5!white, colframe=NavyDark, arc=1mm, boxrule=0.5pt, left=2mm, right=2mm, top=1mm, bottom=1mm]
+    \centering\scriptsize
+    \textbf{Nguyên tắc cốt lõi (Slide 8):} User Need Statement là bản tường thuật quan điểm (Point of View - POV).\\
+    \textbf{Công thức POV:} {\color{NavyDark}\textbf{[Người dùng là ai]}} + cần {\color{PrimaryBlue}\textbf{[Hành động/Mục tiêu bằng ĐỘNG TỪ]}} + bởi vì {\color{SecondaryTeal}\textbf{[Động cơ/Sự thấu hiểu sâu sắc (Insight)]}}
+  \end{tcolorbox}
+  \vspace{-0.1cm}
+
+  \begin{columns}[T]
+    \column{0.50\linewidth}
+      \begin{neutralBox}
+        \scriptsize
+        \textbf{\color{PrimaryBlue}A. Sinh viên (REG / SCH)}\\
+        $\bullet$ \textbf{Cần gì (Động từ):} \textbf{Đăng ký được các học phần đúng lộ trình đào tạo và không bị trùng kíp học}.\\
+        $\bullet$ \textbf{Động cơ (Insight):} Để tốt nghiệp đúng hạn, duy trì học lực tốt và không lãng phí học phí học lại.\\
+        $\times$ \textit{Sai: Cần một ứng dụng di động để đăng ký.} (App là danh từ/giải pháp!).\\[0.1cm]
+        \textbf{\color{SecondaryTeal}B. Giảng viên (GRD / SCH)}\\
+        $\bullet$ \textbf{Cần gì (Động từ):} \textbf{Nhập và nộp điểm thành phần, điểm tổng kết chính xác, đúng thời hạn quy định}.\\
+        $\bullet$ \textbf{Động cơ (Insight):} Để hoàn thành trách nhiệm đào tạo, minh bạch với người học và không bị áp lực nợ bảng điểm.
+      \end{neutralBox}
+
+    \column{0.48\linewidth}
+      \begin{neutralBox}
+        \scriptsize
+        \textbf{\color{WarningAmber}C. Cán bộ Lập lịch PĐT (SCH)}\\
+        $\bullet$ \textbf{Cần gì (Động từ):} \textbf{Điều phối phòng học và phân bổ giảng viên tối ưu trước ngày mở cổng}.\\
+        $\bullet$ \textbf{Động cơ (Insight):} Để khai thác tối đa công suất giảng đường, tránh vỡ kế hoạch và không phải hủy lớp đột ngột.\\[0.1cm]
+        \textbf{\color{NavyDark}D. Cán bộ CTĐT \& Khoa (CUR)}\\
+        $\bullet$ \textbf{Cần gì (Động từ):} \textbf{Quản lý và cập nhật cây điều kiện tiên quyết nhất quán, không xảy ra chu trình lỗi}.\\
+        $\bullet$ \textbf{Động cơ (Insight):} Để sinh viên tiếp thu kiến thức đúng trình tự sư phạm và đáp ứng chuẩn kiểm định ABET/MOET.
+      \end{neutralBox}
+  \end{columns}
+\end{frame}
+
+% ==============================================================================
+% SLIDE 5: PHÁT BIỂU VẤN ĐỀ NGƯỜI DÙNG CÓ BẰNG CHỨNG NGHIÊN CỨU
+% ==============================================================================
+\begin{frame}[t]{Phát biểu Vấn đề Người dùng (User Problem Statement)}{Mục tiêu 2: Công thức chuẩn hóa \& Bằng chứng thực tế định lượng (Slide 11--14 \& 21)}
+  \vspace{-0.15cm}
+  \begin{tcolorbox}[colback=NavyDark!5!white, colframe=NavyDark, arc=1mm, boxrule=0.5pt, left=2.5mm, right=2.5mm, top=1.2mm, bottom=1.2mm]
+    \centering\scriptsize
+    \textbf{Cấu trúc chuẩn:} {\color{NavyDark}\textbf{[Đối tượng]}} + cần {\color{PrimaryBlue}\textbf{[Nhu cầu bằng Động từ]}} + nhưng gặp khó khăn {\color{HustRed}\textbf{[Rào cản/Khó khăn]}} + dẫn đến {\color{WarningAmber}\textbf{[Hậu quả/Cảm xúc]}} + dựa trên {\color{SecondaryTeal}\textbf{[Bằng chứng nghiên cứu]}}
+  \end{tcolorbox}
+  \vspace{-0.1cm}
+
+  \begin{columns}[T]
+    \column{0.50\linewidth}
+      \begin{alertCard}{A. Phát biểu của Sinh viên (Module REG)}
+        \scriptsize
+        \textbf{Sinh viên đại học chính quy} cần \textbf{đăng ký được 16--20 tín chỉ đúng lộ trình và không bị trùng kíp học}, nhưng gặp khó khăn vì \textbf{cổng thông tin thường xuyên nghẽn mạng trong 15 phút đầu và không cảnh báo trước điều kiện tiên quyết (BR-01) hay trùng kíp (BR-03)}, dẫn đến \textbf{sinh viên mất suất học lớp chuyên ngành cốt lõi, đối mặt nguy cơ chậm tiến độ tốt nghiệp 1 kỳ và cảm thấy hoang mang, bức xúc},\\
+        $\to$ \textbf{Bằng chứng:} \textit{Khảo sát 150 sinh viên K66--K67: 78\% từng bị văng khỏi cổng đợt cao điểm; 62\% phải làm đơn xin học bù/học vượt thủ công}.
+      \end{alertCard}
+
+    \column{0.48\linewidth}
+      \begin{alertCard}{B. Phát biểu của Giảng viên (Module GRD)}
+        \scriptsize
+        \textbf{Giảng viên phụ trách lớp} cần \textbf{nhập và gửi điểm tổng kết về phòng Đào tạo đúng hạn}, nhưng gặp khó khăn vì \textbf{giao diện phân mảnh, không tự động kiểm tra công thức trọng số (BR-07) và dễ mất phiên làm việc khi mạng chập chờn}, dẫn đến \textbf{giảng viên mất nhiều thời gian rà soát, rủi ro sai sót và áp lực lớn khi cận hạn chót khóa sổ},\\
+        $\to$ \textbf{Bằng chứng:} \textit{Phỏng vấn 12 giảng viên: mất trung bình 3.5 giờ/kỳ chỉ để đối chiếu lỗi nhập liệu; 30\% từng phải gửi văn bản đính chính điểm}.
+      \end{alertCard}
+  \end{columns}
+\end{frame}
+
+% ==============================================================================
+% SLIDE 6: USER PROBLEM STATEMENT CANVAS (6 Ô CHUẨN)
+% ==============================================================================
+\begin{frame}[t]{User Problem Statement Canvas (6 Ô Chuẩn)}{Bài TH 2: Bóc tách cấu trúc bối cảnh, rào cản \& nguyên nhân (Slide 17--19 \& Đáp án 58)}
+  \vspace{-0.15cm}
+  \tiny
+  \begin{tabularx}{\linewidth}{@{}P{2.2cm}|Y|Y@{}}
+    \toprule
+    \textbf{Thành phần Canvas} & \textbf{Chi tiết phân tích (Case Sinh viên đăng ký tín chỉ)} & \textbf{Cơ sở kiểm chứng / Bằng chứng thực tế} \\
+    \midrule
+    \textbf{1. WHO\newline(Người dùng)} & 
+    Sinh viên đại học chính quy ĐHBK Hà Nội (đặc biệt sinh viên năm 3--4 giai đoạn học chuyên ngành). & 
+    Dữ liệu phòng Đào tạo: Quy mô 35.000+ sinh viên; nhóm K66--K67 chịu áp lực hoàn thành đồ án lớn nhất. \\
+    \midrule
+    \textbf{2. CONTEXT\newline(Bối cảnh)} & 
+    Khung giờ 8:00--9:00 sáng ngày mở cổng đợt 1; hàng chục ngàn người cùng bấm đăng ký đồng thời. & 
+    Biểu đồ log máy chủ: Lưu lượng truy cập đột biến tăng gấp 50 lần so với ngày thường. \\
+    \midrule
+    \textbf{3. USER GOAL\newline(Nhu cầu cốt lõi)} & 
+    Đăng ký đủ 16--20 tín chỉ đúng môn tiên quyết; xếp thời khóa biểu gọn gàng, không trùng kíp học (BR-03). & 
+    Khung CTĐT chuẩn yêu cầu tích lũy tín chỉ tối thiểu theo từng kỳ để không bị cảnh báo học vụ (BR-02). \\
+    \midrule
+    \textbf{4. PAIN POINT\newline(Điểm nghẽn rào cản)} & 
+    Lỗi 504 Gateway Timeout; lớp mong muốn vừa hiện ra đã hết chỗ; thông báo lỗi chung chung không rõ lý do. & 
+    78\% phản hồi khảo sát bị nghẽn mạng; 65\% không biết lớp hết chỗ do sĩ số tối đa (BR-04) hay trùng lịch. \\
+    \midrule
+    \textbf{5. ALTERNATIVES\newline(Giải pháp tạm thời)} & 
+    Nhờ bạn bè đăng ký hộ; canh mạng lúc nửa đêm; xếp hàng xin chữ ký mở thêm lớp; nộp đơn giấy tại văn phòng 1 cửa. & 
+    Ghi nhận hơn 3.000 đơn xin mở lớp nộp về phòng Đào tạo sau mỗi đợt đăng ký tín chỉ đầu kỳ. \\
+    \midrule
+    \textbf{6. EVIDENCE\newline(Bằng chứng \& Giả định)} & 
+    \textbf{Đã xác thực:} Tỷ lệ lỗi mạng cao điểm, số lượng đơn nộp tay.\newline
+    \textbf{Giả định cần kiểm chứng:} Nếu cho phép xếp TKB trước (Wishlist), lưu lượng tải lúc mở cổng sẽ giảm 70\%. & 
+    Cần đo lường thông qua bài thử nghiệm tải (Stress test) và khảo sát mức độ sẵn sàng dùng Wishlist của sinh viên. \\
+    \bottomrule
+  \end{tabularx}
+\end{frame}
+
+% ==============================================================================
+% SLIDE 7: CẦU NỐI NHÂN QUẢ: USER PROBLEM -> BUSINESS PROBLEM
+% ==============================================================================
+\begin{frame}[t]{Kết nối Vấn đề Người dùng với Vấn đề Kinh doanh}{Mục tiêu 4: Cầu nối nhân quả - Tuyệt đối không đánh đồng hai loại vấn đề (Slide 23--25 \& 59)}
+  \vspace{-0.15cm}
+  \begin{tcolorbox}[colback=NavyDark!5!white, colframe=NavyDark, arc=1mm, boxrule=0.5pt, left=2mm, right=2mm, top=1mm, bottom=1mm]
+    \centering\scriptsize
+    \textbf{Chuỗi lập luận nhân quả chuẩn mực (Slide 25):}\;
+    {\color{NavyDark}\textbf{User Problem}} $\xrightarrow{\text{Hành vi phản ứng}}$ {\color{WarningAmber}\textbf{Operational Impact}} $\xrightarrow{\text{Thiệt hại tổ chức}}$ {\color{HustRed}\textbf{Business Problem}} $\xrightarrow{\text{Mục tiêu}}$ {\color{SecondaryTeal}\textbf{Desired Outcome}}
+  \end{tcolorbox}
+  \vspace{-0.15cm}
+
+  \tiny
+  \begin{tabularx}{\linewidth}{@{}P{2.2cm}YYYP{2.8cm}@{}}
+    \toprule
+    \textbf{Phân hệ / Đối tượng} & \textbf{User Problem (Nỗi đau người dùng)} & \textbf{Operational Impact (Tác động vận hành)} & \textbf{Business Problem (Tổn thất của Trường)} & \textbf{Desired Outcome (Mục tiêu đo lường)} \\
+    \midrule
+    \textbf{Module REG}\newline(Sinh viên) & 
+    Sinh viên bị nghẽn mạng, mất suất lớp chuyên ngành cốt lõi. & 
+    Hàng ngàn sinh viên làm đơn khiếu nại, dồn về văn phòng 1 cửa xin mở thêm lớp. & 
+    \textbf{Quá tải chi phí vận hành:} 20 cán bộ tăng ca 120 giờ; \textbf{chậm dòng tiền học phí} hàng tỷ đồng. & 
+    $\bullet$ Giảm 85\% đơn nộp tay.\newline
+    $\bullet$ 100\% sinh viên xong đăng ký trong 48 giờ. \\
+    \midrule
+    \textbf{Module SCH}\newline(Giảng viên \& PĐT) & 
+    Xung đột phòng học và kíp dạy (vi phạm ràng buộc BR-03). & 
+    Lớp phải hủy hoặc dời lịch đột ngột; sinh viên bức xúc, thiếu giảng viên dạy thay. & 
+    \textbf{Lãng phí tài nguyên phòng học:} Hiệu suất phòng giảm 25\%; vi phạm chuẩn kiểm định chất lượng. & 
+    $\bullet$ 0\% trùng kíp học/phòng.\newline
+    $\bullet$ Khai thác phòng $\ge 90\%$. \\
+    \midrule
+    \textbf{Module GRD}\newline(Cán bộ Điểm) & 
+    Chậm cập nhật điểm thi; sinh viên hoang mang kết quả học tập. & 
+    Phát sinh hàng trăm đơn phúc khảo; phòng Đào tạo không thể tính CPA tích lũy. & 
+    \textbf{Nguy cơ sai lệch học vụ:} Chậm xét cảnh báo (BR-09), chậm cấp học bổng, rủi ro pháp lý quy chế. & 
+    $\bullet$ 100\% điểm khóa đúng hạn.\newline
+    $\bullet$ Tính CPA tự động $\le 1$ giờ. \\
+    \bottomrule
+  \end{tabularx}
+\end{frame}
+
+% ==============================================================================
+% SLIDE 8: PHÂN TÍCH CĂN NGUYÊN GỐC RỄ (5 WHYS & 4 GÓC ĐỘ)
+% ==============================================================================
+\begin{frame}[t]{Phân tích Căn nguyên Gốc rễ (Root Cause Analysis)}{Khắc phục bẫy tư duy ngụy biện giải pháp của Slide 35 bằng Kỹ thuật 5 Whys chuẩn mực}
+  \vspace{-0.25cm}
+  \begin{columns}[T]
+    \column{0.48\linewidth}
+      \begin{alertCard}{Cảnh báo Bẫy tư duy ở Slide 35}
+        \tiny
+        $\times$ \textbf{Lỗi ngụy biện ở ví dụ Slide 35 của slide gốc:}\\\textit{Khách chờ lâu $\to$ Làm thủ công $\to$ Root cause: Thiếu hệ thống.}\\[0.05cm]
+        $\to$ \textit{Đây là bẫy ``Solution in disguise'' (nhầm giải pháp là nguyên nhân)!}\\[0.1cm]
+        $\checkmark$ \textbf{Kỹ thuật 5 Whys chuẩn mực của Nhóm:}\\
+        \textbf{Problem:} Cổng đăng ký sập trong 15 phút đầu mở cổng.\\
+        $\to$ \textit{Why 1?} Hàng chục ngàn request dồn vào cùng một giây.\\
+        $\to$ \textit{Why 2?} Mở cổng cho toàn trường cùng một thời điểm.\\
+        $\to$ \textit{Why 3?} SV phải tranh giành suất lớp có giới hạn sĩ số (BR-04).\\
+        $\to$ \textit{Why 4?} CSDL dùng khóa bi quan (Pessimistic Lock) gây Deadlock.\\
+        $\to$ \textbf{Root cause:} \textbf{Nghẽn tranh chấp CSDL + Dồn đợt đồng thời}.
+      \end{alertCard}
+
+    \column{0.50\linewidth}
+      \begin{infoCard}{Mô hình Xương cá (Fishbone -- 4 Trục nguyên nhân)}
+        \tiny
+        \textbf{1. Công nghệ (Technology):}\\
+        Thiếu Message Queue chịu tải cao; khóa dòng CSDL (Row Deadlock) khi hàng ngàn người cùng tranh 1 lớp sắp đầy sĩ số.\\[0.06cm]
+        \textbf{2. Quy trình (Process):}\\
+        Mở cổng đăng ký cùng một khung giờ cho toàn bộ các khóa thay vì phân bổ lệch ca theo mức cảnh báo học vụ hoặc niên khóa.\\[0.06cm]
+        \textbf{3. Thông tin (Information):}\\
+        Sinh viên không được xem trước danh sách lớp để mô phỏng TKB (Wishlist) trước giờ mở cổng.\\[0.06cm]
+        \textbf{4. Chính sách (Policy):}\\
+        Chưa có quy chế tự động hủy người đăng ký giữ chỗ hộ; thiếu chế tài phạt sinh viên đăng ký ảo.
+      \end{infoCard}
+  \end{columns}
+\end{frame}
+
+% ==============================================================================
+% SLIDE 9: LEAN UX CANVAS - PHẦN 1 (Ô 1 ĐẾN Ô 4)
+% ==============================================================================
+\begin{frame}[t]{Lean UX Canvas: Phần 1 -- Vấn đề \& Kết quả}{Bài TH 4: Kết nối mục tiêu kinh doanh với lợi ích người dùng (Slide 37--40 \& 60)}
+  \vspace{-0.25cm}
+  \begin{columns}[T]
+    \column{0.49\linewidth}
+      \begin{alertCard}{Ô 1: Business Problem (Vấn đề Kinh doanh)}
+        \tiny
+        Cổng đăng ký tín chỉ và quản lý điểm hiện tại gây tắc nghẽn nghiêm trọng vào đầu và cuối kỳ.\\
+        $\bullet$ Xử lý thủ công hơn 3.000 đơn khiếu nại mở/hủy lớp.\\
+        $\bullet$ Rủi ro sai sót tính học phí và chậm xét cảnh báo học vụ.\\
+        $\bullet$ Tiêu tốn hơn 120 giờ công/kỳ; giảm uy tín và sự hài lòng.
+      \end{alertCard}
+      \vspace{-0.2cm}
+      \begin{infoCard}{Ô 2: Business Outcomes (Kết quả đo lường)}
+        \tiny
+        $\bullet$ \textbf{Giảm 85\%} đơn xin mở/hủy lớp nộp tay tại PĐT.\\
+        $\bullet$ \textbf{100\% sinh viên} hoàn tất đăng ký chính thức trong 48 giờ.\\
+        $\bullet$ \textbf{Xuất hóa đơn học phí $\le 1$ giờ} sau đóng cổng.\\
+        $\bullet$ \textbf{Thời gian đáp ứng $\le 1.5$ giây} lúc cao điểm (FURPS+).
+      \end{infoCard}
+
+    \column{0.49\linewidth}
+      \begin{neutralBox}
+        \tiny
+        \textbf{\color{PrimaryBlue}Ô 3: Users \& Customers (Khách hàng \& Người dùng)}\\
+        $\bullet$ \textbf{Sinh viên:} 35.000+ sinh viên đại học chính quy.\\
+        $\bullet$ \textbf{Giảng viên:} 1.500+ giảng viên phụ trách nhập điểm.\\
+        $\bullet$ \textbf{Cán bộ PĐT, Khoa \& Tài vụ:} Quản trị khung CTĐT, xếp lịch, thu học phí và xét tốt nghiệp.
+      \end{neutralBox}
+      \vspace{-0.2cm}
+      \begin{accentCard}{Ô 4: User Outcomes \& Benefits (Giá trị người dùng)}
+        \tiny
+        $\bullet$ \textbf{Sinh viên:} Đăng ký thành công ngay lần đầu; rõ lý do lỗi (BR-01..05); lập trước TKB ảo.\\
+        $\bullet$ \textbf{Giảng viên:} Nhập điểm 1 chạm, kiểm tra trọng số tự động (BR-07), khóa an toàn (BR-10).\\
+        $\bullet$ \textbf{Cán bộ PĐT:} Giám sát sĩ số real-time, xóa bỏ cộng sổ điểm tay.
+      \end{accentCard}
+  \end{columns}
+\end{frame}
+
+% ==============================================================================
+% SLIDE 10: LEAN UX CANVAS - PHẦN 2 (Ô 5 ĐẾN Ô 8)
+% ==============================================================================
+\begin{frame}[t]{Lean UX Canvas: Phần 2 -- Giải pháp, Giả thuyết \& MVP}{Bài TH 4: Thiết lập phương án kiểm chứng rủi ro lớn nhất trước khi thi công (Slide 41--44 \& 61)}
+  \vspace{-0.25cm}
+  \begin{columns}[T]
+    \column{0.49\linewidth}
+      \begin{neutralBox}
+        \tiny
+        \textbf{\color{PrimaryBlue}Ô 5: Solutions (Giải pháp Kiến trúc Hệ thống)}\\
+        $\bullet$ \textbf{REG:} Tính năng \textbf{Giỏ học phần (Wishlist)} cho phép xếp trước TKB; Thuật toán kiểm tra điều kiện tức thời.\\
+        $\bullet$ \textbf{SCH:} Thuật toán kiểm tra chống trùng kíp/phòng/GV (\textbf{BR-03}).\\
+        $\bullet$ \textbf{GRD:} Module nhập điểm bảo mật, tính CPA tự động (\textbf{BR-08}) và xét cảnh báo tự động (\textbf{BR-09}).\\
+        $\bullet$ \textbf{CSDL:} Kiến trúc PostgreSQL 3NF tối ưu index.
+      \end{neutralBox}
+      \vspace{-0.2cm}
+      \begin{infoCard}{Ô 6: Hypotheses (Giả thuyết Kiểm chứng)}
+        \tiny
+        \textbf{Giả thuyết 1 (REG):} Chúng tôi tin rằng \textbf{khiếu nại trượt môn giảm 70\%} nếu \textbf{Sinh viên} có thể \textbf{kiểm tra trước tiên quyết và lưu TKB dự kiến trước 3 ngày} nhờ \textbf{Tính năng Giỏ học phần \& Kiểm tra tức thời BR-01, BR-03}.\\[0.05cm]
+        \textbf{Giả thuyết 2 (GRD):} Chúng tôi tin rằng \textbf{thời gian xét cảnh báo học vụ giảm từ 14 ngày xuống 24 giờ} nếu \textbf{Giảng viên} có thể \textbf{nhập và khóa điểm an toàn} nhờ \textbf{Cơ chế kiểm tra tự động BR-07 và phân quyền BR-10}.
+      \end{infoCard}
+
+    \column{0.49\linewidth}
+      \begin{alertCard}{Ô 7: Rủi ro Lớn nhất Cần học Trước tiên?}
+        \tiny
+        $\bullet$ \textbf{Rủi ro Kỹ thuật (Deadlock Concurrency):}\\
+        Liệu Schema CSDL PostgreSQL và thuật toán kiểm tra ràng buộc (\textbf{BR-01..05}) có chịu được tải \textbf{10.000 req/s} mà không bị nghẽn khóa dòng khi tranh suất cuối của lớp?\\
+        $\bullet$ \textbf{Rủi ro Hành vi (Adoption Risk):}\\
+        Sinh viên có thực sự chủ động xếp trước TKB trên Wishlist, hay vẫn đợi sát giờ mở cổng mới vào bấm loạn xạ?
+      \end{alertCard}
+      \vspace{-0.2cm}
+      \begin{accentCard}{Ô 8: Thử nghiệm Tốn ít Công sức nhất (MVP)}
+        \tiny
+        $\bullet$ \textbf{Thử nghiệm Kỹ thuật (PoC Load Test):}\\
+        Script Locust/k6 giả lập 5.000 user ảo truy vấn đồng thời vào bảng \texttt{class\_sections} và \texttt{registrations} với Optimistic Locking trên PostgreSQL để đo độ trễ.\\
+        $\bullet$ \textbf{Thử nghiệm Trải nghiệm (Usability Test):}\\
+        Dựng mẫu tương tác Figma luồng đăng ký 3 bước, mời 15 sinh viên kiểm thử xem có hiểu rõ thông báo lỗi trùng lịch (\textbf{BR-03}) hay không.
+      \end{accentCard}
+  \end{columns}
+\end{frame}
+
+% ==============================================================================
+% SLIDE 11: KẾ HOẠCH THỬ NGHIỆM MVP, THANG ĐO SUS & GO/PIVOT
+% ==============================================================================
+\begin{frame}[t]{Kế hoạch Kiểm chứng Thực tế (Experiment Plan)}{Bài TH 5: Tiêu chí đo lường định lượng, Thang đo SUS \& Khung Go/Pivot (Slide 44 \& 62)}
+  \vspace{-0.15cm}
+  \tiny
+  \begin{tabularx}{\linewidth}{@{}P{2.6cm}YP{3.0cm}Y@{}}
+    \toprule
+    \textbf{Giả thuyết kiểm chứng} & \textbf{Phương pháp thử nghiệm} & \textbf{Chỉ số đo lường (KPI)} & \textbf{Tiêu chí Thành công \& Quyết định} \\
+    \midrule
+    \textbf{G1: Cơ chế chống nghẽn \& Tranh chấp lớp}\newline(\textit{Ràng buộc BR-04}) & 
+    Dựng Schema CSDL PostgreSQL + Kịch bản mô phỏng giao dịch tranh chấp hàng đợi (Concurrency Load Test k6). & 
+    $\bullet$ Tỷ lệ lỗi (Error Rate)\newline
+    $\bullet$ Độ trễ phản hồi (Latency p95)\newline
+    $\bullet$ Sĩ số vượt trần (Over-enrollment) & 
+    $\bullet$ Error Rate $< 0.1\%$, Latency $\le 1.2s$.\newline
+    $\bullet$ \textbf{Tuyệt đối 0 trường hợp} vượt maxCapacity.\newline
+    $\to$ \textit{Nếu thất bại: Chuyển sang kiến trúc Redis Queue.} \\
+    \midrule
+    \textbf{G2: Mức độ hiệu quả Giỏ môn học (Wishlist)}\newline(\textit{Ràng buộc BR-01..03}) & 
+    Mời 20 sinh viên thực hiện nhiệm vụ chọn lớp trên bản mẫu Figma tương tác (Task-based Usability Testing). & 
+    $\bullet$ Tỷ lệ hoàn thành (Completion Rate)\newline
+    $\bullet$ Thời gian hoàn tất (Time on Task)\newline
+    $\bullet$ Điểm độ dễ dùng \textbf{SUS (10 câu)} & 
+    $\bullet$ Completion Rate $\ge 90\%$.\newline
+    $\bullet$ Điểm \textbf{SUS Score $\ge 80/100$}.\newline
+    $\bullet$ 85\% tự tin không bị trùng lịch.\newline
+    $\to$ \textit{Nếu điểm SUS $< 68$: Thiết kế lại UI.} \\
+    \midrule
+    \textbf{G3: Khóa điểm \& Tính CPA tự động}\newline(\textit{Ràng buộc BR-07..10}) & 
+    Chạy script tính toán trên dữ liệu ẩn danh của 1 học kỳ cũ (Historical Batch Run trên 27 bảng dữ liệu). & 
+    $\bullet$ Độ khớp kết quả cảnh báo Mức 0..3\newline
+    $\bullet$ Thời gian xử lý batch toàn trường & 
+    $\bullet$ Khớp 100\% danh sách thực tế của PĐT.\newline
+    $\bullet$ Thời gian xử lý toàn trường $< 15$ phút.\newline
+    $\to$ \textit{Đạt yêu cầu: Đưa vào đặc tả System Request.} \\
+    \bottomrule
+  \end{tabularx}
+\end{frame}
+
+% ==============================================================================
+% SLIDE 12: ĐỀ XUẤT HỆ THỐNG (SYSTEM REQUEST - 11 MỤC CHUẨN)
+% ==============================================================================
+\begin{frame}[t]{Đề xuất Hệ thống (System Request -- Planning Phase)}{Chuyên đề 3: Bản hồ sơ khởi động dự án chính thức theo 11 mục chuẩn của Slide 47--51}
+  \vspace{-0.15cm}
+  \begin{columns}[T]
+    \column{0.49\linewidth}
+      \begin{neutralBox}
+        \tiny
+        \textbf{\color{NavyDark}1. Project Title:} Hệ thống Quản lý Đào tạo Đại học theo Học chế Tín chỉ (SIS - Student Information System).\\
+        \textbf{\color{NavyDark}2. Project Sponsor:} Phòng Đào tạo ĐHBK Hà Nội.\\
+        \textbf{\color{NavyDark}3. Business Need:} Khắc phục tình trạng sập cổng đăng ký, giải tỏa quá tải 3.000 đơn khiếu nại và tự động hóa quy trình quản lý điểm.\\
+        \textbf{\color{NavyDark}4. Project Vision:} Nền tảng hợp nhất 4 phân hệ (CUR, SCH, REG, GRD) bảo đảm minh bạch, tức thời và toàn vẹn dữ liệu.\\
+        \textbf{\color{NavyDark}5. Business Benefits:}
+        \begin{itemize}\itemsep0.5pt
+          \item \textit{Kinh tế:} Tiết kiệm 450 triệu đồng/năm chi phí làm thêm giờ và giấy tờ.
+          \item \textit{Vận hành:} Rút ngắn thời gian đăng ký và xuất hóa đơn học phí từ 7 ngày xuống còn dưới 1 giờ.
+          \item \textit{Chiến lược:} Nâng cao chỉ số hài lòng người học, bảo đảm kiểm định ABET.
+        \end{itemize}
+      \end{neutralBox}
+
+    \column{0.49\linewidth}
+      \begin{neutralBox}
+        \tiny
+        \textbf{\color{NavyDark}6. High-level Requirements (FURPS+):}
+        \begin{itemize}\itemsep0.5pt
+          \item \textit{Chức năng (FR):} Lập CTĐT DAG, xếp TKB chống trùng kíp, đăng ký tín chỉ kèm Wishlist, nhập điểm và xét học vụ tự động.
+          \item \textit{Phi chức năng (NFR):} Chịu tải $\ge 10.000$ concurrent requests, độ trễ $\le 1.5s$, độ sẵn sàng 99.9\%, bảo mật JWT RBAC.
+        \end{itemize}
+        \textbf{\color{NavyDark}7. Constraints \& Assumptions:} Ngân sách 350 triệu; hoàn thành trong 16 tuần; CSDL PostgreSQL 3NF; tuân thủ No-code modeling.\\
+        \textbf{\color{NavyDark}8. Feasibility Analysis:} Kỹ thuật (Khả thi 90\% với PostgreSQL/Redis), Kinh tế (NPV dương), Vận hành (PĐT đồng thuận 100\%).\\
+        \textbf{\color{NavyDark}9. Expected Deliverables:} Bộ hồ sơ OOAD, PlantUML renders, CSDL schema DDL PostgreSQL, Báo cáo Word/PDF.\\
+        \textbf{\color{NavyDark}10. Risks:} Tranh chấp dữ liệu cao điểm (đã có PoC kiểm chứng).\\
+        \textbf{\color{NavyDark}11. Approval / Signature:} Đại diện PĐT \& Nhóm trưởng đã ký duyệt.
+      \end{neutralBox}
+  \end{columns}
+\end{frame}
+
+% ==============================================================================
+% SLIDE 13: MÔ HÌNH PHỄU SONG SONG (PHÂN CÔNG 4 THÀNH VIÊN)
+% ==============================================================================
+\begin{frame}[t]{Mô hình Phễu Song song (Funnel Parallel Model)}{Cơ chế phối hợp 4 thành viên làm chủ độc lập 4 phân hệ qua các buổi thực hành}
+  \vspace{-0.15cm}
+  \tiny
+  \begin{tabularx}{\linewidth}{@{}P{2.0cm}P{2.4cm}YP{3.8cm}@{}}
+    \toprule
+    \textbf{Thành viên} & \textbf{Phân hệ Làm chủ} & \textbf{Trọng tâm Thực hành Buổi 1} & \textbf{Trách nhiệm Kỹ thuật Xuyên suốt Dự án} \\
+    \midrule
+    \textbf{Thành viên A}\newline(\textit{Team Lead}) & 
+    \textbf{REG}\newline(Đăng ký \& Học phí) & 
+    $\bullet$ Lead case Sinh viên (Slide 5--7)\newline
+    $\bullet$ Thuyết minh Lean UX Canvas & 
+    $\bullet$ Quản trị GitHub Repo \& Điều phối chung.\newline
+    $\bullet$ Đặc tả ca sử dụng lõi \textbf{UC-REG-01} \& Quy tắc \textbf{BR-01..06}.\newline
+    $\bullet$ Ước lượng chi phí phần mềm theo phương pháp \textbf{UCP}. \\
+    \midrule
+    \textbf{Thành viên B} & 
+    \textbf{GRD}\newline(Điểm \& Học vụ) & 
+    $\bullet$ Case Giảng viên \& Khóa điểm\newline
+    $\bullet$ Bóc tách Root Cause 5 Whys & 
+    $\bullet$ Quản trị CSDL quan hệ PostgreSQL 27 bảng \& Data Dictionary.\newline
+    $\bullet$ Đặc tả ca sử dụng lõi \textbf{UC-GRD-01} \& Quy tắc \textbf{BR-07..10}.\newline
+    $\bullet$ Xây dựng Ma trận Truy vết Toàn diện (Traceability Matrix). \\
+    \midrule
+    \textbf{Thành viên C} & 
+    \textbf{SCH}\newline(Tổ chức Giảng dạy) & 
+    $\bullet$ Case Cán bộ Lập lịch PĐT\newline
+    $\bullet$ Thuyết minh Kế hoạch MVP & 
+    $\bullet$ Thiết kế Kiến trúc Logic 3 tầng \& Biểu đồ Triển khai.\newline
+    $\bullet$ Đặc tả Yêu cầu phi chức năng \textbf{FURPS+} toàn hệ thống.\newline
+    $\bullet$ Quản trị kết xuất sơ đồ PlantUML sang thư mục \texttt{renders/}. \\
+    \midrule
+    \textbf{Thành viên D} & 
+    \textbf{CUR}\newline(Chương trình Đào tạo) & 
+    $\bullet$ Case Cán bộ Khoa/CTĐT\newline
+    $\bullet$ Thuyết minh System Request & 
+    $\bullet$ Khảo sát hiện trạng, bối cảnh \& viết Chương 1 Báo cáo.\newline
+    $\bullet$ Kiểm soát thuật toán đồ thị DAG chống vòng lặp tiên quyết.\newline
+    $\bullet$ Kiểm tra chất lượng format và xuất bản Báo cáo tổng thể. \\
+    \bottomrule
+  \end{tabularx}
+\end{frame}
+
+% ==============================================================================
+% SLIDE 14: TỔNG KẾT & Q&A
+% ==============================================================================
+\begin{frame}[t]{Tổng kết \& Thảo luận (Key Takeaways \& Q\&A)}{3 Bài học Cốt lõi Rút ra từ Buổi Thực hành}
+  \vspace{-0.1cm}
+  \begin{columns}[T]
+    \column{0.32\linewidth}
+      \begin{neutralBox}
+        \scriptsize
+        \textbf{\color{PrimaryBlue}1. Bắt đầu từ Nỗi đau thật}\\
+        Không nhảy ngay vào giải pháp phần mềm. Luôn xác lập phát biểu vấn đề dựa trên bằng chứng khảo sát định lượng và bóc tách nguyên nhân gốc rễ theo 4 trục công nghệ, quy trình, thông tin, chính sách.
+      \end{neutralBox}
+
+    \column{0.34\linewidth}
+      \begin{neutralBox}
+        \scriptsize
+        \textbf{\color{SecondaryTeal}2. Cầu nối Nhân quả Rạch ròi}\\
+        Không đánh đồng vấn đề người dùng với vấn đề của nhà trường. Trải nghiệm người dùng được cải thiện chính là cơ chế đòn bẩy để nhà trường đạt được hiệu quả vận hành và tối ưu chi phí.
+      \end{neutralBox}
+
+    \column{0.32\linewidth}
+      \begin{neutralBox}
+        \scriptsize
+        \textbf{\color{WarningAmber}3. Học nhanh bằng Thử nghiệm}\\
+        Áp dụng Lean UX Canvas để xác định rủi ro kỹ thuật lớn nhất (Deadlock tranh chấp CSDL), thiết kế MVP và kịch bản thử nghiệm tải trước khi đầu tư nguồn lực thiết kế chi tiết.
+      \end{neutralBox}
+  \end{columns}
+
+  \vspace{0.25cm}
+  \begin{tcolorbox}[colback=NavyDark!5!white, colframe=NavyDark, arc=1.5mm, boxrule=0.6pt, left=3mm, right=3mm, top=2mm, bottom=2mm]
+    \centering\footnotesize
+    \textbf{Nhóm xin trân trọng cảm ơn Thầy và các bạn đã chú ý lắng nghe!}\\[0.05cm]
+    \scriptsize\textcolor{MutedText}{Nhóm sẵn sàng tiếp nhận các câu hỏi thảo luận về: Khung Canvas, Phân định nguyên nhân gốc rễ \& Kế hoạch thử nghiệm tải cao.}
+  \end{tcolorbox}
+\end{frame}
+
+\end{document}
