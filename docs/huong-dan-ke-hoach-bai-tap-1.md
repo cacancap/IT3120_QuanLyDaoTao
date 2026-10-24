@@ -1,12 +1,13 @@
 # KỊCH BẢN KẾ HOẠCH & BÀN GIAO CÔNG VIỆC CHI TIẾT — BÀI TẬP 1
 ## MÔN HỌC: PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG (IT3120 - SOICT, ĐHBK HÀ NỘI)
-### CHỦ ĐỀ: HỆ THỐNG QUẢN LÝ ĐÀO TẠO ĐẠI HỌC THEO HỌC CHẾ TÍN CHỈ (SIS)
-### MÔ HÌNH: 4 TÁC NHÂN (SV - CBĐT - CBTC - GV) + 1 LUỒNG NGHIỆP VỤ XUYÊN SUỐT
+### TỔ CHỨC NGHIÊN CỨU: HỌC VIỆN BÁCH NGHỆ HÀ NỘI (HBA)
+### BỐI CẢNH TOÀN CỤC: CHUYỂN ĐỔI MÔ HÌNH QUẢN TRỊ TỪ NIÊN CHẾ SANG HỌC CHẾ TÍN CHỈ
+### MÔ HÌNH BÀI LÀM: 4 TÁC NHÂN (SV - CBĐT - CBTC - GV) + 1 LUỒNG NGHIỆP VỤ XUYÊN SUỐT
 
 ---
 
 ## MỤC LỤC
-1. [Phần I: Nguyên Tắc Cốt Lõi Cần Tuân Thủ](#phần-i-nguyên-tắc-cốt-lõi-cần-tuân-thủ-slide-3-11-21-23-39)
+1. [Phần I: Bối Cảnh Nghiệp Vụ & Nguyên Tắc Cốt Lõi](#phần-i-bối-cảnh-nghiệp-vụ--nguyên-tắc-cốt-lõi-slide-3-11-21-23-39)
 2. [Phần II: Chốt Nhanh "Neo Đồng Bộ" (5 Phút Trước Khi Làm)](#phần-ii-chốt-nhanh-neo-đồng-bộ-5-phút-trước-khi-làm)
 3. [Phần III: Hướng Dẫn Chi Tiết Cho Từng Thành Viên](#phần-iii-hướng-dẫn-chi-tiết-cho-từng-thành-viên)
    - [Thành viên 1: Sinh viên + Trọn gói Lean UX & MVP](#-thành-viên-1-sinh-viên--luồng-lean-ux--mvp-th1-th2-th4-th5)
@@ -17,37 +18,48 @@
 
 ---
 
-## PHẦN I: NGUYÊN TẮC CỐT LÕI CẦN TUÂN THỦ (SLIDE 3, 11, 21, 23, 39)
+## PHẦN I: BỐI CẢNH NGHIỆP VỤ & NGUYÊN TẮC CỐT LÕI (SLIDE 3, 11, 21, 23, 39)
 
-Tất cả 4 thành viên phải quán triệt 3 nguyên tắc nền tảng sau trước khi đặt bút viết:
+### 1. Bối Cảnh Toàn Cục: Cú Sốc Chuyển Đổi Niên Chế $\rightarrow$ Tín Chỉ Tại Học Viện Bách Nghệ Hà Nội
+* **Học viện Bách Nghệ Hà Nội (HBA):** Là cơ sở giáo dục đại học định hướng công nghệ và kỹ thuật ứng dụng quy mô lớn với **~35.000 sinh viên** và **~1.500 giảng viên**.
+* **Bước ngoặt lịch sử:** Học viện vừa chính thức ban hành Quy chế Đào tạo mới, bãi bỏ hoàn toàn mô hình **Niên chế truyền thống** (vốn gắn liền với việc xếp lớp cố định theo khóa, nhà trường lên sẵn thời khóa biểu từ năm nhất đến khi tốt nghiệp, học phí thu phẳng theo kỳ/năm) để chuyển dịch sang **Học chế Tín chỉ** (người học tự chọn môn, tự quyết định tiến độ học tập, học phí tính động theo số tín chỉ thực tế, mở rộng cơ hội học văn bằng 2 và học vượt).
+* **Cú sốc vận hành ("Tư duy niên chế đối đầu quy chế tín chỉ"):**
+  1. **Sinh viên:** Mang thói quen thụ động từ thời niên chế, đột ngột phải tự đọc cây điều kiện tiên quyết phức tạp, tự xếp thời khóa biểu không trùng lịch và trực cổng đăng ký cạnh tranh suất học.
+  2. **Cán bộ Đào tạo:** Quen xếp lịch cho 50–70 lớp hành chính cố định, nay phải quản lý hàng nghìn lớp học phần riêng rẽ; công cụ bảng tính Excel và phần mềm cũ thời niên chế hoàn toàn "vỡ trận" trước khối lượng dữ liệu khổng lồ.
+  3. **Cán bộ Tài chính:** Quen thu tiền học phí một mức trọn gói theo lớp niên chế, nay phải tính tiền lẻ biến đổi theo từng tín chỉ sinh viên đăng ký, đối soát giao dịch ngân hàng theo thời gian thực và quản lý hoàn/hủy học phí khi lớp bị hủy.
+  4. **Giảng viên:** Quen giảng dạy một tập thể lớp cố định 50 sinh viên quen mặt, nay tiếp nhận các lớp học phần hỗn hợp sinh viên nhiều khóa (K62, K63, K64 cùng ngồi học), danh sách sinh viên liên tục biến động trong 3 tuần đầu kỳ.
 
-### 1. Tuyệt Đối Không Nhảy Bổ Vào Solution (Slide 3, 11, 21)
+---
+
+### 2. Ba Nguyên Tắc Cốt Lõi Bắt Buộc Tuân Thủ
+
+#### Nguyên tắc 1: Tuyệt Đối Không Nhảy Bổ Vào Solution (Slide 3, 11, 21)
 * **Lỗi sai kinh điển:** Viết phát biểu vấn đề dưới dạng thiếu một tính năng cụ thể hoặc đòi hỏi xây dựng phần mềm mới.
-  * ❌ *Sai:* "Vấn đề của sinh viên là chưa có ứng dụng di động để đăng ký môn học thuận tiện."
-  * ❌ *Sai:* "Phòng Đào tạo gặp vấn đề do thiếu hệ thống tự động kiểm tra điều kiện tiên quyết."
-* **Cách viết chuẩn xác:** Tập trung hoàn toàn vào **Nỗi đau (Pain)**, **Rào cản quy trình (Barrier)** và **Hệ quả thực tế (Consequence)**.
-  * ✅ *Đúng:* "Sinh viên gặp khó khăn khi lập kế hoạch và đăng ký môn học đầu kỳ vì không thể tra cứu tức thời tình trạng đáp ứng môn tiên quyết và lịch trùng lặp, dẫn đến việc bị hủy môn muộn và kéo dài thời gian học tập."
+  * ❌ *Sai:* "Vấn đề của sinh viên là Học viện chưa có app mobile để đăng ký môn học."
+  * ❌ *Sai:* "Phòng Đào tạo gặp vấn đề do thiếu hệ thống phần mềm mới."
+* **Cách viết chuẩn xác:** Tập trung hoàn toàn vào **Nỗi đau (Pain)**, **Rào cản quy trình (Barrier)** và **Hệ quả thực tế (Consequence)** do cú sốc chuyển đổi mô hình gây ra.
+  * ✅ *Đúng:* "Sinh viên Học viện Bách Nghệ Hà Nội gặp khó khăn nghiêm trọng khi chuyển sang mô hình tín chỉ vì chưa quen tự tra cứu cây môn tiên quyết và phải dùng các bảng tính rời rạc để xếp lịch, dẫn đến việc thường xuyên đăng ký trùng kíp, bị hủy môn muộn và kéo dài thời gian học tập."
 * **Công thức vàng:**
-  $$\text{Current Situation} \longrightarrow \text{Pain Point / Barrier} \longrightarrow \text{Quantifiable Impact} \longrightarrow \text{Desired State}$$
+  $$\text{Current Situation (Niên chế $\rightarrow$ Tín chỉ)} \longrightarrow \text{Pain Point / Barrier} \longrightarrow \text{Quantifiable Impact} \longrightarrow \text{Desired State}$$
 
-### 2. Tách Bạch Rõ Ràng Bằng Chứng (Evidence) và Giả Định (Assumption) (Slide 23, 28)
+#### Nguyên tắc 2: Tách Bạch Rõ Ràng Bằng Chứng (Evidence) và Giả Định (Assumption) (Slide 23, 28)
 * Mọi nhận định về hành vi, sự cố và số liệu phải được gắn thẻ nguồn gốc rõ ràng:
-  * `[Evidence]` (Bằng chứng): Thông tin lấy từ quy chế đào tạo tín chỉ chính thức (Quy chế đào tạo ĐHBK Hà Nội), kết quả khảo sát thực tế, hoặc nhật ký hệ thống ghi nhận được.
-  * `[Assumption]` (Giả định): Những suy đoán hợp lý của nhóm nhưng **chưa có dữ liệu kiểm chứng độc lập**. Nhóm phải thừa nhận đây là giả định để thiết kế kế hoạch phỏng vấn/thử nghiệm kiểm chứng lại.
-* **Nguyên tắc tài chính:** Không tự tiện bịa số liệu "thiệt hại hàng trăm triệu đồng" khi chưa có khảo sát tài chính thực tế; thay vào đó đo bằng **thời gian lãng phí** hoặc **tỷ lệ công việc phải làm lại**.
+  * `[Evidence]` (Bằng chứng): Thông tin lấy từ Quy chế đào tạo tín chỉ mới ban hành của Học viện Bách Nghệ Hà Nội, kết quả ghi nhận từ hệ thống mạng và sổ khiếu nại học vụ thực tế.
+  * `[Assumption]` (Giả định): Những suy đoán hợp lý của nhóm về nguyên nhân tâm lý, tỷ lệ bỡ ngỡ của sinh viên cần được kiểm chứng độc lập thông qua phỏng vấn và khảo sát.
+* **Nguyên tắc tài chính:** Không tự tiện suy diễn số liệu thiệt hại tài chính khi chưa có khảo sát thực tế; đo lường bằng **thời gian lãng phí** hoặc **tỷ lệ công việc hành chính phải làm lại**.
 
-### 3. Chuỗi Liên Kết Nhân Quả Xuyên Tác Nhân (Slide 25)
-* Nỗi đau của cá nhân người dùng không đứng độc lập mà là mắt xích tạo nên tổn thất vận hành của trường:
+#### Nguyên tắc 3: Chuỗi Liên Kết Nhân Quả Xuyên Tác Nhân (Slide 25)
+* Mọi phân tích phải tuân theo chuỗi liên kết nhân quả 4 cấp:
   $$\begin{aligned}
   \text{User Problem (SV)} &\longrightarrow \text{Operational Impact (CBĐT / CBTC)} \\
-  &\longrightarrow \text{Business Problem (Nhà trường)} \longrightarrow \text{Desired Outcomes}
+  &\longrightarrow \text{Business Problem (Học viện Bách Nghệ Hà Nội)} \longrightarrow \text{Desired Outcomes}
   \end{aligned}$$
-* *Ví dụ mắt xích:*
-  1. **Sinh viên:** Không biết mình trượt môn tiên quyết $A$ nên vẫn cố nộp đơn xin đăng ký môn kế tiếp $B$.
-  2. **Cán bộ Đào tạo:** Quá tải vì phải rà soát thủ công bảng điểm của 2.000 sinh viên nộp đơn ngoại lệ.
-  3. **Cán bộ Tài chính:** Xuất hóa đơn học phí môn $B$, sau đó sinh viên bị phòng Đào tạo hủy môn lại phải làm thủ tục hoàn trả / bù trừ công nợ phức tạp.
-  4. **Giảng viên:** Danh sách lớp môn $B$ biến động liên tục trong 3 tuần đầu kỳ, không thể ổn định nhóm học tập và điểm danh.
-  5. **Nhà trường:** Lãng phí tài nguyên phòng học, tăng chi phí nhân sự xử lý đơn thư và giảm độ hài lòng của người học.
+* *Ví dụ mắt xích tại HBA:*
+  1. **Sinh viên:** Bỡ ngỡ với quy chế tín chỉ, không kiểm tra môn tiên quyết nên đăng ký nhầm vào lớp chuyên ngành cao cấp.
+  2. **Cán bộ Đào tạo:** Quá tải vì phải duyệt 4.000 đơn giấy xin cứu xét do hệ thống cũ thời niên chế không tự động chặn đăng ký sai.
+  3. **Cán bộ Tài chính:** Xuất hóa đơn học phí, sau đó sinh viên bị hủy môn lại phải làm thủ tục hoàn trả công nợ phức tạp.
+  4. **Giảng viên:** Danh sách lớp học phần biến động liên tục trong 3 tuần đầu, không thể ổn định nhóm bài tập lớn.
+  5. **Học viện:** Lãng phí tài nguyên phòng học, tăng chi phí làm thêm giờ cho cán bộ và làm suy giảm uy tín cải cách giáo dục.
 
 ---
 
@@ -55,32 +67,32 @@ Tất cả 4 thành viên phải quán triệt 3 nguyên tắc nền tảng sau 
 
 Để tránh tình trạng mỗi thành viên phân tích một hướng rời rạc, cả 4 thành viên thống nhất neo vào cùng một kịch bản nghiệp vụ lõi:
 
-### 1. Kịch Bản Lõi: "Đăng Ký Học Phần, Kiểm Tra Tiên Quyết & Đối Soát Công Nợ Học Phí Đầu Kỳ"
+### 1. Kịch Bản Lõi: "Đăng Ký Học Phần, Kiểm Tra Tiên Quyết & Đối Soát Công Nợ Học Phí Đầu Kỳ Trong Giai Đoạn Chuyển Đổi Sang Tín Chỉ Tại Học Viện Bách Nghệ Hà Nội"
 
 ```mermaid
 flowchart TD
     subgraph S1["1. Chuẩn Bị & Cấu Hình Đợt ĐK"]
-        A["CB Đào tạo (TV2)"] -->|"Thiết lập quy chế, sĩ số tối đa/tối thiểu,<br/>ràng buộc tiên quyết & mở đợt ĐK"| DB[("Dữ liệu Lớp & Môn")]
-        B["CB Tài chính (TV3)"] -->|"Cập nhật đơn giá tín chỉ, đối soát công nợ cũ,<br/>khóa quyền ĐK với SV nợ học phí"| ACC[("Dữ liệu Công nợ")]
+        A["CB Đào tạo (TV2)"] -->|"Chuyển đổi dữ liệu niên chế sang tín chỉ,<br/>cấu hình môn tiên quyết, mở hàng nghìn lớp HP"| DB[("Dữ liệu Lớp & Môn Tín chỉ")]
+        B["CB Tài chính (TV3)"] -->|"Xác định đơn giá từng tín chỉ,<br/>chuyển từ thu trọn gói sang thu theo môn"| ACC[("Dữ liệu Công nợ Tín chỉ")]
     end
 
     subgraph S2["2. Thực Hiện Đăng Ký"]
-        C["Sinh viên (TV1)"] -->|"Tra cứu học phần, kiểm tra tiên quyết,<br/>chọn lịch không trùng kíp, gửi đăng ký"| GATE{"Kiểm tra điều kiện"}
-        GATE -->|"Vi phạm tiên quyết / Trùng lịch / Nợ phí"| ERR["Bị từ chối / Báo lỗi / Nộp đơn ngoại lệ"]
-        GATE -->|"Thỏa mãn điều kiện"| SUC["Ghi nhận đăng ký thành công"]
+        C["Sinh viên (TV1)"] -->|"Lần đầu tự tra cứu cây tiên quyết,<br/>tự xếp kíp học, gửi đăng ký trực tuyến"| GATE{"Kiểm tra điều kiện tín chỉ"}
+        GATE -->|"Vi phạm tiên quyết / Trùng kíp / Nợ phí"| ERR["Bị từ chối / Báo lỗi / Nộp đơn giấy cứu xét"]
+        GATE -->|"Thỏa mãn điều kiện"| SUC["Ghi nhận lớp học phần thành công"]
     end
 
     subgraph S3["3. Xử Lý Sau Đăng Ký"]
-        ERR -->|"Xử lý đơn xin mở thêm lớp / cứu xét"| A
-        SUC -->|"Tính tổng học phí & phát hành hóa đơn"| B
-        SUC -->|"Chốt danh sách lớp chính thức"| D["Giảng viên (TV4)"]
+        ERR -->|"Xử lý 4.000 đơn ngoại lệ bằng Excel niên chế"| A
+        SUC -->|"Tính tổng học phí động theo số TC đã chọn"| B
+        SUC -->|"Bàn giao danh sách lớp hỗn hợp nhiều khóa"| D["Giảng viên (TV4)"]
     end
 
     subgraph S4["4. Hậu Quả Điểm Nghẽn Hiện Tại"]
-        A -.->|"Xử lý đơn giấy thủ công, quá tải"| P2["Điểm nghẽn CBĐT"]
-        B -.->|"Đối soát bank thủ công, khiếu nại phí"| P3["Điểm nghẽn CBTC"]
-        C -.->|"Nghẽn mạng, mất slot, chậm tiến độ"| P1["Điểm nghẽn SV"]
-        D -.->|"Danh sách lớp biến động, thiếu thông tin"| P4["Điểm nghẽn GV"]
+        A -.->|"Vỡ trận vì công cụ cũ không chịu nổi tải"| P2["Điểm nghẽn CBĐT"]
+        B -.->|"Đối soát thủ công 35.000 SV nộp tiền lẻ"| P3["Điểm nghẽn CBTC"]
+        C -.->|"Bỡ ngỡ, nghẽn mạng, trễ tiến độ tốt nghiệp"| P1["Điểm nghẽn SV"]
+        D -.->|"Danh sách lớp biến động suốt 3 tuần đầu"| P4["Điểm nghẽn GV"]
     end
 
     style C fill:#e1f5fe,stroke:#0288d1,stroke-width:2px
@@ -89,14 +101,14 @@ flowchart TD
     style D fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
 ```
 
-### 2. Ma Trận Tác Nhân & Điểm Nghẽn Trọng Tâm Trong Luồng Neo
+### 2. Ma Trận Tác Nhân & Điểm Nghẽn Trọng Tâm Trong Luồng Chuyển Đổi
 
-| Tác nhân | Vai trò trong luồng neo | Điểm nghẽn (Friction Point) hiện tại | Tác động định lượng ước tính |
+| Tác nhân | Vai trò trong luồng neo | Điểm nghẽn (Friction Point) trong giai đoạn chuyển đổi | Tác động định lượng ước tính |
 |---|---|---|---|
-| **Sinh viên (TV1)** | Chọn môn, xếp TKB, thanh toán học phí | Nghẽn mạng giờ mở cổng; không biết trước môn tiên quyết còn thiếu; bị hủy môn muộn do nợ phí dù đã đóng qua ngân hàng | Mất 3–5 giờ trực cổng đăng ký; 15–20% SV phải học chậm kỳ do trượt slot |
-| **Cán bộ Đào tạo (TV2)** | Mở lớp, gán điều kiện, duyệt đơn xin học vượt/bổ sung | Tiếp nhận hàng nghìn đơn xin học vượt/mở thêm lớp bằng giấy hoặc email phân tán; đối soát điểm tiên quyết thủ công | Mất 2 tuần cao điểm (40–60 giờ làm thêm) chỉ để xử lý đơn ngoại lệ |
-| **Cán bộ Tài chính (TV3)** | Tính học phí, đối soát sao kê ngân hàng, xuất biên lai | Dữ liệu chuyển khoản ngân hàng không khớp mã sinh viên; đối soát thủ công từng giao dịch; cập nhật trạng thái nợ chậm | Mất 5–7 ngày đối soát sao kê; tỷ lệ sai lệch đối soát thủ công ~8–12% |
-| **Giảng viên (TV4)** | Nhận danh sách lớp, tổ chức dạy, quản lý chuyên cần | Danh sách lớp thay đổi liên tục trong 2–3 tuần đầu do SV rút/thêm môn; không nắm được thông tin SV có đủ điều kiện tiên quyết | Mất 15 phút đầu mỗi buổi học để ổn định danh sách; khó chia nhóm bài tập lớn |
+| **Sinh viên (TV1)** | Lần đầu tự chọn môn, tự xếp TKB, tự thanh toán học phí theo tín chỉ | Bỡ ngỡ với khái niệm môn tiên quyết/song hành; không biết cách xếp lịch tránh trùng; trực cổng giờ cao điểm bị nghẽn mạng | Mất 4–6 giờ trực cổng đăng ký; 20–25% SV đăng ký hỏng trong đợt đầu do thao tác sai |
+| **Cán bộ Đào tạo (TV2)** | Mở hàng nghìn lớp tín chỉ, kiểm soát sĩ số trần/sàn, duyệt đơn xin học vượt | Dùng công cụ bảng tính Excel cũ thời niên chế để theo dõi; tiếp nhận hàng nghìn đơn giấy xin mở lớp và học vượt | Mất 40–60 giờ làm thêm trong tháng cao điểm; thời gian duyệt 1 đơn mất 15–20 phút |
+| **Cán bộ Tài chính (TV3)** | Chuyển từ thu trọn gói sang thu học phí động theo tín chỉ, đối soát ngân hàng | Dữ liệu chuyển khoản không khớp mã sinh viên do nộp tiền lẻ theo tín chỉ; gạch nợ thủ công từng dòng sao kê | Mất 5–7 ngày đối soát sao kê; tỷ lệ sai lệch đối soát thủ công ~8–12% |
+| **Giảng viên (TV4)** | Nhận danh sách lớp học phần hỗn hợp, giảng dạy theo chuẩn đầu ra tín chỉ | Lớp không còn là tập thể cố định; sinh viên xin rút/thêm môn kéo dài trong 3 tuần đầu; không kiểm soát được nền tảng môn tiên quyết | Mất 15 phút mỗi buổi học trong 3 tuần đầu để ổn định danh sách; khó chia nhóm bài tập lớn |
 
 ---
 
@@ -110,51 +122,36 @@ flowchart TD
 
 #### Nhiệm vụ 1: Thực hành 1 — User Needs & User Problem Statement (Slide 7–15, 56)
 1. **Xác định 3–5 User Needs của Sinh viên:**
-   * Bắt đầu bằng động từ hành động (ví dụ: *Tra cứu*, *Đăng ký*, *Kiểm tra*, *Theo dõi*).
-   * Điền đủ 5 cột: (1) Động từ/Nhu cầu, (2) Bối cảnh, (3) Rào cản, (4) Hệ quả, (5) Gắn thẻ `[Evidence]` hoặc `[Assumption]`.
+   * Bắt đầu bằng động từ hành động, nhấn mạnh vào sự bỡ ngỡ của sinh viên khi chuyển từ niên chế sang tín chỉ (*Tra cứu cây tiên quyết*, *Tự lập thời khóa biểu chống trùng*, *Đăng ký và xác nhận lớp*, *Theo dõi học phí tín chỉ*, *Gửi đơn xin cứu xét học vụ*).
+   * Điền đủ 5 cột kèm tag `[Evidence]` / `[Assumption]`.
 2. **Viết User Problem Statement ưu tiên:**
-   * Chọn 1 nhu cầu đau đớn nhất (Khó khăn khi đăng ký môn do thiếu thông tin môn tiên quyết và lịch trùng lặp).
-   * Viết câu chuẩn từ 50–100 từ theo công thức:
-     $$\text{[Sinh viên]} \text{ gặp khó khăn khi } \text{[mục tiêu]} \text{ trong } \text{[bối cảnh]}, \text{ vì } \text{[trở ngại]}, \text{ dẫn đến } \text{[hệ quả]}.$$
-3. **Liệt kê 2–3 Giả định cần nghiên cứu thêm.**
+   * Độ dài 50–100 từ bám sát bối cảnh Học viện Bách Nghệ Hà Nội:
+     $$\text{[Sinh viên HBA]} \text{ gặp khó khăn khi } \text{[mục tiêu]} \text{ trong } \text{[bối cảnh]}, \text{ vì } \text{[trở ngại]}, \text{ dẫn đến } \text{[hệ quả]}.$$
+3. **Liệt kê 2–3 Giả định cần kiểm chứng thêm.**
 
 #### Nhiệm vụ 2: Thực hành 2 — User Problem Statement Canvas (Slide 16–21, 57)
-* Hoàn thành đầy đủ 8 ô của Canvas theo cấu trúc chuẩn:
-  1. **Who:** Chân dung cụ thể (SV năm 2–4 hệ kỹ sư/cử nhân, tín chỉ tự do).
-  2. **Context:** 1 tuần trước và trong tuần lễ đăng ký học phần đầu kỳ.
-  3. **Goal & Root Problem:** Mục tiêu muốn đạt và bản chất gốc rễ cản trở.
-  4. **Current Alternatives:** Cách SV đang tự xoay xở (hỏi anh chị trên nhóm Facebook, xem file Excel truyền tay, chạy lên phòng đào tạo xin giấy).
-  5. **Alternative Shortcomings:** Nhược điểm của cách cũ (thông tin sai lệch, file lỗi thời, tốn công đi lại).
-  6. **Emotional Impact:** Cảm xúc tiêu cực (lo lắng trễ tiến độ tốt nghiệp, bực bội vì sập web, ức chế).
-  7. **Quantifiable Impact:** Đo lường bằng số liệu (mất 4 giờ mỗi kỳ, chậm tốt nghiệp 1 kỳ nếu trượt môn tiên quyết).
-  8. **Evidence vs. Assumptions:** Phân định rõ điều đã biết và điều cần phỏng vấn.
+* Hoàn thành đầy đủ 8 ô của Canvas cho Sinh viên HBA (Who, Context, Goal & Root Problem, Current Alternatives, Alternative Shortcomings, Emotional Impact, Quantifiable Impact, Evidence vs Assumptions).
 
 #### Nhiệm vụ 3: Thực hành 4 — Lean UX Canvas hoàn chỉnh 8 ô (Slide 33–40, 59–60)
-* Điền trọn vẹn 8 ô kết nối cả góc nhìn người dùng và nhà trường:
-  * **Ô 1 - Business Problem:** Điểm nghẽn từ phía nhà trường khi quy trình ĐKHP thủ công/kém hiệu quả.
-  * **Ô 2 - Business Outcomes:** Chỉ số đo lường thành công (Giảm 50% thời gian xử lý khiếu nại, giảm 80% đơn xin học vượt giấy, tăng tỷ lệ ĐK đúng hạn lên 95%).
-  * **Ô 3 - Users:** Sinh viên (chính) và Cán bộ Đào tạo, Cán bộ Tài chính (phụ).
-  * **Ô 4 - User Outcomes & Benefits:** SV đăng ký xong trong dưới 10 phút, không bị trùng lịch, biết ngay môn học hợp lệ.
-  * **Ô 5 - Solutions:** Gợi ý lộ trình thông minh, cảnh báo sớm môn tiên quyết chưa đạt, xếp TKB tự động chống trùng kíp.
-  * **Ô 6 - Hypotheses:** Viết ít nhất 2 câu giả thuyết theo mẫu:
-    > *"Chúng tôi tin rằng [Business Outcome] sẽ đạt được nếu [Sinh viên] đạt được [User Benefit] với [Tính năng Solution]."*
-  * **Ô 7 - What We Need to Learn First (Riskiest Assumptions):** Giả định rủi ro nhất (Liệu SV có tin tưởng thuật toán tự động gợi ý môn không? Liệu dữ liệu điểm tiên quyết có được cập nhật kịp thời không?).
-  * **Ô 8 - MVP:** Phương án nguyên mẫu tối thiểu để kiểm chứng nhanh mà không tốn công xây hệ thống hoàn chỉnh.
+* Điền trọn vẹn 8 ô kết nối người học và Học viện Bách Nghệ Hà Nội:
+  * **Ô 1 - Business Problem:** Quá tải chuyển đổi từ niên chế sang tín chỉ gây nghẽn mạng và ứ đọng thủ tục.
+  * **Ô 2 - Business Outcomes:** Tỷ lệ đăng ký thành công ngay đợt đầu $\ge 95\%$, giảm 70% đơn khiếu nại.
+  * **Ô 3 - Users:** Sinh viên HBA, Cán bộ Đào tạo, Cán bộ Tài vụ, Giảng viên.
+  * **Ô 4 - User Outcomes & Benefits:** SV nắm rõ lộ trình, đăng ký xong trong $< 5$ phút, không trùng lịch.
+  * **Ô 5 - Solutions:** Công cụ lập lộ trình cá nhân hóa, lưới xếp TKB chống trùng tự động, cổng thanh toán VietQR.
+  * **Ô 6 - Hypotheses:** Đúng cú pháp chuẩn Slide 36: *"Chúng tôi tin rằng [Business Outcome] sẽ đạt được nếu [Sinh viên HBA] đạt được [User Benefit] với [Solution]."*
+  * **Ô 7 - What We Need to Learn First (Riskiest Assumptions):** Sinh viên có sẵn sàng tự lập kế hoạch trước không?
+  * **Ô 8 - MVP:** Nguyên mẫu Clickable Prototype 4 màn hình.
 
 #### Nhiệm vụ 4: Thực hành 5 — MVP & Experiment Plan (Slide 41–42, 61)
 1. **Đặc tả Clickable Prototype (4 bước màn hình cốt lõi):**
-   * Màn hình 1: Bảng điều khiển lộ trình học tập & cảnh báo môn tiên quyết khả dụng.
-   * Màn hình 2: Lưới lọc lớp học phần và tính năng kéo-thả/chọn kíp học chống trùng.
-   * Màn hình 3: Màn hình kiểm tra tổng hợp điều kiện (Tiên quyết ✅, Công nợ ✅, Sĩ số ✅).
-   * Màn hình 4: Xác nhận đăng ký tức thời & Biên lai điện tử tạm tính.
-2. **Kế hoạch kiểm thử với người dùng (Usability Test):**
-   * Đối tượng tham gia: 5–8 sinh viên thuộc các năm khác nhau.
-   * Nhiệm vụ (Task): Thực hiện chọn 4 môn học cho kỳ tới trong vòng 5 phút.
-   * Chỉ số đo lường:
-     * Task Completion Rate (Tỷ lệ hoàn thành): Mục tiêu $\ge 90\%$.
-     * Time on Task (Thời gian thao tác): Mục tiêu $< 3\text{ phút}$.
-     * Error Rate / Help Request (Số lần nhấp lỗi hoặc cần trợ giúp): Mục tiêu $\le 1\text{ lần/SV}$.
-   * Tiêu chí đánh giá thành công / Thất bại và hướng điều chỉnh (Pivot).
+   * Màn hình 1: Lộ trình tín chỉ & Cảnh báo tiên quyết.
+   * Màn hình 2: Lưới chọn lớp học phần & Chống trùng kíp tự động.
+   * Màn hình 3: Kiểm tra tổng hợp điều kiện (Tiên quyết ✅, Không trùng lịch ✅, Sĩ số ✅).
+   * Màn hình 4: Xác nhận đăng ký & Biên lai điện tử tạm tính.
+2. **Kế hoạch kiểm thử Usability Test:**
+   * 8 sinh viên HBA thực hiện 3 nhiệm vụ trong 5 phút.
+   * Đo lường: Tỷ lệ hoàn thành $\ge 85\%$, Thời gian $< 4$ phút, Số lỗi $\le 1$, Điểm SUS $\ge 75$.
 
 ---
 
@@ -163,32 +160,21 @@ flowchart TD
 * **Tài liệu tham chiếu:** Slides 7–19, 22–35, 54, 58 trong `docs/OOAD_Lab_B1-5.md`.
 
 #### Nhiệm vụ 1: Phân tích Tác nhân Cán bộ Đào tạo (Slide 7–19)
-1. **Xác định 3–5 User Needs của Cán bộ Đào tạo:**
-   * Tập trung vào: Mở lớp học phần, kiểm soát sĩ số trần/sàn, kiểm tra sinh viên có đủ điều kiện tiên quyết, duyệt đơn cứu xét/học vượt, chốt TKB.
-   * Lập bảng đầy đủ Động từ, Bối cảnh, Rào cản, Hệ quả, Evidence/Assumption.
-2. **Lập 1 bảng Problem Statement Canvas cho Cán bộ Đào tạo:**
-   * Làm rõ gánh nặng khi phải dùng phần mềm cũ chắp vá kết hợp rà soát bảng tính Excel thủ công.
+1. **Xác định 3–5 User Needs của CBĐT HBA:**
+   * Phản ánh rõ nhiệm vụ điều phối lớp học phần khi chuyển từ niên chế sang tín chỉ.
+2. **Lập bảng Problem Statement Canvas cho CBĐT:**
+   * Làm rõ nỗi đau: Công cụ Excel thời niên chế bị sụp đổ trước hàng nghìn lớp tín chỉ mới.
 
 #### Nhiệm vụ 2: Thực hành 3 — Xác Định Business Problem & Phân Tích Gốc Rễ (Slide 22–32, 54, 58)
-1. **Xây dựng chuỗi lập luận nhân quả 4 cấp:**
-   * Chỉ ra rõ ràng: Nỗi đau của Sinh viên (TV1) kéo theo sự quá tải của Cán bộ Đào tạo (TV2) ra sao, từ đó ảnh hưởng tới chỉ số vận hành của Nhà trường như thế nào.
-2. **Áp dụng kỹ thuật 5 Whys (Năm câu hỏi Vì sao) để tìm nguyên nhân gốc rễ (Slide 28, 35):**
-   * *Problem:* Hàng nghìn sinh viên phải nộp đơn khiếu nại và xếp hàng xin mở thêm lớp mỗi đầu kỳ.
-   * Triển khai chi tiết đủ 5 tầng Why dẫn tới nguyên nhân cốt lõi về quy trình và dữ liệu rời rạc.
-3. **Áp dụng kỹ thuật Fishbone (Biểu đồ xương cá) hoặc 5W-1H (Slide 29, 35):**
-   * Phân tích theo 4 nhóm nguyên nhân: Con người (People), Quy trình (Process), Dữ liệu/Hệ thống (Platform), Quy chế (Policy).
-4. **Viết 3–5 Business Problems chuẩn theo cấu trúc 5 mục (Slide 30–32):**
-   * Mỗi Business Problem bắt buộc viết đủ:
-     * (1) **Context:** Quy trình nào?
-     * (2) **Current State:** Hiện trạng kèm số liệu?
-     * (3) **Problem:** Pain point cốt lõi là gì?
-     * (4) **Impact:** Thiệt hại vận hành, chi phí, uy tín?
-     * (5) **Desired State:** Trạng thái mong muốn sau cải tiến?
-5. **Đề xuất Dữ liệu Vận Hành & Chỉ số KPI đo lường (Slide 26, 27):**
-   * Bảng danh sách các dữ liệu cần thu thập (nhật ký truy cập, số đơn khiếu nại, thời gian phản hồi đơn).
-   * Các KPI đo lường hiệu quả vận hành.
-6. **Chuyển hóa thành danh sách Business Requirements (Slide 34, 54):**
-   * Áp dụng công thức: $\text{Business Problem} \longrightarrow \text{Business Requirement} \longrightarrow \text{System Feature}$.
+1. **Chuỗi lập luận nhân quả 4 cấp:** User Problem (SV) $\rightarrow$ Operational Impact (CBĐT) $\rightarrow$ Business Problem (Học viện) $\rightarrow$ Desired Outcomes.
+2. **Kỹ thuật 5 Whys (Năm câu hỏi Vì sao) (Slide 28, 35):**
+   * Đào sâu 5 tầng câu hỏi, tìm đến nguyên nhân gốc rễ: **Quy trình và công cụ quản lý kế thừa từ thời niên chế không tương thích với quy chế tín chỉ phức tạp.**
+3. **Kỹ thuật Fishbone / 5W-1H (Slide 29, 35):**
+   * Phân tích 4 nhóm: Process, Platform, People, Policy trong bối cảnh chuyển đổi sang tín chỉ.
+4. **Viết 3–5 Business Problems chuẩn cấu trúc 5 mục (Slide 30–32):**
+   * Mỗi Problem viết đủ: (1) Context, (2) Current State, (3) Problem, (4) Impact, (5) Desired State.
+5. **Dữ liệu Vận Hành & Chỉ số KPI đo lường (Slide 26, 27).**
+6. **Danh sách Business Requirements (Slide 34, 54).**
 
 ---
 
@@ -197,32 +183,24 @@ flowchart TD
 * **Tài liệu tham chiếu:** Slides 7–19, 45–51 trong `docs/OOAD_Lab_B1-5.md`.
 
 #### Nhiệm vụ 1: Phân tích Tác nhân Cán bộ Tài chính (Slide 7–19)
-1. **Xác định 3–5 User Needs của Cán bộ Tài chính:**
-   * Tập trung vào: Định giá tín chỉ theo chương trình đào tạo, tự động hóa tính toán học phí theo danh sách tín chỉ đăng ký thực tế, đối soát giao dịch ngân hàng theo thời gian thực, cấp quyền thi/xác nhận hoàn thành nghĩa vụ tài chính, xuất hóa đơn điện tử.
-   * Lập bảng chuẩn 5 cột kèm tag `[Evidence]` / `[Assumption]`.
-2. **Lập 1 bảng Problem Statement Canvas cho Cán bộ Tài chính:**
-   * Làm bật nỗi đau: Đối soát thủ công hàng chục nghìn giao dịch chuyển khoản ngân hàng bị sai cú pháp, sinh viên nộp tiền nhưng hệ thống chưa mở khóa học phần kịp thời.
+1. **Xác định 3–5 User Needs của CBTC HBA:**
+   * Nổi bật bài toán chuyển từ thu học phí phẳng trọn gói sang thu tiền lẻ động theo số tín chỉ đăng ký thực tế.
+2. **Lập bảng Problem Statement Canvas cho CBTC:**
+   * Làm bật nỗi đau: Đối soát thủ công hàng chục nghìn giao dịch chuyển khoản ngân hàng bị sai cú pháp.
 
 #### Nhiệm vụ 2: Lập Hồ Sơ Đề Xuất Hệ Thống — System Request (Slide 45–51)
-* Soạn thảo văn bản **System Request chính thức chuẩn 11 mục** của giai đoạn Khởi tạo Dự án (Planning Phase):
-  1. **Project Title:** Tên dự án chuẩn mực (ví dụ: *Hệ thống Đăng ký Học phần và Quản trị Đào tạo Trực tuyến Thế hệ mới - HUST SIS*).
-  2. **Project Sponsor / Requestor:** Ban Giám hiệu, Phòng Đào tạo & Phòng Tài chính Kế toán.
-  3. **Business Need / Problem Statement:** Khái quát nhu cầu chuyển đổi số và giải quyết triệt để điểm nghẽn thủ công hiện hành.
-  4. **Project Vision / Goals:** Mục tiêu cụ thể, định lượng (SMART).
-  5. **Business Benefits:** Bắt buộc phân tích chi tiết ở 3 khía cạnh (có bảng so sánh Hiện tại vs Tương lai):
-     * *Lợi ích kinh tế:* Giảm thất thoát học phí, tiết kiệm giấy tờ in ấn, giảm chi phí làm thêm giờ của nhân sự.
-     * *Lợi ích vận hành:* Giảm thời gian xử lý đối soát từ 7 ngày xuống còn dưới 1 phút; giảm thời gian xác nhận nộp phí từ 24h xuống thời gian thực.
-     * *Lợi ích chiến lược:* Chuẩn hóa dữ liệu toàn trường, nâng cao hình ảnh đại học số hiện đại.
-  6. **High-level Requirements:** Danh sách 8–10 yêu cầu chức năng và phi chức năng cấp cao.
-  7. **Constraints / Assumptions:** Ngân sách giả định, thời gian thực hiện, ràng buộc hạ tầng, công nghệ tương thích.
-  8. **Feasibility Assessment (Đánh giá tính khả thi 4 chiều):**
-     * *Technical Feasibility:* Công nghệ có khả thi với hạ tầng trường đại học không?
-     * *Economic Feasibility:* Phân tích chi phí - lợi ích (Cost-Benefit Analysis) định tính và định lượng.
-     * *Operational Feasibility:* Cán bộ và sinh viên có sẵn sàng đón nhận và dễ dàng sử dụng không?
-     * *Schedule Feasibility:* Lộ trình triển khai có kịp cho năm học mới không?
-  9. **Expected Deliverables:** Các sản phẩm bàn giao dự kiến (Phần mềm, CSDL, Tài liệu phân tích, Hướng dẫn sử dụng).
-  10. **Risks & Mitigation:** Nhận diện ít nhất 4 rủi ro chính (Rủi ro kỹ thuật sập tải, rủi ro sai sót chuyển khoản ngân hàng, rủi ro người dùng kháng cự thay đổi) kèm phương án giảm thiểu cụ thể.
-  11. **Approval / Sign-off:** Khung ký duyệt phê duyệt dự án.
+* Soạn thảo văn bản **System Request chính thức chuẩn 11 mục** của HBA SIS:
+  1. **Project Title:** Hệ thống Quản trị Đào tạo Đại học theo Học chế Tín chỉ và Thanh toán Học phí Trực tuyến (HBA SIS-Pay).
+  2. **Project Sponsor / Requestor:** Ban Giám đốc Học viện Bách Nghệ Hà Nội, Phòng Đào tạo & Phòng Tài vụ.
+  3. **Business Need / Problem Statement:** Khắc phục triệt để sự đổ vỡ của quy trình thủ công thời niên chế khi chuyển sang tín chỉ.
+  4. **Project Vision / Goals:** Mục tiêu cụ thể định lượng (SMART).
+  5. **Business Benefits:** Phân tích chi tiết Lợi ích Kinh tế, Lợi ích Vận hành (bảng số liệu trước/sau), Lợi ích Chiến lược.
+  6. **High-level Requirements:** 8–10 yêu cầu chức năng và phi chức năng.
+  7. **Constraints / Assumptions:** Ngân sách, thời gian 6 tháng, hạ tầng máy chủ.
+  8. **Feasibility Assessment:** Đánh giá 4 chiều (Technical, Economic, Operational, Schedule).
+  9. **Expected Deliverables:** Các sản phẩm bàn giao phần mềm, CSDL, tài liệu.
+  10. **Risks & Mitigation:** Nhận diện 4 rủi ro chính kèm biện pháp giảm thiểu.
+  11. **Approval / Sign-off:** Khung ký duyệt của lãnh đạo Học viện.
 
 ---
 
@@ -231,35 +209,21 @@ flowchart TD
 * **Tài liệu tham chiếu:** Slides 7–19, 20, 51–55 trong `docs/OOAD_Lab_B1-5.md`.
 
 #### Nhiệm vụ 1: Phân tích Tác nhân Giảng viên (Slide 7–19)
-1. **Xác định 3–5 User Needs của Giảng viên:**
-   * Tập trung vào: Tiếp nhận danh sách lớp ổn định đúng hạn, theo dõi sĩ số thực, tra cứu nhanh thông tin sinh viên và điều kiện học phần, quản lý lịch dạy, ghi nhận điểm chuyên cần và giữa kỳ.
-   * Lập bảng chuẩn 5 cột kèm tag `[Evidence]` / `[Assumption]`.
-2. **Lập 1 bảng Problem Statement Canvas cho Giảng viên:**
-   * Làm rõ nỗi đau: Danh sách sinh viên thay đổi liên tục trong 3 tuần đầu kỳ, sinh viên chưa đủ môn tiên quyết vẫn lọt vào lớp làm ảnh hưởng chất lượng giảng dạy chung.
+1. **Xác định 3–5 User Needs của GV HBA:**
+   * Tiếp nhận danh sách lớp ổn định, nắm bắt kiến thức tiên quyết của sinh viên, quản lý lớp hỗn hợp nhiều khóa.
+2. **Lập bảng Problem Statement Canvas cho Giảng viên:**
+   * Nỗi đau: Lớp học biến động suốt 3 tuần đầu, lãng phí thời gian ổn định lớp học phần.
 
 #### Nhiệm vụ 2: Biên Soạn Báo Cáo Khám Phá Vấn Đề — Problem Discovery Report (Slide 52, 55)
-* Tổng hợp dữ liệu từ cả 4 thành viên để viết hoàn chỉnh **5 phần của Problem Discovery Report**:
-  1. **Section 1: Executive Summary (The Big Takeaway):** Tóm tắt 1 trang bức tranh toàn cảnh, quy mô người dùng ảnh hưởng (35.000 sinh viên, 1.500 giảng viên, hàng trăm cán bộ), và thông điệp then chốt giải thích vì sao hệ thống đào tạo hiện tại cần được nâng cấp toàn diện.
-  2. **Section 2: Problem Statement (User-Centric Anchor):** Phát biểu vấn đề chung của toàn bộ hệ sinh thái và lấy phát biểu vấn đề của Sinh viên (từ TV1) làm mỏ neo trung tâm.
-  3. **Section 3: Background & Context (The Business "Why"):** Bối cảnh vận hành đào tạo theo học chế tín chỉ đặc thù của ĐHBK Hà Nội (tự chọn linh hoạt, phụ thuộc tiên quyết phức tạp, phân kỳ học phí đa dạng) và lý do kinh doanh buộc Nhà trường phải chuyển đổi.
-  4. **Section 4: Research Methodology & Inputs (Data Origins):** Thiết kế phương pháp nghiên cứu thực địa giả định:
-     * Bộ câu hỏi phỏng vấn sâu (In-depth interview) dành cho 4 nhóm tác nhân (SV, CBĐT, CBTC, GV).
-     * Mẫu phiếu khảo sát định lượng (Survey questionnaire) 10 câu hỏi trắc nghiệm đo lường điểm nghẽn.
-     * Phương pháp phân tích tài liệu (Quy chế học vụ, nhật ký hỗ trợ kỹ thuật).
-  5. **Section 5: Key Insights & User Friction Points:** Lập **Ma trận Điểm Nghẽn Giao Thoa** tổng hợp toàn bộ 4 tác nhân, phân tích các điểm nghẽn chéo nhau khi các tác nhân tương tác.
+* Viết hoàn chỉnh **5 phần của Problem Discovery Report** cho Học viện Bách Nghệ Hà Nội:
+  1. **Executive Summary:** Toàn cảnh cú sốc chuyển đổi từ niên chế sang tín chỉ của 35.000 SV và 1.500 GV.
+  2. **Problem Statement:** Phát biểu vấn đề chung và mỏ neo người dùng (Sinh viên HBA).
+  3. **Background & Context:** Bối cảnh chuyển đổi mô hình đào tạo của Học viện Bách Nghệ Hà Nội.
+  4. **Research Methodology & Inputs:** Kịch bản phỏng vấn sâu 4 tác nhân, Bảng hỏi khảo sát 10 câu, phân tích tài liệu quy chế HBA.
+  5. **Key Insights & User Friction Points:** Ma trận điểm nghẽn giao thoa giữa 4 tác nhân.
 
 #### Nhiệm vụ 3: Trả Lời Bộ Câu Hỏi Phản Biện & Tự Đánh Giá (Slide 20, 51, 53, 54)
-1. **Giải quyết bộ 4 câu hỏi phản biện cốt lõi (Slide 20, 54):**
-   * *Nhu cầu nào là sống còn đối với người dùng mục tiêu?*
-   * *Nhóm có bằng chứng thực tế về nguyên nhân hay chỉ đang suy đoán?*
-   * *Vấn đề có thể vẫn tồn tại ngay cả khi đã xây dựng phần mềm mới không?*
-   * *Có cách nào giải quyết triệt để vấn đề mà KHÔNG cần phát triển phần mềm mới (ví dụ: tối ưu lại quy trình hành chính)?*
-2. **Rà soát chất lượng toàn nhóm theo 5 Tiêu chí đánh giá của giảng viên (Slide 51, 53):**
-   * (1) Nhu cầu và vấn đề có rõ ràng, không chứa sẵn giải pháp?
-   * (2) Bằng chứng và giả định có được tách bạch minh bạch?
-   * (3) Business Problem có mắt xích hợp lý với User Problem?
-   * (4) Giải pháp và giả thuyết Lean UX có nhất quán?
-   * (5) Kế hoạch thử nghiệm MVP có sinh ra dữ liệu đánh giá hữu ích?
+* Giải quyết 4 câu hỏi phản biện cốt lõi và tự đánh giá theo 5 tiêu chí chấm điểm môn học.
 
 ---
 
@@ -269,69 +233,63 @@ flowchart TD
 
 ```mermaid
 gantt
-    title TIẾN ĐỘ THỰC HIỆN BÀI TẬP 1 (4 NGÀY)
+    title TIẾN ĐỘ THỰC HIỆN BÀI TẬP 1 — HỌC VIỆN BÁCH NGHỆ HÀ NỘI
     dateFormat  YYYY-MM-DD
     axisFormat  Ngày %d
     
     section Họp Đồng Bộ
-    Chốt Neo & Đọc Tài Liệu     :milestone, m1, 2026-10-25, 0d
+    Chốt Bối Cảnh HBA & Neo Đồng Bộ :milestone, m1, 2026-10-25, 0d
     
     section TV1 - Sinh Viên
-    TH1 & TH2 User Canvas       :a1, 2026-10-25, 1d
-    TH4 Lean UX & TH5 MVP       :a2, 2026-10-26, 1d
+    TH1 & TH2 User Canvas           :a1, 2026-10-25, 1d
+    TH4 Lean UX & TH5 MVP           :a2, 2026-10-26, 1d
     
     section TV2 - CB Đào Tạo
-    TH1 & TH2 User Canvas       :b1, 2026-10-25, 1d
-    TH3 Business Problem & 5Whys:b2, 2026-10-26, 1d
+    TH1 & TH2 User Canvas           :b1, 2026-10-25, 1d
+    TH3 Business Problem & 5Whys    :b2, 2026-10-26, 1d
     
     section TV3 - CB Tài Chính
-    TH1 & TH2 User Canvas       :c1, 2026-10-25, 1d
-    System Request (11 mục)     :c2, 2026-10-26, 1d
+    TH1 & TH2 User Canvas           :c1, 2026-10-25, 1d
+    System Request (11 mục)         :c2, 2026-10-26, 1d
     
     section TV4 - Giảng Viên
-    TH1 & TH2 User Canvas       :d1, 2026-10-25, 1d
-    Problem Discovery Report    :d2, 2026-10-26, 1d
+    TH1 & TH2 User Canvas           :d1, 2026-10-25, 1d
+    Problem Discovery Report        :d2, 2026-10-26, 1d
     
     section Tổng Hợp & Đánh Giá
-    Ghép Bài & Phản Biện Chéo   :crit, e1, 2026-10-27, 1d
-    Rà Soát Tiêu Chí & Hoàn Thiện:crit, e2, 2026-10-28, 1d
+    Ghép Bài & Phản Biện Chéo       :crit, e1, 2026-10-27, 1d
+    Rà Soát Tiêu Chí & Hoàn Thiện   :crit, e2, 2026-10-28, 1d
 ```
-
-* **Ngày 0 (Khởi động - 15 phút):** Toàn nhóm đọc kỹ Phần II của tài liệu này để cùng hiểu chung kịch bản Đăng ký học phần.
-* **Ngày 1:** Tất cả 4 thành viên hoàn thành song song **Phần A (TH1 - User Needs)** và **Phần B (TH2 - Problem Statement Canvas)** của tác nhân mình phụ trách.
-* **Ngày 2:** Mỗi thành viên tập trung làm sâu chuyên đề lớn của mình (TV1: Lean UX + MVP; TV2: Business Problem & 5 Whys; TV3: System Request; TV4: Báo cáo khám phá vấn đề).
-* **Ngày 3:** TV4 thu thập kết quả từ TV1, TV2, TV3 để hoàn thiện Section 2 và Section 5 trong Báo cáo. Cả nhóm thực hiện rà soát chéo (Cross-review).
-* **Ngày 4:** Sửa chữa các điểm chưa khớp, rà soát 5 tiêu chí chấm điểm và chốt bộ hồ sơ hoàn chỉnh.
 
 ---
 
 ### 2. Checklist Nghiệm Thu Đầu Ra Từng Thành Viên
 
 #### ✅ Checklist Thành viên 1 (Sinh viên + Lean UX + MVP)
-- [ ] Bảng User Needs có ít nhất 3 nhu cầu, bắt đầu bằng động từ hành động.
-- [ ] User Problem Statement không chứa từ ngữ giải pháp (không có "cần app", "thiếu web"), độ dài 50–100 từ.
+- [ ] Bảng User Needs có ít nhất 3 nhu cầu, bắt đầu bằng động từ hành động, phản ánh đúng sự bỡ ngỡ của sinh viên HBA khi chuyển sang tín chỉ.
+- [ ] User Problem Statement không chứa từ ngữ giải pháp, độ dài 50–100 từ.
 - [ ] Bảng Problem Statement Canvas có đủ 8 ô, ô Quantifiable Impact có đơn vị đo lường cụ thể.
 - [ ] Lean UX Canvas điền đủ 8 ô; Ô số 6 viết đúng cú pháp giả thuyết chuẩn: *"Chúng tôi tin rằng..."*.
 - [ ] Clickable Prototype đặc tả đủ 4 bước màn hình mạch lạc.
-- [ ] Kế hoạch kiểm thử có chỉ số rõ ràng (Tỷ lệ hoàn thành %, Thời gian thao tác phút, Số lỗi).
+- [ ] Kế hoạch kiểm thử có chỉ số rõ ràng (Tỷ lệ hoàn thành %, Thời gian thao tác phút, Số lỗi, Điểm SUS).
 
 #### ✅ Checklist Thành viên 2 (Cán bộ Đào tạo + Business Problem)
-- [ ] Bảng User Needs và Canvas của Cán bộ Đào tạo làm nổi bật gánh nặng xử lý ngoại lệ thủ công.
-- [ ] Chuỗi lập luận nhân quả liên kết chặt chẽ: Nỗi đau SV $\rightarrow$ Quá tải CBĐT $\rightarrow$ Thiệt hại Nhà trường.
-- [ ] Biểu đồ / Bảng 5 Whys đào sâu đủ 5 tầng câu hỏi tìm đến nguyên nhân quy trình/dữ liệu gốc rễ.
+- [ ] Bảng User Needs và Canvas của Cán bộ Đào tạo làm nổi bật sự đổ vỡ của công cụ Excel niên chế trước hàng nghìn lớp tín chỉ.
+- [ ] Chuỗi lập luận nhân quả liên kết chặt chẽ: Nỗi đau SV HBA $\rightarrow$ Quá tải CBĐT $\rightarrow$ Thiệt hại Học viện.
+- [ ] Biểu đồ / Bảng 5 Whys đào sâu đủ 5 tầng câu hỏi tìm đến nguyên nhân gốc rễ về sự lệch pha giữa công cụ cũ và quy chế mới.
 - [ ] Có ít nhất 3 Business Problems viết chuẩn 5 thành phần: Context, Current State, Problem, Impact, Desired State.
 - [ ] Bảng chỉ số KPI đo lường vận hành và danh sách Business Requirements tương ứng.
 
 #### ✅ Checklist Thành viên 3 (Cán bộ Tài chính + System Request)
-- [ ] Bảng User Needs và Canvas của Cán bộ Tài chính phân tích sâu khâu đối soát và công nợ học phí.
-- [ ] Hồ sơ System Request đủ 11 mục không thiếu mục nào.
+- [ ] Bảng User Needs và Canvas của Cán bộ Tài chính phân tích sâu khâu thu học phí lẻ theo tín chỉ và đối soát ngân hàng.
+- [ ] Hồ sơ System Request đủ 11 mục không thiếu mục nào, tên tổ chức là Học viện Bách Nghệ Hà Nội.
 - [ ] Mục Business Benefits phân tích chi tiết cả 3 mặt: Kinh tế, Vận hành (có số liệu trước/sau), Chiến lược.
 - [ ] Mục Feasibility Assessment đánh giá chi tiết cả 4 khía cạnh: Kỹ thuật, Kinh tế, Vận hành, Lịch trình.
 - [ ] Có bảng nhận diện ít nhất 4 rủi ro và biện pháp giảm thiểu tương ứng.
 
 #### ✅ Checklist Thành viên 4 (Giảng viên + Problem Discovery Report)
-- [ ] Bảng User Needs và Canvas của Giảng viên nêu bật vấn đề biến động danh sách lớp và chuẩn bị giảng dạy.
-- [ ] Problem Discovery Report có đủ 5 phần theo chuẩn Slide 52.
-- [ ] Phần 4 có kịch bản phỏng vấn và câu hỏi khảo sát cụ thể cho cả 4 tác nhân.
+- [ ] Bảng User Needs và Canvas của Giảng viên nêu bật vấn đề bỡ ngỡ với lớp học phần hỗn hợp sinh viên nhiều khóa.
+- [ ] Problem Discovery Report có đủ 5 phần theo chuẩn Slide 52, bối cảnh Học viện Bách Nghệ Hà Nội chuyển đổi niên chế sang tín chỉ.
+- [ ] Phần 4 có kịch bản phỏng vấn và câu hỏi khảo sát cụ thể cho cả 4 tác nhân tại HBA.
 - [ ] Phần 5 có Ma trận Điểm Nghẽn Giao Thoa giữa 4 tác nhân.
 - [ ] Trả lời thấu đáo 4 câu hỏi phản biện (Slide 20, 54) và đánh giá đạt 5 tiêu chí chấm điểm (Slide 51, 53).

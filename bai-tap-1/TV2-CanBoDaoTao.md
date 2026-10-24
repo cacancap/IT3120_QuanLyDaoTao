@@ -1,10 +1,12 @@
 # PHIẾU BÀI LÀM BÀI TẬP 1 — THÀNH VIÊN 2
 ## TÁC NHÂN: CÁN BỘ ĐÀO TẠO (CBĐT) & CHUYÊN ĐỀ BUSINESS PROBLEM + 5 WHYS
+### ĐƠN VỊ: HỌC VIỆN BÁCH NGHỆ HÀ NỘI (HBA) — GIAI ĐOẠN CHUYỂN ĐỔI SANG TÍN CHỈ
 
 > **Thông tin thành viên:**
 > - Họ và tên: `[Điền họ và tên]`
 > - Mã số sinh viên: `[Điền MSSV]`
-> - Tác nhân phụ trách chính: **Cán bộ Đào tạo (CBĐT)**
+> - Tác nhân phụ trách chính: **Cán bộ Đào tạo (Phòng Đào tạo HBA)**
+> - Bối cảnh nghiên cứu: **Bộ máy quản lý đào tạo dùng công cụ niên chế cũ để điều phối hàng nghìn lớp tín chỉ mới dẫn đến tình trạng quá tải nghiêm trọng**
 > - Hạng mục bài tập đảm nhận: **TH1 (User Needs của CBĐT) + TH2 (Problem Canvas của CBĐT) + TH3 (Chuyên đề Business Problem, Phân tích 5 Whys & Chỉ số KPI)**
 > - Tài liệu slide tham chiếu: Slide 7–19, 22–35, 54, 58 trong `docs/OOAD_Lab_B1-5.md`
 
@@ -12,55 +14,55 @@
 
 ## PHẦN A: THỰC HÀNH 1 — USER NEEDS CỦA CÁN BỘ ĐÀO TẠO (SLIDE 7–15)
 
-### A.1. Bảng xác định Nhu cầu Người dùng (User Needs) của Cán bộ Đào tạo
-*Lưu ý: Bắt đầu bằng động từ hành động, phản ánh nhiệm vụ nghiệp vụ quản lý đào tạo.*
+### A.1. Bảng xác định Nhu cầu Người dùng (User Needs) của Cán bộ Đào tạo HBA
+*Lưu ý: Bắt đầu bằng động từ hành động, phản ánh áp lực điều phối lớp học phần khi chuyển từ niên chế sang tín chỉ.*
 
 | Mã | Nhu cầu người dùng (Bắt đầu bằng động từ) | Bối cảnh xảy ra | Rào cản hiện tại | Hệ quả thực tế | Phân loại |
 |---|---|---|---|---|---|
-| **UN-CBĐT-01** | **Thiết lập và công bố** kế hoạch mở lớp học phần và thời khóa biểu trước mỗi học kỳ | 4–6 tuần trước khi học kỳ mới bắt đầu, khi các Viện/Khoa gửi dự kiến phân công giảng dạy | Phải tổng hợp thủ công từ hàng chục file Excel phân tán của các bộ môn; xung đột phòng học và giảng viên khó phát hiện tự động | Lịch học bị trùng phòng, trùng giờ giảng viên, phải điều chỉnh nhiều lần gây chậm tiến độ mở cổng đăng ký | `[Evidence]` |
-| **UN-CBĐT-02** | **Cấu hình và kiểm soát** các quy tắc điều kiện tiên quyết và giới hạn sĩ số của từng lớp | Khi chuẩn bị dữ liệu đợt đăng ký tín chỉ | Hệ thống cũ không hỗ trợ kiểm tra điều kiện tiên quyết phức tạp (ví dụ: chuỗi tiên quyết hoặc điều kiện học phần song hành); phải nhập tay giới hạn | Sinh viên không đủ điều kiện vẫn đăng ký được, hoặc lớp quá tải vượt quá công suất phòng học thực tế | `[Evidence]` |
-| **UN-CBĐT-03** | **Tiếp nhận và xử lý** các đơn xin học vượt, học cải thiện, hoặc mở thêm lớp học phần | Trong suốt 2 tuần đăng ký và tuần đầu học kỳ | Tiếp nhận đơn bằng giấy hoặc email cá nhân; phải đối soát hồ sơ học tập của từng sinh viên qua nhiều màn hình khác nhau | Quá tải đơn thư, thời gian xử lý kéo dài (3–7 ngày), sinh viên phải chờ đợi trong tình trạng lo âu | `[Evidence]` |
-| **UN-CBĐT-04** | **Theo dõi và điều tiết** sĩ số thực tế của các lớp học phần (hủy lớp thiếu sĩ số / tách lớp quá tải) | Sau khi kết thúc đợt đăng ký chính thức | Dữ liệu sĩ số không được cập nhật tập trung theo thời gian thực; việc liên hệ với sinh viên thuộc lớp bị hủy gặp nhiều khó khăn | Chậm ra quyết định hủy lớp; sinh viên không kịp đăng ký lớp thay thế, ảnh hưởng quyền lợi học tập | `[Assumption]` |
-| **UN-CBĐT-05** | **Khóa và xuất** danh sách lớp chính thức để bàn giao cho Giảng viên và Phòng Thanh tra | Tuần học đầu tiên của học kỳ | Danh sách lớp liên tục biến động do sinh viên vẫn rút môn hoặc xin vào bổ sung; dữ liệu tài chính chưa chốt | Giảng viên nhận danh sách lớp không chuẩn xác, khó khăn trong quản lý chuyên cần và chấm bài | `[Assumption]` |
+| **UN-CBĐT-01** | **Chuyển đổi và thiết lập** kế hoạch mở hàng nghìn lớp học phần tín chỉ thay vì vài chục lớp niên chế cố định | 6–8 tuần trước khi học kỳ mới bắt đầu, khi các Khoa/Viện gửi dự thảo phân công giảng dạy | Trước đây chỉ cần xếp lịch cho 50–70 lớp hành chính cố định; nay số lượng lớp học phần bùng nổ lên gấp hàng chục lần mà vẫn phải quản lý bằng các file Excel rời rạc | Xung đột phòng học, trùng giờ giảng viên diễn ra phổ biến; phải sửa đổi thời khóa biểu nhiều lần làm chậm ngày mở cổng đăng ký | `[Evidence]` |
+| **UN-CBĐT-02** | **Cấu hình và kiểm soát** các ràng buộc môn tiên quyết và giới hạn sĩ số của từng lớp học phần | Giai đoạn chuẩn bị dữ liệu đợt đăng ký tín chỉ | Hệ thống phần mềm cũ thời niên chế không có bộ máy kiểm tra điều kiện tiên quyết phức tạp; cán bộ phải nhập tay giới hạn sĩ số từng lớp | Sinh viên chưa đủ điều kiện vẫn lọt vào lớp; các lớp chuyên ngành bị quá tải vượt công suất phòng học thực tế | `[Evidence]` |
+| **UN-CBĐT-03** | **Tiếp nhận và xử lý** hơn 4.000 đơn xin học vượt, học cải thiện, hoặc mở thêm lớp học phần của sinh viên | Suốt 2 tuần đăng ký và tuần đầu học kỳ tín chỉ | Sinh viên chưa quen quy chế nên nộp đơn ồ ạt bằng giấy; cán bộ phải tra cứu học bạ của từng sinh viên qua nhiều file dữ liệu cũ để xét duyệt thủ công | Cán bộ kiệt sức vì quá tải; thời gian trả kết quả đơn kéo dài từ 5 đến 7 ngày, sinh viên nháo nhác chờ đợi | `[Evidence]` |
+| **UN-CBĐT-04** | **Theo dõi và ra quyết định** hủy các lớp học phần không đủ sĩ số sàn hoặc tách các lớp quá tải | Ngay sau khi đóng đợt đăng ký chính thức | Dữ liệu sĩ số không được cập nhật tập trung theo thời gian thực; việc liên lạc với sinh viên thuộc diện lớp bị hủy gặp nhiều bế tắc | Chậm ra quyết định hủy lớp; sinh viên không kịp trở tay đăng ký lớp thay thế, phát sinh khiếu nại gay gắt | `[Assumption]` |
+| **UN-CBĐT-05** | **Khóa và xuất** danh sách lớp học phần chính thức cho Giảng viên trước ngày khai giảng | Tuần học đầu tiên của học kỳ | Danh sách lớp liên tục biến động do sinh viên vẫn rút môn hoặc xin vào bổ sung; dữ liệu tài chính chưa kịp gạch nợ | Giảng viên nhận danh sách lớp không chuẩn xác, khó khăn trong quản lý chuyên cần và chia nhóm học tập | `[Assumption]` |
 
 ---
 
 ### A.2. Phát biểu Vấn đề của Cán bộ Đào tạo (User Problem Statement)
 > **Phát biểu vấn đề lựa chọn:**
 > 
-> "Cán bộ Phòng Đào tạo gặp áp lực quá tải nghiêm trọng khi điều phối lịch học và xử lý các yêu cầu đăng ký học vụ trong các tuần cao điểm đầu kỳ, vì các quy tắc ràng buộc tiên quyết và sĩ số phải kiểm tra thủ công trên nhiều nguồn dữ liệu rời rạc, dẫn đến việc xử lý đơn thư bị chậm trễ từ 3 đến 7 ngày, phát sinh nhiều sai sót trong danh sách lớp và gây bức xúc lớn cho cả giảng viên lẫn sinh viên."
+> "Cán bộ Phòng Đào tạo Học viện Bách Nghệ Hà Nội gặp áp lực quá tải nghiêm trọng khi điều phối lịch học và xử lý các yêu cầu học vụ trong các đợt đăng ký tín chỉ đầu tiên, vì các công cụ bảng tính thủ công kế thừa từ thời niên chế không thể xử lý nổi sự bùng nổ của hàng nghìn lớp học phần và các quy tắc môn tiên quyết phức tạp, dẫn đến việc xử lý đơn thư bị chậm trễ từ 5 đến 7 ngày, phát sinh nhiều sai sót trong danh sách lớp và gây bức xúc lớn cho cả giảng viên lẫn sinh viên."
 
 ---
 
 ## PHẦN B: THỰC HÀNH 2 — USER PROBLEM STATEMENT CANVAS CHO CÁN BỘ ĐÀO TẠO (SLIDE 16–21)
 
-| STT | Thành phần Canvas | Phân tích chi tiết đối với Cán bộ Đào tạo |
+| STT | Thành phần Canvas | Phân tích chi tiết đối với Cán bộ Đào tạo HBA |
 |---|---|---|
-| **1** | **Who** (Ai chịu nỗi đau?) | Chuyên viên quản lý đào tạo, cán bộ giáo vụ phụ trách lập thời khóa biểu và xử lý học vụ tại Phòng Đào tạo và Văn phòng các Viện/Khoa. |
-| **2** | **Context** (Xảy ra khi nào, ở đâu?) | Giai đoạn chuẩn bị mở kỳ học mới và đợt cao điểm đăng ký học phần (kéo dài khoảng 3–4 tuần) tại văn phòng làm việc Phòng Đào tạo. |
-| **3** | **Goal & Root Problem** (Mục tiêu & Bản chất vấn đề) | - **Mục tiêu:** Vận hành đợt đăng ký thông suốt, tối ưu hóa công suất phòng học, đảm bảo 100% sinh viên đăng ký đúng quy chế và bàn giao danh sách lớp chuẩn cho giảng viên đúng hạn.<br>- **Bản chất vấn đề:** Thiếu công cụ tự động hóa việc thẩm định quy chế đào tạo và đồng bộ dữ liệu thời gian thực giữa Đào tạo - Tài chính - Giảng viên. |
-| **4** | **Current Alternatives** (Cách đang tự giải quyết) | - Nhận đơn giấy tại bàn một cửa, ghi sổ theo dõi thủ công.<br>- Tra cứu bảng điểm sinh viên trên phần mềm quản lý điểm cũ để kiểm tra môn tiên quyết từng người một.<br>- Dùng bảng tính Excel ngoại tuyến để cộng trừ sĩ số và lập danh sách lớp mở bổ sung. |
-| **5** | **Alternative Shortcomings** (Nhược điểm của cách hiện tại) | - Tốn rất nhiều nhân lực và thời gian cho các thao tác lặp đi lặp lại.<br>- Dễ xảy ra sai sót con người (bỏ sót đơn, nhìn nhầm mã môn, tính sai điều kiện).<br>- Không có cơ chế lưu vết lịch sử xử lý đơn để giải trình khi có khiếu nại. |
-| **6** | **Emotional Impact** (Tác động cảm xúc) | - Căng thẳng tột độ (burnout) do phải làm thêm giờ liên tục trong mùa cao điểm.<br>- Ức chế khi phải đối mặt với thái độ bức xúc của phụ huynh và sinh viên xếp hàng chờ đợi.<br>- Lo lắng về trách nhiệm hành chính khi để lọt sai phạm quy chế. |
-| **7** | **Quantifiable Impact** (Tác động định lượng - Kèm đơn vị) | - **Thời gian ngoài giờ:** Mỗi cán bộ phải làm thêm 40–60 giờ trong tháng cao điểm.<br>- **Khối lượng đơn từ:** Tiếp nhận và xử lý thủ công từ 3.000 đến 5.000 đơn xin học vụ mỗi học kỳ.<br>- **Thời gian xử lý:** Trung bình mất 15–20 phút để kiểm tra và xử lý 1 trường hợp đơn ngoại lệ. |
-| **8** | **Evidence vs. Assumptions** (Bằng chứng và Giả định) | - `[Evidence]`: Quy định kiểm tra môn học tiên quyết và cảnh báo học vụ được quy định cứng trong Quy chế Đào tạo ĐHBK Hà Nội; cảnh sinh viên xếp hàng nộp đơn là hiện tượng thực tế.<br>- `[Assumption]`: Giả định 70% số đơn xin cứu xét có thể tự động duyệt nếu hệ thống có thuật toán kiểm tra ràng buộc trước. |
+| **1** | **Who** (Ai chịu nỗi đau?) | Chuyên viên quản lý đào tạo, cán bộ giáo vụ phụ trách thời khóa biểu và xử lý học vụ tại Phòng Đào tạo và Văn phòng các Khoa/Viện thuộc Học viện Bách Nghệ Hà Nội. |
+| **2** | **Context** (Xảy ra khi nào, ở đâu?) | Giai đoạn chuẩn bị học kỳ mới và cao điểm đợt đăng ký tín chỉ đầu tiên theo quy chế mới (kéo dài 3–4 tuần) tại Văn phòng Phòng Đào tạo HBA. |
+| **3** | **Goal & Root Problem** (Mục tiêu & Bản chất vấn đề) | - **Mục tiêu:** Vận hành đợt đăng ký tín chỉ thông suốt, tối ưu hóa công suất phòng học, đảm bảo 100% sinh viên đăng ký đúng quy chế và bàn giao danh sách lớp chuẩn cho giảng viên đúng hạn.<br>- **Bản chất vấn đề:** Đổi mới quy chế đào tạo sang tín chỉ nhưng hạ tầng công nghệ và công cụ quản trị vẫn dừng lại ở thời niên chế; thiếu cơ chế tự động hóa kiểm soát quy chế theo thời gian thực. |
+| **4** | **Current Alternatives** (Cách đang tự giải quyết) | - Nhận đơn giấy tại bàn một cửa, vào sổ theo dõi thủ công.<br>- Tra cứu bảng điểm sinh viên trên phần mềm niên chế cũ để kiểm tra môn tiên quyết từng người một.<br>- Dùng bảng tính Excel ngoại tuyến để cộng trừ sĩ số và lập danh sách lớp mở bổ sung. |
+| **5** | **Alternative Shortcomings** (Nhược điểm của cách hiện tại) | - Tốn quá nhiều nhân lực và thời gian cho các thao tác lặp đi lặp lại.<br>- Dễ xảy ra sai sót con người (bỏ sót đơn, nhìn nhầm mã môn, tính sai điều kiện tiên quyết).<br>- Không có cơ chế lưu vết lịch sử xử lý đơn để giải trình khi sinh viên khiếu nại. |
+| **6** | **Emotional Impact** (Tác động cảm xúc) | - Căng thẳng tột độ (burnout) do phải làm thêm ngoài giờ liên tục trong mùa cao điểm.<br>- Ức chế khi phải đối mặt với thái độ bức xúc của sinh viên và phụ huynh xếp hàng chờ đợi.<br>- Lo lắng về trách nhiệm hành chính khi để lọt sinh viên không đủ điều kiện vào học. |
+| **7** | **Quantifiable Impact** (Tác động định lượng - Kèm đơn vị) | - **Thời gian làm thêm giờ:** Mỗi cán bộ phải làm thêm 40–60 giờ trong tháng cao điểm chuyển đổi.<br>- **Khối lượng đơn từ:** Tiếp nhận và xử lý thủ công từ 3.500 đến 4.500 đơn cứu xét học vụ mỗi học kỳ.<br>- **Thời gian xử lý:** Mất trung bình 15–20 phút để kiểm tra và xử lý 1 lá đơn ngoại lệ. |
+| **8** | **Evidence vs. Assumptions** (Bằng chứng và Giả định) | - `[Evidence]`: Quy định kiểm tra môn học tiên quyết và cảnh báo học vụ được quy định cứng trong Quy chế Đào tạo mới của HBA; cảnh sinh viên xếp hàng nộp đơn tràn ra hành lang là sự thật.<br>- `[Assumption]`: Giả định 75% số đơn xin cứu xét học vụ có thể được duyệt tự động nếu hệ thống có bộ máy kiểm tra ràng buộc trước. |
 
 ---
 
 ## PHẦN C: THỰC HÀNH 3 — BUSINESS PROBLEM, ROOT CAUSE ANALYSIS & REQUIREMENTS (SLIDE 22–35, 54, 58)
 
-### C.1. Chuỗi Lập Luận Nhân Quả Xuyên Tác Nhân (User Problem $\rightarrow$ Business Problem) (Slide 25)
+### C.1. Chuỗi Lập Luận Nhân Quả Xuyên Tác Nhân Tại Học Viện Bách Nghệ Hà Nội (Slide 25)
 
 ```mermaid
 flowchart TD
-    UP["🔴 User Problem (Sinh viên - TV1):<br/>Không tra cứu được môn tiên quyết,<br/>bị hủy lớp muộn, đăng ký hỏng"]
-    OI["🟠 Operational Impact (Cán bộ Đào tạo - TV2):<br/>Quá tải xử lý 4.000 đơn giấy thủ công,<br/>đối soát điểm chậm trễ, sai lệch sĩ số"]
-    BP["🟣 Business Problem (Nhà trường - SOICT/HUST):<br/>Lãng phí tài nguyên phòng học, tăng chi phí nhân sự,<br/>giảm chất lượng đào tạo và uy tín dịch vụ công"]
-    DO["🟢 Desired Outcomes (Mục tiêu nhà trường):<br/>Tự động hóa 90% khâu xét duyệt điều kiện,<br/>tối ưu 100% công suất phòng, chốt danh sách lớp đúng hạn"]
+    UP["🔴 User Problem (Sinh viên HBA - TV1):<br/>Quen niên chế, bỡ ngỡ với cây tiên quyết,<br/>bị hủy lớp muộn, đăng ký hỏng"]
+    OI["🟠 Operational Impact (Cán bộ Đào tạo - TV2):<br/>Quá tải xử lý 4.000 đơn giấy bằng Excel cũ,<br/>đối soát điểm chậm trễ, sai lệch sĩ số"]
+    BP["🟣 Business Problem (Học viện Bách Nghệ Hà Nội):<br/>Nguy cơ đổ vỡ chuyển đổi tín chỉ, lãng phí phòng học,<br/>chi phí nhân sự tăng cao, suy giảm uy tín đào tạo"]
+    DO["🟢 Desired Outcomes (Mục tiêu Học viện):<br/>Tự động hóa 90% khâu xét duyệt quy chế,<br/>tối ưu 100% công suất phòng, chốt danh sách lớp đúng hạn"]
 
-    UP -->|"Kéo theo hàng loạt đơn khiếu nại"| OI
-    OI -->|"Gây tắc nghẽn vận hành toàn trường"| BP
-    BP -->|"Định hướng mục tiêu cải tiến"| DO
+    UP -->|"Bùng nổ hàng nghìn đơn cứu xét"| OI
+    OI -->|"Tê liệt bộ máy hành chính nhà trường"| BP
+    BP -->|"Định hướng mục tiêu số hóa toàn diện"| DO
 
     style UP fill:#ffebee,stroke:#c62828,stroke-width:2px
     style OI fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
@@ -72,53 +74,53 @@ flowchart TD
 
 ### C.2. Phân Tích Nguyên Nhân Gốc Rễ: Kỹ Thuật 5 Whys (Năm Câu Hỏi Vì Sao) (Slide 28, 35)
 
-* **Vấn đề xuất phát (Problem):** Hàng nghìn sinh viên bị trễ hạn đăng ký học phần và phải nộp đơn khiếu nại làm tê liệt hoạt động Phòng Đào tạo đầu mỗi học kỳ.
+* **Vấn đề xuất phát (Problem):** Hàng nghìn sinh viên Học viện Bách Nghệ Hà Nội bị trễ hạn đăng ký học phần và làm tê liệt hoạt động của Phòng Đào tạo ngay trong kỳ đầu áp dụng quy chế tín chỉ.
 
-| Tầng Why | Câu hỏi | Câu trả lời phân tích |
+| Tầng Why | Câu hỏi | Câu trả lời phân tích bám sát bối cảnh HBA |
 |:---:|---|---|
-| **Why 1** | *Tại sao sinh viên phải nộp đơn khiếu nại và xếp hàng tại Phòng Đào tạo nhiều như vậy?* | Vì sinh viên không thể đăng ký trực tuyến các lớp học phần mình cần do hệ thống báo lỗi không đủ điều kiện hoặc lớp đã hết chỗ. |
-| **Why 2** | *Tại sao sinh viên không biết trước mình thiếu điều kiện hoặc tại sao lớp lại nhanh hết chỗ bất thường?* | Vì hệ thống đăng ký không cung cấp thông tin kiểm tra trước điều kiện tiên quyết và không dự báo được nhu cầu môn học thực tế của sinh viên để mở số lớp tương ứng. |
-| **Why 3** | *Tại sao hệ thống không kiểm tra tự động và không dự báo được nhu cầu học phần?* | Vì dữ liệu kết quả học tập kỳ trước và dữ liệu mở lớp nằm ở hai phân hệ riêng biệt không đồng bộ thời gian thực; việc lập kế hoạch mở lớp hiện tại dựa vào ước lượng cảm tính của các bộ môn. |
-| **Why 4** | *Tại sao dữ liệu học vụ không được đồng bộ thời gian thực và tự động hóa quy tắc?* | Vì hệ thống phần mềm hiện tại được xây dựng từ nhiều năm trước theo kiến trúc module rời rạc, thiếu bộ máy xử lý quy tắc nghiệp vụ (Business Rules Engine) tập trung. |
-| **Why 5 (Root Cause)** | *Tại sao nhà trường vẫn duy trì quy trình kiểm tra thủ công và hệ thống rời rạc này?* | **NGUYÊN NHÂN GỐC RỄ:** Quy trình đào tạo tín chỉ chưa được chuẩn hóa về mặt số hóa; nhà trường thiếu một cơ chế quản trị luồng dữ liệu học vụ thống nhất, dẫn đến việc dùng nhân lực hành chính để "chắp vá" các lỗ hổng của quy trình nghiệp vụ thủ công. |
+| **Why 1** | *Tại sao sinh viên phải nộp đơn khiếu nại và xếp hàng tại Phòng Đào tạo nhiều đột biến như vậy?* | Vì sinh viên không thể đăng ký trực tuyến các lớp học phần mình cần do hệ thống báo lỗi không đủ điều kiện tiên quyết hoặc các lớp đều đã kín chỗ. |
+| **Why 2** | *Tại sao sinh viên không biết trước mình thiếu điều kiện và tại sao các lớp lại nhanh hết chỗ bất thường?* | Vì sinh viên quen tâm lý thụ động thời niên chế, không tự tra cứu cây tiên quyết; đồng thời Học viện không dự báo được nhu cầu môn học thực tế để mở số lớp tương ứng. |
+| **Why 3** | *Tại sao hệ thống không kiểm tra tự động và Phòng Đào tạo không dự báo được nhu cầu học phần?* | Vì dữ liệu học bạ thời niên chế và dữ liệu mở lớp tín chỉ mới nằm phân tán ở các file Excel riêng biệt; việc mở lớp hoàn toàn dựa trên ước tính cảm tính của các bộ môn. |
+| **Why 4** | *Tại sao dữ liệu học vụ không được tích hợp và tự động hóa quy tắc kiểm tra?* | Vì Học viện vừa đổi quy chế đào tạo nhưng vẫn tận dụng lại phần mềm quản lý và quy trình hành chính cũ thời niên chế, chưa đầu tư xây dựng bộ máy quy tắc nghiệp vụ (Business Rules Engine) cho học chế tín chỉ. |
+| **Why 5 (Root Cause)** | *Tại sao lại có sự lệch pha nghiêm trọng giữa quy chế mới và công cụ cũ?* | **NGUYÊN NHÂN GỐC RỄ:** Học viện Bách Nghệ Hà Nội thực hiện chuyển đổi mô hình đào tạo từ Niên chế sang Tín chỉ về mặt **chính sách (Policy)** nhưng chưa chuẩn bị kịp thời nền tảng **chuyển đổi số (Digital Transformation)** tương ứng, dẫn đến việc dùng nhân lực hành chính thủ công để gánh vác sự phức tạp khổng lồ của mô hình tín chỉ. |
 
 ---
 
 ### C.3. Phân Tích Đa Chiều: Kỹ Thuật 5W-1H và Phân Loại Xương Cá (Fishbone) (Slide 29, 35)
 
 #### 1. Bảng phân tích 5W-1H
-* **WHO (Ai bị ảnh hưởng?):** 35.000 sinh viên, toàn bộ đội ngũ cán bộ Phòng Đào tạo, Phòng Tài vụ và hơn 1.500 giảng viên.
+* **WHO (Ai bị ảnh hưởng?):** 35.000 sinh viên HBA, toàn bộ đội ngũ cán bộ Phòng Đào tạo, Phòng Tài vụ và hơn 1.500 giảng viên.
 * **WHAT (Họ gặp vấn đề gì?):** Tắc nghẽn đăng ký, sai lệch danh sách lớp, quá tải xử lý đơn từ hành chính.
-* **WHERE (Xảy ra ở đâu?):** Cổng thông tin đào tạo trực tuyến và văn phòng tiếp nhận một cửa của trường.
-* **WHEN (Xảy ra khi nào?):** Vào 2–4 tuần cao điểm trước và sau ngày khai giảng mỗi học kỳ.
-* **WHY (Tại sao nghiêm trọng?):** Đe dọa chất lượng giảng dạy, làm chậm tiến độ tốt nghiệp của sinh viên, lãng phí ngân sách vận hành của trường.
+* **WHERE (Xảy ra ở đâu?):** Cổng thông tin đào tạo trực tuyến và văn phòng tiếp nhận một cửa của Học viện.
+* **WHEN (Xảy ra khi nào?):** Vào 2–4 tuần cao điểm đợt đăng ký tín chỉ đầu kỳ.
+* **WHY (Tại sao nghiêm trọng?):** Đe dọa chất lượng giảng dạy, làm chậm tiến độ tốt nghiệp của sinh viên, lãng phí ngân sách vận hành của Học viện.
 * **HOW (Tác động như thế nào?):** Tốn hàng nghìn giờ công lao động hành chính; tỷ lệ sinh viên bức xúc về dịch vụ công tăng cao.
 
 #### 2. Phân loại theo 4 nhóm nguyên nhân (Fishbone Categories)
-1. **Quy trình (Process):** Quy trình xử lý đơn ngoại lệ vẫn mang tính chất thủ công, nhiều bước xét duyệt trung gian qua giấy tờ.
-2. **Hệ thống / Công nghệ (Platform):** Hạ tầng không chịu được tải đồng thời cao; thiếu API kết nối dữ liệu giữa điểm thi, công nợ và đăng ký học phần.
-3. **Con người (People):** Cán bộ đào tạo quá tải; sinh viên thiếu kỹ năng lập kế hoạch học tập theo học chế tín chỉ.
-4. **Quy chế (Policy):** Quy định về môn tiên quyết, học phần thay thế, và trần tín chỉ phức tạp nhưng không được cấu hình hóa thành luật phần mềm.
+1. **Quy trình (Process):** Quy trình xử lý đơn ngoại lệ vẫn mang tính chất thủ công bằng giấy tờ kế thừa từ thời niên chế.
+2. **Hệ thống / Công nghệ (Platform):** Phần mềm cũ xây dựng cho niên chế, không có tính năng kiểm tra cây tiên quyết thời gian thực và không chịu được tải lớn.
+3. **Con người (People):** Cán bộ đào tạo quá tải; sinh viên thiếu kỹ năng tự lập kế hoạch học tập theo học chế tín chỉ.
+4. **Quy chế (Policy):** Quy định về môn tiên quyết, học phần tương đương phức tạp nhưng chưa được mã hóa thành các luật phần mềm.
 
 ---
 
 ### C.4. Danh Sách 3 Business Problems Chuẩn Cấu Trúc 5 Mục (Slide 30–32)
 
-#### 📌 BUSINESS PROBLEM 1: Quá tải và tắc nghẽn quy trình xử lý đơn ngoại lệ học vụ
-1. **Context (Bối cảnh):** Hoạt động tiếp nhận và xử lý các trường hợp ngoại lệ trong đăng ký học phần (xin học vượt, học cải thiện, hủy môn, mở thêm lớp) diễn ra vào 2 tuần đầu kỳ.
-2. **Current State (Hiện trạng):** Hơn 4.000 đơn giấy được gửi về Phòng Đào tạo mỗi kỳ; cán bộ phải mở từng hồ sơ điểm trên hệ thống cũ để kiểm tra thủ công điều kiện tiên quyết và tính hợp lệ.
-3. **Problem (Vấn đề chính):** Quy trình xử lý hoàn toàn thủ công, thiếu công cụ tự động đối soát điều kiện quy chế và thiếu hệ thống lưu vết điện tử.
+#### 📌 BUSINESS PROBLEM 1: Quá tải và tắc nghẽn quy trình xử lý đơn ngoại lệ học vụ do chuyển đổi mô hình
+1. **Context (Bối cảnh):** Hoạt động tiếp nhận và xử lý các trường hợp ngoại lệ trong đăng ký học phần (xin học vượt, học cải thiện, hủy môn, mở thêm lớp) diễn ra vào 2 tuần đầu kỳ tại Học viện Bách Nghệ Hà Nội.
+2. **Current State (Hiện trạng):** Hơn 4.000 đơn giấy được gửi về Phòng Đào tạo mỗi kỳ; cán bộ phải mở từng hồ sơ học bạ trên phần mềm cũ để kiểm tra thủ công điều kiện tiên quyết và tính hợp lệ.
+3. **Problem (Vấn đề chính):** Quy trình xử lý hoàn toàn thủ công bằng giấy tờ kế thừa thời niên chế, thiếu công cụ tự động đối soát điều kiện quy chế và thiếu hệ thống lưu vết điện tử.
 4. **Impact (Tác động):** Thời gian phản hồi kéo dài từ 5–7 ngày làm việc; 15% đơn bị xử lý nhầm hoặc thất lạc; cán bộ phải làm thêm 50 giờ/người/tháng; sinh viên bỏ lỡ tuần học đầu tiên.
 5. **Desired State (Trạng thái mong muốn):** 90% các yêu cầu ngoại lệ được gửi và xét duyệt trực tuyến; hệ thống tự động thẩm định điều kiện tiên quyết và trả kết quả trong vòng dưới 24 giờ.
 
 ---
 
 #### 📌 BUSINESS PROBLEM 2: Lãng phí tài nguyên phòng học và mất cân đối sĩ số lớp học phần
-1. **Context (Bối cảnh):** Hoạt động lập kế hoạch mở lớp học phần và phân bổ phòng học theo thời khóa biểu học kỳ.
-2. **Current State (Hiện trạng):** Việc mở lớp dựa trên số liệu ước đoán của kỳ trước; không có số liệu khảo sát nguyện vọng đăng ký theo thời gian thực của sinh viên.
+1. **Context (Bối cảnh):** Hoạt động lập kế hoạch mở lớp học phần và phân bổ phòng học theo thời khóa biểu học kỳ tại HBA.
+2. **Current State (Hiện trạng):** Việc mở lớp dựa trên số liệu ước đoán của thời niên chế; không có số liệu khảo sát nguyện vọng đăng ký theo thời gian thực của sinh viên.
 3. **Problem (Vấn đề chính):** Tình trạng mất cân đối trầm trọng: nhiều lớp học phần chuyên ngành bị hủy do không đủ sĩ số tối thiểu (< 15 SV), trong khi nhiều lớp đại cương lại quá tải (> 80 SV/phòng).
-4. **Impact (Tác động):** Lãng phí 20–30% công suất sử dụng phòng học; chi phí vận hành điều hòa/điện năng không tối ưu; trường phải hủy hàng chục lớp sau khi đã xếp thời khóa biểu.
-5. **Desired State (Trạng thái mong muốn):** Tự động dự báo nhu cầu mở lớp dựa trên tiến độ học tập của sinh viên; tỷ lệ lấp đầy phòng học đạt trên 85%; giảm số lớp bị hủy do thiếu sĩ số xuống dưới 3%.
+4. **Impact (Tác động):** Lãng phí 20–30% công suất sử dụng phòng học; chi phí vận hành điều hòa/điện năng không tối ưu; Học viện phải hủy hàng chục lớp sau khi đã xếp thời khóa biểu.
+5. **Desired State (Trạng thái mong muốn):** Tự động dự báo nhu cầu mở lớp dựa trên tiến độ tích lũy tín chỉ của sinh viên; tỷ lệ lấp đầy phòng học đạt trên 85%; giảm số lớp bị hủy do thiếu sĩ số xuống dưới 3%.
 
 ---
 
@@ -135,8 +137,8 @@ flowchart TD
 
 #### 1. Dữ liệu vận hành cần thu thập để xác minh
 * Nhật ký truy cập (Access Log) và lưu lượng yêu cầu (Request/sec) tại cổng đăng ký trong giờ cao điểm.
-* Số lượng đơn khiếu nại học vụ phân loại theo nguyên nhân (trượt môn tiên quyết, trùng lịch, hết chỗ, nợ học phí).
-* Thời gian trung bình để cán bộ xử lý xong 1 lá đơn cứu xét học vụ.
+* Số lượng đơn khiếu nại học vụ phân loại theo nguyên nhân (chưa học môn tiên quyết, trùng kíp, hết chỗ, nợ học phí tín chỉ).
+* Thời gian trung bình để cán bộ đào tạo xử lý xong 1 lá đơn cứu xét học vụ.
 * Tỷ lệ các lớp học phần bị hủy sau khi mở cổng đăng ký do không đạt sĩ số sàn.
 
 #### 2. Chỉ số KPI đo lường thành công
@@ -155,4 +157,4 @@ flowchart TD
 1. **BRQ-01:** Hệ thống phải tự động kiểm tra điều kiện tiên quyết của học phần dựa trên lịch sử điểm tích lũy của sinh viên và ngăn chặn đăng ký không hợp lệ ngay tại thời điểm thao tác.
 2. **BRQ-02:** Hệ thống phải cung cấp cổng tiếp nhận và luồng duyệt đơn ngoại lệ học vụ điện tử, cho phép cán bộ phê duyệt với thông tin đối soát tự động hiển thị trên 1 màn hình.
 3. **BRQ-03:** Hệ thống phải tự động kiểm soát sĩ số trần/sàn của từng lớp học phần theo thời gian thực và tự động khóa lớp khi đạt sĩ số tối đa.
-4. **BRQ-04:** Hệ thống phải cung cấp báo cáo phân tích nhu cầu học phần dựa trên dữ liệu môn nợ và môn tích lũy của sinh viên toàn trường để hỗ trợ lập kế hoạch mở lớp tối ưu.
+4. **BRQ-04:** Hệ thống phải cung cấp báo cáo phân tích nhu cầu học phần dựa trên dữ liệu môn nợ và môn tích lũy của sinh viên toàn Học viện để hỗ trợ lập kế hoạch mở lớp tối ưu.
