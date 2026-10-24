@@ -2,9 +2,7 @@
 ## TÁC NHÂN: CÁN BỘ TÀI CHÍNH (CBTC) & HỒ SƠ ĐỀ XUẤT HỆ THỐNG (SYSTEM REQUEST)
 ### ĐƠN VỊ: HỌC VIỆN BÁCH NGHỆ HÀ NỘI (HBA) — GIAI ĐOẠN CHUYỂN ĐỔI SANG TÍN CHỈ
 
-> **Thông tin thành viên:**
-> - Họ và tên: `[Điền họ và tên]`
-> - Mã số sinh viên: `[Điền MSSV]`
+> **Công việc của TV3: **
 > - Tác nhân phụ trách chính: **Cán bộ Tài chính (Phòng Tài chính - Kế toán HBA)**
 > - Bối cảnh nghiên cứu: **Chuyển từ thu học phí trọn gói phẳng sang thu tiền lẻ biến đổi theo từng tín chỉ đăng ký thực tế, đối soát ngân hàng vỡ trận**
 > - Hạng mục bài tập đảm nhận: **TH1 (User Needs của CBTC) + TH2 (Problem Canvas của CBTC) + Hồ sơ System Request chuẩn 11 mục (Planning Phase)**

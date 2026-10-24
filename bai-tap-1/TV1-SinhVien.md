@@ -2,9 +2,7 @@
 ## TÁC NHÂN: SINH VIÊN (SV) & CHUYÊN ĐỀ LEAN UX + MVP EXPERIMENT
 ### ĐƠN VỊ: HỌC VIỆN BÁCH NGHỆ HÀ NỘI (HBA) — GIAI ĐOẠN CHUYỂN ĐỔI SANG TÍN CHỈ
 
-> **Thông tin thành viên:**
-> - Họ và tên: `[Điền họ và tên]`
-> - Mã số sinh viên: `[Điền MSSV]`
+> **Công việc của TV1: **
 > - Tác nhân phụ trách chính: **Sinh viên (SV)**
 > - Bối cảnh nghiên cứu: **Sinh viên Học viện Bách Nghệ Hà Nội bỡ ngỡ trong đợt đăng ký tín chỉ đầu tiên sau khi trường bỏ niên chế**
 > - Hạng mục bài tập đảm nhận: **TH1 (User Needs & Problem Statement) + TH2 (Problem Canvas) + TH4 (Lean UX Canvas) + TH5 (MVP & Kế hoạch thử nghiệm)**

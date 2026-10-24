@@ -2,9 +2,7 @@
 ## TÁC NHÂN: CÁN BỘ ĐÀO TẠO (CBĐT) & CHUYÊN ĐỀ BUSINESS PROBLEM + 5 WHYS
 ### ĐƠN VỊ: HỌC VIỆN BÁCH NGHỆ HÀ NỘI (HBA) — GIAI ĐOẠN CHUYỂN ĐỔI SANG TÍN CHỈ
 
-> **Thông tin thành viên:**
-> - Họ và tên: `[Điền họ và tên]`
-> - Mã số sinh viên: `[Điền MSSV]`
+> **Công việc của TV2: **
 > - Tác nhân phụ trách chính: **Cán bộ Đào tạo (Phòng Đào tạo HBA)**
 > - Bối cảnh nghiên cứu: **Bộ máy quản lý đào tạo dùng công cụ niên chế cũ để điều phối hàng nghìn lớp tín chỉ mới dẫn đến tình trạng quá tải nghiêm trọng**
 > - Hạng mục bài tập đảm nhận: **TH1 (User Needs của CBĐT) + TH2 (Problem Canvas của CBĐT) + TH3 (Chuyên đề Business Problem, Phân tích 5 Whys & Chỉ số KPI)**
