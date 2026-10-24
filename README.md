@@ -1,59 +1,80 @@
-# IT3120 - HỆ THỐNG QUẢN LÝ ĐÀO TẠO ĐẠI HỌC (HỌC CHẾ TÍN CHỈ)
-
-> **Môn học:** Phân tích và Thiết kế Hệ thống (IT3120)  
-> **Đơn vị:** Trường Công nghệ Thông tin & Truyền thông (SOICT) – Đại học Bách khoa Hà Nội  
-> **Đặc thù dự án:** Phân tích nghiệp vụ, mô hình hóa UML (PlantUML) & Thiết kế CSDL (PostgreSQL). Không phát triển mã nguồn phần mềm thực thi (No-code).  
-> **Mô hình phối hợp:** Phễu song song 4 thành viên (Funnel Parallel Model) – Chuyên môn hóa 100% theo 4 Phân hệ nghiệp vụ.
+# DỰ ÁN PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG (IT3120)
+## HỆ THỐNG QUẢN LÝ ĐÀO TẠO ĐẠI HỌC THEO HỌC CHẾ TÍN CHỈ (HUST SIS)
+### TRƯỜNG CÔNG NGHỆ THÔNG TIN VÀ TRUYỀN THÔNG (SOICT) — ĐẠI HỌC BÁCH KHOA HÀ NỘI
 
 ---
 
-## 📌 BẢNG ĐIỀU HƯỚNG TÀI NGUYÊN DỰ ÁN
-
-| Danh mục | Đường dẫn thư mục / Tệp tin | Mô tả nội dung chính |
-|---|---|---|
-| 🌟 **Tài liệu Nghiệp vụ Master (TH1 $\to$ TH5)** | [`docs/problem-discovery-and-system-request.md`](./docs/problem-discovery-and-system-request.md) | Hồ sơ tổng thể: Khám phá nhu cầu, Canvas 6 ô, 5 Whys, Lean UX Canvas, Kế hoạch thử nghiệm MVP & System Request *(65+ KB)* |
-| 🖥️ **Slide Thuyết trình Marp Master (Buổi TH1)** | [`slides/BuoiTH1_Master_Discovery_LeanUX.md`](./slides/BuoiTH1_Master_Discovery_LeanUX.md) | Bộ 22 slide chuẩn Marp Markdown (16:9), tích hợp liền mạch trọn vẹn 5 bài thực hành Buổi 1 |
-| 🌟 **Bức tranh Toàn cảnh & Sợi chỉ đỏ** | [`docs/big-picture-and-red-thread.md`](./docs/big-picture-and-red-thread.md) | Xâu chuỗi 5 tầng chuyển đổi từ bài giảng lý thuyết đến kiến trúc kỹ thuật |
-| 📋 **Tài liệu Bối cảnh & Phạm vi** | [`docs/context-and-scope.md`](./docs/context-and-scope.md) | Bối cảnh, mục tiêu, In/Out-of-scope, Danh mục Actors, Glossary |
-| 🏷️ **Quy ước & Định danh** | [`docs/conventions-and-naming.md`](./docs/conventions-and-naming.md) | Quy ước đặt tên mã `FR`, `UC`, `BR`, `SCR`, PascalCase, camelCase, snake_case |
-| ⚖️ **10 Quy tắc Nghiệp vụ Cốt lõi** | [`docs/business-rules.md`](./docs/business-rules.md) | Đặc tả chi tiết logic nghiệp vụ kiểm tra từ `BR-01` đến `BR-10` |
-| 🔌 **Ma trận Giao tiếp Liên Module** | [`docs/interfaces-matrix.md`](./docs/interfaces-matrix.md) | 6 Chữ ký hàm gọi chéo giữa 4 phân hệ (Inter-Module Interfaces) |
-| 👥 **Lộ trình Nhóm & Kế hoạch Phối hợp** | [`docs/team-roadmap.md`](./docs/team-roadmap.md) | Quy chuẩn kỹ thuật, phân công chi tiết và các mốc bàn giao |
-| 📐 **Đặc tả Ca sử dụng Lõi** | [`docs/use-cases/`](./docs/use-cases/) | Bảng đặc tả chi tiết các use case lõi (`UC-CUR-01`, `UC-SCH-01`, `UC-REG-01`, `UC-GRD-01`) |
-| 🧮 **Ước lượng Chi phí Phần mềm (UCP)** | [`docs/ucp-estimation.md`](./docs/ucp-estimation.md) | Công thức và bảng tính chi phí phần mềm theo Use Case Points (UAW, UUCW, TCF, ECF) |
-| 🗄️ **Thiết kế CSDL (PostgreSQL)** | [`database/`](./database/) | [Mã nguồn DDL `schema.sql`](./database/schema.sql) và [Từ điển dữ liệu `data-dictionary.md`](./database/data-dictionary.md) |
-| 📊 **Mã nguồn Biểu đồ PlantUML** | [`diagrams/`](./diagrams/) | Mã nguồn `.puml` cho Domain Model, Sequence BCE, Use Case, State Machine |
-| 🖼️ **Ảnh Biểu đồ đã kết xuất** | [`renders/`](./renders/) | Ảnh `.png` kết xuất tự động từ PlantUML phục vụ nhúng vào báo cáo |
-| 📑 **Khung Mục lục Báo cáo Đồ án** | [`report/report-outline.md`](./report/report-outline.md) | Cấu trúc chuẩn 5 chương nộp báo cáo tổng kết môn học |
-| 🐙 **Quy trình Git & GitHub** | [`docs/git-workflow.md`](./docs/git-workflow.md) | Quy chuẩn tạo nhánh, cú pháp commit, mở Pull Request và CI/CD |
+> [!IMPORTANT]
+> ### 🔥 TRỌNG TÂM HIỆN TẠI: BÀI TẬP 1 — PROBLEM DISCOVERY, LEAN UX & SYSTEM REQUEST
+> Toàn bộ repo đã được tái cấu trúc tinh gọn để 100% tài nguyên và sự tập trung của nhóm hướng vào việc hoàn thành xuất sắc **Bài tập 1** dựa trên 62 slides bài giảng chuẩn mực trong [`docs/OOAD_Lab_B1-5.md`](./docs/OOAD_Lab_B1-5.md).
 
 ---
 
-## 👥 BẢNG PHÂN CÔNG CHUYÊN MÔN HÓA 4 THÀNH VIÊN (100% MODULE-BASED)
+## 1. BẢNG PHÂN CÔNG NHIỆM VỤ 4 THÀNH VIÊN (MÔ HÌNH 4 TÁC NHÂN)
 
-Áp dụng nguyên tắc **Mỗi thành viên làm chủ trọn vẹn 1 Phân hệ Nghiệp vụ (1-on-1 Module Ownership)** xuyên suốt cả kỳ học:
+Dự án áp dụng chiến lược **Workload Balancing**: TV1 phụ trách xuyên suốt luồng người dùng ưu tiên (Sinh viên) từ Problem Statement đến Lean UX và MVP; 3 thành viên còn lại phụ trách 3 tác nhân nội bộ kèm 3 chuyên đề học thuật lớn của môn học.
 
-| Thành viên | Phân hệ Làm chủ | Đối tượng Trọng tâm | Thực thể CSDL Sở hữu | Ca sử dụng Lõi Phân tích Sâu | Trách nhiệm Điều phối Chung |
-|:---:|:---:|:---:|---|---|---|
-| **Thành viên A**<br>*(Team Lead)* | **REG**<br>(Đăng ký HP & Học phí) | **Sinh viên** | `RegistrationPeriod`, `Registration`, `TuitionRate`, `Invoice`, `Payment`, `Waiver` | **`UC-REG-01`**<br>Đăng ký học phần (Kiểm tra điều kiện & tính học phí) | • Quản trị GitHub Repo<br>• Trọng tâm Buổi TH1 (Lead case Sinh viên)<br>• Tính toán chi phí theo UCP |
-| **Thành viên B** | **GRD**<br>(Kết quả Học tập) | **Giảng viên** | `GradeComponent`, `Grade`, `GradeAppeal`, `AcademicRecord`, `AcademicWarning` | **`UC-GRD-01`**<br>Nhập điểm, công bố điểm & Xét cảnh báo học vụ | • Chuẩn hóa Quy tắc nghiệp vụ BR-07..10<br>• Quản trị CSDL & Data Dictionary<br>• Lập Ma trận truy vết (Traceability) |
-| **Thành viên C** | **SCH**<br>(Tổ chức Giảng dạy) | **Cán bộ Lập lịch (PĐT)** | `Semester`, `ClassSection`, `Room`, `ScheduleSlot`, `InstructorAssignment` | **`UC-SCH-01`**<br>Mở lớp học phần & Xếp TKB phòng học | • Thiết kế Kiến trúc Logic & Triển khai<br>• Đặc tả Yêu cầu phi chức năng (FURPS+)<br>• Quản trị Biểu đồ PlantUML & renders |
-| **Thành viên D** | **CUR**<br>(Chương trình Đào tạo) | **Cán bộ CTĐT (Khoa/PĐT)** | `User`, `Role`, `Faculty`, `Major`, `Program`, `Course`, `Prerequisite`, `Student`, `Instructor`, `AdminClass` | **`UC-CUR-01`**<br>Xây dựng khung CTĐT & Thuật toán DAG | • Khảo sát bối cảnh & Chương 1 Báo cáo<br>• Kiểm soát chu trình tiên quyết DAG<br>• Định dạng & kiểm tra báo cáo cuối |
+| Thành viên | Tác nhân phụ trách | Hạng mục bài tập đảm nhận | Slides tham chiếu | File làm bài chi tiết |
+|:---:|---|---|:---:|---|
+| **TV1** | **Sinh viên (SV)** *(Ưu tiên)* | • **TH1:** User Needs & Problem Statement của SV<br>• **TH2:** Problem Statement Canvas của SV<br>• **TH4:** Lean UX Canvas hoàn chỉnh 8 ô<br>• **TH5:** MVP Clickable Prototype & Usability Test Plan | Slide 7–21<br>Slide 33–44<br>Slide 56–62 | [`bai-tap-1/TV1-SinhVien.md`](./bai-tap-1/TV1-SinhVien.md) |
+| **TV2** | **Cán bộ Đào tạo (CBĐT)** | • **TH1:** User Needs của CBĐT<br>• **TH2:** Problem Statement Canvas của CBĐT<br>• **TH3:** Chuỗi lập luận nhân quả, Phân tích 5 Whys, Biểu đồ Fishbone / 5W-1H, 3 Business Problems chuẩn 5 mục & Danh sách Business Requirements | Slide 7–19<br>Slide 22–35<br>Slide 54, 58 | [`bai-tap-1/TV2-CanBoDaoTao.md`](./bai-tap-1/TV2-CanBoDaoTao.md) |
+| **TV3** | **Cán bộ Tài chính (CBTC)** | • **TH1:** User Needs của CBTC<br>• **TH2:** Problem Statement Canvas của CBTC<br>• **System Request:** Hồ sơ Đề xuất Hệ thống chính thức chuẩn 11 mục (Planning Phase), Phân tích Lợi ích 3 chiều, Đánh giá Khả thi 4 chiều & Ma trận Rủi ro | Slide 7–19<br>Slide 45–51 | [`bai-tap-1/TV3-CanBoTaiChinh.md`](./bai-tap-1/TV3-CanBoTaiChinh.md) |
+| **TV4** | **Giảng viên (GV)** | • **TH1:** User Needs của GV<br>• **TH2:** Problem Statement Canvas của GV<br>• **Problem Discovery Report:** Biên soạn hoàn chỉnh Báo cáo Khám phá Vấn đề 5 phần (Executive Summary, Problem Anchor, Context, Methodology/Survey, Ma trận Điểm nghẽn Giao thoa 4 tác nhân)<br>• Trả lời 4 câu hỏi phản biện & Tự đánh giá theo 5 tiêu chí chấm điểm | Slide 7–21<br>Slide 51–55 | [`bai-tap-1/TV4-GiangVien.md`](./bai-tap-1/TV4-GiangVien.md) |
 
 ---
 
-## 🛠️ QUY CHUẨN KỸ THUẬT & CÔNG CỤ HỖ TRỢ
+## 2. KỊCH BẢN "NEO ĐỒNG BỘ" XUYÊN SUỐT (5 PHÚT ĐỌC TRƯỚC KHI LÀM)
 
-1. **Nguyên tắc Sở hữu Thực thể (Entity Ownership):**
-   * Mỗi thực thể chỉ do duy nhất 1 Module làm chủ sở hữu.
-   * Khi module khác cần truy xuất dữ liệu, **bắt buộc** gọi thông qua 6 Chữ ký hàm chuẩn trong [`docs/interfaces-matrix.md`](./docs/interfaces-matrix.md).
-2. **Quy ước Commit Git:**
-   * Cú pháp: `[<MÃ_MODULE>] <Hành động>: <Nội dung chi tiết>`
-   * Ví dụ:
-     * `[REG] Add: UC-REG-01 sequence diagram and activity diagram`
-     * `[GRD] Fix: Update grade state machine and warning levels`
-     * `[DOCS] Update: Refine master discovery and system request`
-3. **Kết xuất Biểu đồ PlantUML:**
-   * Cài extension **PlantUML** trên VS Code để xem trước trực tiếp (`Alt + D`).
-   * Chạy script PowerShell: `./scripts/render.ps1` để xuất ảnh toàn bộ vào thư mục `renders/`.
-   * GitHub Actions sẽ tự động kiểm tra cú pháp và kết xuất ảnh khi có commit push lên GitHub.
+Để tránh tình trạng mỗi thành viên phân tích một hướng rời rạc, cả nhóm cùng neo vào một kịch bản nghiệp vụ trọng tâm:
+
+> **Kịch bản Neo:** **"Đăng ký học phần, Kiểm tra điều kiện tiên quyết & Đối soát công nợ học phí đầu kỳ"**
+> 
+> *Luồng nghiệp vụ giao thoa giữa 4 tác nhân:*
+> 1. **Cán bộ Đào tạo (TV2):** Thiết lập quy chế, mở đợt đăng ký, cấu hình môn tiên quyết và giới hạn sĩ số lớp.
+> 2. **Cán bộ Tài chính (TV3):** Cập nhật đơn giá tín chỉ, đối soát công nợ cũ, gửi yêu cầu khóa/mở quyền đăng ký.
+> 3. **Sinh viên (TV1):** Tra cứu môn học, kiểm tra điều kiện tiên quyết, xếp thời khóa biểu chống trùng và gửi đăng ký.
+> 4. **Giảng viên (TV4):** Tiếp nhận danh sách lớp chính thức đã được chốt và quản lý sĩ số ổn định để giảng dạy.
+
+Chi tiết về sơ đồ luồng Mermaid và ma trận điểm nghẽn có tại: [`docs/huong-dan-ke-hoach-bai-tap-1.md`](./docs/huong-dan-ke-hoach-bai-tap-1.md#phần-ii-chốt-nhanh-neo-đồng-bộ-5-phút-trước-khi-làm).
+
+---
+
+## 3. CẤU TRÚC THƯ MỤC DỰ ÁN
+
+```
+IT3120_QuanLyDaoTao/
+├── README.md                           # Trang chủ điều phối dự án (File này)
+├── AGENTS.md                           # Bộ quy tắc dành riêng cho AI Agent (No-code, 3 nguyên tắc cốt lõi)
+├── .gitignore                          # Cấu hình Git bỏ qua file nhị phân/rác
+│
+├── docs/
+│   ├── OOAD_Lab_B1-5.md                # Tài liệu gốc 62 slides bài giảng môn học (Bắt buộc đọc)
+│   └── huong-dan-ke-hoach-bai-tap-1.md # Kịch bản Kế hoạch & Bàn giao chi tiết (Phần I đến IV)
+│
+├── bai-tap-1/                          # Thư mục chứa toàn bộ sản phẩm Bài tập 1
+│   ├── TV1-SinhVien.md                 # Phiếu bài làm của TV1 (Sinh viên + Lean UX + MVP)
+│   ├── TV2-CanBoDaoTao.md             # Phiếu bài làm của TV2 (CB Đào tạo + Business Problem + 5 Whys)
+│   ├── TV3-CanBoTaiChinh.md           # Phiếu bài làm của TV3 (CB Tài chính + System Request 11 mục)
+│   └── TV4-GiangVien.md              # Phiếu bài làm của TV4 (Giảng viên + Báo cáo 5 phần & Phản biện)
+│
+├── .agents/                            # Công cụ & Kỹ năng hỗ trợ của Agent
+│   └── skills/                         # Các kỹ năng định dạng, PlantUML, Database, UCP
+└── scripts/
+    └── render.ps1                      # Script tự động hóa hỗ trợ
+```
+
+---
+
+## 4. TIẾN ĐỘ THỰC HIỆN DỰ KIẾN (LỊCH TRÌNH 4 NGÀY TƯƠNG ĐỐI)
+
+* **Ngày 0 (Khởi động - 15 phút):** Cả nhóm họp nhanh, đọc kỹ kịch bản neo tại Phần II trong tài liệu hướng dẫn.
+* **Ngày 1:** Từng thành viên điền độc lập **Phần A (TH1)** và **Phần B (TH2)** trong file `bai-tap-1/TV*.md` của mình.
+* **Ngày 2:** Mỗi thành viên tập trung hoàn thiện chuyên đề lớn được giao (TV1: Lean UX & MVP; TV2: Business Problem & 5 Whys; TV3: System Request; TV4: Báo cáo khám phá vấn đề).
+* **Ngày 3:** TV4 tổng hợp dữ liệu từ 3 thành viên còn lại vào Báo cáo chung; cả nhóm rà soát chéo (Cross-review).
+* **Ngày 4:** Sửa chữa các điểm chưa đồng nhất, đối soát theo 5 tiêu chí chấm điểm và nộp bài.
+
+---
+
+## 5. TÀI LIỆU HƯỚNG DẪN CHI TIẾT
+Mọi câu hỏi về phương pháp luận, công thức viết phát biểu vấn đề, cấu trúc 5 Whys, Lean UX Canvas 8 ô và mẫu văn bản System Request đều được hướng dẫn chi tiết tại:
+👉 **[`docs/huong-dan-ke-hoach-bai-tap-1.md`](./docs/huong-dan-ke-hoach-bai-tap-1.md)**
