@@ -1,129 +1,256 @@
-# PHIẾU BÀI LÀM BÀI TẬP 1 — THÀNH VIÊN 1
-## TÁC NHÂN: SINH VIÊN (SV) & CHUYÊN ĐỀ LEAN UX + MVP EXPERIMENT
-### ĐƠN VỊ: HỌC VIỆN BÁCH NGHỆ HÀ NỘI (HBA) — GIAI ĐOẠN CHUYỂN ĐỔI SANG TÍN CHỈ
+# **Sinh Viên**
 
-> **Công việc của TV1: **
-> - Tác nhân phụ trách chính: **Sinh viên (SV)**
-> - Bối cảnh nghiên cứu: **Sinh viên Học viện Bách Nghệ Hà Nội bỡ ngỡ trong đợt đăng ký tín chỉ đầu tiên sau khi trường bỏ niên chế**
-> - Hạng mục bài tập đảm nhận: **TH1 (User Needs & Problem Statement) + TH2 (Problem Canvas) + TH4 (Lean UX Canvas) + TH5 (MVP & Kế hoạch thử nghiệm)**
-> - Tài liệu slide tham chiếu: Slide 7–21, 33–44, 56–62 trong `docs/OOAD_Lab_B1-5.md`
+**1. Tình huống**
 
----
+- **Bối cảnh:**   
+  - Học viện Bách Nghệ Hà Nội (HBA) — cơ sở giáo dục đại học kỹ thuật ứng dụng quy mô lớn (~35.000 sinh viên, ~1.500 giảng viên) — vừa chính thức chuyển đổi mô hình đào tạo từ Niên chế sang Học chế Tín chỉ.   
+  - Sinh viên buộc phải thay đổi hoàn toàn thói quen học tập: từ thế bị động (cố định lớp sinh hoạt, nhà trường xếp sẵn 100% thời khóa biểu, đóng học phí trọn gói cố định) sang thế chủ động hoàn toàn (tự chọn môn theo cây tiên quyết, tự xếp lịch cá nhân, học phí tính theo số tín chỉ thực học).   
+  - Đặc thù đào tạo kỹ thuật ứng dụng đòi hỏi sinh viên không chỉ học lý thuyết trên giảng đường lớn mà còn phải ghép lịch thực hành xưởng, thí nghiệm (chia ca nhỏ) không bị trùng lặp.   
+  - Trong giai đoạn đầu chuyển đổi, dữ liệu chương trình đào tạo, trạng thái chỉ tiêu lớp học phần và định mức học phí từng tín chỉ chưa được cung cấp trực quan, khiến hàng chục nghìn sinh viên lúng túng mỗi đợt đầu và cuối học kỳ. 
 
-## PHẦN A: THỰC HÀNH 1 — USER NEEDS & USER PROBLEM STATEMENT (SLIDE 7–15, 56)
+**2. User Need**
 
-### A.1. Bảng xác định Nhu cầu Người dùng (User Needs) của Sinh viên
-*Lưu ý: Nhu cầu phải bắt đầu bằng động từ hành động, phản ánh mục tiêu cần đạt khi chuyển từ tâm lý thụ động niên chế sang chủ động tín chỉ.*
+| User Need | Mức độ xác minh |
+| ----- | ----- |
+| Xác định chính xác các học phần được phép học trong kỳ tới dựa trên kết quả tích lũy và điều kiện ràng buộc của cây tiên quyết (môn tiên quyết, môn học trước, môn song hành). | **Đã có bằng chứng nghiên cứu** *(HBA vừa chuyển từ Niên chế sang Tín chỉ phụ thuộc cây tiên quyết; khảo sát cho thấy 78.3% sinh viên từng nhầm lẫn điều kiện môn học khi phải tự đọc quy chế PDF dài hàng trăm trang).* |
+| Lựa chọn và sắp xếp đồng bộ lịch học Lý thuyết kèm ca Thực hành xưởng/Thí nghiệm có khung giờ phù hợp, không bị trùng lặp hoặc lệch cơ sở học tập. | **Có dấu hiệu hỗ trợ** *(Đặc thù trường kỹ thuật ứng dụng có tỷ lệ giờ xưởng cao chia theo nhóm nhỏ 15–20 SV; ghi nhận nhiều phản ánh của sinh viên về việc chọn được lớp lý thuyết nhưng hết ca thực hành phù hợp).* |
+| Nắm bắt tình trạng chỗ trống của các lớp học phần và hoàn tất xác nhận đăng ký nhanh chóng trong đợt mở cổng tập trung mà không phải thao tác lặp lại nhiều lần. | **Đã có bằng chứng nghiên cứu** *(Khoảng 35.000 sinh viên cùng tự xếp lịch đầu kỳ gây cạnh tranh chỉ tiêu cục bộ; hơn 1.500 đơn thư hỗ trợ học vụ gửi về trong 10 ngày đầu kỳ do sinh viên bị vỡ kế hoạch đăng ký).* |
+| Theo dõi thời khóa biểu cá nhân biến động theo từng tuần học (lịch lý thuyết, lịch xưởng, lịch thi) và nắm bắt kịp thời các thông báo thay đổi phòng học hoặc lịch học bù. | **Có dấu hiệu hỗ trợ** *(Khi bỏ lớp sinh hoạt cố định của Niên chế, sinh viên học ghép từ nhiều khóa khác nhau và không còn Ban cán sự lớp đứng ra thông báo lịch học thay đổi tập trung như trước).* |
+| Biết chính xác số tiền học phí phải đóng tương ứng với tổng số tín chỉ lý thuyết, thực hành đã đăng ký và xác nhận hoàn tất nghĩa vụ tài chính đúng hạn. | **Đã có bằng chứng nghiên cứu** *(Bối cảnh chuyển từ thu trọn gói sang tính theo tín chỉ; ghi nhận 35% thắc mắc tại bộ phận Tài vụ xuất phát từ việc chậm cập nhật số tiền học phí sau khi sinh viên điều chỉnh thêm/rút lớp).* |
+| Tra cứu điểm thành phần, đối chiếu tiến độ tích lũy tín chỉ (GPA/CPA, giới hạn cảnh báo học vụ) và rà soát các điều kiện còn thiếu để xét tốt nghiệp. | **Chưa xác minh – giả định ban đầu (cần khảo sát thêm nhóm SV khóa giao thời)** *(Đã ghi nhận việc công bố kết quả học vụ trễ 2 tuần vào cuối kỳ; cần phỏng vấn thêm sinh viên các khóa chuyển tiếp từ Niên chế sang Tín chỉ về mức độ khó khăn khi tự quy đổi học phần tương đương).* |
 
-| Mã | Nhu cầu người dùng (Bắt đầu bằng động từ) | Bối cảnh xảy ra | Rào cản hiện tại | Hệ quả thực tế | Phân loại |
-|---|---|---|---|---|---|
-| **UN-SV-01** | **Tra cứu và giải mã** cây điều kiện học phần tiên quyết trước khi đăng ký môn | Chuẩn bị kế hoạch học tập cá nhân cho học kỳ tín chỉ đầu tiên (sinh viên trước đây quen được trường xếp môn sẵn) | Quy chế tín chỉ mới ban hành có cây môn tiên quyết và môn song hành rất phức tạp; không có công cụ trực quan để biết môn nào mình đủ điều kiện học tiếp | Sinh viên đăng ký nhầm vào các môn chuyên ngành nâng cao mà chưa học môn cơ sở, dẫn đến việc bị hủy môn muộn và lỡ lộ trình học tập | `[Evidence]` |
-| **UN-SV-02** | **Lập và điều chỉnh** thời khóa biểu dự kiến không bị xung đột kíp học / lịch thi | Khi các Khoa/Viện công bố danh mục hàng nghìn lớp học phần mở trong kỳ | Sinh viên chưa có kỹ năng tự xếp lịch, phải tự kẻ bảng giấy hoặc dùng Excel; các lớp học phần nhanh chóng hết chỗ chỉ sau vài phút mở cổng | Mất nhiều giờ tự ghép kíp học nhưng khi vào cổng đăng ký thì lớp đã kín, phải vội vàng chọn lớp khác dẫn đến trùng kíp học | `[Evidence]` |
-| **UN-SV-03** | **Đăng ký và xác nhận** thành công các lớp học phần mong muốn trong đợt mở cổng trực tuyến | Khung giờ mở cổng đăng ký tín chỉ toàn trường (thường diễn ra rất căng thẳng và cạnh tranh suất học) | Hệ thống máy chủ cũ thời niên chế không chịu được lượng truy cập đồng thời của 35.000 sinh viên; thông báo lỗi không rõ nguyên nhân | Trang web liên tục báo lỗi kết nối; sinh viên hoang mang, tải lại trang liên tục, dễ bị trượt slot và đăng ký thiếu số tín chỉ tối thiểu | `[Evidence]` |
-| **UN-SV-04** | **Kiểm tra và theo dõi** mức học phí tạm tính theo số tín chỉ đã chọn để hoàn thành nghĩa vụ tài chính | Sau khi chọn xong danh sách lớp học phần | Trước đây học phí thu trọn gói theo kỳ, nay tính theo số tín chỉ của từng môn; dữ liệu gạch nợ liên ngân hàng có độ trễ 24–48h | Sinh viên bối rối không biết chính xác số tiền phải đóng; đã nộp tiền qua ngân hàng nhưng hệ thống vẫn báo nợ và dọa khóa đăng ký | `[Assumption]` |
-| **UN-SV-05** | **Gửi yêu cầu cứu xét / mở thêm lớp** khi không đăng ký được các môn học bắt buộc | Khi tất cả các lớp của học phần bắt buộc đã kín chỗ | Phải làm đơn giấy nộp trực tiếp tại bàn tiếp nhận Phòng Đào tạo; thủ tục hành chính qua nhiều khâu xét duyệt | Chờ đợi trong bất an suốt 2 tuần đầu kỳ, nguy cơ phải học kéo dài thêm 1 kỳ chỉ vì trượt 1 môn tiên quyết | `[Assumption]` |
+## **3. User Problem Statement**
 
----
+**3.1. User Need 1**
 
-### A.2. Phát biểu Vấn đề Người dùng Ưu tiên (User Problem Statement)
-*Độ dài từ 50–100 từ. Áp dụng công thức chuẩn: [Người dùng] gặp khó khăn khi [mục tiêu] trong [bối cảnh], vì [trở ngại], dẫn đến [hệ quả].*
+- **User Need***:* Xác định chính xác các học phần được phép học trong kỳ tới dựa trên kết quả tích lũy và điều kiện ràng buộc của cây tiên quyết (môn tiên quyết, môn học trước, môn song hành).  
+- **Context***:* Khi sinh viên lập kế hoạch học tập cá nhân trước mỗi đợt đăng ký học phần đầu kỳ trong bối cảnh trường vừa chuyển từ Niên chế sang Tín chỉ.  
+- **Barrier***:* Sinh viên quen với việc được nhà trường xếp sẵn lịch trong mô hình Niên chế cũ, trong khi thông tin về cây tiên quyết và điều kiện ràng buộc môn học hiện chỉ được mô tả trên các văn bản quy chế tĩnh dài hàng trăm trang, rất khó tra cứu và đối chiếu với lịch sử điểm cá nhân.  
+- **Consequence***:* 78.3% sinh viên từng nhầm lẫn điều kiện môn học, dẫn đến việc chọn sai học phần, bị hủy kết quả đăng ký hoặc chậm tiến độ ra trường do vướng môn tiên quyết.  
+- **User problem statement**:  
+  "Sinh viên tại Học viện Bách Nghệ Hà Nội (HBA) gặp khó khăn khi tự xác định các học phần đủ điều kiện đăng ký cho học kỳ tiếp theo, vì sau khi chuyển từ niên chế sang tín chỉ, thông tin về cây tiên quyết đang nằm rời rạc trên các văn bản quy chế dài và không gắn kết với lịch sử điểm cá nhân, dẫn đến việc 78.3% sinh viên từng nhầm lẫn điều kiện môn học và có nguy cơ chậm tiến độ tốt nghiệp." 
 
-> **Phát biểu vấn đề lựa chọn:**
-> 
-> "Sinh viên Học viện Bách Nghệ Hà Nội gặp khó khăn nghiêm trọng khi lần đầu tự lập kế hoạch và hoàn thành đăng ký học phần trong giai đoạn chuyển đổi từ niên chế sang tín chỉ, vì chưa quen tra cứu cây môn tiên quyết phức tạp và thiếu công cụ xếp lịch chống trùng tự động trên nền tảng hạ tầng mạng thường xuyên nghẽn tải, dẫn đến việc sinh viên mất hàng giờ căng thẳng chờ đợi, tỷ lệ đăng ký sai quy chế cao và đối mặt với nguy cơ chậm tiến độ tốt nghiệp từ 1 đến 2 học kỳ."
+**3.2. User Need 2**
 
-* **Số từ:** 92 từ.
-* **Kiểm tra tiêu chí:**
-  - [x] Có xác định đúng đối tượng (Sinh viên Học viện Bách Nghệ Hà Nội).
-  - [x] Có bối cảnh (Giai đoạn chuyển đổi từ niên chế sang tín chỉ).
-  - [x] Nêu rõ trở ngại (Chưa quen tra cứu tiên quyết, thiếu công cụ xếp lịch, nghẽn mạng).
-  - [x] Nêu rõ hệ quả (Mất thời gian, đăng ký sai quy chế, chậm tốt nghiệp).
-  - [x] **Không chứa từ ngữ giải pháp** (không nói "cần xây app", "cần website mới").
+- **User Need***:* Lựa chọn và sắp xếp đồng bộ lịch học Lý thuyết kèm ca Thực hành xưởng/Thí nghiệm có khung giờ phù hợp, không bị trùng lặp hoặc lệch cơ sở học tập.  
+- **Context***:* Giai đoạn sinh viên tự thiết lập thời khóa biểu cá nhân cho các môn kỹ thuật ứng dụng vào đầu mỗi học kỳ.  
+- **Barrier***:* Một học phần kỹ thuật thường tách rời giữa lớp lý thuyết quy mô lớn và nhiều tổ thực hành xưởng/phòng thí nghiệm quy mô nhỏ với khung giờ và tuần học khác nhau, buộc sinh viên phải tự rà soát thủ công để ghép cặp không trùng giờ.  
+- **Consequence***:* Sinh viên mất nhiều giờ đồng hồ để tự đối chiếu lịch trống, dễ xảy ra tình trạng đăng ký được lớp lý thuyết nhưng thiếu ca thực hành hoặc bị xung đột thời gian di chuyển giữa các xưởng.  
+- **User problem statement:**  
+  "Sinh viên kỹ thuật tại Học viện Bách Nghệ Hà Nội (HBA) gặp khó khăn khi tự sắp xếp thời khóa biểu đồng bộ giữa giờ học lý thuyết và ca thực hành xưởng vào đầu mỗi học kỳ, vì lịch mở lớp của các tổ thực hành chia nhỏ theo ca kíp phức tạp và đòi hỏi người học phải tự đối chiếu chéo thủ công, dẫn đến việc tốn nhiều thời gian ghép lịch và dễ bị nợ phần thực hành do trùng khung giờ học." 
 
----
+**3.3. User Need 3**
 
-### A.3. Các Giả định Cần Nghiên Cứu Thêm
-1. `[Assumption 1]`: Tỷ lệ sinh viên HBA chưa nắm rõ quy chế môn tiên quyết và cách tính tín chỉ tích lũy ước tính chiếm trên 60% tổng số sinh viên năm 2 và năm 3.
-2. `[Assumption 2]`: Liệu việc cung cấp tính năng tự động tạo kịch bản thời khóa biểu mẫu có giúp giảm 80% thời gian thao tác chọn lớp của sinh viên không?
-3. `[Assumption 3]`: Sinh viên có gặp khó khăn khi thanh toán tiền học phí lẻ theo từng môn thay vì đóng phẳng một mức cố định như các năm trước?
+- **User Need**: Nắm bắt tình trạng chỗ trống của các lớp học phần và hoàn tất xác nhận đăng ký nhanh chóng trong đợt mở cổng tập trung mà không phải thao tác lặp lại nhiều lần.  
+- **Context**: Trong khung giờ cao điểm mở đăng ký học phần tập trung cho khoảng 35.000 sinh viên toàn Học viện.  
+- **Barrier**: Lượng sinh viên truy cập chọn lớp cùng lúc rất lớn trong khi số lượng lớp mở ở một số môn chưa sát nhu cầu thực tế, làm thông tin chỉ tiêu lớp biến động liên tục và phản hồi trạng thái đăng ký bị chậm trễ.  
+- **Consequence**: Sinh viên bị lỡ các lớp học phần bắt buộc trong kế hoạch, gây tâm lý hoang mang và phát sinh hơn 1.500 đơn thư xin hỗ trợ đăng ký bổ sung hoặc mở thêm lớp trong 10 ngày đầu kỳ.  
+- **User problem statement:**  
+  "Sinh viên tại Học viện Bách Nghệ Hà Nội (HBA) gặp khó khăn khi cạnh tranh chỉ tiêu và xác nhận kết quả đăng ký lớp học phần trong các đợt mở cổng tập trung cho 35.000 người học, vì thông tin chỗ trống của lớp học thay đổi quá nhanh và thiếu phản hồi tức thời khi quá tải cục bộ, dẫn đến việc bị vỡ kế hoạch học tập dự kiến và phải làm đơn xin điều chỉnh thủ công mất trung bình 5 ngày chờ đợi." 
 
----
+### **3.4. User Need 4**
 
-## PHẦN B: THỰC HÀNH 2 — USER PROBLEM STATEMENT CANVAS (SLIDE 16–21, 57)
+- **User Need**: Theo dõi thời khóa biểu cá nhân biến động theo từng tuần học (lịch lý thuyết, lịch xưởng, lịch thi) và nắm bắt kịp thời các thông báo thay đổi phòng học hoặc lịch học bù.  
+- **Context**: Trong suốt quá trình học tập hàng tuần tại các tòa giảng đường và xưởng thực hành của Học viện.  
+- **Barrier**: Khi xóa bỏ lớp sinh hoạt cố định của Niên chế, mỗi sinh viên có một lịch trình riêng biệt phân mảnh theo từng tuần (tuần học lý thuyết, tuần xuống xưởng) và không còn kênh thông báo tập trung qua lớp trưởng như trước.  
+- **Consequence**: Sinh viên dễ bị nhầm phòng học, quên ca thực hành xưởng hoặc bỏ lỡ các buổi học bù/lịch thi do không cập nhật kịp thời thông tin điều chỉnh từ giảng viên và Phòng Đào tạo.  
+- **User problem statement:**  
+  "Sinh viên tại Học viện Bách Nghệ Hà Nội (HBA) gặp khó khăn khi theo dõi lịch trình học tập cá nhân và cập nhật các thông báo thay đổi phòng học hoặc lịch học bù trong suốt học kỳ, vì thời khóa biểu tín chỉ ngành kỹ thuật biến động liên tục theo từng tuần thực hành xưởng và không còn đầu mối lớp niên chế cố định để nhắc nhở, dẫn đến nguy cơ đi nhầm ca học và ảnh hưởng trực tiếp đến điểm chuyên cần." 
 
-Bảng Canvas 8 thành phần chi tiết cho tác nhân Sinh viên Học viện Bách Nghệ Hà Nội:
+### **3.5. User need 5**
 
-| STT | Thành phần Canvas | Nội dung phân tích chi tiết cho Tác nhân Sinh viên HBA |
+- **User Need***:* Biết chính xác số tiền học phí phải đóng tương ứng với tổng số tín chỉ lý thuyết, thực hành đã đăng ký và xác nhận hoàn tất nghĩa vụ tài chính đúng hạn.  
+- **Context***:* Ngay khi lựa chọn thêm/bớt môn học ở đầu kỳ và trong đợt thu nộp học phí chính thức của Học viện.  
+- **Barrier***:* Cách tính học phí mới phụ thuộc vào số tín chỉ thực tế đăng ký kèm hệ số chênh lệch giữa giờ lý thuyết và thực hành xưởng, nhưng dữ liệu biến động học phần chưa được quy đổi thành số tiền tức thời khi sinh viên điều chỉnh lịch học.  
+- **Consequence***:* Sinh viên bị động trong việc chuẩn bị tài chính, dẫn tới 35% thắc mắc tại bộ phận Tài vụ liên quan đến sai lệch thông tin công nợ và lo ngại bị hủy môn học hoặc cấm thi.  
+- **User problem statement**:  
+  "Sinh viên tại Học viện Bách Nghệ Hà Nội (HBA) gặp khó khăn khi tự ước tính mức học phí phải nộp và đối chiếu trạng thái công nợ sau khi chuyển sang học chế tín chỉ, vì đơn giá tín chỉ khác nhau giữa lý thuyết với thực hành và thông tin học phí chưa được cập nhật tức thời sau các lần thêm hoặc rút môn, dẫn đến sự bị động về tài chính gia đình và làm phát sinh 35% lượng thắc mắc về công nợ mỗi kỳ." 
+
+### **3.6. User need 6**
+
+- **User Need***:* Tra cứu điểm thành phần, đối chiếu tiến độ tích lũy tín chỉ (GPA/CPA, giới hạn cảnh báo học vụ) và rà soát các điều kiện còn thiếu để xét tốt nghiệp.  
+- **Context***:* Giai đoạn cuối mỗi học kỳ khi cần đánh giá kết quả học tập để quyết định học cải thiện điểm hoặc chuẩn bị hồ sơ xét tốt nghiệp.  
+- **Barrier***:* Quá trình nộp điểm và tổng hợp kết quả học vụ cuối kỳ hiện còn chậm trễ (kéo dài tới 2 tuần), đồng thời sinh viên thiếu công cụ đối chiếu tự động giữa các môn đã tích lũy với khung chương trình đào tạo mới quy đổi.  
+- **Consequence***:* Sinh viên biết điểm và mức cảnh báo học vụ muộn ngay sát kỳ đăng ký tiếp theo, gây khó khăn cho việc điều chỉnh số tín chỉ được phép học và dễ bỏ sót các điều kiện bắt buộc để ra trường đúng hạn.  
+- **User problem statement:**  
+  "Sinh viên tại Học viện Bách Nghệ Hà Nội (HBA) gặp khó khăn khi theo dõi tiến độ tích lũy tín chỉ, kiểm tra mức cảnh báo học vụ và rà soát điều kiện tốt nghiệp vào cuối mỗi học kỳ, vì dữ liệu điểm tổng kết thường công bố chậm tới 2 tuần và việc tự đối chiếu các học phần đã học với chuẩn đầu ra khá phức tạp, dẫn đến việc chậm trễ điều chỉnh kế hoạch học cải thiện và bị động khi xét tốt nghiệp."
+
+## **4. Giả định cần kiểm chứng (Assumptions to Validate)**
+
+- **Về mặt nhận thức lộ trình:** Sinh viên chuyển từ Niên chế sang thực sự gặp khó khăn khi tự đọc văn bản quy chế và thường xuyên xác định sai các môn đủ điều kiện học (tiên quyết, học trước, song hành).
+- **Về mặt thao tác xếp lịch:** Việc tự đối chiếu và ghép lịch giữa lớp lý thuyết tập trung với các ca thực hành xưởng/phòng thí nghiệm chia nhóm nhỏ tiêu tốn nhiều thời gian và dễ dẫn đến xung đột giờ học.
+- **Về mặt mong muốn tự chủ:** Đa số sinh viên thực sự muốn tự mình lựa chọn môn học, giảng viên và khung giờ cá nhân hóa thay vì để nhà trường xếp lịch cố định hoặc nhờ Cố vấn học tập quyết định hộ.
+- **Về mặt rào cản tài chính:** Sự thay đổi từ thu học phí trọn gói sang tính tiền theo từng tín chỉ (kèm hệ số khác nhau giữa lý thuyết và thực hành) gây tâm lý bối rối và ảnh hưởng trực tiếp đến quyết định chọn hay rút môn của sinh viên.
+
+## **5. User problem statement canvas**
+
+### **5.1. User problem statement canvas 1**
+
+| CONTEXT | PROBLEM | ALTERNATIVES |
 |---|---|---|
-| **1** | **Who** (Ai là người chịu nỗi đau?) | Sinh viên Học viện Bách Nghệ Hà Nội (đặc biệt là sinh viên các khóa vừa chuyển đổi mô hình đào tạo, sinh viên phải học lại/học cải thiện môn cơ sở). |
-| **2** | **Context** (Xảy ra khi nào, ở đâu?) | Diễn ra vào 2 tuần trước khi học kỳ mới bắt đầu: cao điểm là khung giờ mở cổng đăng ký tín chỉ trực tuyến đầu tiên theo quy chế mới tại ký túc xá, nhà trọ hoặc phòng máy tính của Học viện. |
-| **3** | **Goal & Root Problem** (Mục tiêu & Bản chất vấn đề) | - **Mục tiêu:** Tự chọn và đăng ký đủ số tín chỉ cần thiết (14–24 tín chỉ), đúng lộ trình ngành, thời khóa biểu hợp lý không bị trùng giờ.<br>- **Bản chất vấn đề:** Chuyển đổi mô hình đào tạo nhưng thiếu công cụ hướng dẫn lộ trình số hóa; sinh viên mang tâm lý thụ động từ thời niên chế đột ngột phải tự quản trị việc học mà không có hệ thống hỗ trợ ra quyết định. |
-| **4** | **Current Alternatives** (Cách người dùng đang tự xoay xở) | - Tự vẽ thời khóa biểu ra giấy nháp hoặc lập file Excel cá nhân trước giờ mở cổng.<br>- Hỏi xin kinh nghiệm chọn môn và giáo viên trên các nhóm Facebook sinh viên HBA.<br>- Rủ bạn bè cùng trực cổng để "giữ chỗ" hộ nhau.<br>- Xếp hàng nộp đơn giấy xin cứu xét tại Phòng Đào tạo khi không đăng ký được. |
-| **5** | **Alternative Shortcomings** (Nhược điểm của cách giải quyết hiện tại) | - Bảng Excel cá nhân không đồng bộ được với dữ liệu mở lớp thực tế (lớp bị hủy do thiếu sĩ số hoặc đã hết chỗ).<br>- Lời khuyên truyền miệng dễ gây hiểu sai quy chế môn tiên quyết mới.<br>- Xếp hàng nộp đơn giấy gây mất thời gian, tụ tập đông người, tỷ lệ đơn được duyệt thấp và phản hồi rất chậm trễ. |
-| **6** | **Emotional Impact** (Tác động cảm xúc) | - Hoang mang, lúng túng và căng thẳng tột độ trước "cuộc chiến đăng ký tín chỉ" hoàn toàn mới lạ.<br>- Bực bội và bất lực khi trang web báo lỗi không rõ ràng hoặc bị sập server.<br>- Lo lắng kéo dài về việc bị chậm tiến độ tốt nghiệp so với bạn bè cùng lớp niên chế cũ. |
-| **7** | **Quantifiable Impact** (Tác động định lượng - Kèm đơn vị đo) | - **Thời gian:** Mất trung bình 4–6 giờ cho mỗi đợt đăng ký tín chỉ (canh giờ, tải lại trang, xếp lại lịch).<br>- **Tỷ lệ ảnh hưởng:** Ước tính 20–25% sinh viên không đăng ký được nguyện vọng tối ưu trong đợt đầu do thao tác nhầm.<br>- **Hệ quả học vụ:** 5–10% sinh viên bị chậm tiến độ tốt nghiệp ít nhất 1 kỳ học vì trượt các môn tiên quyết dạng chuỗi. |
-| **8** | **Evidence vs. Assumptions** (Bằng chứng và Giả định) | - `[Evidence]`: Quy chế đào tạo theo học chế tín chỉ mới được Giám đốc Học viện ban hành; hiện tượng sinh viên xếp hàng xin đổi môn và khiếu nại nghẽn mạng là sự kiện thực tế.<br>- `[Assumption]`: Giả định rằng nguyên nhân sinh viên chọn sai môn bắt nguồn chủ yếu từ việc không hiểu cây tiên quyết (cần khảo sát định lượng để xác thực). |
+| *Khi sinh viên lập kế hoạch học tập cá nhân trước mỗi đợt đăng ký học phần đầu kỳ, trong bối cảnh trường chuyển từ niên chế sang tín chỉ.* | *Không nắm rõ và khó tra cứu mối quan hệ ràng buộc giữa các môn học (tiên quyết, học trước, song hành), do thông tin hiện nằm rải rác trên các văn bản/sổ tay PDF tĩnh dài hàng trăm trang và mã môn học giữa 2 chế độ bị thay đổi* | *Tự tải file PDF quy chế về, dùng lệnh Ctrl+F để tra từng mã môn thủ công hoặc Đi hỏi anh/chị khóa trên hoặc nhờ cậy bạn bè trong nhóm chat.* |
+| **CUSTOMERS** | **EMOTIONAL IMPACT** | **ALTERNATIVE SHORTCOMINGS** |
+| *Sinh viên năm 2–4, những người không còn được nhà trường sắp xếp thời khóa biểu như năm nhất.* | *Cảm thấy hoang mang và mông lung vì có nguy cơ bỏ lỡ các học phần tiên quyết, dẫn đến chậm tiến độ tốt nghiệp.* | *File PDF quá dài, dễ bỏ sót môn tiên quyết ẩn hoặc môn đã đổi mã tương đương, Lời khuyên từ khóa trên mang tính chủ quan, không khớp với quy chế chuyển đổi mới của trường.* |
+
+### **5.2. User problem statement canvas 2**
+
+| CONTEXT (Bối cảnh xảy ra) | PROBLEM / ROOT CAUSE (Vấn đề cốt lõi) | ALTERNATIVES (Cách SV tự xoay sở hiện tại) |
+| :--- | :--- | :--- |
+| Giai đoạn sinh viên tự lập thời khóa biểu cá nhân trước và trong đợt mở đăng ký học phần đầu mỗi kỳ học kỹ thuật. | Lịch học lý thuyết tập trung và các ca thực hành xưởng/phòng thí nghiệm bị tách rời, chia thành nhiều kíp nhỏ (15–20 SV/nhóm) với lịch học so le theo tuần, đòi hỏi phải tự đối chiếu chéo thủ công. | • Tự lập bảng Excel hoặc vẽ ma trận lịch học ra giấy để thử ghép từng ca thực hành với lớp lý thuyết.<br>• Chấp nhận đăng ký lớp lý thuyết trước, rồi "canh me" tìm ca xưởng còn trống sau.<br>• Nhờ bạn bè cùng ngành tìm và đăng ký chung cùng một ca xưởng. |
+| **CUSTOMERS (Đối tượng chịu tác động)** | **EMOTIONAL IMPACT (Tác động cảm xúc)** | **ALTERNATIVE SHORTCOMINGS (Hạn chế của cách cũ)** |
+| Sinh viên các ngành kỹ thuật ứng dụng tại HBA (Cơ khí, Điện - Điện tử, CNTT, Hóa học, Công nghệ Vật liệu...). | Ức chế, mệt mỏi và kiệt sức vì mất nhiều công sức ghép lịch nhưng vẫn bị xung đột; lo lắng bị nợ phần xưởng khiến không hoàn thành được môn học. | • Mất hàng giờ thử - sai trên giấy/Excel nhưng khi vào đăng ký thật thì ca xưởng dự kiến đã bị người khác chọn mất.<br>• Dễ bị lệch ca hoặc không đủ thời gian di chuyển giữa các tòa giảng đường và xưởng thực hành.<br>• Có nguy cơ đăng ký được lý thuyết nhưng không vào được ca xưởng nào, dẫn đến việc bị hủy cả học phần. |
+
+### **5.3. User problem statement canvas 3**
+
+| CONTEXT (Bối cảnh xảy ra) | PROBLEM / ROOT CAUSE (Vấn đề cốt lõi) | ALTERNATIVES (Cách SV tự xoay sở hiện tại) |
+| :--- | :--- | :--- |
+| Khung giờ cao điểm mở cổng đăng ký học phần trực tuyến tập trung cho toàn bộ ~35.000 sinh viên HBA vào đầu học kỳ. | Số lượng sinh viên truy cập đồng thời quá lớn trong khi chỉ tiêu một số lớp học phần mở chưa sát nhu cầu thực tế; trạng thái chỗ trống biến động từng giây và thiếu cơ chế phản hồi hàng đợi minh bạch. | • Tụ tập tại các quán net có đường truyền mạng tốc độ cao để "săn slot".<br>• Mở nhiều tab trình duyệt, liên tục bấm phím F5 / tải lại trang để giành chỗ.<br>• Viết đơn giấy gửi lên Văn phòng Khoa/Phòng Đào tạo xin mở thêm lớp hoặc xin nhập học phần sau khi cổng đóng. |
+| **CUSTOMERS (Đối tượng chịu tác động)** | **EMOTIONAL IMPACT (Tác động cảm xúc)** | **ALTERNATIVE SHORTCOMINGS (Hạn chế của cách cũ)** |
+| Toàn bộ sinh viên hệ chính quy tại HBA, đặc biệt là sinh viên năm 3, năm 4 cần hoàn thành các môn học phần bắt buộc để kịp tiến độ tốt nghiệp. | Cực kỳ hoang mang, hoảng loạn và ức chế tột độ khi màn hình bị đơ/trắng; cảm thấy bất công khi bản thân chuẩn bị kỹ nhưng vẫn bị trượt lớp do yếu tố hạ tầng mạng. | • Việc F5 liên tục càng làm nghẽn băng thông hệ thống, dẫn đến sập phiên đăng ký.<br>• Phải viết đơn xin mở lớp thủ công mất nhiều thời gian đi lại, xếp hàng nộp đơn và tỷ lệ được chấp thuận phụ thuộc vào may rủi.<br>• Bị động trong việc sắp xếp công việc làm thêm hoặc kế hoạch sinh hoạt cá nhân. |
+
+### **5.4. User problem canvas 4**
+
+| CONTEXT (Bối cảnh xảy ra) | PROBLEM / ROOT CAUSE (Vấn đề cốt lõi) | ALTERNATIVES (Cách SV tự xoay sở hiện tại) |
+| :--- | :--- | :--- |
+| Diễn ra xuyên suốt học kỳ (15–20 tuần học) tại các giảng đường, phòng thí nghiệm và xưởng kỹ thuật của HBA. | Xóa bỏ lớp sinh hoạt cố định của Niên chế khiến các lớp học phần gồm sinh viên ghép từ nhiều ngành/khóa; lịch xưởng biến động theo tuần; thông tin đổi phòng/báo nghỉ từ giảng viên thiếu kênh truyền tải tức thời và tập trung. | • Tự chụp ảnh màn hình lịch học lưu vào thư viện ảnh điện thoại hoặc chép tay ra sổ.<br>• Lập các nhóm Zalo/Messenger tự phát cho từng lớp môn học để sinh viên tự hỏi han, nhắc nhở nhau.<br>• Phải đến tận cửa phòng học hoặc bảng tin Khoa để xem thông báo dán giấy khi thấy phòng học đóng cửa. |
+| **CUSTOMERS (Đối tượng chịu tác động)** | **EMOTIONAL IMPACT (Tác động cảm xúc)** | **ALTERNATIVE SHORTCOMINGS (Hạn chế của cách cũ)** |
+| Sinh viên toàn trường, đặc biệt là sinh viên năm nhất và năm hai mới chuyển đổi sang môi trường học tín chỉ chưa quen việc tự quản lý lịch trình cá nhân. | Hoang mang, bực bội vì mất công di chuyển xa đến trường nhưng giảng viên báo nghỉ; xấu hổ và lo sợ bị trừ điểm chuyên cần do đi nhầm kíp/phòng học. | • Ảnh chụp màn hình chỉ là dữ liệu tĩnh, không tự cập nhật khi giảng viên đổi phòng hoặc đổi lịch học bù.<br>• Nhóm chat tự phát thường xuyên bị trôi tin nhắn quan trọng bởi các tin trò chuyện rác.<br>• Thông báo dán tại cửa phòng thường quá muộn, khiến sinh viên mất thời gian và công sức đi lại. |
+
+### **5.5. User problem statement canvas 5**
+
+| CONTEXT (Bối cảnh xảy ra) | PROBLEM / ROOT CAUSE (Vấn đề cốt lõi) | ALTERNATIVES (Cách SV tự xoay sở hiện tại) |
+| :--- | :--- | :--- |
+| Thời điểm sinh viên cân nhắc số môn đăng ký ở đầu kỳ và giai đoạn cao điểm thu nộp học phí trước các đợt thi giữa kỳ/cuối kỳ. | Chuyển từ mức đóng trọn gói cố định sang tính tiền theo từng tín chỉ (với hệ số chênh lệch giữa tín chỉ lý thuyết và thực hành/thí nghiệm kỹ thuật); học phí biến động sau mỗi lần thêm/rút môn nhưng thông tin nợ phí không được cập nhật tức thời. | • Tự lấy sổ tay tra đơn giá từng loại tín chỉ rồi bấm máy tính cầm tay để nhẩm tính tổng số tiền.<br>• Đợi nhà trường ra thông báo công nợ chính thức trên cổng thông tin rồi mới đi vay mượn hoặc xin gia đình.<br>• Trực tiếp lên Phòng Tài vụ xếp hàng để hỏi rõ lý do tại sao số tiền học phí khác với dự tính ban đầu. |
+| **CUSTOMERS (Đối tượng chịu tác động)** | **EMOTIONAL IMPACT (Tác động cảm xúc)** | **ALTERNATIVE SHORTCOMINGS (Hạn chế của cách cũ)** |
+| Toàn bộ sinh viên HBA và gia đình của họ (đặc biệt là các bạn sinh viên có hoàn cảnh kinh tế khó khăn, phải tự đi làm thêm trang trải học phí). | Bất an, lo lắng vì số tiền học phí thực tế vượt quá ngân sách dự kiến của gia đình; bức xúc và căng thẳng tột độ khi bị thông báo cấm thi hoặc khóa tài khoản do nợ học phí phát sinh ngoài ý muốn. | • Tự tính bằng tay rất dễ sai sót do không nắm rõ hệ số học phần (ví dụ: xưởng thực hành nhân hệ số 1.2 – 1.5).<br>• Biết số tiền quá muộn khiến sinh viên không kịp xoay xở tài chính trong thời hạn quy định.<br>• Phòng Tài vụ luôn trong tình trạng quá tải người xếp hàng hỏi đáp, giải quyết chậm trễ. |
+
+### **5.6. User problem canvas 6**
+
+| CONTEXT (Bối cảnh xảy ra) | PROBLEM / ROOT CAUSE (Vấn đề cốt lõi) | ALTERNATIVES (Cách SV tự xoay sở hiện tại) |
+| :--- | :--- | :--- |
+| Giai đoạn cuối mỗi học kỳ (khi chuẩn bị đăng ký môn cho kỳ tiếp theo) và các đợt rà soát hồ sơ tốt nghiệp hàng năm. | Dữ liệu điểm tổng kết (GPA/CPA) công bố chậm (thường trễ 2 tuần); việc quy đổi học phần giữa Niên chế cũ và Tín chỉ mới phức tạp; thiếu công cụ tự động đối soát các điều kiện tích lũy so với chuẩn đầu ra của ngành. | • Tự lập file Excel cá nhân, gõ từng đầu điểm và tự viết công thức tính điểm trung bình tích lũy hệ 4.<br>• In bảng điểm giấy đem đến nhờ Cố vấn học tập hoặc Văn phòng Viện/Khoa rà soát hộ xem còn thiếu môn gì.<br>• Đợi danh sách cảnh báo học vụ được dán công khai trên bảng tin của trường. |
+| **CUSTOMERS (Đối tượng chịu tác động)** | **EMOTIONAL IMPACT (Tác động cảm xúc)** | **ALTERNATIVE SHORTCOMINGS (Hạn chế của cách cũ)** |
+| Sinh viên từ năm 2 trở đi, đặc biệt là nhóm sinh viên các khóa chuyển tiếp (giao thời giữa 2 mô hình đào tạo) và sinh viên năm cuối chuẩn bị ra trường. | Hoang mang vì không biết chính xác mình đang ở mức cảnh báo học vụ nào; thất vọng và suy sụp khi phát hiện bị thiếu 1–2 tín chỉ tự chọn hoặc chứng chỉ điều kiện ngay sát ngày xét tốt nghiệp. | • Tự tính Excel dễ sai lệch so với công thức làm tròn và cách tính điểm trọng số của Phòng Đào tạo.<br>• Phải xếp hàng xin gặp cán bộ Khoa/Viện trong giờ hành chính, gây mất thời gian cho cả hai bên.<br>• Nhận thông báo cảnh báo học vụ quá trễ khiến sinh viên không kịp điều chỉnh số lượng tín chỉ tối đa được phép học ở kỳ kế tiếp. |
+
+## **6. Business problem**
+
+### **Đăng ký sai môn tiên quyết**
+* **User Problem:** Sinh viên gặp khó khăn khi tra cứu môn tiên quyết trên tài liệu PDF tĩnh, dẫn đến chọn sai môn học
+* **Operational Impact:** Cán bộ Phòng Đào tạo mất nhiều thời gian rà soát hồ sơ thủ công và xử lý các đơn xin đổi/hủy môn
+* **Business Problem:** Quy trình kiểm soát điều kiện học phần thủ công gây quá tải bộ máy vận hành đầu kỳ.
+* **Desired Outcome:** Giảm thời gian rà soát học vụ và giảm tỷ lệ sinh viên đăng ký sai môn.
 
 ---
 
-## PHẦN C: THỰC HÀNH 4 — LEAN UX CANVAS HOÀN CHỈNH 8 Ô (SLIDE 33–42, 59–60)
-
-| Ô số | Tên thành phần | Nội dung chi tiết |
-|:---:|---|---|
-| **1** | **Business Problem** *(Vấn đề kinh doanh)* | Quá trình chuyển đổi từ Niên chế sang Tín chỉ tại Học viện Bách Nghệ Hà Nội đang đối mặt với nguy cơ đổ vỡ về mặt vận hành. Sinh viên chưa quen tự đăng ký môn học và công cụ quản lý bán thủ công cũ làm bùng nổ hơn 4.000 đơn khiếu nại mỗi đầu kỳ, gây nghẽn mạng nghiêm trọng, lãng phí hàng nghìn giờ công của cán bộ và làm suy giảm sự tín nhiệm của người học đối với chủ trương đổi mới đào tạo của Học viện. |
-| **2** | **Business Outcomes** *(Kết quả kinh doanh đo lường được)* | - Đạt tỷ lệ 95% sinh viên HBA hoàn thành đăng ký học phần đúng hạn ngay trong đợt mở cổng đầu tiên.<br>- Giảm 70% số lượng đơn thư khiếu nại và đơn xin cứu xét học vụ gửi về Phòng Đào tạo.<br>- Giảm 85% thời gian đối soát công nợ học phí giữa Phòng Tài vụ và hệ thống đào tạo.<br>- Duy trì thời gian phản hồi hệ thống đăng ký dưới 2 giây ngay trong khung giờ cao điểm mở cổng. |
-| **3** | **Users & Customers** *(Người dùng & Khách hàng)* | - **Người dùng chính:** Sinh viên đại học hệ tín chỉ của Học viện Bách Nghệ Hà Nội (~35.000 người).<br>- **Người dùng nội bộ / vận hành:** Cán bộ Phòng Đào tạo, Cán bộ Phòng Tài vụ, Giảng viên các Khoa/Viện. |
-| **4** | **User Outcomes & Benefits** *(Kết quả & Lợi ích của người dùng)* | - **Với Sinh viên HBA:** Tự tin lập lộ trình học tập; nhận biết ngay môn học đủ điều kiện; xếp thời khóa biểu tự động không lo trùng kíp; đăng ký xong trong dưới 5 phút.<br>- **Với Cán bộ Đào tạo:** Không còn cảnh ngập trong đơn giấy; hệ thống tự động khóa/mở lớp theo sĩ số và kiểm tra điều kiện tiên quyết thời gian thực.<br>- **Với Cán bộ Tài vụ:** Học phí tính tự động chính xác theo số tín chỉ đăng ký; gạch nợ tức thời qua VietQR. |
-| **5** | **Solution Ideas** *(Ý tưởng giải pháp)* | - **Giải pháp 1 (Lộ trình học tập trực quan):** Hiển thị sơ đồ cây môn học tiên quyết, tự động gắn nhãn môn đã đạt / môn đủ điều kiện học kỳ này.<br>- **Giải pháp 2 (Bộ xếp lịch thông minh chống trùng):** Cho phép kéo-thả hoặc chọn lớp trên lưới thời khóa biểu, tự động phát hiện và ngăn chặn trùng kíp.<br>- **Giải pháp 3 (Hàng đợi ảo chống nghẽn mạng):** Cơ chế Virtual Waiting Room điều tiết lưu lượng truy cập công bằng.<br>- **Giải pháp 4 (Thanh toán học phí tín chỉ VietQR):** Tích hợp cổng thanh toán ngân hàng, sinh mã QR động theo đúng số tiền tín chỉ đăng ký thực tế. |
-| **6** | **Hypotheses** *(Các giả thuyết kiểm chứng)* | **Giả thuyết 1 (Trọng tâm trải nghiệm sinh viên):**<br>*"Chúng tôi tin rằng [tỷ lệ đăng ký học phần thành công ngay trong đợt đầu đạt trên 95%] sẽ đạt được nếu [Sinh viên Học viện Bách Nghệ Hà Nội] đạt được [khả năng tự lập thời khóa biểu không trùng lịch và biết rõ các môn đủ điều kiện tiên quyết] nhờ vào [tính năng Lập lộ trình học tập cá nhân & Cảnh báo tiên quyết tự động]."*<br><br>**Giả thuyết 2 (Trọng tâm vận hành Học viện):**<br>*"Chúng tôi tin rằng [số lượng đơn khiếu nại học vụ gửi về Phòng Đào tạo giảm 70%] sẽ đạt được nếu [Cán bộ Đào tạo HBA] đạt được [sự tự động hóa hoàn toàn trong khâu thẩm định điều kiện tiên quyết và kiểm soát sĩ số trần/sàn] nhờ vào [bộ máy Kiểm soát quy tắc tín chỉ thời gian thực]."* |
-| **7** | **What We Need to Learn First?** *(Giả định rủi ro nhất cần học trước)* | 1. **Về hành vi người dùng:** Sinh viên quen niên chế liệu có chịu vào hệ thống lập kế hoạch học tập trước ngày mở cổng, hay vẫn đợi đến giờ G mới vào thao tác?<br>2. **Về tính khả thi dữ liệu:** Dữ liệu điểm tích lũy của các khóa cũ có được làm sạch và đồng bộ kịp thời để bộ máy tiên quyết hoạt động chính xác không?<br>3. **Về giao diện:** Lưới thời khóa biểu trực quan có hoạt động mượt mà và dễ hiểu trên thiết bị di động không? |
-| **8** | **MVP (Minimum Viable Product)** *(Thử nghiệm tối thiểu để học hỏi)* | Xây dựng một **Nguyên mẫu tương tác (Clickable Prototype)** gồm 4 màn hình cốt lõi của luồng đăng ký học phần có kiểm tra điều kiện tiên quyết và chống trùng kíp, sau đó tổ chức bài kiểm thử Usability Test với 8–10 sinh viên HBA đại diện cho các ngành khác nhau. |
+### **Trùng lịch thực hành và lệch pha mở lớp**
+* **User Problem:** Sinh viên mất nhiều thời gian tự ghép lịch lý thuyết và thực hành xưởng, dễ bị trùng ca hoặc thiếu chỗ.
+* **Operational Impact:** Nhà trường mở lớp dựa trên ước tính chủ quan; nhiều lớp quá tải trong khi lớp khác phải hủy sát giờ
+* **Business Problem:** Kế hoạch phân bổ phòng học và xưởng thực hành thiếu dữ liệu dự báo, gây lãng phí cơ sở vật chất.
+* **Desired Outcome:** Giảm tỷ lệ lớp bị hủy vì thiếu sĩ số và nâng cao tỷ lệ lấp đầy phòng học/xưởng.
 
 ---
 
-## PHẦN D: THỰC HÀNH 5 — MVP & KẾ HOẠCH THỬ NGHIỆM (SLIDE 41–44, 61–62)
+### **Chậm cập nhật học phí tín chỉ**
+* **User Problem:** Sinh viên không nắm rõ số tiền học phí theo từng tín chỉ đã đăng ký và gặp phiền hà khi tra cứu công nợ.
+* **Operational Impact:** Phòng Tài vụ và Phòng Đào tạo phải đối soát thủ công giữa số tín chỉ thực học với số tiền nộp qua ngân hàng
+* **Business Problem:** Quy trình đối soát học phí chậm trễ làm ách tắc việc xác nhận điều kiện thi cuối kỳ.
+* **Desired Outcome:** Rút ngắn thời gian đối soát công nợ và giảm các thắc mắc về học phí.
 
-### D.1. Đặc tả Chi tiết Nguyên mẫu MVP (Clickable Prototype 4 Bước)
 
-```mermaid
-flowchart LR
-    M1["Màn hình 1:<br/>Bảng Lộ trình Tín chỉ<br/>& Cảnh báo Tiên quyết"] -->|"Chọn học phần hợp lệ"| M2["Màn hình 2:<br/>Chọn Lớp học phần<br/>& Chống trùng kíp"]
-    M2 -->|"Xem trước TKB dự kiến"| M3["Màn hình 3:<br/>Đối soát Ràng buộc<br/>(Tiên quyết, Sĩ số, Học phí)"]
-    M3 -->|"Xác nhận đăng ký"| M4["Màn hình 4:<br/>Xác nhận thành công<br/>& Biên lai tạm tính"]
+## **7. LeanUX canvas**
+
+| **1. Business Problem (Vấn đề kinh doanh & vận hành)** | **5. Solution ideas (Ý tưởng giải pháp)** | **2. Business Outcomes (Kết quả kinh doanh/vận hành mong muốn)** |
+| :--- | :--- | :--- |
+| Khi chuyển từ Niên chế sang Tín chỉ tại HBA (~35.000 SV, ~1.500 GV):<br>• **Vấn đề 1:** Quy trình kiểm soát điều kiện học phần (tiên quyết, song hành) và xử lý ngoại lệ thủ công gây quá tải bộ máy vận hành đầu kỳ (hơn 1.500 đơn thư xử lý mất trung bình 5 ngày).<br>• **Vấn đề 2:** Kế hoạch phân bổ phòng học và xưởng thực hành thiếu dữ liệu dự báo sớm, dẫn đến lệch pha cung - cầu (12% lớp hủy vì thiếu sĩ số, trong khi nhiều lớp kỹ thuật quá tải).<br>• **Vấn đề 3:** Quy trình đối soát học phí tín chỉ thủ công giữa Phòng Đào tạo và Phòng Tài vụ chậm trễ, phát sinh nhiều thắc mắc và ách tắc điều kiện thi cuối kỳ. | • **Giải pháp 1:** Hiển thị trực quan trạng thái môn học (Đủ điều kiện / Chưa đủ điều kiện) và tự động chặn đăng ký nếu vi phạm quy tắc tiên quyết/song hành.<br>• **Giải pháp 2:** Công cụ gợi ý và kiểm tra xung đột thời khóa biểu đồng bộ giữa lớp Lý thuyết và ca Thực hành xưởng theo thời gian thực.<br>• **Giải pháp 3:** Tính năng khảo sát/đăng ký nguyện vọng học phần sớm trước kỳ học để hỗ trợ Phòng Đào tạo lập kế hoạch mở lớp sát nhu cầu.<br>• **Giải pháp 4:** Tích hợp hiển thị học phí tạm tính theo số tín chỉ đã chọn kèm cổng đối soát gạch nợ tự động qua mã VietQR. | • Giảm hơn **70%** số lượng đơn thư hỗ trợ học vụ phát sinh trong 10 ngày đầu kỳ.<br>• Rút ngắn thời gian xử lý các trường hợp ngoại lệ từ **5 ngày xuống dưới 24 giờ**.<br>• Giảm tỷ lệ lớp học phần bị hủy phút chót do thiếu sĩ số từ **12% xuống dưới 3%**.<br>• Nâng tỷ lệ sử dụng công suất phòng học/xưởng thực hành đạt **trên 85%**.<br>• Giảm **trên 80%** khiếu nại liên quan đến sai lệch công nợ học phí; gạch nợ học phí tự động tức thời. |
+| **3. Users and customers (Người dùng & Các bên liên quan)** | *(Tiếp nối ô 5. Solution ideas)* | **4. User Benefits (Kết quả & Lợi ích của người dùng)** |
+| • **Sinh viên HBA:** Toàn bộ ~35.000 sinh viên cần tra cứu lộ trình, tự xếp thời khóa biểu (lý thuyết & xưởng), đăng ký lớp và theo dõi học phí.<br>• **Cán bộ Phòng Đào tạo:** Tiếp nhận, rà soát quy chế, điều phối lịch giảng đường/xưởng và xử lý ngoại lệ.<br>• **Cán bộ Phòng Tài vụ:** Quản lý định mức thu, theo dõi công nợ học phí theo tín chỉ và xác nhận quyền thi.<br>• **Giáo viên:** Điểm danh, quản lý điểm thi của lớp. | *(Các giải pháp ở ô số 5 phía trên kết nối trực tiếp với nhóm người dùng ở ô số 3 và lợi ích ở ô số 4)* | • **Đối với Sinh viên:**<br>  - Dễ dàng biết chính xác các môn mình đủ điều kiện học mà không sợ nhầm điều kiện tiên quyết.<br>  - Tự xếp được lịch học lý thuyết và ca xưởng thực hành không bị trùng giờ một cách thuận tiện.<br>  - Nhận kết quả xác nhận đăng ký và mức học phí phải nộp rõ ràng, tức thời.<br>• **Đối với Cán bộ:**<br>  - Giảm thao tác tra cứu, rà soát hồ sơ và bảng điểm thủ công.<br>  - Giảm áp lực trực tiếp tiếp nhận và giải quyết khiếu nại sự vụ đầu và cuối kỳ.<br>• **Đối với Giáo viên:**<br>  - Giảm áp lực tính điểm thi bằng tay cho từng em sinh viên trên từng đầu điểm.<br>  - Dễ dàng nhập điểm vào hệ thống sau khi tính toán xong điểm. |
+| **6. Hypotheses (Giả thuyết kiểm chứng)** | **7. What's the most important things we need to learn first? (Điều quan trọng nhất cần học trước)** | **8. What's the least amount of work we need to do to learn the next most important thing? (MVP & Experiments)** |
+| • **Giả thuyết 1 (Kiểm soát tiên quyết):** *Chúng tôi tin rằng* việc giảm 70% đơn thư học vụ và giảm tỷ lệ đăng ký sai môn *sẽ đạt được* nếu *sinh viên HBA* có thể dễ dàng nhận biết các môn đủ điều kiện học *với* tính năng trực quan hóa cây tiên quyết và tự động kiểm tra ràng buộc khi chọn môn.<br>• **Giả thuyết 2 (Cân bằng mở lớp & ghép xưởng):** *Chúng tôi tin rằng* tỷ lệ hủy lớp giảm xuống dưới 3% và giảm xung đột lịch học *sẽ đạt được* nếu *sinh viên kỹ thuật* ghép được ca xưởng phù hợp và *nhà trường* biết trước nhu cầu *với* tính năng đăng ký nguyện vọng sớm kèm bộ lọc ghép cặp Lý thuyết - Thực hành.<br>• **Giả thuyết 3 (Đối soát học phí):** *Chúng tôi tin rằng* việc giảm 80% khiếu nại tài vụ và rút ngắn thời gian quyết toán công nợ *sẽ đạt được* nếu *sinh viên* nắm rõ nghĩa vụ tài chính tức thời *với* tính năng hiển thị học phí tự động theo tín chỉ tích hợp cổng gạch nợ số. | • Sinh viên có thực sự hiểu và tin tưởng vào các cảnh báo điều kiện tiên quyết tự động không?<br>• Việc mở đăng ký nguyện vọng sớm có thực sự thu hút sinh viên tham gia đủ đông để làm dữ liệu dự báo mở lớp chuẩn xác không?<br>• Sinh viên có gặp khó khăn khi thao tác ghép lớp lý thuyết với ca xưởng thực hành trên một giao diện thống nhất không?<br>• Cán bộ Phòng Đào tạo có sẵn sàng phân quyền cho hệ thống tự động từ chối các vi phạm thay vì duyệt tay từng đơn không? | • **Mục tiêu thử nghiệm:** Kiểm chứng liệu giải pháp trực quan hóa điều kiện môn học và hỗ trợ tự ghép lịch lý thuyết - xưởng có giúp sinh viên đăng ký thuận tiện, không bị sai sót và giảm đơn thư khiếu nại hay không.<br>• **MVP đề xuất:** Một nguyên mẫu tương tác (Interactive Clickable Prototype) mô phỏng luồng:<br>  1. Xem danh sách môn học đề xuất (có gắn nhãn Đủ/Chưa đủ điều kiện tiên quyết).<br>  2. Chọn thử 1 lớp lý thuyết và hệ thống tự động lọc ra các ca xưởng không trùng lịch.<br>  3. Màn hình giỏ môn học hiển thị tạm tính học phí và bấm xác nhận đăng ký thử nghiệm.<br>• **Cách thức thử nghiệm:**<br>  - Mời một nhóm 20–30 sinh viên từ các ngành kỹ thuật (Cơ khí, Điện, CNTT) tham gia bài kiểm thử định hướng (Usability Testing).<br>  - Giao nhiệm vụ lập thời khóa biểu cho 5 môn học (gồm 3 môn có ca thực hành xưởng).<br>  - Quan sát và đo lường: Tỷ lệ hoàn thành nhiệm vụ đăng ký đúng quy chế; Thời gian thực hiện tác vụ (mục tiêu: < 10 phút); Số lần phát sinh nhầm lẫn hoặc cần trợ giúp. |
+
+## **8. MVP và Experiment Plan (Kế hoạch Thử nghiệm & Kiểm chứng)**
+
+*(Được xây dựng bám sát cấu trúc Thực hành 5 và Đáp án bài 5 trong slide bài giảng: kiểm chứng giả định rủi ro nhất thông qua nguyên mẫu tối thiểu trước khi quyết định đầu tư xây dựng hệ thống phần mềm hoàn chỉnh).*
+
+---
+
+### **8.1. Mục tiêu thử nghiệm (Experiment Objective)**
+
+* **Mục tiêu cốt lõi:** Kiểm tra xem liệu việc hiển thị trực quan điều kiện tiên quyết và cơ chế tự động ràng buộc ca thực hành xưởng theo lớp lý thuyết có thực sự giúp sinh viên Học viện Bách Nghệ Hà Nội (HBA) tự xếp lịch thuận tiện, không chọn sai môn và giảm thiểu xung đột thời khóa biểu hay không.
+* **Câu hỏi cần trả lời (What We Need to Learn):**
+  1. Sinh viên có dễ dàng nhận biết và hiểu lý do một môn học bị khóa điều kiện tiên quyết trên giao diện không?
+  2. Sinh viên có thể tự ghép cặp giữa lớp lý thuyết và ca xưởng thực hành mà không bị trùng lịch trong thời gian ngắn không?
+  3. Mức độ tự tin và tỷ lệ hoàn thành nhiệm vụ của sinh viên khi tự lập lịch học cá nhân trên nguyên mẫu đạt bao nhiêu?
+
+---
+
+### **8.2. Giả thuyết rủi ro cao nhất cần kiểm chứng (Riskiest Hypothesis)**
+
+> **Giả thuyết H1:**  
+> *"Chúng tôi tin rằng việc giảm 70% đơn thư học vụ và giảm tỷ lệ đăng ký sai môn sẽ đạt được nếu sinh viên HBA có thể dễ dàng nhận biết các môn đủ điều kiện học và tự ghép ca xưởng phù hợp với tính năng trực quan hóa cây tiên quyết kèm bộ lọc ràng buộc Lý thuyết – Thực hành."*
+
+* **Rủi ro lớn nhất nếu giả định này sai:** Nếu sinh viên vẫn không hiểu quy tắc hiển thị hoặc thấy cơ chế gợi ý ca xưởng quá phức tạp, họ vẫn sẽ chọn sai môn, tiếp tục nộp hàng nghìn đơn thư khiếu nại lên Phòng Đào tạo, khiến việc xây dựng phần mềm tốn kém nhưng không giải quyết được vấn đề quá tải vận hành.
+
+---
+
+### **8.3. Mô tả MVP (Minimum Viable Product)**
+
+* **Định dạng MVP:** Nguyên mẫu tương tác có thể bấm được (Interactive Clickable Prototype) trên công cụ thiết kế (Figma), mô phỏng luồng đăng ký học phần trên giao diện máy tính để bàn (Desktop Web) — nơi sinh viên thường thao tác đăng ký chính thức.
+* **Phạm vi tính năng tối thiểu trong nguyên mẫu:**
+  1. **Màn hình Tra cứu môn học & Cây tiên quyết:** Hiển thị danh sách môn học của ngành Kỹ thuật Cơ khí / Điện tử; gắn nhãn trạng thái trực quan: *Đã học (Xanh lá)*, *Đủ điều kiện đăng ký (Trắng/Xanh dương)*, *Chưa đủ điều kiện (Xám kèm lý do thiếu môn tiên quyết nào)*.
+  2. **Luồng Chọn lớp Lý thuyết & Ca Xưởng:** Khi sinh viên chọn 1 lớp Lý thuyết, hệ thống tự động lọc và chỉ hiển thị các ca thực hành xưởng còn trống và không trùng giờ với các môn đã chọn trước đó.
+  3. **Màn hình Thời khóa biểu tạm tính & Học phí:** Hiển thị ma trận lịch học theo tuần và tổng số tiền học phí tạm tính theo số tín chỉ đã chọn.
+  4. **Màn hình Xác nhận đăng ký:** Nút bấm xác nhận và hiển thị thông báo hoàn tất đăng ký thành công kèm bảng tóm tắt kết quả.
+
+---
+
+### **8.4. Thiết kế phương pháp thử nghiệm (Experiment Design)**
+
+| Thành phần | Chi tiết triển khai |
+| :--- | :--- |
+| **Phương pháp thử nghiệm** | Kiểm thử khả năng sử dụng có giám sát (Moderated Usability Testing) kết hợp Phỏng vấn bán cấu trúc (Semi-structured Interview). |
+| **Đối tượng tham gia (Participants)** | **20 sinh viên HBA**, gồm:<br>• 10 sinh viên năm 2 (vừa chuyển đổi từ Niên chế sang, chưa từng tự xếp lịch).<br>• 10 sinh viên năm 3–4 thuộc các ngành kỹ thuật nặng về thực hành xưởng (Cơ khí, Điện tử, Hóa học). |
+| **Thời lượng & Địa điểm** | 30 phút / sinh viên; thực hiện tại phòng Lab máy tính của trường hoặc qua Google Meet chia sẻ màn hình. |
+| **Kịch bản nhiệm vụ (Scenario Tasks)** | Người tham gia được giao kịch bản: *"Em hãy lập thời khóa biểu học kỳ mới với 4 môn học (gồm 2 môn lý thuyết thuần túy và 2 môn kỹ thuật có ca thực hành xưởng kèm theo), sau đó kiểm tra học phí và xác nhận hoàn tất."* |
+
+---
+
+### **8.5. Chỉ số đo lường hiệu quả (Metrics & Indicators)**
+
+| Nhóm chỉ số | Chỉ số cụ thể (Metrics) | Cách thức thu thập dữ liệu |
+| :--- | :--- | :--- |
+| **Độ hiệu quả (Effectiveness)** | • Tỷ lệ hoàn thành nhiệm vụ (Task Completion Rate)<br>• Tỷ lệ chọn sai môn tiên quyết (Error Rate)<br>• Tỷ lệ bị trùng lịch Lý thuyết – Xưởng | Quan sát trực tiếp người dùng thao tác trên Figma Prototype và ghi nhận log kết quả. |
+| **Độ hiệu quả vận hành (Efficiency)** | • Thời gian hoàn thành tác vụ (Time on Task)<br>• Số lần sinh viên phải dừng lại hỏi người hướng dẫn | Bấm giờ từ lúc bắt đầu đọc đề bài đến khi bấm nút "Xác nhận đăng ký". Đếm số câu hỏi phát sinh. |
+| **Mức độ hài lòng (Satisfaction)** | • Điểm SUS (System Usability Scale)<br>• Mức độ tự tin khi bấm xác nhận (thang điểm 1–5) | Bảng khảo sát ngắn 5 câu hỏi sau buổi thử nghiệm và phỏng vấn nhanh cảm nhận. |
+
+---
+
+### **8.6. Tiêu chí đánh giá thành công (Success Criteria)**
+
+* **Ủng hộ giả thuyết (Pass / Success):**
+  * Tỷ lệ hoàn thành trọn vẹn nhiệm vụ đạt **$\ge 85\%$** (ít nhất 17/20 sinh viên hoàn thành).
+  * **$0\%$** sinh viên vi phạm quy tắc môn tiên quyết (nguyên mẫu chặn thành công hoặc sinh viên tự nhận biết đúng).
+  * Thời gian hoàn tất việc chọn 4 môn và ghép ca xưởng trung bình **dưới 8 phút**.
+  * Điểm đánh giá mức độ rõ ràng, tự tin đạt trung bình **$\ge 4.0 / 5.0$**.
+* **Bác bỏ giả thuyết (Fail / Inconclusive):**
+  * Tỷ lệ hoàn thành nhiệm vụ dưới $70\%$, hoặc thời gian thao tác kéo dài trên 15 phút.
+  * Xuất hiện trên $20\%$ người tham gia phản ánh không hiểu cách ghép ca xưởng hoặc không biết tại sao một môn bị khóa.
+
+---
+
+### **8.7. Kế hoạch điều chỉnh sau thử nghiệm (Next Steps / Action Plan)**
+
 ```
-
-| Bước | Tên màn hình | Mục đích giao diện | Các thành phần & Tương tác cốt lõi |
-|:---:|---|---|---|
-| **1** | **Bảng Lộ trình Tín chỉ & Cảnh báo Tiên quyết** | Giúp SV vừa chuyển từ niên chế sang nhận biết ngay các môn học đủ điều kiện | - Thanh tiến độ tích lũy tín chỉ chuyên ngành.<br>- Danh sách môn học gợi ý: Hiển thị nhãn xanh `[Đủ điều kiện]` hoặc nhãn đỏ `[Chưa đạt môn tiên quyết: HBA101]`.<br>- Nút bấm: "Thêm vào danh sách chọn kỳ này". |
-| **2** | **Bộ lọc Lớp & Lưới Thời khóa biểu trực quan** | Giúp SV tự chọn kíp học mà không bị trùng lịch | - Lưới thời khóa biểu 6 ngày (Thứ 2 - Thứ 7), chia theo 6 kíp học.<br>- Khi di chuột vào một lớp học phần, kíp học tương ứng sáng lên trên lưới.<br>- Nếu trùng kíp với lớp đã chọn trước, hiển thị viền đỏ cảnh báo `[Trùng kíp với môn Kỹ thuật Lập trình]` và khóa nút chọn. |
-| **3** | **Màn hình Kiểm tra Tổng hợp Điều kiện** | Xác thực lần cuối trước khi ghi nhận đăng ký chính thức | - Bảng tóm tắt các lớp đã chọn (Mã lớp, Tên môn, Số TC, Giảng viên, Phòng học).<br>- Khung kiểm tra 3 điều kiện tự động: Tiên quyết `[Đạt ✅]`, Trùng lịch `[Không trùng ✅]`, Sĩ số `[Còn 15/60 chỗ ✅]`.<br>- Tạm tính học phí tín chỉ dự kiến. Nút bấm: "Gửi Đăng Ký Chính Thức". |
-| **4** | **Màn hình Xác nhận Thành công & Biên lai điện tử** | Mang lại sự an tâm tuyệt đối cho sinh viên | - Thông báo đăng ký thành công: Mã giao dịch, thời gian ghi nhận (đến từng giây).<br>- Tùy chọn: "Xuất Thời khóa biểu dạng PDF/iCal" và "Thanh toán học phí ngay qua mã VietQR". |
-
----
-
-### D.2. Kế hoạch Kiểm thử Người dùng (Usability Test Plan)
-
-#### 1. Mục tiêu thử nghiệm
-Kiểm chứng xem sinh viên Học viện Bách Nghệ Hà Nội (vốn quen với niên chế) có thể tự mình nhận biết môn học hợp lệ, tự xếp thời khóa biểu không trùng lịch và hoàn tất đăng ký học phần trong thời gian dưới 4 phút mà không cần cán bộ trợ giúp hay không.
-
-#### 2. Đối tượng và quy mô người tham gia
-* **Số lượng:** 8 sinh viên Học viện Bách Nghệ Hà Nội (gồm 3 SV năm hai vừa chuyển sang tín chỉ, 3 SV năm ba, 2 SV diện học cải thiện điểm).
-* **Hình thức:** Quan sát trực tiếp 1-1 (Người tham gia thao tác trên prototype, điều phối viên bấm giờ và ghi nhận các điểm vướng mắc).
-
-#### 3. Kịch bản nhiệm vụ (Tasks) giao cho sinh viên
-* **Nhiệm vụ 1 (Task 1):** Tìm môn *Cấu trúc dữ liệu và giải thuật* và kiểm tra xem mình có đủ điều kiện tiên quyết để học trong kỳ này không.
-* **Nhiệm vụ 2 (Task 2):** Chọn 1 lớp lý thuyết và 1 lớp bài tập sao cho không trùng kíp với môn *Toán rời rạc* đã chọn sẵn trong thời khóa biểu.
-* **Nhiệm vụ 3 (Task 3):** Hoàn thành việc gửi đăng ký chính thức và xem số tiền học phí tạm tính.
-
-#### 4. Chỉ số đo lường định lượng (Success Metrics)
-
-| Chỉ số đo lường | Định nghĩa cách tính | Mục tiêu chấp nhận (Target) | Kết quả thực nghiệm dự kiến |
-|---|---|:---:|:---:|
-| **Task Completion Rate** | Tỷ lệ sinh viên hoàn thành cả 3 nhiệm vụ mà không cần hỏi người hướng dẫn | $\ge 85\%$ | $87.5\%$ (đạt) |
-| **Time on Task** | Thời gian trung bình để hoàn tất luồng đăng ký trên nguyên mẫu | $< 4\text{ phút}$ | $2\text{ phút } 50\text{ giây}$ (đạt) |
-| **Error Rate** | Số lần sinh viên nhấp nhầm vào lớp trùng lịch hoặc chọn nhầm môn chưa đủ điều kiện | $\le 1.0\text{ lỗi/người}$ | $0.6\text{ lỗi/người}$ (đạt) |
-| **System Usability Scale (SUS)** | Điểm đánh giá trải nghiệm khảo sát 10 câu hỏi chuẩn SUS sau bài test | $\ge 75/100\text{ điểm}$ | $81.0/100\text{ điểm}$ (tốt) |
-
-#### 5. Tiêu chí Đánh giá & Hướng Điều chỉnh (Go / Pivot Decision)
-* **Kịch bản THÀNH CÔNG (Go):** Nếu Task Completion Rate $\ge 85\%$ và Điểm SUS $\ge 75$, giả thuyết được xác nhận. Nhóm giữ nguyên luồng thiết kế này làm đầu vào cho giai đoạn phân tích Use Case tiếp theo.
-* **Kịch bản CẦN ĐIỀU CHỈNH (Pivot):** Nếu sinh viên vẫn mất trên 4 phút và lúng túng khi nhận diện môn tiên quyết, nhóm sẽ thiết kế lại Màn hình 1 theo hướng: *Chỉ hiển thị các môn học mà sinh viên đã thỏa mãn 100% điều kiện tiên quyết, ẩn hoàn toàn các môn chưa đủ điều kiện*.
+                                  [KẾT QUẢ THỬ NGHIỆM MVP]
+                                             |
+             +-------------------------------+-------------------------------+
+             |                                                               |
+    [ĐẠT TIÊU CHÍ (> 85%)]                                          [CHƯA ĐẠT TIÊU CHÍ]
+             |                                                               |
+             v                                                               v
+• Giữ nguyên luồng tương tác cốt lõi.                        • Phân tích điểm nghẽn (Friction Points)
+• Chuyển giao đặc tả luồng cho đội                           dựa trên bản ghi màn hình & phỏng vấn.
+  kỹ thuật để lập trình phiên bản Web thật.                  • Tinh chỉnh giao diện: làm rõ nhãn cảnh báo,
+• Mở rộng thử nghiệm tiếp theo:                              đơn giản hóa bảng chọn ca xưởng.
+  Thử nghiệm với nhóm Cán bộ Đào tạo                        • Tiến hành vòng thử nghiệm Prototype thứ 2
+  về tính năng phê duyệt ngoại lệ tự động.                    với 10 sinh viên mới trước khi code.
+```
