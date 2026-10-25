@@ -48,12 +48,14 @@
 
 ## PHẦN B: KHUNG XÁC ĐỊNH VẤN ĐỀ CỦA GIẢNG VIÊN
 
-| Nhóm Bối cảnh & Tác động | Nhóm Bản chất Vấn đề & Thực trạng |
-|---|---|
-| **Bối cảnh xảy ra vấn đề (Context)**<br>Diễn ra trong 3 tuần đầu tiên của học kỳ tín chỉ (giai đoạn sinh viên rút và bổ sung môn học) tại các giảng đường và phòng thí nghiệm của Học viện Bách Nghệ Hà Nội. | **Bản chất vấn đề cốt lõi (Root Problem)**<br>Học viện áp dụng quy chế đào tạo tín chỉ cho phép điều chỉnh môn học kéo dài nhưng thiếu kênh cập nhật sĩ số tự động đến giảng viên; công tác quản trị đào tạo tách rời việc giảng dạy trên lớp. |
-| **Đối tượng chịu tác động (Who / Customers)**<br>Giảng viên trực tiếp đứng lớp các học phần đại cương và chuyên ngành tại các Khoa/Viện, bao gồm cả giảng viên cơ hữu và giảng viên thỉnh giảng. | **Cách thức giải quyết hiện tại (Alternatives)**<br>• In danh sách lớp dạng bảng tính ra giấy từ đầu kỳ để điểm danh thủ công.<br>• Cho sinh viên mới vào lớp tự viết thêm tên vào cuối danh sách giấy.<br>• Tự lập nhóm mạng xã hội để trao đổi thông tin với sinh viên. |
-| **Tác động cảm xúc (Emotional Impact)**<br>Bực bội và mệt mỏi khi thời lượng truyền đạt kiến thức bị gián đoạn vì các thủ tục hành chính; bất an về tính chính xác của dữ liệu sinh viên ngồi trong lớp. | **Nhược điểm của cách giải quyết hiện tại (Shortcomings)**<br>• Danh sách giấy dễ rách nát, thất lạc và nhanh chóng sai lệch so với hệ thống gốc.<br>• Tốn nhiều giờ cuối kỳ để nhập lại điểm danh thủ công.<br>• Kênh mạng xã hội không bảo mật và dễ trôi thông tin học vụ. |
-| **Tác động định lượng (Quantifiable Impact)**<br>• Lãng phí 15 phút mỗi buổi học trong 3 tuần đầu (tương đương 10–12% thời lượng môn học).<br>• Biến động 15–20% sĩ số sau buổi học đầu tiên.<br>• Tốn 3–5 giờ cuối kỳ để đối soát dữ liệu chuyên cần từ giấy. | **Cơ sở xác định (Evidence vs Assumptions)**<br>• `[Evidence]`: Hiện tượng sinh viên xin vào lớp muộn và xin điểm danh bổ sung bằng tay diễn ra phổ biến trên các giảng đường.<br>• `[Assumption]`: Giả định rằng nếu có danh sách lớp số hóa cập nhật thời gian thực, thời gian ổn định lớp sẽ giảm xuống dưới 1 phút. |
+| **CONTEXT**<br>*When does the problem occur?* | **PROBLEM**<br>*What is the root cause of the problem?* | **ALTERNATIVES**<br>*What do customers do now to fix the problem?* |
+|---|---|---|
+| “Diễn ra trong 3 tuần đầu tiên của mỗi học kỳ tín chỉ, đặc biệt vào khung giờ lên lớp tại các giảng đường và phòng thí nghiệm của Học viện Bách Nghệ Hà Nội.” | “Danh sách lớp học phần liên tục biến động và thiếu thông tin về năng lực tiên quyết của sinh viên.”<br><br>Giảng viên có thể dành trọn thời gian để nâng cao chất lượng giảng dạy và hướng dẫn chuyên môn thay vì phải giải quyết các thủ tục hành chính sĩ số trên lớp. | “In danh sách lớp dạng bảng tính ra giấy từ đầu kỳ để điểm danh tay; cho sinh viên mới vào lớp tự viết thêm tên vào cuối danh sách; tự lập nhóm Zalo hoặc Facebook để trao đổi thông tin.” |
+| **CUSTOMERS**<br>*Who has the problem most often?* | **EMOTIONAL IMPACT**<br>*How does the customer feel?*<br><br>Sự bực bội, ức chế và bất an khi chất lượng tiết dạy bị gián đoạn và không kiểm soát được danh sách sinh viên thực tế trong lớp.<br><br>**QUANTIFIABLE IMPACT**<br>*What is the measurable impact (include units)?*<br><br>“Lãng phí trung bình 10–15 phút mỗi buổi học trong 3 tuần đầu (chiếm 10–12% thời lượng môn học); biến động 15–20% sĩ số sau buổi học đầu tiên; mất 3–5 giờ cuối kỳ để đối soát dữ liệu chuyên cần từ giấy.” | **ALTERNATIVE SHORTCOMINGS**<br>*What are the disadvantages of the alternatives?*<br><br>Danh sách giấy nhanh chóng rách nát, thất lạc và sai lệch so với dữ liệu gốc của Phòng Đào tạo; việc điểm danh đọc tên thủ công gây lãng phí thời gian; kênh mạng xã hội không bảo mật và dễ trôi thông tin học vụ. |
+
+* **Cơ sở phân biệt Bằng chứng và Giả định:**
+  * `[Evidence]`: Hiện tượng sinh viên xin vào lớp muộn, xin điểm danh bổ sung bằng tay và danh sách giấy bị sửa chằng chịt là thực tế diễn ra tại các giảng đường HBA sau khi chuyển sang tín chỉ.
+  * `[Assumption]`: Giả định rằng nếu có danh sách lớp học phần số hóa cập nhật thời gian thực, thời gian ổn định lớp sẽ giảm xuống dưới 1 phút.
 
 ---
 
