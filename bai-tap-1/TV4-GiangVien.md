@@ -5,7 +5,7 @@
 > **Công việc của TV4:**
 > - Tác nhân phụ trách chính: **Giảng viên**
 > - Bối cảnh nghiên cứu: **Giảng viên bỡ ngỡ với lớp học phần hỗn hợp nhiều khóa, danh sách lớp biến động kéo dài trong 3 tuần đầu chuyển đổi sang tín chỉ**
-> - Hạng mục bài tập đảm nhận: **TH1 (Nhu cầu người dùng và Phát biểu vấn đề) + TH2 (Khung xác định vấn đề Canvas) + Báo cáo khám phá vấn đề toàn diện 5 phần + Phản biện nghiệp vụ**
+> - Hạng mục bài tập đảm nhận: **TH1 (User Needs & Problem Statement) + TH2 (User Problem Statement Canvas) + Báo cáo khám phá vấn đề toàn diện 5 phần + Phản biện nghiệp vụ**
 > - Tài liệu tham chiếu: Slide 7–21, 51–55 trong `docs/OOAD_Lab_B1-5.md`
 
 ---
@@ -29,14 +29,6 @@
 > 
 > "Giảng viên Học viện Bách Nghệ Hà Nội gặp khó khăn và lãng phí thời gian đáng kể trong việc tổ chức giảng dạy và quản lý chuyên cần trong giai đoạn chuyển đổi sang tín chỉ, vì danh sách lớp học phần liên tục biến động do sinh viên rút/thêm môn kéo dài và thiếu thông tin về trình độ đáp ứng môn tiên quyết của người học, dẫn đến việc giảng viên mất từ 10 đến 15 phút mỗi buổi học để ổn định sĩ số, gặp trở ngại khi phân chia nhóm làm bài tập lớn và không kiểm soát được chất lượng tiếp thu của lớp học."
 
-* **Số từ:** 88 từ.
-* **Kiểm tra tiêu chí chất lượng:**
-  - [x] Có xác định đúng đối tượng (Giảng viên Học viện Bách Nghệ Hà Nội).
-  - [x] Có bối cảnh cụ thể (Giai đoạn chuyển đổi từ niên chế sang tín chỉ).
-  - [x] Nêu rõ trở ngại cốt lõi (Danh sách lớp biến động do rút/thêm môn kéo dài, thiếu thông tin môn tiên quyết).
-  - [x] Nêu rõ hệ quả thực tế (Mất 10–15 phút đầu giờ, khó chia nhóm bài tập lớn, khó kiểm soát chất lượng).
-  - [x] **Tuyệt đối không chứa từ ngữ giải pháp** (không nhắc đến "cần website", "cần app mobile").
-
 ---
 
 ### 3. Danh mục giả định cần kiểm chứng
@@ -46,12 +38,12 @@
 
 ---
 
-## PHẦN B: KHUNG XÁC ĐỊNH VẤN ĐỀ CỦA GIẢNG VIÊN
+## PHẦN B: USER PROBLEM STATEMENT CANVAS CỦA GIẢNG VIÊN
 
 | **CONTEXT**<br>*When does the problem occur?* | **PROBLEM**<br>*What is the root cause of the problem?* | **ALTERNATIVES**<br>*What do customers do now to fix the problem?* |
 |---|---|---|
 | “Diễn ra trong 3 tuần đầu tiên của mỗi học kỳ tín chỉ, đặc biệt vào khung giờ lên lớp tại các giảng đường và phòng thí nghiệm của Học viện Bách Nghệ Hà Nội.” | “Danh sách lớp học phần liên tục biến động và thiếu thông tin về năng lực tiên quyết của sinh viên.”<br><br>Giảng viên có thể dành trọn thời gian để nâng cao chất lượng giảng dạy và hướng dẫn chuyên môn thay vì phải giải quyết các thủ tục hành chính sĩ số trên lớp. | “In danh sách lớp dạng bảng tính ra giấy từ đầu kỳ để điểm danh tay; cho sinh viên mới vào lớp tự viết thêm tên vào cuối danh sách; tự lập nhóm Zalo hoặc Facebook để trao đổi thông tin.” |
-| **CUSTOMERS**<br>*Who has the problem most often?* | **EMOTIONAL IMPACT**<br>*How does the customer feel?*<br><br>Sự bực bội, ức chế và bất an khi chất lượng tiết dạy bị gián đoạn và không kiểm soát được danh sách sinh viên thực tế trong lớp.<br><br>**QUANTIFIABLE IMPACT**<br>*What is the measurable impact (include units)?*<br><br>“Lãng phí trung bình 10–15 phút mỗi buổi học trong 3 tuần đầu (chiếm 10–12% thời lượng môn học); biến động 15–20% sĩ số sau buổi học đầu tiên; mất 3–5 giờ cuối kỳ để đối soát dữ liệu chuyên cần từ giấy.” | **ALTERNATIVE SHORTCOMINGS**<br>*What are the disadvantages of the alternatives?*<br><br>Danh sách giấy nhanh chóng rách nát, thất lạc và sai lệch so với dữ liệu gốc của Phòng Đào tạo; việc điểm danh đọc tên thủ công gây lãng phí thời gian; kênh mạng xã hội không bảo mật và dễ trôi thông tin học vụ. |
+| **USER / CUSTOMERS**<br>*Who has the problem most often?*<br><br>Giảng viên trực tiếp đứng lớp các học phần đại cương và chuyên ngành tại các Khoa/Viện, bao gồm cả giảng viên cơ hữu và giảng viên thỉnh giảng. | **EMOTIONAL IMPACT**<br>*How does the customer feel?*<br><br>Sự bực bội, ức chế và bất an khi chất lượng tiết dạy bị gián đoạn và không kiểm soát được danh sách sinh viên thực tế trong lớp.<br><br>**QUANTIFIABLE IMPACT**<br>*What is the measurable impact (include units)?*<br><br>“Lãng phí trung bình 10–15 phút mỗi buổi học trong 3 tuần đầu (chiếm 10–12% thời lượng môn học); biến động 15–20% sĩ số sau buổi học đầu tiên; mất 3–5 giờ cuối kỳ để đối soát dữ liệu chuyên cần từ giấy.” | **ALTERNATIVE SHORTCOMINGS**<br>*What are the disadvantages of the alternatives?*<br><br>Danh sách giấy nhanh chóng rách nát, thất lạc và sai lệch so với dữ liệu gốc của Phòng Đào tạo; việc điểm danh đọc tên thủ công gây lãng phí thời gian; kênh mạng xã hội không bảo mật và dễ trôi thông tin học vụ. |
 
 * **Cơ sở phân biệt Bằng chứng và Giả định:**
   * `[Evidence]`: Hiện tượng sinh viên xin vào lớp muộn, xin điểm danh bổ sung bằng tay và danh sách giấy bị sửa chằng chịt là thực tế diễn ra tại các giảng đường HBA sau khi chuyển sang tín chỉ.
