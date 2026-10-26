@@ -22,28 +22,27 @@
 
 ## MỤC LỤC BÁO CÁO
 
-* [PHẦN MỞ ĐẦU: BỐI CẢNH NGHIỆP VỤ & CÚ SỐC VẬN HÀNH TẠI HBA](#phần-mở-đầu-bối-cảnh-nghiệp-vụ--cú-sốc-vận-hành-tại-hba)
-  * [1. Cú sốc chuyển đổi mô hình từ Niên chế sang Tín chỉ](#1-cú-sốc-chuyển-đổi-mô-hình-từ-niên-chế-sang-tín-chỉ)
-  * [2. Nút thắt cổ chai cấp bách: Cán bộ Đào tạo vỡ trận trong khâu mở lớp & xếp TKB](#2-nút-thắt-cổ-chai-cấp-bách-cán-bộ-đào-tạo-vỡ-trận-trong-khâu-mở-lớp--xếp-tkb)
-* [BÀI TẬP 1: XÁC ĐỊNH NHU CẦU NGƯỜI DÙNG & PHÁT BIỂU VẤN ĐỀ (USER NEEDS & PROBLEM STATEMENT)](#bài-tập-1-xác-định-nhu-cầu-người-dùng--phát-biểu-vấn-đề-user-needs--problem-statement)
-  * [1.1. Bảng xác định 4 User Needs cốt lõi của 4 tác nhân](#11-bảng-xác-định-4-user-needs-cốt-lõi-của-4-tác-nhân)
-  * [1.2. Lựa chọn User Need ưu tiên mỏ neo (Anchor Priority)](#12-lựa-chọn-user-need-ưu-tiên-mỏ-neo-anchor-priority)
-  * [1.3. Phát biểu User Problem Statement trọng tâm của Cán bộ Đào tạo](#13-phát-biểu-user-problem-statement-trọng-tâm-của-cán-bộ-đào-tạo)
-* [BÀI TẬP 2: BẢN ĐỒ VẤN ĐỀ NGƯỜI DÙNG (USER PROBLEM STATEMENT CANVAS)](#bài-tập-2-bản-đồ-vấn-đề-người-dùng-user-problem-statement-canvas)
-  * [2.1. Bảng User Problem Statement Canvas chuẩn 6 thành phần](#21-bảng-user-problem-statement-canvas-chuẩn-6-thành-phần)
-  * [2.2. Điểm nhấn phân biệt giữa Bằng chứng (Evidence) và Giả định (Assumptions)](#22-điểm-nhấn-phân-biệt-giữa-bằng-chứng-evidence-và-giả-định-assumptions)
-* [BÀI TẬP 3: MỐI QUAN HỆ GIỮA VẤN ĐỀ NGƯỜI DÙNG VÀ VẤN ĐỀ TỔ CHỨC (USER PROBLEM & BUSINESS PROBLEM)](#bài-tập-3-mối-quan-hệ-giữa-vấn-đề-người-dùng-và-vấn-đề-tổ-chức-user-problem--business-problem)
-  * [3.1. Bảng bộ tứ liên kết nhân quả xuyên suốt](#31-bảng-bộ-tứ-liên-kết-nhân-quả-xuyên-suốt)
-  * [3.2. Danh mục dữ liệu vận hành cần thu thập để xác minh mối liên hệ](#32-danh-mục-dữ-liệu-vận-hành-cần-thu-thập-để-xác-minh-mối-liên-hệ)
-  * [3.3. Phân tích nguyên nhân gốc rễ bằng kỹ thuật 5 Whys](#33-phân-tích-nguyên-nhân-gốc-rễ-bằng-kỹ-thuật-5-whys)
-* [BÀI TẬP 4: KHUNG GIẢI PHÁP TINH GỌN (LEAN UX CANVAS)](#bài-tập-4-khung-giải-pháp-tinh-gọn-lean-ux-canvas)
-  * [4.1. Bảng Lean UX Canvas hoàn chỉnh 8 ô chuẩn](#41-bảng-lean-ux-canvas-hoàn-chỉnh-8-ô-chuẩn)
-  * [4.2. Hệ thống 3 Giả thuyết kiểm chứng (Hypotheses) chuẩn cú pháp](#42-hệ-thống-3-giả-thuyết-kiểm-chứng-hypotheses-chuẩn-cú-pháp)
-* [BÀI TẬP 5: NGUYÊN MẪU KHẢ THI TỐI THIỂU & KẾ HOẠCH THỬ NGHIỆM (MVP & USABILITY EXPERIMENT)](#bài-tập-5-nguyên-mẫu-khả-thi-tối-thiểu--kế-hoạch-thử-nghiệm-mvp--usability-experiment)
-  * [5.1. Mục tiêu thử nghiệm (Test Objective)](#51-mục-tiêu-thử-nghiệm-test-objective)
-  * [5.2. MVP: Đặc tả nguyên mẫu bấm được (Clickable Prototype 4 màn hình)](#52-mvp-đặc-tả-nguyên-mẫu-bấm-được-clickable-prototype-4-màn-hình)
-  * [5.3. Quy trình thử nghiệm thực địa (Testing Protocol)](#53-quy-trình-thử-nghiệm-thực-địa-testing-protocol)
-  * [5.4. Hệ thống chỉ số đo lường thành công (Success Metrics)](#54-hệ-thống-chỉ-số-đo-lường-thành-công-success-metrics)
+- [PHẦN MỞ ĐẦU: BỐI CẢNH NGHIỆP VỤ TẠI HBA](#phần-mở-đầu-bối-cảnh-nghiệp-vụ-tại-hba)
+  - [1. Cú sốc chuyển đổi mô hình từ Niên chế sang Tín chỉ](#1-cú-sốc-chuyển-đổi-mô-hình-từ-niên-chế-sang-tín-chỉ)
+  - [2. Phân biệt nghiệp vụ cốt lõi: Đăng ký Học phần (Course) vs Đăng ký Lớp học phần (Class)](#2-phân-biệt-nghiệp-vụ-cốt-lõi-đăng-ký-học-phần-course-vs-đăng-ký-lớp-học-phần-class)
+  - [3. Nút thắt cổ chai cấp bách: Mở lớp theo cảm tính & Vỡ trận điều phối thời khóa biểu](#3-nút-thắt-cổ-chai-cấp-bách-mở-lớp-theo-cảm-tính--vỡ-trận-điều-phối-thời-khóa-biểu)
+- [BÀI TẬP 1: USER NEEDS & USER PROBLEM STATEMENT](#bài-tập-1-user-needs--user-problem-statement)
+  - [1.1. Bảng xác định 4 User Needs cốt lõi của 4 tác nhân](#11-bảng-xác-định-4-user-needs-cốt-lõi-của-4-tác-nhân)
+  - [1.2. Lựa chọn User Need ưu tiên của Cán bộ Đào tạo](#12-lựa-chọn-user-need-ưu-tiên-của-cán-bộ-đào-tạo)
+  - [1.3. Phát biểu User Problem Statement trọng tâm của Cán bộ Đào tạo](#13-phát-biểu-user-problem-statement-trọng-tâm-của-cán-bộ-đào-tạo)
+- [BÀI TẬP 2: USER PROBLEM STATEMENT CANVAS](#bài-tập-2-user-problem-statement-canvas)
+- [BÀI TẬP 3: USER PROBLEM VÀ BUSINESS PROBLEM](#bài-tập-3-user-problem-và-business-problem)
+  - [3.1. Bảng bộ tứ liên kết nhân quả xuyên suốt](#31-bảng-bộ-tứ-liên-kết-nhân-quả-xuyên-suốt)
+  - [3.2. Danh mục dữ liệu vận hành cần thu thập để xác minh mối liên hệ](#32-danh-mục-dữ-liệu-vận-hành-cần-thu-thập-để-xác-minh-mối-liên-hệ)
+  - [3.3. Phân tích nguyên nhân gốc rễ bằng kỹ thuật 5 Whys](#33-phân-tích-nguyên-nhân-gốc-rễ-bằng-kỹ-thuật-5-whys)
+- [BÀI TẬP 4: LEAN UX CANVAS](#bài-tập-4-lean-ux-canvas)
+  - [4.1. Bảng Lean UX Canvas hoàn chỉnh](#41-bảng-lean-ux-canvas-hoàn-chỉnh)
+  - [4.2. Hệ thống 3 Giả thuyết kiểm chứng](#42-hệ-thống-3-giả-thuyết-kiểm-chứng)
+- [BÀI TẬP 5: MVP VÀ KẾ HOẠCH THỬ NGHIỆM](#bài-tập-5-mvp-và-kế-hoạch-thử-nghiệm)
+  - [5.1. Mục tiêu thử nghiệm](#51-mục-tiêu-thử-nghiệm)
+  - [5.2. MVP: Đặc tả nguyên mẫu bấm được (Clickable Prototype 4 màn hình)](#52-mvp-đặc-tả-nguyên-mẫu-bấm-được-clickable-prototype-4-màn-hình)
+  - [5.3. Quy trình thử nghiệm thực địa (Usability Testing)](#53-quy-trình-thử-nghiệm-thực-địa-usability-testing)
+  - [5.4. Hệ thống chỉ số đo lường thành công](#54-hệ-thống-chỉ-số-đo-lường-thành-công)
 
 ---
 
@@ -54,24 +53,49 @@ Học viện Bách Nghệ Hà Nội (HBA) là cơ sở giáo dục đại học 
 
 Trước thời điểm nghiên cứu, Học viện vận hành hoàn toàn theo mô hình **Học chế Niên chế**:
 * Sinh viên khi nhập học được xếp cố định vào các lớp sinh hoạt hành chính (30–40 sinh viên/lớp) và gắn bó suốt 4–5 năm.
-* Nhà trường lập sẵn **thời khóa biểu trọn gói cố định** cho từng lớp sinh hoạt; sinh viên chỉ việc đi học theo lịch cứng, **hoàn toàn không có nhu cầu hay khái niệm tự đăng ký môn học trực tuyến**.
+* Nhà trường lập sẵn **thời khóa biểu trọn gói cố định** cho từng lớp sinh hoạt; sinh viên chỉ việc đi học theo lịch cứng, hoàn toàn không có khái niệm tự chọn môn hay đăng ký môn học trực tuyến.
 * Học phí được thu cào bằng phẳng một lần vào đầu năm học.
 
-Học viện vừa quyết định chuyển đổi toàn diện mô hình quản trị sang **Học chế Tín chỉ**. Mô hình mới trao quyền chủ động cho người học: sinh viên được tự chọn môn, tự lập tiến độ học tập, đăng ký lớp học phần lý thuyết và ghép ca xưởng thực hành phù hợp với năng lực cá nhân.
+Học viện vừa quyết định chuyển đổi toàn diện mô hình quản trị sang **Học chế Tín chỉ**. Mô hình mới trao quyền chủ động cho người học: sinh viên được tự chọn môn, tự lập tiến độ học tập, đăng ký học phần lý thuyết và ghép ca xưởng thực hành phù hợp với năng lực cá nhân.
 
 ---
 
-### 2. Nút thắt cổ chai cấp bách: Cán bộ Đào tạo vỡ trận trong khâu mở lớp & xếp TKB
-Theo mô hình quản trị đào tạo tín chỉ chuẩn mực (điển hình tại Đại học Bách Khoa Hà Nội - HUST), quy trình đăng ký tín chỉ đầu kỳ luôn được tách bạch thành **2 giai đoạn độc lập**:
-1. **Giai đoạn 1 — Đăng ký học phần (Thu thập nhu cầu thực tế):** Sinh viên nộp danh sách các mã học phần mong muốn học trong kỳ tới. Hệ thống tự động đối soát với cây điều kiện tiên quyết và lịch sử học tập để xác nhận tính hợp lệ. Dữ liệu hợp lệ này chính là căn cứ thực tế để Cán bộ Đào tạo tính toán số lớp cần mở và xếp thời khóa biểu.
-2. **Giai đoạn 2 — Đăng ký lớp học phần:** Sau khi thời khóa biểu được công bố, sinh viên mới đăng ký vào các lớp cụ thể (chọn ca, chọn thứ) không bị trùng lịch cá nhân.
+### 2. Phân biệt nghiệp vụ cốt lõi: Đăng ký Học phần (Course) vs Đăng ký Lớp học phần (Class)
+Để phân tích chính xác quy trình quản trị đào tạo theo học chế tín chỉ, cần phân định rạch ròi 2 khái niệm nghiệp vụ nền tảng:
 
-Tuy nhiên, tại Học viện Bách Nghệ Hà Nội trong giai đoạn đầu chuyển đổi, **Học viện chưa hề có hệ thống tiếp nhận Đăng ký học phần tích hợp bộ máy kiểm tra điều kiện tiên quyết tự động**. Hậu quả là:
-* **Mất kiểm soát nhu cầu thực tế:** Cán bộ Đào tạo không thể biết chính xác có bao nhiêu sinh viên đủ điều kiện học từng môn học phần. Sinh viên nộp nguyện vọng qua các kênh phân tán (Google Form, phiếu giấy), dẫn đến tình trạng sinh viên chưa qua môn tiên quyết vẫn nộp đơn đăng ký học vượt bừa bãi.
-* **Quá tải rà soát thủ công:** Cán bộ giáo vụ phải mở từng học bạ trên phần mềm niên chế cũ để kiểm tra điều kiện tiên quyết từng sinh viên một trên hàng vạn dòng dữ liệu bảng tính Excel.
-* **Xếp lịch và điều phối vỡ trận:** Việc ước lượng số lớp mở hoàn toàn dựa trên cảm tính. Khi xếp thời khóa biểu cho hơn 2.500 lớp học phần trên các file Excel rời rạc, xung đột phòng học lý thuyết và xưởng thực hành (giới hạn 15–20 SV/ca máy) bùng nổ lên tới 15–20%, làm chậm trễ tiến độ công bố lịch học 4–6 tuần.
+```mermaid
+flowchart LR
+    subgraph Phase1["Giai đoạn 1: Thu thập Nhu cầu"]
+        C1["Sinh viên thực hiện:<br/><b>ĐĂNG KÝ HỌC PHẦN (Courses)</b><br/>(Chọn mã môn dự kiến học, kiểm tra tiên quyết, CHƯA có lịch cụ thể)"]
+    end
 
-Do đó, nhiệm vụ số hóa cấp bách hàng đầu chính là **xây dựng công cụ hỗ trợ Cán bộ Đào tạo tiếp nhận dữ liệu Đăng ký học phần hợp lệ của sinh viên để lập kế hoạch mở lớp và xếp thời khóa biểu tự động chống trùng lặp**.
+    subgraph Phase2["Giai đoạn 2: Điều phối Học vụ"]
+        C2["Cán bộ Đào tạo thực hiện:<br/><b>MỞ LỚP HỌC PHẦN & XẾP TKB</b><br/>(Chốt số lớp lý thuyết, số ca xưởng máy, gán phòng và giảng viên)"]
+    end
+
+    subgraph Phase3["Giai đoạn 3: Xếp Lịch Cá nhân"]
+        C3["Sinh viên thực hiện:<br/><b>ĐĂNG KÝ LỚP HỌC PHẦN (Classes)</b><br/>(Chọn mã lớp cụ thể có thứ, ca, phòng, GV để lập TKB cá nhân & tính học phí)"]
+    end
+
+    Phase1 -->|"Dữ liệu tổng hợp nhu cầu thực"| Phase2
+    Phase2 -->|"Danh mục Lớp học phần có TKB sạch"| Phase3
+
+    style Phase1 fill:#e3f2fd,stroke:#1565c0,stroke-width:1px
+    style Phase2 fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style Phase3 fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px
+```
+
+* **Đăng ký Học phần (Course Registration):** Diễn ra trước kỳ học (6–8 tuần trước khai giảng). Sinh viên đăng ký danh mục các **học phần** (môn học, ví dụ: *IT3120, MI1111*) dự định học kỳ tới dựa trên chương trình đào tạo và điều kiện tiên quyết. Ở bước này, **hoàn toàn chưa có thời khóa biểu cụ thể**. Mục đích là xác định chính xác tổng nhu cầu người học đối với từng học phần.
+* **Đăng ký Lớp học phần (Class Registration):** Diễn ra sau khi Phòng Đào tạo đã lập và công bố thời khóa biểu (2–3 tuần trước khai giảng). Sinh viên đăng ký vào các **lớp học phần cụ thể** (đã có mã lớp, thứ, ca, phòng học, giảng viên phụ trách, ví dụ: *Lớp IT3120-145620, Thứ 3 ca 1–3, Phòng D9-401*) để tạo lập thời khóa biểu cá nhân chính thức và làm căn cứ tính học phí tín chỉ.
+
+---
+
+### 3. Nút thắt cổ chai cấp bách: Mở lớp theo cảm tính & Vỡ trận điều phối thời khóa biểu
+Khi chuyển sang tín chỉ, nút thắt đầu tiên, nặng nề và cấp bách nhất đè nặng lên vai **Cán bộ Phòng Đào tạo (CBĐT)** nằm ở khoảng trống giữa 2 giai đoạn trên:
+* **Mở lớp theo cảm tính do thiếu bước Đăng ký học phần:** Phần mềm niên chế cũ không hỗ trợ cổng cho sinh viên Đăng ký học phần trước kỳ. Do đó, Phòng Đào tạo hoàn toàn "mù thông tin" về nhu cầu thực tế của từng môn. Việc quyết định mở bao nhiêu **lớp học phần lý thuyết** và bao nhiêu **ca xưởng máy** chủ yếu dựa vào ước lượng cảm tính, dẫn đến tình trạng nhiều lớp học phần mở ra không đủ sĩ số sàn phải hủy, trong khi nhiều lớp học phần chuyên ngành lại thiếu chỗ nghiêm trọng.
+* **Bùng nổ dữ liệu và xung đột tài nguyên:** Từ hơn 100 lớp niên chế cố định trước đây, nay bùng nổ thành hơn 2.500 lớp học phần tín chỉ rời rạc. Việc phân bổ phòng học lý thuyết (180 phòng) và các xưởng thực hành công nghệ (giới hạn nghiêm ngặt $\le 20$ sinh viên/ca máy) vẫn làm thủ công trên các **bảng tính Excel rời rạc**. Hậu quả là tỷ lệ trùng phòng, trùng giờ giảng viên lên tới 15%, thời gian lập TKB kéo dài 4 tuần làm chậm trễ đợt Đăng ký lớp học phần của toàn trường.
+
+Do đó, nhiệm vụ số hóa cấp bách hàng đầu trong giai đoạn đầu chuyển đổi tín chỉ chính là **xây dựng công cụ thu thập nhu cầu Đăng ký học phần của sinh viên, hỗ trợ Cán bộ Đào tạo lập kế hoạch mở các lớp học phần chuẩn xác và điều phối thời khóa biểu chống xung đột**.
 
 ---
 
@@ -82,20 +106,20 @@ Nhóm đã tiến hành khảo sát toàn diện 4 nhóm tác nhân liên quan t
 
 | Mã | Tác nhân | Nhu cầu người dùng (Bắt đầu bằng động từ hành động) | Bối cảnh xảy ra | Rào cản hiện tại | Hệ quả thực tế | Phân loại |
 |:---:|---|---|---|---|---|:---:|
-| **UN-01** | **Cán bộ Đào tạo** | **Thiết lập và điều phối** kế hoạch mở lớp học phần và thời khóa biểu dựa trên dữ liệu nhu cầu thực tế | 6–8 tuần trước khi học kỳ mới bắt đầu, khi chuyển đổi sang tín chỉ | Chưa có cổng tiếp nhận Đăng ký học phần của SV tích hợp kiểm tra cây tiên quyết tự động; việc tổng hợp và xếp lịch làm trên Excel | Dễ xảy ra xung đột phòng học, trùng giờ giảng viên; mất 4 tuần lập TKB làm chậm trễ tiến độ toàn trường | `[Evidence]` |
-| **UN-02** | **Sinh viên** | **Đăng ký học phần** dự kiến học và tự động kiểm tra điều kiện tiên quyết theo lộ trình đào tạo | Giai đoạn khảo sát nhu cầu học tập (8–10 tuần trước kỳ mới) | Hệ thống cũ không có cây tiên quyết trực quan; sinh viên phải tự tra cứu quy chế giấy phức tạp | Sinh viên nộp đăng ký môn học vượt hoặc chưa qua tiên quyết, bị từ chối muộn làm lỡ kế hoạch học tập | `[Evidence]` |
-| **UN-03** | **Giảng viên** | **Tiếp nhận và xác nhận** lịch phân công giảng dạy lý thuyết và ca xưởng thực hành ổn định trước học kỳ | 4 tuần trước ngày khai giảng năm học mới | Lịch học phần liên tục bị điều chỉnh thủ công do giải quyết xung đột phòng học của Phòng Đào tạo | Giảng viên bị động trong sắp xếp lịch nghiên cứu và công tác; khó chuẩn bị giáo án thực hành xưởng | `[Assumption]` |
-| **UN-04** | **Cán bộ Tài chính** | **Thiết lập cấu hình** bảng đơn giá học phí theo từng tín chỉ (nhân hệ số ca xưởng 1.2–1.5) và định mức công nợ | Giai đoạn chuẩn bị dữ liệu tài chính đầu kỳ | Phần mềm tài vụ cũ chỉ hỗ trợ thu phẳng trọn gói theo năm, không liên thông với dữ liệu lớp học phần | Phải tính toán học phí thủ công từng sinh viên trên bảng tính; chậm ra thông báo nợ học phí | `[Evidence]` |
+| **UN-01** | **Cán bộ Đào tạo** | **Tổng hợp nhu cầu và điều phối** kế hoạch mở lớp học phần và thời khóa biểu dựa trên dữ liệu Đăng ký học phần của sinh viên | 6–8 tuần trước khi học kỳ mới bắt đầu, khi chuẩn bị danh mục các lớp học phần tín chỉ | Chưa có kênh thu thập Đăng ký học phần tập trung; việc xếp phòng học và giảng viên vẫn làm thủ công trên các file Excel phân tán | Mở lớp học phần theo cảm tính dẫn đến thừa/thiếu lớp; dễ xung đột phòng học, mất 4 tuần lập TKB làm trễ tiến độ toàn trường | `[Evidence]` |
+| **UN-02** | **Sinh viên** | **Đăng ký học phần** dự kiến học và tra cứu sơ đồ cây môn tiên quyết để chủ động lộ trình học kỳ tới | 8–10 tuần trước ngày khai giảng học kỳ mới | Hệ thống cũ không có tính năng Đăng ký học phần trước kỳ; sinh viên quen tâm lý niên chế thụ động | Không chủ động được lộ trình học, đến đợt Đăng ký lớp học phần mới biết học phần mình cần không được mở hoặc hết chỗ | `[Evidence]` |
+| **UN-03** | **Giảng viên** | **Tiếp nhận và xác nhận** lịch phân công giảng dạy các lớp học phần lý thuyết và ca xưởng thực hành ổn định | 3–4 tuần trước ngày khai giảng năm học mới | Lịch lớp học phần liên tục bị điều chỉnh thủ công do giải quyết xung đột phòng học của Phòng Đào tạo | Giảng viên bị động trong sắp xếp lịch nghiên cứu và công tác; khó chuẩn bị giáo án và vật tư xưởng | `[Assumption]` |
+| **UN-04** | **Cán bộ Tài chính** | **Thiết lập cấu hình** bảng đơn giá học phí theo từng tín chỉ (nhân hệ số ca xưởng 1.2–1.5) và định mức công nợ | Giai đoạn chuẩn bị dữ liệu tài chính đầu kỳ | Phần mềm tài vụ cũ chỉ hỗ trợ thu phẳng trọn gói theo năm, không liên thông với danh mục lớp học phần mở | Phải tính toán học phí thủ công từng sinh viên trên bảng tính; chậm ra thông báo công nợ sau đợt Đăng ký lớp học phần | `[Evidence]` |
 
 ---
 
-### 1.2. Lựa chọn User Need ưu tiên mỏ neo (Anchor Priority)
+### 1.2. Lựa chọn User Need ưu tiên của Cán bộ Đào tạo
 * **User Need được chọn làm trọng tâm:** **UN-01 — Cán bộ Đào tạo**.
-* **Lý do lựa chọn:** Trong mô hình đào tạo theo học chế tín chỉ chuẩn hóa, kế hoạch mở lớp học phần và thời khóa biểu là **điều kiện tiên quyết số 1** của toàn bộ chu trình đào tạo. Nếu Cán bộ Đào tạo không thể tổng hợp được nhu cầu thực tế và không thể xếp được thời khóa biểu chống trùng phòng/giờ thì:
-  1. Sinh viên hoàn toàn không có danh mục lớp học phần để đăng ký lớp (Giai đoạn 2).
-  2. Giảng viên không có lịch để chuẩn bị bài giảng và sắp xếp máy xưởng.
-  3. Cán bộ Tài chính không có căn cứ số lượng tín chỉ/ca học để tính học phí.
-* Do đó, tháo gỡ điểm nghẽn của Cán bộ Đào tạo là bước đi sống còn để kích hoạt toàn bộ hệ thống HBA SIS.
+* **Lý do lựa chọn:** Trong mô hình đào tạo theo học chế tín chỉ, kế hoạch mở các lớp học phần và thời khóa biểu là **điều kiện tiên quyết số 1** kích hoạt toàn bộ chu trình đào tạo:
+  1. Sinh viên chỉ có thể thực hiện **Đăng ký lớp học phần (Class Registration)** khi Phòng Đào tạo đã công bố danh mục lớp học phần mở và khung giờ học chuẩn xác.
+  2. Giảng viên chỉ có thể lên giáo án và sắp xếp lịch công tác khi có lịch phân công giảng dạy lớp học phần chính thức.
+  3. Cán bộ Tài chính chỉ có thể xác định học phí khi danh mục lớp học phần và số ca xưởng đã được phê duyệt.
+* Giải quyết triệt để nút thắt của Cán bộ Đào tạo là bước đi then chốt và cấp bách nhất để toàn bộ hệ thống HBA SIS đi vào vận hành thông suốt.
 
 ---
 
@@ -105,7 +129,7 @@ $$\text{[Người dùng]} + \text{gặp khó khăn khi [Mục tiêu]} + \text{tr
 
 > **TUYÊN BỐ VẤN ĐỀ NGƯỜI DÙNG (USER PROBLEM STATEMENT):**
 > 
-> *"**Cán bộ Phòng Đào tạo Học viện Bách Nghệ Hà Nội** gặp khó khăn nghiêm trọng khi **thiết lập kế hoạch mở lớp học phần và điều phối thời khóa biểu dựa trên dữ liệu nhu cầu thực tế** trong **giai đoạn chuẩn bị học kỳ tín chỉ đầu tiên khi vừa chuyển đổi từ mô hình niên chế**, vì **chưa có hệ thống tự động kiểm tra điều kiện tiên quyết và tổng hợp dữ liệu Đăng ký học phần của sinh viên theo thời gian thực, buộc cán bộ phải đối soát học bạ và xếp lịch thủ công trên các bảng tính Excel phân tán**, dẫn đến **tiến độ lập TKB bị trễ hạn 3–4 tuần, nhiều lớp học phần bị mất cân đối sĩ số nghiêm trọng hoặc xung đột phòng/giờ, khiến toàn bộ hoạt động đào tạo đầu kỳ bị xáo trộn và cán bộ giáo vụ bị kiệt sức (burnout)**."*
+> *"**Cán bộ Phòng Đào tạo Học viện Bách Nghệ Hà Nội** gặp khó khăn nghiêm trọng khi **thiết lập kế hoạch mở các lớp học phần và điều phối thời khóa biểu** trong **giai đoạn chuẩn bị học kỳ tín chỉ đầu tiên khi vừa chuyển đổi từ mô hình niên chế**, vì **chưa có kênh tổng hợp dữ liệu Đăng ký học phần thực tế của sinh viên và các công cụ bảng tính Excel thủ công cũ không kiểm soát nổi sự bùng nổ của hơn 2.500 lớp học phần cùng ma trận phòng học/xưởng phức tạp**, dẫn đến **tiến độ lập TKB bị trễ hạn 3–4 tuần, hơn 15% lớp học phần bị xung đột phòng/giờ hoặc mất cân đối sĩ số nghiêm trọng, khiến kế hoạch đào tạo đầu kỳ bị xáo trộn và cán bộ giáo vụ bị kiệt sức**."*
 
 ---
 
@@ -116,17 +140,11 @@ $$\text{[Người dùng]} + \text{gặp khó khăn khi [Mục tiêu]} + \text{tr
 | Thành phần Canvas | Nội dung phân tích chi tiết đối với Cán bộ Đào tạo HBA |
 |---|---|
 | **1. User** *(Ai là người dùng?)* | Chuyên viên quản lý đào tạo, cán bộ giáo vụ phụ trách kế hoạch học vụ và xếp thời khóa biểu tại Phòng Đào tạo và Văn phòng các Khoa/Viện thuộc Học viện Bách Nghệ Hà Nội. |
-| **2. Context** *(Xảy ra khi nào, ở đâu?)* | Xảy ra trong khoảng 6–8 tuần trước khi học kỳ mới bắt đầu, tại Văn phòng Phòng Đào tạo HBA trong đợt chuẩn bị triển khai học chế tín chỉ đầu tiên. |
-| **3. Goal** *(Mục tiêu người dùng muốn đạt được?)* | Thiết lập danh mục lớp học phần đáp ứng chính xác nhu cầu đăng ký học phần thực tế của sinh viên, tối ưu hóa công suất phòng học lý thuyết và xưởng thực hành, hoàn tất thời khóa biểu chuẩn xác không xung đột phòng/giờ trước khai giảng 4 tuần. |
-| **4. Pain Point** *(Điểm đau / khó khăn gặp phải?)* | Không nắm bắt được nhu cầu người học thực tế do dữ liệu đăng ký nguyện vọng bị lẫn lộn giữa sinh viên đủ điều kiện và sinh viên vi phạm tiên quyết; phải lọc thủ công hàng vạn dòng dữ liệu; việc xếp lịch trên Excel rất dễ trùng phòng học và trùng giờ giảng viên, liên tục phải sửa đổi TKB khi bị phản ánh. |
-| **5. Current Alternative** *(Cách đang tự giải quyết hiện tại?)* | - Thu thập danh sách nguyện vọng môn học của sinh viên qua biểu mẫu rời rạc và file Excel đề xuất mở lớp từ các Bộ môn.<br>- Mở từng hồ sơ học bạ trên phần mềm niên chế cũ để kiểm tra thủ công xem sinh viên đã qua môn tiên quyết hay chưa.<br>- Dò tìm phòng học trống và kiểm tra trùng lịch giảng viên bằng mắt thường.<br>- Xử lý khiếu nại trùng lịch bằng cách hoán đổi thủ công từng ca học. |
-| **6. Evidence / Assumptions** *(Bằng chứng và Giả định)* | **• Đã biết từ tình huống (Evidence):**<br>- Quy chế đào tạo tín chỉ mới đã ban hành chính thức, quy định rõ ràng buộc môn tiên quyết.<br>- Chưa có cổng Đăng ký học phần tích hợp kiểm tra tiên quyết tự động cho sinh viên.<br>- Số lượng lớp học phần tăng vọt từ 120 lớp niên chế lên hơn 2.500 lớp tín chỉ.<br>- Công cụ làm việc duy nhất hiện tại là phần mềm niên chế cũ và các bảng tính Excel ngoại tuyến.<br><br>**• Cần nghiên cứu / khảo sát thêm để xác minh (Assumptions):**<br>- Tỷ lệ sinh viên nộp nguyện vọng vi phạm môn tiên quyết nếu không được hệ thống tự động chặn trước.<br>- Thời gian trung bình và số giờ làm thêm ngoài giờ (OT) của cán bộ giáo vụ để rà soát điều kiện học phần và hoàn thành TKB cho 1 Khoa.<br>- Tần suất phát sinh lỗi trùng phòng và trùng giờ giảng viên trong các bản dự thảo TKB đầu tiên. |
-
----
-
-### 2.2. Điểm nhấn phân biệt giữa Bằng chứng (Evidence) và Giả định (Assumptions)
-* **Điều đã biết chắc chắn (Evidence):** Khối lượng dữ liệu nguyện vọng tín chỉ bùng nổ vượt quá khả năng xử lý của con người nếu không có công cụ tự động hóa; việc thiếu phân hệ Đăng ký học phần có kiểm tra tiên quyết khiến dữ liệu nhu cầu đầu vào bị "nhiễm bẩn", dẫn đến vỡ trận kế hoạch mở lớp là sự thật khách quan của cuộc chuyển đổi mô hình.
-* **Điều cần thu thập dữ liệu kiểm chứng (Assumptions):** Tỷ lệ chính xác về số giờ lãng phí, tỷ lệ lớp bị hủy do thiếu sĩ số sàn (<15 sinh viên), và tỷ lệ lỗi xung đột phòng/giờ sẽ được xác minh thông qua phỏng vấn sâu 8 cán bộ giáo vụ và phân tích dữ liệu lịch sử đăng ký.
+| **2. Context** *(Xảy ra khi nào, ở đâu?)* | Xảy ra trong khoảng 6–8 tuần trước khi học kỳ mới bắt đầu, tại Văn phòng Phòng Đào tạo HBA trong đợt chuẩn bị triển khai học kỳ tín chỉ. |
+| **3. Goal** *(Mục tiêu người dùng muốn đạt được?)* | Nắm bắt chính xác nhu cầu qua dữ liệu Đăng ký học phần của sinh viên để thiết lập danh mục lớp học phần mở sát thực tế, tối ưu hóa công suất phòng học lý thuyết và xưởng thực hành, hoàn tất thời khóa biểu chuẩn xác không xung đột phòng/giờ trước đợt Đăng ký lớp học phần 2 tuần. |
+| **4. Pain Point** *(Điểm đau / khó khăn gặp phải?)* | Mở lớp học phần theo cảm tính do thiếu số liệu Đăng ký học phần trước kỳ; việc xếp lịch thủ công trên bảng tính Excel rất dễ trùng phòng học và trùng giờ giảng viên; mất hàng tuần để rà soát lỗi thủ công và liên tục phải chắp vá sửa đổi TKB khi bị phản ánh. |
+| **5. Current Alternative** *(Cách đang tự giải quyết hiện tại?)* | - Thu thập đề xuất mở lớp học phần và danh sách giảng viên từ các Bộ môn qua file Excel rời rạc gửi email.<br>- Nhập liệu thủ công từng lớp học phần vào bảng tính tổng hợp.<br>- Dò tìm phòng học trống và kiểm tra trùng lịch giảng viên bằng mắt thường.<br>- Xử lý khiếu nại trùng lịch bằng cách hoán đổi thủ công từng ca học trên Excel. |
+| **6. Evidence / Assumptions** *(Bằng chứng và Giả định)* | **• Đã biết từ tình huống (Evidence):**<br>- Quy chế đào tạo tín chỉ mới đã ban hành chính thức, quy định rõ điều kiện tiên quyết và quy chuẩn mở lớp học phần.<br>- Số lượng lớp học phần tăng vọt từ hơn 100 lớp niên chế lên hơn 2.500 lớp học phần tín chỉ.<br>- Công cụ làm việc duy nhất hiện tại là phần mềm niên chế cũ và các bảng tính Excel ngoại tuyến.<br><br>**• Cần nghiên cứu / khảo sát thêm để xác minh (Assumptions):**<br>- Tỷ lệ sinh viên chủ động tham gia Đăng ký học phần sớm trước kỳ mới.<br>- Tần suất phát sinh lỗi trùng phòng và trùng giờ giảng viên trong các bản dự thảo TKB đầu tiên.<br>- Số giờ làm thêm ngoài giờ (OT) của cán bộ giáo vụ để hoàn thành TKB cho 1 Khoa. |
 
 ---
 
@@ -136,10 +154,10 @@ $$\text{[Người dùng]} + \text{gặp khó khăn khi [Mục tiêu]} + \text{tr
 
 | Thành phần kết nối | Nội dung đặc tả bám sát bối cảnh Học viện Bách Nghệ Hà Nội |
 |---|---|
-| **1. User Problem** *(Vấn đề người dùng)* | Cán bộ Đào tạo khó thiết lập và điều phối kế hoạch mở lớp học phần phù hợp khi chưa có dữ liệu tổng hợp Đăng ký học phần hợp lệ của sinh viên và phải rà soát, xếp lịch thủ công trên bảng tính Excel dễ phát sinh xung đột. |
-| **2. Operational Impact có thể có** *(Tác động vận hành nội bộ)* | - Cán bộ giáo vụ dành nhiều thời gian (hàng trăm giờ công) rà soát học bạ từng sinh viên, nhập liệu và kiểm tra chéo TKB.<br>- Phát sinh trao đổi lặp lại nhiều lần hoặc sai lệch thông tin thời khóa biểu giữa Phòng Đào tạo, các Khoa và Giảng viên.<br>- Lịch học bị chậm trễ làm dồn ứ toàn bộ chu trình: sinh viên không kịp đăng ký lớp, kế toán chậm tính học phí và xưởng thực hành bị động lịch chuẩn bị máy móc. |
-| **3. Business Problem giả định** *(Vấn đề kinh doanh tổ chức)* | Quy trình thu thập nhu cầu và xếp thời khóa biểu thủ công có thể làm tăng công sức vận hành hành chính, hạn chế năng lực điều phối đào tạo của Học viện, gây lãng phí 20–30% công suất phòng học/xưởng và đe dọa trực tiếp đến sự thành công của công cuộc chuyển đổi sang học chế tín chỉ. |
-| **4. Desired Outcomes** *(Kết quả mong muốn)* | - Rút ngắn thời gian lập kế hoạch mở lớp và hoàn tất thời khóa biểu từ 4 tuần xuống $\le 5$ ngày.<br>- Tăng tỷ lệ lớp học phần được xếp lịch thành công ngay trong lần chạy đầu tiên lên $\ge 95\%$.<br>- Giảm lỗi trùng phòng học lý thuyết, trùng ca xưởng thực hành và trùng giờ giảng viên về **0%**.<br>- Giảm tỷ lệ lớp học phần bị hủy do thiếu sĩ số sàn từ 12% xuống **< 3%**. |
+| **1. User Problem** *(Vấn đề người dùng)* | Cán bộ Đào tạo khó thiết lập kế hoạch mở lớp học phần phù hợp khi chưa có dữ liệu Đăng ký học phần thực tế của sinh viên và phải điều phối lịch học thủ công trên bảng tính Excel dễ phát sinh xung đột. |
+| **2. Operational Impact có thể có** *(Tác động vận hành nội bộ)* | - Cán bộ giáo vụ tốn hàng trăm giờ công nhập liệu, dò tìm phòng trống và sửa đổi lịch học thủ công.<br>- Thường xuyên phát sinh sai lệch thông tin thời khóa biểu lớp học phần giữa Phòng Đào tạo, các Khoa và Giảng viên.<br>- Lịch học bị chậm trễ làm dồn ứ toàn bộ các khâu Đăng ký lớp học phần, thu học phí và chuẩn bị phôi liệu xưởng thực hành. |
+| **3. Business Problem giả định** *(Vấn đề kinh doanh tổ chức)* | Quy trình mở lớp học phần cảm tính và xếp thời khóa biểu thủ công có thể làm tăng chi phí vận hành hành chính, gây lãng phí 20% công suất phòng học/xưởng và đe dọa trực tiếp đến sự thành công của công cuộc chuyển đổi sang học chế tín chỉ của Học viện. |
+| **4. Desired Outcomes** *(Kết quả mong muốn)* | - Giảm thời gian lập kế hoạch mở lớp học phần và hoàn tất thời khóa biểu từ 4 tuần xuống $\le 7$ ngày làm việc.<br>- Triệt tiêu hoàn toàn lỗi trùng phòng học lý thuyết, trùng ca xưởng và trùng giờ giảng viên trước khi công bố TKB chính thức.<br>- Giảm tỷ lệ lớp học phần bị hủy đột ngột do thiếu sĩ số sàn từ 12% xuống $< 4\%$.<br>- Nâng cao hiệu suất khai thác phòng học lý thuyết lên $75–80\%$ và xưởng thực hành lên $65–70\%$ (đảm bảo thời gian bảo trì máy móc an toàn). |
 
 ---
 
@@ -148,81 +166,82 @@ $$\text{[Người dùng]} + \text{gặp khó khăn khi [Mục tiêu]} + \text{tr
 
 ```mermaid
 flowchart LR
-    UP["User Problem:<br/>CBĐT khó lập kế hoạch do<br/>dữ liệu nhu cầu chưa sạch &<br/>xếp lịch thủ công"] -->|"CẦN DỮ LIỆU XÁC MINH:<br/>1. Log thời gian rà soát đơn SV<br/>2. Tần suất hoán đổi phòng/ca<br/>3. Số giờ OT làm thêm của cán bộ"| OI["Operational Impact:<br/>Tốn thời gian, sai lệch lịch,<br/>trao đổi lặp lại nhiều lần"]
-    OI -->|"CẦN DỮ LIỆU XÁC MINH:<br/>4. Tỷ lệ phòng học bỏ trống (Heatmap)<br/>5. Tỷ lệ lớp bị hủy dưới sàn sĩ số<br/>6. Đơn khiếu nại của SV & GV"| BP["Business Problem:<br/>Tăng chi phí vận hành,<br/>lãng phí công suất phòng,<br/>nguy cơ vỡ tiến độ học kỳ"]
+    UP["User Problem:<br/>CBĐT mở lớp học phần cảm tính &<br/>xếp lịch thủ công trên Excel"] -->|"CẦN DỮ LIỆU XÁC MINH:<br/>1. Log thời gian lập TKB (tuần)<br/>2. Tần suất hoán đổi phòng/ca học<br/>3. Số giờ OT làm thêm của cán bộ"| OI["Operational Impact:<br/>Tốn thời gian, sai lệch lịch,<br/>trao đổi lặp lại nhiều lần"]
+    OI -->|"CẦN DỮ LIỆU XÁC MINH:<br/>4. Tỷ lệ lớp học phần bị hủy<br/>5. Tỷ lệ phòng học/xưởng bỏ trống<br/>6. Đơn khiếu nại của SV & GV"| BP["Business Problem:<br/>Tăng chi phí vận hành,<br/>lãng phí công suất phòng/xưởng,<br/>nguy cơ vỡ tiến độ học kỳ"]
     
     style UP fill:#ffebee,stroke:#c62828,stroke-width:1px
     style OI fill:#fff3e0,stroke:#ef6c00,stroke-width:1px
     style BP fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
 ```
 
-* **Dữ liệu 1:** Bảng chấm công làm thêm giờ (OT) của chuyên viên Phòng Đào tạo trong 2 tháng cao điểm trước học kỳ mới (hiện ghi nhận trung bình 40–50 giờ OT/người).
-* **Dữ liệu 2:** Tỷ lệ sinh viên bị hủy môn học trong tuần đầu tiên do hậu kiểm phát hiện chưa đủ điều kiện tiên quyết (ước tính hiện tại khoảng 8–12%).
-* **Dữ liệu 3:** Báo cáo thống kê hiệu suất sử dụng phòng học (Room Utilization Rate): đo lường công suất khai thác thực tế của 180 phòng học lý thuyết và 35 xưởng thực hành công nghệ tại HBA.
+* **Dữ liệu 1:** Bảng chấm công làm thêm giờ (OT) của chuyên viên Phòng Đào tạo trong tháng cao điểm lập TKB (hiện ghi nhận trung bình 40–50 giờ OT/người).
+* **Dữ liệu 2:** Thống kê số lượng lớp học phần bị hủy do không đủ sĩ số sàn trong kỳ chuyển đổi đầu tiên (chiếm khoảng 12% tổng số lớp mở).
+* **Dữ liệu 3:** Sổ nhật ký điều chỉnh thời khóa biểu tại các Giảng đường: ghi nhận số ca lớp học phần phải đổi phòng hoặc đổi giờ đột xuất trong tuần đầu khai giảng.
 
 ---
 
 ### 3.3. Phân tích nguyên nhân gốc rễ bằng kỹ thuật 5 Whys
 
-* **Vấn đề xuất phát:** Thời khóa biểu học kỳ tín chỉ đầu tiên của Học viện Bách Nghệ Hà Nội bị trễ hạn 4 tuần, phát sinh hàng trăm xung đột phòng học và gây bức xúc lớn cho giảng viên lẫn sinh viên.
+* **Vấn đề xuất phát:** Thời khóa biểu học kỳ tín chỉ đầu tiên của Học viện Bách Nghệ Hà Nội bị trễ hạn 4 tuần, phát sinh nhiều lớp học phần bị hủy và gây bức xúc lớn cho giảng viên lẫn sinh viên.
 
 | Tầng Why | Câu hỏi đào sâu | Câu trả lời phân tích nghiệp vụ tại HBA |
 |:---:|---|---|
-| **Why 1** | *Tại sao thời khóa biểu bị trễ hạn và xảy ra hàng loạt xung đột phòng/giờ?* | Vì Cán bộ Đào tạo phải mất quá nhiều thời gian để dò tìm thủ công lịch bận của hơn 1.500 giảng viên và xếp thủ công hơn 2.500 lớp học phần vào 180 phòng học trên các bảng tính Excel phân tán. |
-| **Why 2** | *Tại sao không thể xếp lịch nhanh và chính xác hơn trên bảng tính Excel?* | Vì bảng tính Excel không có thuật toán tự động giải bài toán ràng buộc (Constraint Satisfaction) và không thể phát hiện xung đột thời gian thực giữa ca thực hành xưởng (15–20 SV) và giờ lý thuyết tập trung (80–120 SV). |
-| **Why 3** | *Tại sao không nắm được chính xác số lượng sinh viên cần học từng môn để mở lớp hợp lý?* | Vì Học viện chưa có giai đoạn **Đăng ký học phần** trực tuyến tích hợp cây tiên quyết cho sinh viên; cán bộ phải tự đối soát học bạ thủ công cho hàng vạn sinh viên nộp nguyện vọng phân tán. |
-| **Why 4** | *Tại sao lại thiếu quy trình và phân hệ Đăng ký học phần chuẩn mực này?* | Vì Học viện vẫn tận dụng lại hạ tầng phần mềm quản lý niên chế cũ; phần mềm cũ chỉ thiết kế để gán cứng một thời khóa biểu duy nhất cho cả lớp sinh hoạt hành chính cố định. |
-| **Why 5 (Root Cause)** | *Tại sao lại có sự lệch pha nghiêm trọng giữa quy chế mới và công cụ cũ?* | **NGUYÊN NHÂN GỐC RỄ:** Học viện Bách Nghệ Hà Nội thực hiện chuyển đổi mô hình đào tạo từ Niên chế sang Tín chỉ về mặt **chính sách** nhưng chưa chuẩn bị kịp thời nền tảng **chuyển đổi số** tương ứng (đặc biệt là quy trình 2 giai đoạn: Đăng ký học phần $\rightarrow$ Xếp TKB $\rightarrow$ Đăng ký lớp học phần theo chuẩn HUST), dẫn đến việc dùng nhân lực hành chính thủ công để gánh vác sự bùng nổ dữ liệu phức tạp của mô hình tín chỉ. |
+| **Why 1** | *Tại sao thời khóa biểu bị trễ hạn và xảy ra hàng loạt xung đột phòng/giờ?* | Vì Cán bộ Đào tạo phải mất quá nhiều thời gian để dò tìm thủ công lịch bận của hơn 1.500 giảng viên và ghép lịch hơn 2.500 lớp học phần vào phòng học trên các bảng tính Excel phân tán. |
+| **Why 2** | *Tại sao việc xếp lịch trên bảng tính Excel lại tốn thời gian và dễ phát sinh xung đột?* | Vì các bảng tính Excel hoạt động ngoại tuyến, không có cơ chế tự động kiểm tra chéo các quy tắc ràng buộc (không trùng phòng, không trùng GV, đúng sĩ số ca xưởng) giữa hàng nghìn lớp học phần cùng lúc. |
+| **Why 3** | *Tại sao không có kế hoạch mở lớp học phần ổn định ngay từ đầu mà phải liên tục chắp vá sửa đổi TKB?* | Vì danh mục lớp học phần mở ban đầu không khớp với nhu cầu học thực tế của sinh viên, dẫn đến nhiều lớp học phần mở ra bị thiếu người phải hủy, trong khi nhiều lớp chuyên ngành lại thiếu chỗ. |
+| **Why 4** | *Tại sao Phòng Đào tạo lại không nắm được nhu cầu thực tế của người học trước khi mở lớp?* | Vì nhà trường chưa có quy trình và cổng trực tuyến cho sinh viên **Đăng ký học phần (Course Registration)** trước khi lập kế hoạch mở các **Lớp học phần (Classes)**. |
+| **Why 5 (Root Cause)** | *Tại sao lại có sự lệch pha nghiêm trọng giữa quy chế mới và công cụ quản trị?* | Học viện chuyển đổi sang mô hình tín chỉ về mặt **chính sách đào tạo**, nhưng **quy trình thu thập nhu cầu người học (Đăng ký học phần) và công cụ điều phối lớp học phần vẫn giữ nguyên tư duy thụ động thời niên chế**, dẫn đến tình trạng quá tải hành chính khi dữ liệu bùng nổ. |
 
 ---
 
 # BÀI TẬP 4: KHUNG GIẢI PHÁP TINH GỌN (LEAN UX CANVAS)
 
-### 4.1. Bảng Lean UX Canvas hoàn chỉnh 8 ô chuẩn
+### 4.1. Bảng Lean UX Canvas hoàn chỉnh
+Bảng tổng hợp bám sát cấu trúc phân định chuẩn mực giữa Vấn đề & Mục tiêu và Giải pháp & Thử nghiệm theo Slide 59 & Slide 60:
 
-| Tên thành phần | Nội dung chi tiết chuẩn mực bám sát bối cảnh HBA SIS |
+| Tên thành phần | Nội dung chi tiết chuẩn mực bám sát Slide 59 & Slide 60 |
 |---|---|
-| **1. Business Problem** *(Vấn đề kinh doanh)* | Quy trình thu thập nhu cầu học phần và xếp thời khóa biểu thủ công tiêu tốn hàng trăm giờ công của nhân viên, làm chậm trễ tiến độ công bố lịch học 3–4 tuần, gây lãng phí 20–30% công suất phòng học/xưởng và đe dọa uy tín chất lượng đào tạo của Học viện Bách Nghệ Hà Nội. |
-| **2. Business Outcomes** *(Kết quả kinh doanh kỳ vọng)* | - Giảm thời gian lập kế hoạch mở lớp và hoàn tất TKB từ 4 tuần xuống $\le 5$ ngày.<br>- Giảm tỷ lệ xung đột phòng học, trùng giờ giảng viên về **0%**.<br>- Giảm tỷ lệ lớp học phần bị hủy do không đủ sĩ số sàn (<15 SV) từ 12% xuống **< 3%**.<br>- Nâng cao hiệu suất khai thác phòng học lý thuyết và xưởng thực hành từ 65% lên tối thiểu **88%**. |
-| **3. Users** *(Người sử dụng — Gồm cả 2 phía)* | **• Người dùng nội bộ trực tiếp:** Cán bộ Phòng Đào tạo (chuyên viên tổng hợp nhu cầu & điều phối TKB); Ban Chủ nhiệm Khoa/Bộ môn (phân công giảng viên).<br>**• Người dùng thụ hưởng / liên đới:** Giảng viên (nhận lịch dạy cố định); Sinh viên HBA (nộp Đăng ký học phần và nhận danh mục lớp mở đủ chỗ để chuẩn bị đăng ký lớp). |
-| **4. User Outcomes & Benefits** *(Lợi ích đạt được — Tách rõ 2 phía)* | **• Đối với Cán bộ Đào tạo / Giáo vụ (Người dùng nội bộ):**<br>- Tiếp nhận dữ liệu nhu cầu học phần sạch 100% (đã tự động loại bỏ các ca vi phạm tiên quyết).<br>- Tự động tính toán số lớp lý thuyết và số ca xưởng cần mở; cảnh báo môn <15 SV.<br>- Thuật toán tự động xếp lịch và cảnh báo xung đột tức thì, giảm 80% thao tác kiểm tra thủ công lặp lại.<br>**• Đối với Giảng viên & Sinh viên (Người dùng thụ hưởng):**<br>- Sinh viên biết ngay mình đủ điều kiện học môn nào ngay khi nộp Đăng ký học phần.<br>- Giảng viên nhận lịch giảng dạy cố định sớm 4 tuần, an tâm chuẩn bị giáo án và công tác.<br>- Sinh viên có đầy đủ lớp học phần theo đúng tiến độ lộ trình tín chỉ, không lo bị hủy lớp đột ngột. |
-| **5. Solutions** *(Ý tưởng giải pháp)* | **Phân hệ Quản trị Kế hoạch Mở Lớp & Xếp Thời Khóa Biểu Tín chỉ Tự động (HBA Course Planner & Timetable Engine) theo mô hình HUST:**<br>1. **Cổng Đăng ký học phần cho Sinh viên:** Bộ máy kiểm tra điều kiện tiên quyết thời gian thực, tự động phản hồi kết quả Hợp lệ / Không hợp lệ ngay khi sinh viên chọn mã học phần.<br>2. **Module Tổng hợp Nhu cầu Học phần Thực tế:** Tiếp nhận dữ liệu hợp lệ, tự động tính toán số lớp lý thuyết (80 SV/lớp) và số ca xưởng (20 SV/ca) cần mở; cảnh báo các môn <15 SV để CBĐT quyết định hủy/gộp lớp.<br>3. **Bộ máy Thuật toán Xếp Lịch Tự Động:** Giải bài toán ràng buộc phân bổ phòng học lý thuyết, xưởng máy và giảng viên chống trùng lặp.<br>4. **Giao diện Lưới Thời khóa biểu Tương tác & Heatmap Tải Phòng:** Hỗ trợ CBĐT kiểm tra cảnh báo viền đỏ và vi chỉnh kéo thả; hiển thị biểu đồ nhiệt công suất phòng trước khi xuất bản TKB chính thức. |
-| **6. Hypotheses** *(Hệ thống giả thuyết kiểm chứng)* | *"Chúng tôi tin rằng **thời gian lập TKB sẽ giảm 75% và không còn xung đột phòng** nếu **Cán bộ Đào tạo** đạt được **dữ liệu nhu cầu học phần sạch từ cổng Đăng ký học phần của sinh viên và khả năng chạy thuật toán xếp lịch tự động kèm vi chỉnh kéo thả** nhờ vào **Phân hệ Kế hoạch Mở Lớp & Xếp TKB Tự Động**."* |
-| **7. What We Need to Learn** *(Điều cần học hỏi / Giả định rủi ro)* | - Sinh viên có thao tác thuận tiện và hiểu rõ thông báo lý do không hợp lệ khi bị chặn tiên quyết không?<br>- Cán bộ Đào tạo có tin tưởng vào kết quả phân bổ phòng/giờ của thuật toán tự động không?<br>- Giao diện lưới kéo thả có giúp họ xử lý các ca xung đột ngoại lệ dễ dàng hơn bảng tính Excel không?<br>- Thuật toán có đáp ứng được các ràng buộc phức tạp của các ca xưởng thực hành (15–20 SV/ca máy) không? |
-| **8. MVP / Experiment** *(Nguyên mẫu thử nghiệm nhỏ nhất)* | Tạo một **nguyên mẫu tương tác có thể bấm được trên máy tính (Clickable Prototype gồm 4 màn hình Figma)** cho luồng nghiệp vụ: Tổng hợp nhu cầu Đăng ký học phần $\rightarrow$ Cấu hình ràng buộc & Chạy thuật toán xếp lịch $\rightarrow$ Kiểm tra cảnh báo & Vi chỉnh kéo thả $\rightarrow$ Xác nhận xuất bản TKB; tiến hành thử nghiệm với một nhóm cán bộ giáo vụ HBA. |
+|**Business Problem** *(Vấn đề kinh doanh)* | Quy trình mở lớp học phần theo cảm tính và xếp thời khóa biểu thủ công trên Excel khi chưa thu thập dữ liệu Đăng ký học phần của sinh viên tiêu tốn hàng trăm giờ công của cán bộ giáo vụ, làm chậm trễ tiến độ công bố lịch học 3–4 tuần, gây lãng phí 20% công suất phòng/xưởng và đe dọa uy tín chất lượng đào tạo của Học viện. |
+|**Business Outcomes** *(Kết quả kinh doanh kỳ vọng)* | - Giảm thời gian lập kế hoạch mở lớp học phần và hoàn tất TKB từ 4 tuần xuống $\le 7$ ngày làm việc.<br>- Triệt tiêu hoàn toàn lỗi xung đột phòng học, ca xưởng và trùng giờ giảng viên trước khi công bố TKB chính thức.<br>- Giảm tỷ lệ lớp học phần bị hủy đột ngột do thiếu sĩ số sàn từ 12% xuống $< 4\%$.<br>- Nâng cao hiệu suất khai thác phòng học lý thuyết lên $75–80\%$ và xưởng thực hành lên $65–70\%$ (đảm bảo thời gian bảo trì máy móc an toàn). |
+|**Users** *(Người sử dụng — Gồm cả 2 phía Slide 59)* | **• Người dùng nội bộ trực tiếp:** Cán bộ Phòng Đào tạo (chuyên viên lập kế hoạch & điều phối TKB); Ban Chủ nhiệm Khoa/Bộ môn (phân công giảng viên).<br>**• Người dùng thụ hưởng / liên đới:** Giảng viên (nhận lịch dạy lớp học phần cố định); Sinh viên HBA (Đăng ký học phần và nhận danh mục lớp học phần mở đủ chỗ để tiến hành Đăng ký lớp học phần). |
+|**User Outcomes & Benefits** *(Lợi ích đạt được — Tách rõ 2 phía)* | **• Đối với Cán bộ Đào tạo / Giáo vụ (Người dùng nội bộ):**<br>- Nắm rõ số lượng lớp học phần cần mở dựa trên dữ liệu Đăng ký học phần thực tế của sinh viên.<br>- Nhận diện tức thì các vị trí xung đột phòng/giờ trên giao diện trực quan, giảm 70% thao tác kiểm tra thủ công lặp lại.<br>**• Đối với Giảng viên & Sinh viên (Người dùng thụ hưởng):**<br>- Giảng viên nhận lịch giảng dạy lớp học phần cố định sớm 3 tuần, an tâm chuẩn bị giáo án và vật tư xưởng.<br>- Sinh viên chủ động đăng ký học phần theo lộ trình, được học đúng các lớp học phần cần thiết, không lo bị hủy lớp đột ngột. |
+|**Solutions** *(Ý tưởng giải pháp)* | **Phân hệ Hỗ trợ Lập Kế hoạch Mở Lớp & Điều Phối Thời Khóa Biểu (HBA Course Planner & Timetable Assistant):**<br>1. Cổng Đăng ký học phần (Course Registration) cho sinh viên trước kỳ học.<br>2. Bảng tổng hợp nhu cầu tự động đối chiếu điều kiện tiên quyết và đề xuất số lớp học phần lý thuyết/ca xưởng cần mở.<br>3. Công cụ hỗ trợ phân bổ lịch học dự thảo theo các quy tắc ràng buộc (không trùng phòng, trùng GV, đúng sĩ số ca xưởng).<br>4. Giao diện lưới thời khóa biểu tương tác hỗ trợ kéo thả vi chỉnh và cảnh báo xung đột trực quan. |
+|**Hypotheses** *(Hệ thống giả thuyết kiểm chứng)* | *"Chúng tôi tin rằng **thời gian lập TKB sẽ rút ngắn 75% và không còn xung đột phòng/giờ khi xuất bản** nếu **Cán bộ Đào tạo** đạt được **khả năng phát hiện xung đột tức thì và thao tác điều chỉnh kéo thả dễ dàng** nhờ vào **Giao diện Lưới Thời khóa biểu Tương tác có kiểm soát ràng buộc tự động**."* |
+|**What We Need to Learn** *(Điều cần học hỏi / Giả định rủi ro)* | - Sinh viên có tích cực tham gia Đăng ký học phần sớm trước kỳ không (tỷ lệ tham gia kỳ vọng $\ge 80\%$)?<br>- Cán bộ giáo vụ có hiểu và thao tác thuận tiện với các thông báo cảnh báo lỗi xung đột màu đỏ trên giao diện lưới không?<br>- Cơ chế gợi ý ô trống màu xanh có giúp họ xử lý các ca điều chỉnh lịch nhanh hơn bảng tính Excel không? |
+|**MVP / Experiment** *(Nguyên mẫu thử nghiệm nhỏ nhất)* | Tạo một **nguyên mẫu tương tác có thể bấm được trên Figma (Clickable Prototype gồm 4 màn hình)** cho luồng nghiệp vụ: Xem tổng hợp nhu cầu từ Đăng ký học phần $\rightarrow$ Xem bảng phân bổ lịch dự thảo $\rightarrow$ Kiểm tra cảnh báo đỏ & kéo thả vi chỉnh sang ô xanh $\rightarrow$ Phê duyệt xuất bản TKB; tiến hành thử nghiệm với cán bộ giáo vụ HBA. |
 
 ---
 
-### 4.2. Hệ thống 3 Giả thuyết kiểm chứng (Hypotheses) chuẩn cú pháp
-Cấu trúc chuẩn mực:
+### 4.2. Hệ thống 3 Giả thuyết kiểm chứng
+Áp dụng mẫu câu giả thuyết chuẩn:
 > *"Chúng tôi tin rằng **[Business Outcome]** sẽ đạt được nếu **[Đối tượng người dùng]** đạt được **[User Benefit]** nhờ vào **[Tính năng / Solution]**."*
 
-1. **Giả thuyết 1 (Về Dữ liệu Nhu cầu Học phần Sạch):**  
-   *"Chúng tôi tin rằng **thời gian tính toán số lớp cần mở sẽ giảm 80% và tỷ lệ hủy lớp dưới sàn sĩ số giảm xuống < 3%** nếu **Cán bộ Đào tạo** đạt được **dữ liệu tổng hợp nhu cầu học phần thực tế đã được tự động lọc sạch các ca vi phạm tiên quyết** nhờ vào **Cổng Đăng Ký Học Phần Tích Hợp Kiểm Tra Cây Tiên Quyết Tự Động**."*
+1. **Giả thuyết 1 (Về Xác định nhu cầu thực tế qua Đăng ký học phần):**  
+   *"Chúng tôi tin rằng **tỷ lệ lớp học phần bị hủy do thiếu sĩ số sàn sẽ giảm từ 12% xuống dưới 4%** nếu **Cán bộ Đào tạo** đạt được **dữ liệu nhu cầu học tập thực tế và chính xác của sinh viên trước kỳ** nhờ vào **Tính năng Đăng ký Học phần Trực tuyến**."*
 
-2. **Giả thuyết 2 (Về Tự động hóa xếp lịch & Xóa bỏ xung đột):**  
-   *"Chúng tôi tin rằng **tỷ lệ xung đột phòng học lý thuyết và xưởng thực hành sẽ giảm về 0%** nếu **Cán bộ Đào tạo** đạt được **kết quả phân bổ phòng/giờ tối ưu kèm cảnh báo xung đột thời gian thực** nhờ vào **Bộ máy Xếp Lịch Tự Động dựa trên bài toán ràng buộc**."*
+2. **Giả thuyết 2 (Về Kiểm soát ràng buộc & Loại bỏ xung đột):**  
+   *"Chúng tôi tin rằng **tỷ lệ xung đột phòng học lý thuyết và xưởng thực hành sẽ triệt tiêu về 0% trước khi xuất bản** nếu **Cán bộ Đào tạo** đạt được **cảnh báo tức thời về các vị trí trùng phòng/giờ** nhờ vào **Bộ máy Kiểm tra Quy tắc Ràng buộc Tự động**."*
 
 3. **Giả thuyết 3 (Về Năng suất vận hành & Tinh chỉnh linh hoạt):**  
-   *"Chúng tôi tin rằng **thời gian hoàn tất thời khóa biểu toàn trường sẽ rút ngắn từ 4 tuần xuống dưới 5 ngày** nếu **Cán bộ Đào tạo** đạt được **khả năng vi chỉnh kéo thả các ca học ngoại lệ trên giao diện lưới trực quan** nhờ vào **Giao diện Lưới Thời khóa biểu Tương tác Chống Xung đột**."*
+   *"Chúng tôi tin rằng **thời gian hoàn tất thời khóa biểu toàn trường sẽ rút ngắn từ 4 tuần xuống dưới 7 ngày** nếu **Cán bộ Đào tạo** đạt được **khả năng kéo thả điều chỉnh các ca học ngoại lệ trên giao diện lưới trực quan** nhờ vào **Giao diện Lưới Thời khóa biểu Tương tác Hỗ trợ Quyết định**."*
 
 ---
 
 # BÀI TẬP 5: NGUYÊN MẪU KHẢ THI TỐI THIỂU & KẾ HOẠCH THỬ NGHIỆM (MVP & USABILITY EXPERIMENT)
 
-### 5.1. Mục tiêu thử nghiệm (Test Objective)
-* **Mục tiêu:** Kiểm tra liệu việc **tiếp nhận dữ liệu Đăng ký học phần đã được lọc sạch tiên quyết, chạy thuật toán xếp lịch tự động và hỗ trợ công cụ vi chỉnh kéo thả có cảnh báo xung đột tức thì** có giúp **Cán bộ Đào tạo lập kế hoạch mở lớp và hoàn tất thời khóa biểu dễ dàng, nhanh chóng và chính xác hơn** so với việc dùng bảng tính Excel thủ công hay không.
+### 5.1. Mục tiêu thử nghiệm
+* **Mục tiêu:** Kiểm tra liệu việc **nắm bắt nhu cầu thực qua dữ liệu Đăng ký học phần kết hợp với giao diện lưới xếp lịch tương tác có cảnh báo xung đột trực quan** có giúp **Cán bộ Đào tạo lập kế hoạch mở các lớp học phần chuẩn xác và hoàn tất thời khóa biểu dễ dàng, nhanh chóng hơn** so với quy trình lập bảng tính Excel thủ công hay không.
 
 ---
 
 ### 5.2. MVP: Đặc tả nguyên mẫu bấm được (Clickable Prototype 4 màn hình)
-Nguyên mẫu tương tác kiểm chứng 1 luồng công việc (Use Case) cốt lõi nhất của Cán bộ Đào tạo, gồm đúng 4 bước màn hình nghiệp vụ chuẩn:
+Nguyên mẫu tương tác kiểm chứng 1 luồng công việc (Use Case) cốt lõi nhất của Cán bộ Đào tạo trên Figma, gồm đúng 4 bước màn hình theo cấu trúc:
 
 ```mermaid
 flowchart LR
-    S1["Màn hình 1:<br/>Dashboard Tổng Hợp Nhu Cầu<br/>& Đề Xuất Mở Lớp"] -->|"Chốt số lớp cần mở"| S2["Màn hình 2:<br/>Cấu Hình Ràng Buộc &<br/>Bấm Chạy Thuật Toán"]
-    S2 -->|"Sinh TKB tự động"| S3["Màn hình 3:<br/>Kiểm Tra Cảnh Báo Đỏ &<br/>Vi Chỉnh Kéo Thả"]
-    S3 -->|"Xử lý xong 100% xung đột"| S4["Màn hình 4:<br/>Xem Heatmap Tải Phòng &<br/>Xác Nhận Xuất Bản TKB"]
+    S1["Màn hình 1:<br/>Xem Tổng Hợp Đăng Ký Học Phần &<br/>Duyệt Danh Mục Mở Lớp Học Phần"] -->|"Chốt số lớp cần mở"| S2["Màn hình 2:<br/>Xem Bảng Phân Bổ Lịch<br/>& Bấm Kiểm Tra Xung Đột"]
+    S2 -->|"Chuyển sang dạng lưới"| S3["Màn hình 3:<br/>Lưới TKB Tương Tác:<br/>Nhận Cảnh Báo Đỏ & Kéo Thả"]
+    S3 -->|"Xử lý xong 100% lỗi"| S4["Màn hình 4:<br/>Xem Báo Cáo Tải Phòng &<br/>Phê Duyệt Xuất Bản TKB"]
 
     style S1 fill:#e3f2fd,stroke:#1565c0,stroke-width:1px
     style S2 fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px
@@ -230,65 +249,52 @@ flowchart LR
     style S4 fill:#ede7f6,stroke:#512da8,stroke-width:1px
 ```
 
-1. **Màn hình 1: Dashboard Tổng hợp Đăng ký Học phần & Đề xuất Mở Lớp (Nhu cầu thực tế)**
-   - Cán bộ chọn học kỳ tác nghiệp (ví dụ: *Học kỳ 1 — Năm học 2026–2027*).
-   - Hệ thống hiển thị danh sách các mã học phần kèm **số lượng sinh viên đăng ký hợp lệ** từ đợt Đăng ký học phần (đã được hệ thống tự động loại bỏ các trường hợp chưa đạt môn tiên quyết).
-   - Hệ thống tự động tính toán và đề xuất: Số lớp lý thuyết cần mở (chuẩn 80 SV/lớp) và số ca xưởng thực hành (tối đa 20 SV/ca).
-   - Cảnh báo trực quan các môn học có số đăng ký $< 15$ SV (dưới sàn sĩ số) kèm 2 nút tùy chọn: *"Hủy môn kỳ này"* hoặc *"Mở lớp ghép"*. Cán bộ bấm nút **"Chốt Kế Hoạch Mở Lớp"**.
+1. **Màn hình 1: Tổng hợp Nhu cầu từ Đăng ký Học phần của Sinh viên & Phê duyệt Mở Lớp học phần**
+   - Hiển thị danh sách các học phần tín chỉ kèm số lượng sinh viên thực tế đã thực hiện Đăng ký học phần trực tuyến (ví dụ: *Học phần Kỹ thuật số: 245 SV đăng ký học phần; 210 SV đủ điều kiện tiên quyết*).
+   - Hệ thống tự động đề xuất số lớp học phần lý thuyết cần mở (sĩ số chuẩn 70–80 SV/lớp) và số ca xưởng thực hành (giới hạn nghiêm ngặt $\le 20$ SV/ca máy).
+   - Cán bộ kiểm tra số liệu thực tế và bấm nút: **"PHÊ DUYỆT DANH MỤC LỚP HỌC PHẦN MỞ"**.
 
-2. **Màn hình 2: Cấu hình ràng buộc tài nguyên & Chạy thuật toán xếp lịch**
-   - Hiển thị danh mục tài nguyên sẵn sàng: Danh sách 180 phòng học lý thuyết, 35 xưởng máy khả dụng và danh sách giảng viên đã được các Bộ môn phân công.
-   - Cán bộ thiết lập các tham số ưu tiên (tránh xếp ca xưởng buổi tối, ưu tiên giảng viên cơ hữu).
-   - Cán bộ bấm nút nổi bật: **"⚡ CHẠY THUẬT TOÁN XẾP LỊCH TỰ ĐỘNG (AUTO-SCHEDULER)"**.
+2. **Màn hình 2: Bảng Phân bổ Lịch học Dự thảo theo Ràng buộc**
+   - Hiển thị danh sách các lớp học phần đã được gán phòng học lý thuyết, xưởng máy và giảng viên theo quy tắc cơ bản.
+   - Cán bộ xem xét tổng thể danh sách và bấm nút chuyển sang giao diện kiểm tra: **"KIỂM TRA XUNG ĐỘT TRÊN LƯỚI THỜI KHÓA BIỂU"**.
 
-3. **Màn hình 3: Lưới Thời khóa biểu tương tác — Kiểm tra xung đột & Vi chỉnh kéo thả**
-   - Hệ thống hiển thị kết quả phân bổ trên lưới TKB tuần trực quan (Thứ 2 đến Thứ 7, Ca 1 đến Ca 6).
-   - **Xử lý xung đột thực tế:** Nếu có 2 ca học bị trùng giảng viên hoặc trùng phòng thực hành xưởng, ô thời khóa biểu sẽ **nhấp nháy viền đỏ kèm icon cảnh báo (!)**.
-   - Cán bộ nhấp chuột vào ca học bị lỗi, hệ thống tự động làm sáng các ô trống khả dụng màu xanh lá cây; cán bộ chỉ việc **kéo thả (drag-and-drop)** ca học sang ô xanh để triệt tiêu 100% xung đột.
+3. **Màn hình 3: Lưới Thời khóa biểu Tương tác — Nhận diện Xung đột & Vi chỉnh Kéo thả**
+   - Hệ thống hiển thị toàn bộ lịch học trên lưới tuần trực quan (Thứ 2 đến Thứ 7, Ca 1 đến Ca 6).
+   - **Mô phỏng tình huống xung đột:** Có 1 ca học bị **nhấp nháy viền đỏ kèm icon cảnh báo (!): "Trùng phòng Xưởng Cơ khí 1 vào Sáng Thứ 4 với lớp CK02"**.
+   - **Tương tác người dùng:** Cán bộ nhấp chuột vào ca học bị lỗi $\rightarrow$ Hệ thống tự động làm sáng các ô trống khả dụng màu xanh lá cây (các ô không bị trùng phòng và giảng viên rảnh) $\rightarrow$ Cán bộ **kéo thả (drag-and-drop)** ca học sang ô xanh $\rightarrow$ Viền đỏ biến mất, lịch chuyển sang trạng thái an toàn.
 
-4. **Màn hình 4: Báo cáo Heatmap công suất phòng & Màn hình xác nhận xuất bản**
-   - Hiển thị báo cáo tổng quan trước khi phê duyệt: Biểu đồ nhiệt (Heatmap) thể hiện tỷ lệ lấp đầy phòng học/xưởng (đạt chuẩn xanh 88%), thống kê 0% xung đột phòng/giờ.
-   - Cán bộ kiểm tra lại lần cuối danh sách lớp và bấm nút: **"PHÊ DUYỆT & XUẤT BẢN THỜI KHÓA BIỂU"**.
-   - Hệ thống hiển thị thông báo thành công và kích hoạt dữ liệu lớp học phần sẵn sàng cho sinh viên bước vào Giai đoạn 2: Đăng ký lớp học phần.
+4. **Màn hình 4: Báo cáo Công suất Phòng/Xưởng & Xác nhận Xuất bản**
+   - Hiển thị bảng tổng hợp trước khi ban hành: Tỷ lệ lấp đầy phòng học ($73\%$), tỷ lệ lấp đầy xưởng máy ($68\%$), thông báo xác nhận: *"0 xung đột phòng học và giảng viên"*.
+   - Cán bộ kiểm tra lần cuối và bấm nút: **"PHÊ DUYỆT & XUẤT BẢN THỜI KHÓA BIỂU CHÍNH THỨC"**.
+   - Hệ thống hiển thị thông báo thành công và chuyển dữ liệu danh mục lớp học phần sang cổng **Đăng ký Lớp học phần (Class Registration)** của sinh viên.
 
 ---
 
-### 5.3. Quy trình thử nghiệm thực địa (Testing Protocol)
+### 5.3. Quy trình thử nghiệm thực địa (Usability Testing)
+
 1. **Mời nhóm người dùng thử nghiệm:**
-   - Mời **6–8 chuyên viên Phòng Đào tạo và cán bộ giáo vụ Khoa** tại Học viện Bách Nghệ Hà Nội trực tiếp tham gia thử nghiệm.
-   - Giao nhiệm vụ cụ thể: *"Hãy sử dụng nguyên mẫu để tiếp nhận dữ liệu Đăng ký học phần, chốt kế hoạch mở lớp và hoàn tất thời khóa biểu cho Khoa Cơ khí (gồm 30 lớp học phần lý thuyết và 45 ca thực hành xưởng), xử lý hết các cảnh báo trùng phòng/giờ và bấm xuất bản TKB"*.
+   - Mời **5–6 chuyên viên Phòng Đào tạo và cán bộ giáo vụ Khoa** tại Học viện Bách Nghệ Hà Nội trực tiếp tham gia thử nghiệm trên nguyên mẫu Figma.
+   - Giao nhiệm vụ cụ thể (Task Scenario):  
+     *"Thầy/Cô hãy sử dụng nguyên mẫu để xem xét số lượng sinh viên Đăng ký học phần, duyệt mở các lớp học phần cho Khoa Cơ khí, phát hiện ca học đang bị cảnh báo trùng phòng trên lưới thời khóa biểu, thực hiện kéo thả sang vị trí hợp lệ và bấm xuất bản thời khóa biểu."*
 
 2. **Quan sát trực tiếp quá trình thao tác:**
-   - Người điều phối quan sát và ghi hình màn hình thao tác:
-     - Ghi nhận thời gian hoàn thành từng bước.
-     - Đếm số lần cán bộ thao tác nhầm hoặc bối rối không biết kéo thả ca học về đâu.
-     - Ghi lại các thắc mắc, câu hỏi phát sinh khi thấy thông báo cảnh báo xung đột màu đỏ.
+   - Người điều phối quan sát và ghi nhận:
+     - Thời gian để cán bộ nhận biết được ca lớp học phần bị cảnh báo viền đỏ trên lưới lịch.
+     - Cán bộ có hiểu ý nghĩa của các ô màu xanh khi nhấp vào ca lỗi hay không.
+     - Số lần thao tác nhầm hoặc ngập ngừng khi thực hiện kéo thả ca học.
 
-3. **Phỏng vấn định tính sau thử nghiệm:**
+3. **Phỏng vấn định tính sau thử nghiệm (Bám sát Slide 61–62):**
    - Phỏng vấn người tham gia dựa trên 2 câu hỏi trọng tâm:
-     1. *"Thầy/Cô có gặp điểm nào khó hiểu hoặc khó thao tác trên giao diện lưới kéo thả không?"*
-     2. *"Thầy/Cô cảm thấy tự tin bao nhiêu phần trăm về tính chính xác khi bấm nút 'Phê duyệt & Xuất bản Thời khóa biểu'?"*
+     1. *"Thầy/Cô có gặp điểm nào khó hiểu hoặc khó thao tác trên giao diện lưới kéo thả khi xử lý ca trùng phòng không?"*
+     2. *"So với việc dò tìm thủ công trên bảng tính Excel, Thầy/Cô cảm thấy tự tin bao nhiêu phần trăm về tính chính xác khi bấm nút 'Phê duyệt & Xuất bản' để mở cổng Đăng ký lớp học phần cho sinh viên?"*
 
 ---
 
-### 5.4. Hệ thống chỉ số đo lường thành công (Success Metrics)
+### 5.4. Hệ thống chỉ số đo lường thành công
+Tuân thủ đầy đủ 3 nhóm chỉ số định lượng bắt buộc tại **Slide 61 & 62**:
 
 | Nhóm chỉ số đo lường | Định nghĩa & Phương pháp đo | Mục tiêu kỳ vọng (Target) | Ý nghĩa đánh giá theo Lean UX |
 |---|---|:---:|---|
-| **1. Tỷ lệ hoàn thành nhiệm vụ** *(Task Completion Rate - TCR)* | Tỷ lệ cán bộ giáo vụ hoàn thành trọn vẹn luồng từ Màn hình 1 đến Màn hình 4 mà không cần người hướng dẫn can thiệp trợ giúp. | $\mathbf{\ge 8 5\%}$ | Đánh giá tính khả dụng và mức độ trực quan của quy trình nghiệp vụ mới trên phần mềm. |
-| **2. Thời gian hoàn tất nhiệm vụ** *(Time on Task)* | Thời gian trung bình để một cán bộ hoàn tất xếp TKB cho 30 lớp học phần của Khoa thí điểm. | $\mathbf{\le 15\text{ phút}}$ | Chứng minh sự đột phá về năng suất so với hiện trạng làm thủ công mất 3–4 ngày trên Excel. |
-| **3. Số lỗi và phản hồi định tính** *(Error Count & Feedback)* | - Số lỗi xung đột phòng/giờ còn sót lại sau khi xuất bản TKB.<br>- Mức độ tự tin khi xác nhận xuất bản. | **0 lỗi sót**<br>$\mathbf{\ge 8.5/10}$ điểm tự tin | Khẳng định độ tin cậy tuyệt đối của thuật toán; giải tỏa áp lực lo sợ trách nhiệm hành chính của cán bộ. |
-
----
-
-# TỔNG KẾT BÀI TẬP & LIÊN KẾT TÀI LIỆU
-
-> [!NOTE]
-> Báo cáo này đã hoàn thành trọn vẹn **100% yêu cầu 5 bài tập thực hành cốt lõi** của Buổi 1 môn học IT3120 theo đúng bối cảnh chuyển đổi sang học chế tín chỉ tại Học viện Bách Nghệ Hà Nội (mô hình chuẩn tham chiếu từ HUST).
-> 
-> Hai phần mở rộng nâng cao gồm:
-> 1. **Hồ sơ Đề xuất Hệ thống (System Request 11 mục theo chuẩn Planning Phase)**
-> 2. **Báo cáo Phương pháp Nghiên cứu, Phản biện & Bảng Tự đánh giá**
-> 
-> Đã được lưu trữ và hoàn thiện độc lập tại tài liệu:  
-> 👉 [`bai-tap-1/TAI-LIEU-BO-TRO-SYSTEM-REQUEST-VA-REPORT.md`](file:///d:/SourceCodes/Java_SourceCodes/IT3120_QuanLyDaoTao/bai-tap-1/TAI-LIEU-BO-TRO-SYSTEM-REQUEST-VA-REPORT.md)
+| **1. Tỷ lệ hoàn thành nhiệm vụ** | Tỷ lệ cán bộ giáo vụ hoàn thành trọn vẹn luồng từ Màn hình 1 đến Màn hình 4 mà không cần người hướng dẫn trợ giúp. | $\mathbf{\ge 85\%}$ | Đánh giá tính khả dụng và sự rõ ràng của luồng nghiệp vụ mở lớp học phần và xếp lịch mới. |
+| **2. Thời gian nhận diện và xử lý lỗi** | Thời gian trung bình để cán bộ phát hiện ca trùng phòng viền đỏ và kéo thả thành công sang ô xanh hợp lệ. | $\mathbf{\le 1.5\text{ phút}}$ | Chứng minh sự đột phá về năng suất so với hiện trạng dò tìm thủ công mất 15–20 phút trên Excel. |
+| **3. Độ dễ hiểu và phản hồi định tính** | - Tỷ lệ nhận diện đúng nguyên nhân cảnh báo đỏ.<br>- Điểm tự tin khi xác nhận xuất bản TKB. | **$\ge 90\%$ nhận diện đúng**<br>$\mathbf{\ge 8.5/10}$ điểm tự tin | Khẳng định tính trực quan của UI; giải tỏa áp lực tâm lý lo sợ sai sót hành chính của cán bộ giáo vụ. |
