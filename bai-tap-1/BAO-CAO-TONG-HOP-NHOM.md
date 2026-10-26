@@ -16,7 +16,7 @@
 > - **Đơn vị đào tạo:** Viện CNTT&TT — Đại học Bách Khoa Hà Nội
 > - **Cơ quan giả định:** Học viện Bách Nghệ Hà Nội (HBA) — Quy mô ~35.000 sinh viên, ~1.500 giảng viên
 > - **Phương pháp luận:** Product Discovery, Problem Statement Canvas, Lean UX Canvas & MVP Usability Testing
-> - **Căn cứ tài liệu bài giảng:** Bám sát 62 slides bài giảng và Slide đáp án chuẩn (Slide 57–62) trong `docs/OOAD_Lab_B1-5.md`
+> - **Mô hình tham chiếu nghiệp vụ:** Chu trình 2 giai đoạn đăng ký tín chỉ chuẩn hóa của Đại học Bách Khoa Hà Nội (HUST)
 
 ---
 
@@ -46,7 +46,7 @@
 
 ---
 
-# PHẦN MỞ ĐẦU: BỐI CẢNH NGHIỆP VỤ TẠI HBA
+# PHẦN MỞ ĐẦU: BỐI CẢNH NGHIỆP VỤ & CÚ SỐC VẬN HÀNH TẠI HBA
 
 ### 1. Cú sốc chuyển đổi mô hình từ Niên chế sang Tín chỉ
 Học viện Bách Nghệ Hà Nội (HBA) là cơ sở giáo dục đại học công lập trọng điểm đào tạo khối ngành kỹ thuật và công nghệ ứng dụng với quy mô khoảng **35.000 sinh viên** chính quy và hơn **1.500 cán bộ, giảng viên**.
@@ -99,12 +99,12 @@ Do đó, nhiệm vụ số hóa cấp bách hàng đầu trong giai đoạn đ�
 
 ---
 
-# BÀI TẬP 1: USER NEEDS & USER PROBLEM STATEMENT
+# BÀI TẬP 1: XÁC ĐỊNH NHU CẦU NGƯỜI DÙNG & PHÁT BIỂU VẤN ĐỀ (USER NEEDS & PROBLEM STATEMENT)
 
 ### 1.1. Bảng xác định 4 User Needs cốt lõi của 4 tác nhân
 Nhóm đã tiến hành khảo sát toàn diện 4 nhóm tác nhân liên quan trong cuộc chuyển đổi tại Học viện Bách Nghệ Hà Nội:
 
-| Mã | Tác nhân | Nhu cầu người dùng | Bối cảnh xảy ra | Rào cản hiện tại | Hệ quả thực tế | Phân loại |
+| Mã | Tác nhân | Nhu cầu người dùng (Bắt đầu bằng động từ hành động) | Bối cảnh xảy ra | Rào cản hiện tại | Hệ quả thực tế | Phân loại |
 |:---:|---|---|---|---|---|:---:|
 | **UN-01** | **Cán bộ Đào tạo** | **Tổng hợp nhu cầu và điều phối** kế hoạch mở lớp học phần và thời khóa biểu dựa trên dữ liệu Đăng ký học phần của sinh viên | 6–8 tuần trước khi học kỳ mới bắt đầu, khi chuẩn bị danh mục các lớp học phần tín chỉ | Chưa có kênh thu thập Đăng ký học phần tập trung; việc xếp phòng học và giảng viên vẫn làm thủ công trên các file Excel phân tán | Mở lớp học phần theo cảm tính dẫn đến thừa/thiếu lớp; dễ xung đột phòng học, mất 4 tuần lập TKB làm trễ tiến độ toàn trường | `[Evidence]` |
 | **UN-02** | **Sinh viên** | **Đăng ký học phần** dự kiến học và tra cứu sơ đồ cây môn tiên quyết để chủ động lộ trình học kỳ tới | 8–10 tuần trước ngày khai giảng học kỳ mới | Hệ thống cũ không có tính năng Đăng ký học phần trước kỳ; sinh viên quen tâm lý niên chế thụ động | Không chủ động được lộ trình học, đến đợt Đăng ký lớp học phần mới biết học phần mình cần không được mở hoặc hết chỗ | `[Evidence]` |
@@ -124,12 +124,18 @@ Nhóm đã tiến hành khảo sát toàn diện 4 nhóm tác nhân liên quan t
 ---
 
 ### 1.3. Phát biểu User Problem Statement trọng tâm của Cán bộ Đào tạo
+Áp dụng công thức chuẩn mực:
+$$\text{[Người dùng]} + \text{gặp khó khăn khi [Mục tiêu]} + \text{trong [Bối cảnh]} + \text{vì [Trở ngại]} + \text{dẫn đến [Hệ quả]}$$
+
+> **TUYÊN BỐ VẤN ĐỀ NGƯỜI DÙNG (USER PROBLEM STATEMENT):**
 > 
 > *"**Cán bộ Phòng Đào tạo Học viện Bách Nghệ Hà Nội** gặp khó khăn nghiêm trọng khi **thiết lập kế hoạch mở các lớp học phần và điều phối thời khóa biểu** trong **giai đoạn chuẩn bị học kỳ tín chỉ đầu tiên khi vừa chuyển đổi từ mô hình niên chế**, vì **chưa có kênh tổng hợp dữ liệu Đăng ký học phần thực tế của sinh viên và các công cụ bảng tính Excel thủ công cũ không kiểm soát nổi sự bùng nổ của hơn 2.500 lớp học phần cùng ma trận phòng học/xưởng phức tạp**, dẫn đến **tiến độ lập TKB bị trễ hạn 3–4 tuần, hơn 15% lớp học phần bị xung đột phòng/giờ hoặc mất cân đối sĩ số nghiêm trọng, khiến kế hoạch đào tạo đầu kỳ bị xáo trộn và cán bộ giáo vụ bị kiệt sức**."*
 
 ---
 
-# BÀI TẬP 2: USER PROBLEM STATEMENT CANVAS
+# BÀI TẬP 2: BẢN ĐỒ VẤN ĐỀ NGƯỜI DÙNG (USER PROBLEM STATEMENT CANVAS)
+
+### 2.1. Bảng User Problem Statement Canvas chuẩn 6 thành phần
 
 | Thành phần Canvas | Nội dung phân tích chi tiết đối với Cán bộ Đào tạo HBA |
 |---|---|
@@ -142,11 +148,11 @@ Nhóm đã tiến hành khảo sát toàn diện 4 nhóm tác nhân liên quan t
 
 ---
 
-# BÀI TẬP 3: USER PROBLEM VÀ BUSINESS PROBLEM
+# BÀI TẬP 3: MỐI QUAN HỆ GIỮA VẤN ĐỀ NGƯỜI DÙNG VÀ VẤN ĐỀ TỔ CHỨC (USER PROBLEM & BUSINESS PROBLEM)
 
 ### 3.1. Bảng bộ tứ liên kết nhân quả xuyên suốt
 
-| Thành phần kết nối | Nội dung đặc tả bám sát bối cảnh Học viện Bách Nghệ Hà Nội (Slide 58) |
+| Thành phần kết nối | Nội dung đặc tả bám sát bối cảnh Học viện Bách Nghệ Hà Nội |
 |---|---|
 | **1. User Problem** *(Vấn đề người dùng)* | Cán bộ Đào tạo khó thiết lập kế hoạch mở lớp học phần phù hợp khi chưa có dữ liệu Đăng ký học phần thực tế của sinh viên và phải điều phối lịch học thủ công trên bảng tính Excel dễ phát sinh xung đột. |
 | **2. Operational Impact có thể có** *(Tác động vận hành nội bộ)* | - Cán bộ giáo vụ tốn hàng trăm giờ công nhập liệu, dò tìm phòng trống và sửa đổi lịch học thủ công.<br>- Thường xuyên phát sinh sai lệch thông tin thời khóa biểu lớp học phần giữa Phòng Đào tạo, các Khoa và Giảng viên.<br>- Lịch học bị chậm trễ làm dồn ứ toàn bộ các khâu Đăng ký lớp học phần, thu học phí và chuẩn bị phôi liệu xưởng thực hành. |
@@ -156,7 +162,7 @@ Nhóm đã tiến hành khảo sát toàn diện 4 nhóm tác nhân liên quan t
 ---
 
 ### 3.2. Danh mục dữ liệu vận hành cần thu thập để xác minh mối liên hệ
-Theo lưu ý cốt lõi tại **Slide 58**: *"Mối liên hệ giữa hai vấn đề cần được xác minh bằng dữ liệu vận hành, không suy diễn trực tiếp thành kết luận"*:
+*Nguyên tắc phương pháp luận: "Mối liên hệ giữa hai vấn đề cần được xác minh bằng dữ liệu vận hành, không suy diễn trực tiếp thành kết luận"*:
 
 ```mermaid
 flowchart LR
@@ -188,7 +194,7 @@ flowchart LR
 
 ---
 
-# BÀI TẬP 4: LEAN UX CANVAS
+# BÀI TẬP 4: KHUNG GIẢI PHÁP TINH GỌN (LEAN UX CANVAS)
 
 ### 4.1. Bảng Lean UX Canvas hoàn chỉnh
 Bảng tổng hợp bám sát cấu trúc phân định chuẩn mực giữa Vấn đề & Mục tiêu và Giải pháp & Thử nghiệm theo Slide 59 & Slide 60:
@@ -221,7 +227,7 @@ Bảng tổng hợp bám sát cấu trúc phân định chuẩn mực giữa V�
 
 ---
 
-# BÀI TẬP 5: MVP VÀ KẾ HOẠCH THỬ NGHIỆM
+# BÀI TẬP 5: NGUYÊN MẪU KHẢ THI TỐI THIỂU & KẾ HOẠCH THỬ NGHIỆM (MVP & USABILITY EXPERIMENT)
 
 ### 5.1. Mục tiêu thử nghiệm
 * **Mục tiêu:** Kiểm tra liệu việc **nắm bắt nhu cầu thực qua dữ liệu Đăng ký học phần kết hợp với giao diện lưới xếp lịch tương tác có cảnh báo xung đột trực quan** có giúp **Cán bộ Đào tạo lập kế hoạch mở các lớp học phần chuẩn xác và hoàn tất thời khóa biểu dễ dàng, nhanh chóng hơn** so với quy trình lập bảng tính Excel thủ công hay không.
