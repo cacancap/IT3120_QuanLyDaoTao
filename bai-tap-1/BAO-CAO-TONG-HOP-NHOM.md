@@ -30,34 +30,30 @@
     - [TỔ CHỨC NGHIÊN CỨU: HỌC VIỆN BÁCH NGHỆ HÀ NỘI (HBA)](#tổ-chức-nghiên-cứu-học-viện-bách-nghệ-hà-nội-hba)
     - [BỐI CẢNH: CHUYỂN ĐỔI MÔ HÌNH QUẢN TRỊ TỪ NIÊN CHẾ SANG HỌC CHẾ TÍN CHỈ](#bối-cảnh-chuyển-đổi-mô-hình-quản-trị-từ-niên-chế-sang-học-chế-tín-chỉ)
   - [MỤC LỤC BÁO CÁO](#mục-lục-báo-cáo)
-- [PHẦN MỞ ĐẦU: BỐI CẢNH NGHIỆP VỤ \& CÚ SỐC VẬN HÀNH TẠI HBA](#phần-mở-đầu-bối-cảnh-nghiệp-vụ--cú-sốc-vận-hành-tại-hba)
+- [PHẦN MỞ ĐẦU: BỐI CẢNH NGHIỆP VỤ TẠI HBA](#phần-mở-đầu-bối-cảnh-nghiệp-vụ-tại-hba)
     - [1. Cú sốc chuyển đổi mô hình từ Niên chế sang Tín chỉ](#1-cú-sốc-chuyển-đổi-mô-hình-từ-niên-chế-sang-tín-chỉ)
     - [2. Nút thắt cổ chai cấp bách: Cán bộ Đào tạo vỡ trận trong khâu mở lớp \& xếp TKB](#2-nút-thắt-cổ-chai-cấp-bách-cán-bộ-đào-tạo-vỡ-trận-trong-khâu-mở-lớp--xếp-tkb)
-    - [3. Sơ đồ luồng phối hợp tổng thể giữa 4 tác nhân tại HBA](#3-sơ-đồ-luồng-phối-hợp-tổng-thể-giữa-4-tác-nhân-tại-hba)
-- [BÀI TẬP 1: USER NEEDS \& USER PROBLEM STATEMENT (SLIDE 7–15, 56)](#bài-tập-1-user-needs--user-problem-statement-slide-715-56)
+- [BÀI TẬP 1: USER NEEDS \& USER PROBLEM STATEMENT](#bài-tập-1-user-needs--user-problem-statement)
     - [1.1. Bảng xác định 4 User Needs cốt lõi của 4 tác nhân](#11-bảng-xác-định-4-user-needs-cốt-lõi-của-4-tác-nhân)
-    - [1.2. Lựa chọn User Need ưu tiên mỏ neo (Anchor Priority)](#12-lựa-chọn-user-need-ưu-tiên-mỏ-neo-anchor-priority)
+    - [1.2. Lựa chọn User Need ưu tiên](#12-lựa-chọn-user-need-ưu-tiên)
     - [1.3. Phát biểu User Problem Statement trọng tâm của Cán bộ Đào tạo](#13-phát-biểu-user-problem-statement-trọng-tâm-của-cán-bộ-đào-tạo)
-- [BÀI TẬP 2: USER PROBLEM STATEMENT CANVAS (SLIDE 16–21, 57)](#bài-tập-2-user-problem-statement-canvas-slide-1621-57)
-    - [2.1. Bảng User Problem Statement Canvas chuẩn 6 thành phần (Slide 57)](#21-bảng-user-problem-statement-canvas-chuẩn-6-thành-phần-slide-57)
-    - [2.2. Điểm nhấn phân biệt giữa Bằng chứng (Evidence) và Giả định (Assumptions)](#22-điểm-nhấn-phân-biệt-giữa-bằng-chứng-evidence-và-giả-định-assumptions)
-- [BÀI TẬP 3: USER PROBLEM VÀ BUSINESS PROBLEM (SLIDE 22–35, 58)](#bài-tập-3-user-problem-và-business-problem-slide-2235-58)
-    - [3.1. Bảng bộ tứ liên kết nhân quả xuyên suốt (Slide 58)](#31-bảng-bộ-tứ-liên-kết-nhân-quả-xuyên-suốt-slide-58)
+- [BÀI TẬP 2: USER PROBLEM STATEMENT CANVAS](#bài-tập-2-user-problem-statement-canvas)
+- [BÀI TẬP 3: USER PROBLEM VÀ BUSINESS PROBLEM](#bài-tập-3-user-problem-và-business-problem)
+    - [3.1. Bảng bộ tứ liên kết nhân quả xuyên suốt](#31-bảng-bộ-tứ-liên-kết-nhân-quả-xuyên-suốt)
     - [3.2. Danh mục dữ liệu vận hành cần thu thập để xác minh mối liên hệ](#32-danh-mục-dữ-liệu-vận-hành-cần-thu-thập-để-xác-minh-mối-liên-hệ)
-    - [3.3. Phân tích nguyên nhân gốc rễ bằng kỹ thuật 5 Whys (Slide 28, 35)](#33-phân-tích-nguyên-nhân-gốc-rễ-bằng-kỹ-thuật-5-whys-slide-28-35)
-- [BÀI TẬP 4: LEAN UX CANVAS (SLIDE 36–40, 59, 60)](#bài-tập-4-lean-ux-canvas-slide-3640-59-60)
-    - [4.1. Bảng Lean UX Canvas hoàn chỉnh 8 ô chuẩn (Slide 37–40, 59–60)](#41-bảng-lean-ux-canvas-hoàn-chỉnh-8-ô-chuẩn-slide-3740-5960)
-    - [4.2. Hệ thống 3 Giả thuyết kiểm chứng (Hypotheses) chuẩn cú pháp Slide 36](#42-hệ-thống-3-giả-thuyết-kiểm-chứng-hypotheses-chuẩn-cú-pháp-slide-36)
-- [BÀI TẬP 5: MVP VÀ KẾ HOẠCH THỬ NGHIỆM (SLIDE 41–42, 61)](#bài-tập-5-mvp-và-kế-hoạch-thử-nghiệm-slide-4142-61)
-    - [5.1. Mục tiêu thử nghiệm (Test Objective)](#51-mục-tiêu-thử-nghiệm-test-objective)
+    - [3.3. Phân tích nguyên nhân gốc rễ bằng kỹ thuật 5 Whys](#33-phân-tích-nguyên-nhân-gốc-rễ-bằng-kỹ-thuật-5-whys)
+- [BÀI TẬP 4: LEAN UX CANVAS](#bài-tập-4-lean-ux-canvas)
+    - [4.1. Bảng Lean UX Canvas hoàn chỉnh](#41-bảng-lean-ux-canvas-hoàn-chỉnh)
+    - [4.2. Hệ thống 3 Giả thuyết kiểm chứng](#42-hệ-thống-3-giả-thuyết-kiểm-chứng)
+- [BÀI TẬP 5: MVP VÀ KẾ HOẠCH THỬ NGHIỆM](#bài-tập-5-mvp-và-kế-hoạch-thử-nghiệm)
+    - [5.1. Mục tiêu thử nghiệm](#51-mục-tiêu-thử-nghiệm)
     - [5.2. MVP: Đặc tả nguyên mẫu bấm được (Clickable Prototype 4 màn hình)](#52-mvp-đặc-tả-nguyên-mẫu-bấm-được-clickable-prototype-4-màn-hình)
-    - [5.3. Quy trình thử nghiệm thực địa (Testing Protocol)](#53-quy-trình-thử-nghiệm-thực-địa-testing-protocol)
-    - [5.4. Hệ thống chỉ số đo lường thành công (Success Metrics)](#54-hệ-thống-chỉ-số-đo-lường-thành-công-success-metrics)
-- [TỔNG KẾT BÀN GIAO \& LIÊN KẾT TÀI LIỆU](#tổng-kết-bàn-giao--liên-kết-tài-liệu)
+    - [5.3. Quy trình thử nghiệm thực địa](#53-quy-trình-thử-nghiệm-thực-địa)
+    - [5.4. Hệ thống chỉ số đo lường thành công](#54-hệ-thống-chỉ-số-đo-lường-thành-công)
 
 ---
 
-# PHẦN MỞ ĐẦU: BỐI CẢNH NGHIỆP VỤ & CÚ SỐC VẬN HÀNH TẠI HBA
+# PHẦN MỞ ĐẦU: BỐI CẢNH NGHIỆP VỤ TẠI HBA
 
 ### 1. Cú sốc chuyển đổi mô hình từ Niên chế sang Tín chỉ
 Học viện Bách Nghệ Hà Nội (HBA) là cơ sở giáo dục đại học công lập trọng điểm đào tạo khối ngành kỹ thuật và công nghệ ứng dụng với quy mô khoảng **35.000 sinh viên** chính quy và hơn **1.500 cán bộ, giảng viên**.
@@ -81,38 +77,12 @@ Do đó, nhiệm vụ số hóa cấp bách hàng đầu trong giai đoạn đ�
 
 ---
 
-### 3. Sơ đồ luồng phối hợp tổng thể giữa 4 tác nhân tại HBA
-
-```mermaid
-flowchart TD
-    subgraph G1["Giai đoạn 1: Lập Kế Hoạch & Xếp TKB (Nút Thắt Ưu Tiên Của CBĐT)"]
-        CBĐT["👤 Cán bộ Đào tạo"] -->|"1. Trích xuất CTĐT &<br/>Dự báo nhu cầu mở lớp"| PE["⚙️ Engine Dự Báo Nhu Cầu"]
-        PE -->|"2. Đề xuất số lớp lý thuyết &<br/>số ca xưởng cần mở"| CBĐT
-        CBĐT -->|"3. Nạp danh sách phòng &<br/>ràng buộc giảng viên"| SE["⚙️ Thuật Toán Xếp Lịch Tự Động"]
-        SE -->|"4. Cảnh báo xung đột phòng/giờ &<br/>hỗ trợ vi chỉnh kéo thả"| CBĐT
-    end
-
-    subgraph G2["Giai đoạn 2: Công Bố & Thụ Hưởng Thời Khóa Biểu"]
-        CBĐT -->|"5. Xuất bản TKB chính thức"| PUB[("Dữ Liệu TKB Tín Chỉ")]
-        PUB -->|"Xem lịch giảng dạy cố định"| GV["👨‍🏫 Giảng viên"]
-        PUB -->|"Xem danh mục lớp mở & chuẩn bị đăng ký"| SV["👨‍🎓 Sinh viên"]
-        PUB -->|"Xác định đơn giá tín chỉ theo ca xưởng"| CBTC["👩‍💼 Cán bộ Tài chính"]
-    end
-
-    style CBĐT fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
-    style PE fill:#e3f2fd,stroke:#1565c0,stroke-width:1px
-    style SE fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px
-    style PUB fill:#ede7f6,stroke:#512da8,stroke-width:2px
-```
-
----
-
-# BÀI TẬP 1: USER NEEDS & USER PROBLEM STATEMENT (SLIDE 7–15, 56)
+# BÀI TẬP 1: USER NEEDS & USER PROBLEM STATEMENT
 
 ### 1.1. Bảng xác định 4 User Needs cốt lõi của 4 tác nhân
 Nhóm đã tiến hành khảo sát toàn diện 4 nhóm tác nhân liên quan trong cuộc chuyển đổi tại Học viện Bách Nghệ Hà Nội:
 
-| Mã | Tác nhân | Nhu cầu người dùng (Bắt đầu bằng động từ hành động) | Bối cảnh xảy ra | Rào cản hiện tại | Hệ quả thực tế | Phân loại |
+| Mã | Tác nhân | Nhu cầu người dùng | Bối cảnh xảy ra | Rào cản hiện tại | Hệ quả thực tế | Phân loại |
 |:---:|---|---|---|---|---|:---:|
 | **UN-01** | **Cán bộ Đào tạo** | **Thiết lập và điều phối** kế hoạch mở lớp học phần và thời khóa biểu dựa trên dữ liệu nhu cầu thực tế | 6–8 tuần trước khi học kỳ mới bắt đầu, khi chuyển đổi sang tín chỉ | Chưa có công cụ dự báo số lượng sinh viên; việc xếp phòng học và giảng viên vẫn làm thủ công trên Excel thời niên chế | Dễ xảy ra xung đột phòng học, trùng giờ giảng viên; mất 4 tuần lập TKB làm chậm trễ tiến độ toàn trường | `[Evidence]` |
 | **UN-02** | **Sinh viên** | **Tra cứu và nắm bắt** sơ đồ cây môn học tiên quyết và danh mục lớp mở để chuẩn bị kế hoạch học tập | 2–4 tuần trước ngày bắt đầu đợt đăng ký tín chỉ | Chưa có hệ thống tra cứu trực quan; quy chế tín chỉ mới phức tạp, sinh viên quen tâm lý niên chế thụ động | Sinh viên bỡ ngỡ, không biết chọn môn nào trước, đăng ký sai môn dẫn đến nguy cơ chậm tiến độ tốt nghiệp | `[Evidence]` |
@@ -121,7 +91,7 @@ Nhóm đã tiến hành khảo sát toàn diện 4 nhóm tác nhân liên quan t
 
 ---
 
-### 1.2. Lựa chọn User Need ưu tiên mỏ neo (Anchor Priority)
+### 1.2. Lựa chọn User Need ưu tiên
 * **User Need được chọn làm trọng tâm:** **UN-01 — Cán bộ Đào tạo**.
 * **Lý do lựa chọn:** Trong mô hình đào tạo theo học chế tín chỉ, kế hoạch mở lớp học phần và thời khóa biểu là **điều kiện tiên quyết số 1** của toàn bộ chu trình đào tạo. Nếu Cán bộ Đào tạo không thể mở lớp và không thể xếp được thời khóa biểu chống trùng phòng/giờ thì:
   1. Sinh viên hoàn toàn không có dữ liệu lớp để đăng ký học tập.
@@ -137,11 +107,7 @@ Nhóm đã tiến hành khảo sát toàn diện 4 nhóm tác nhân liên quan t
 
 ---
 
-# BÀI TẬP 2: USER PROBLEM STATEMENT CANVAS (SLIDE 16–21, 57)
-
-### 2.1. Bảng User Problem Statement Canvas chuẩn 6 thành phần (Slide 57)
-
-Bảng phân tích có cấu trúc tuân thủ 100% biểu mẫu đáp án chuẩn tại **Slide 57**:
+# BÀI TẬP 2: USER PROBLEM STATEMENT CANVAS
 
 | Thành phần Canvas | Nội dung phân tích chi tiết đối với Cán bộ Đào tạo HBA |
 |---|---|
@@ -154,18 +120,9 @@ Bảng phân tích có cấu trúc tuân thủ 100% biểu mẫu đáp án chu�
 
 ---
 
-### 2.2. Điểm nhấn phân biệt giữa Bằng chứng (Evidence) và Giả định (Assumptions)
-Theo chỉ dẫn tại **Slide 57**: *"Phần Evidence đặc biệt quan trọng: cần phân biệt điều đã biết với điều cần phỏng vấn hoặc quan sát để xác minh"*:
-* **Điều đã biết chắc chắn (Evidence):** Khối lượng lớp học phần tín chỉ bùng nổ vượt quá khả năng xử lý của con người nếu không có công cụ tự động hóa; hiện tượng quá tải và chậm trễ công bố TKB là sự thật khách quan của cuộc chuyển đổi mô hình.
-* **Điều cần thu thập dữ liệu kiểm chứng (Assumptions):** Các chỉ số định lượng chính xác về số giờ lãng phí, tỷ lệ lớp bị hủy do thiếu sĩ số sàn (<15 sinh viên), và mức độ hao phí công suất phòng học thực tế sẽ được xác minh thông qua phỏng vấn sâu 8 cán bộ giáo vụ và phân tích log dữ liệu phòng học.
+# BÀI TẬP 3: USER PROBLEM VÀ BUSINESS PROBLEM
 
----
-
-# BÀI TẬP 3: USER PROBLEM VÀ BUSINESS PROBLEM (SLIDE 22–35, 58)
-
-### 3.1. Bảng bộ tứ liên kết nhân quả xuyên suốt (Slide 58)
-
-Tuân thủ đúng cấu trúc đáp án chuẩn tại **Slide 58**, liên kết chặt chẽ giữa trải nghiệm người dùng và tác động cấp tổ chức:
+### 3.1. Bảng bộ tứ liên kết nhân quả xuyên suốt 
 
 | Thành phần kết nối | Nội dung đặc tả bám sát bối cảnh Học viện Bách Nghệ Hà Nội (Slide 58) |
 |---|---|
@@ -195,7 +152,7 @@ flowchart LR
 
 ---
 
-### 3.3. Phân tích nguyên nhân gốc rễ bằng kỹ thuật 5 Whys (Slide 28, 35)
+### 3.3. Phân tích nguyên nhân gốc rễ bằng kỹ thuật 5 Whys
 
 * **Vấn đề xuất phát:** Thời khóa biểu học kỳ tín chỉ đầu tiên của Học viện Bách Nghệ Hà Nội bị trễ hạn 4 tuần, phát sinh hàng trăm xung đột phòng học và gây bức xúc lớn cho giảng viên lẫn sinh viên.
 
@@ -205,15 +162,15 @@ flowchart LR
 | **Why 2** | *Tại sao không thể xếp lịch nhanh và chính xác hơn trên bảng tính Excel?* | Vì bảng tính Excel không có thuật toán tự động giải bài toán ràng buộc (Constraint Satisfaction) và không thể phát hiện xung đột thời gian thực giữa ca thực hành xưởng (15–20 SV) và giờ lý thuyết tập trung (80–120 SV). |
 | **Why 3** | *Tại sao không biết trước số lượng lớp cần mở để chủ động phân bổ phòng học hợp lý?* | Vì Phòng Đào tạo không có công cụ tự động quét cây môn tiên quyết và lịch sử học tập để dự báo chính xác có bao nhiêu sinh viên đủ điều kiện học từng học phần trong kỳ tới. |
 | **Why 4** | *Tại sao lại thiếu các công cụ dự báo và tự động hóa xếp lịch thiết yếu này?* | Vì Học viện vẫn tận dụng lại hạ tầng phần mềm quản lý niên chế cũ; phần mềm cũ chỉ thiết kế để gán cứng một thời khóa biểu duy nhất cho cả lớp sinh hoạt hành chính cố định. |
-| **Why 5 (Root Cause)** | *Tại sao lại có sự lệch pha nghiêm trọng giữa quy chế mới và công cụ cũ?* | **NGUYÊN NHÂN GỐC RỄ:** Học viện Bách Nghệ Hà Nội thực hiện chuyển đổi mô hình đào tạo từ Niên chế sang Tín chỉ về mặt **chính sách (Policy)** nhưng chưa chuẩn bị kịp thời nền tảng **chuyển đổi số (Digital Transformation)** tương ứng, dẫn đến việc dùng nhân lực hành chính thủ công để gánh vác sự bùng nổ phức tạp khổng lồ của mô hình tín chỉ. |
+| **Why 5 (Root Cause)** | *Tại sao lại có sự lệch pha nghiêm trọng giữa quy chế mới và công cụ cũ?* | Học viện Bách Nghệ Hà Nội thực hiện chuyển đổi mô hình đào tạo từ Niên chế sang Tín chỉ về mặt **chính sách** nhưng chưa chuẩn bị kịp thời nền tảng **chuyển đổi số** tương ứng, dẫn đến việc dùng nhân lực hành chính thủ công để gánh vác sự bùng nổ phức tạp khổng lồ của mô hình tín chỉ. |
 
 ---
 
-# BÀI TẬP 4: LEAN UX CANVAS (SLIDE 36–40, 59, 60)
+# BÀI TẬP 4: LEAN UX CANVAS
 
-### 4.1. Bảng Lean UX Canvas hoàn chỉnh 8 ô chuẩn (Slide 37–40, 59–60)
+### 4.1. Bảng Lean UX Canvas hoàn chỉnh
 
-Bảng tổng hợp bám sát cấu trúc phân định rạch ròi giữa Vấn đề & Mục tiêu (Ô 1–4, Slide 59) và Giải pháp & Thử nghiệm (Ô 5–8, Slide 60):
+Bảng tổng hợp bám sát cấu trúc phân định rạch ròi giữa Vấn đề & Mục tiêu và Giải pháp & Thử nghiệm:
 
 | Tên thành phần | Nội dung chi tiết chuẩn mực bám sát Slide 59 & Slide 60 |
 |---|---|
@@ -228,7 +185,7 @@ Bảng tổng hợp bám sát cấu trúc phân định rạch ròi giữa Vấn
 
 ---
 
-### 4.2. Hệ thống 3 Giả thuyết kiểm chứng (Hypotheses) chuẩn cú pháp Slide 36
+### 4.2. Hệ thống 3 Giả thuyết kiểm chứng 
 Áp dụng mẫu câu giả thuyết chuẩn:
 > *"Chúng tôi tin rằng **[Business Outcome]** sẽ đạt được nếu **[Đối tượng người dùng]** đạt được **[User Benefit]** nhờ vào **[Tính năng / Solution]**."*
 
@@ -243,17 +200,15 @@ Bảng tổng hợp bám sát cấu trúc phân định rạch ròi giữa Vấn
 
 ---
 
-# BÀI TẬP 5: MVP VÀ KẾ HOẠCH THỬ NGHIỆM (SLIDE 41–42, 61)
+# BÀI TẬP 5: MVP VÀ KẾ HOẠCH THỬ NGHIỆM
 
-Bám sát 100% cấu trúc 4 phần của đáp án mẫu tại **Slide 61**:
-
-### 5.1. Mục tiêu thử nghiệm (Test Objective)
+### 5.1. Mục tiêu thử nghiệm
 * **Mục tiêu:** Kiểm tra liệu việc **tự động hóa dự báo nhu cầu mở lớp, chạy thuật toán xếp lịch và hỗ trợ công cụ vi chỉnh kéo thả có cảnh báo xung đột tức thì** có giúp **Cán bộ Đào tạo lập kế hoạch mở lớp và hoàn tất thời khóa biểu dễ dàng, nhanh chóng và chính xác hơn** so với việc dùng bảng tính Excel thủ công hay không.
 
 ---
 
 ### 5.2. MVP: Đặc tả nguyên mẫu bấm được (Clickable Prototype 4 màn hình)
-Nguyên mẫu tương tác kiểm chứng 1 luồng công việc (Use Case) cốt lõi nhất của Cán bộ Đào tạo, gồm đúng 4 bước màn hình theo cấu trúc Slide 61:
+Nguyên mẫu tương tác kiểm chứng 1 luồng công việc (Use Case) cốt lõi nhất của Cán bộ Đào tạo, gồm đúng 4 bước màn hình theo cấu trúc:
 
 ```mermaid
 flowchart LR
@@ -267,30 +222,29 @@ flowchart LR
     style S4 fill:#ede7f6,stroke:#512da8,stroke-width:1px
 ```
 
-1. **Màn hình 1: Chọn đợt mở lớp và xem dự báo nhu cầu học phần (Tương ứng: *Chọn dịch vụ/nhu cầu*)**
+1. **Màn hình 1: Chọn đợt mở lớp và xem dự báo nhu cầu học phần**
    - Cán bộ chọn học kỳ tác nghiệp (ví dụ: *Học kỳ 1 — Năm học 2026–2027*).
    - Hệ thống hiển thị danh sách các môn tín chỉ của Học viện kèm số lượng sinh viên dự kiến đủ điều kiện học (tự động tính từ cây tiên quyết).
    - Hệ thống tự động đề xuất số lớp lý thuyết cần mở (sĩ số chuẩn 80 SV/lớp) và số ca xưởng thực hành (sĩ số tối đa 20 SV/ca). Cán bộ bấm nút "Duyệt kế hoạch mở lớp".
 
-2. **Màn hình 2: Cấu hình ràng buộc & Chạy thuật toán xếp lịch (Tương ứng: *Xem ngày và khung giờ*)**
+2. **Màn hình 2: Cấu hình ràng buộc & Chạy thuật toán xếp lịch**
    - Hiển thị danh mục tài nguyên: Danh sách phòng học lý thuyết, xưởng máy khả dụng và danh sách giảng viên đã được Khoa phân công.
    - Cán bộ thiết lập các tham số ưu tiên (tránh xếp ca xưởng buổi tối, ưu tiên giảng viên cơ hữu).
-   - Cán bộ bấm nút nổi bật: **"⚡ CHẠY THUẬT TOÁN XẾP LỊCH TỰ ĐỘNG (AUTO-SCHEDULER)"**.
+   - Cán bộ bấm nút nổi bật: **"⚡ CHẠY THUẬT TOÁN XẾP LỊCH TỰ ĐỘNG"**.
 
-3. **Màn hình 3: Lưới Thời khóa biểu tương tác — Kiểm tra xung đột & Vi chỉnh kéo thả (Tương ứng: *Chọn lịch và nhập thông tin*)**
+3. **Màn hình 3: Lưới Thời khóa biểu tương tác — Kiểm tra xung đột & Vi chỉnh kéo thả**
    - Hệ thống hiển thị kết quả phân bổ trên lưới TKB tuần trực quan (Thứ 2 đến Thứ 7, Ca 1 đến Ca 6).
    - **Xử lý xung đột thực tế:** Nếu có 2 ca học bị trùng giảng viên hoặc trùng phòng thực hành xưởng, ô thời khóa biểu sẽ **nhấp nháy viền đỏ kèm icon cảnh báo (!)**.
    - Cán bộ nhấp chuột vào ca học bị lỗi, hệ thống tự động làm sáng các ô trống khả dụng màu xanh lá cây; cán bộ chỉ việc **kéo thả (drag-and-drop)** ca học sang ô xanh để triệt tiêu xung đột.
 
-4. **Màn hình 4: Báo cáo công suất phòng học & Màn hình xác nhận (Tương ứng: *Xem màn hình xác nhận*)**
+4. **Màn hình 4: Báo cáo công suất phòng học & Màn hình xác nhận**
    - Hiển thị báo cáo tổng quan trước khi phê duyệt: Biểu đồ nhiệt (Heatmap) thể hiện tỷ lệ lấp đầy phòng học/xưởng (đạt 89%), thống kê 0% xung đột phòng/giờ.
    - Cán bộ kiểm tra lại lần cuối danh sách lớp và bấm nút: **"PHÊ DUYỆT & XUẤT BẢN THỜI KHÓA BIỂU"**.
    - Hệ thống hiển thị hộp thoại xác nhận thành công và tự động đồng bộ TKB lên cổng dữ liệu chung.
 
 ---
 
-### 5.3. Quy trình thử nghiệm thực địa (Testing Protocol)
-Quy trình thử nghiệm tuân thủ 3 bước chỉ dẫn tại **Slide 61**:
+### 5.3. Quy trình thử nghiệm thực địa
 
 1. **Mời nhóm người dùng thử nghiệm:**
    - Mời **6–8 chuyên viên Phòng Đào tạo và cán bộ giáo vụ Khoa** tại Học viện Bách Nghệ Hà Nội trực tiếp tham gia thử nghiệm.
@@ -309,25 +263,14 @@ Quy trình thử nghiệm tuân thủ 3 bước chỉ dẫn tại **Slide 61**:
 
 ---
 
-### 5.4. Hệ thống chỉ số đo lường thành công (Success Metrics)
+### 5.4. Hệ thống chỉ số đo lường thành công
 Tuân thủ đầy đủ 3 nhóm chỉ số định lượng bắt buộc tại **Slide 61**:
 
 | Nhóm chỉ số đo lường | Định nghĩa & Phương pháp đo | Mục tiêu kỳ vọng (Target) | Ý nghĩa đánh giá theo Lean UX |
 |---|---|:---:|---|
-| **1. Tỷ lệ hoàn thành nhiệm vụ** *(Task Completion Rate - TCR)* | Tỷ lệ cán bộ giáo vụ hoàn thành trọn vẹn luồng từ Màn hình 1 đến Màn hình 4 mà không cần người hướng dẫn can thiệp trợ giúp. | $\mathbf{\ge 8 5\%}$ | Đánh giá tính khả dụng và mức độ trực quan của quy trình nghiệp vụ mới trên phần mềm. |
-| **2. Thời gian hoàn tất nhiệm vụ** *(Time on Task)* | Thời gian trung bình để một cán bộ hoàn tất xếp TKB cho 30 lớp học phần của Khoa thí điểm. | $\mathbf{\le 15\text{ phút}}$ | Chứng minh sự đột phá về năng suất so với hiện trạng làm thủ công mất 3–4 ngày trên Excel. |
-| **3. Số lỗi và phản hồi định tính** *(Error Count & Feedback)* | - Số lỗi xung đột phòng/giờ còn sót lại sau khi xuất bản TKB.<br>- Mức độ tự tin khi xác nhận xuất bản. | **0 lỗi sót**<br>$\mathbf{\ge 8.5/10}$ điểm tự tin | Khẳng định độ tin cậy tuyệt đối của thuật toán; giải tỏa áp lực lo sợ trách nhiệm hành chính của cán bộ. |
+| **1. Tỷ lệ hoàn thành nhiệm vụ** | Tỷ lệ cán bộ giáo vụ hoàn thành trọn vẹn luồng từ Màn hình 1 đến Màn hình 4 mà không cần người hướng dẫn can thiệp trợ giúp. | $\mathbf{\ge 8 5\%}$ | Đánh giá tính khả dụng và mức độ trực quan của quy trình nghiệp vụ mới trên phần mềm. |
+| **2. Thời gian hoàn tất nhiệm vụ** | Thời gian trung bình để một cán bộ hoàn tất xếp TKB cho 30 lớp học phần của Khoa thí điểm. | $\mathbf{\le 15\text{ phút}}$ | Chứng minh sự đột phá về năng suất so với hiện trạng làm thủ công mất 3–4 ngày trên Excel. |
+| **3. Số lỗi và phản hồi định tính** | - Số lỗi xung đột phòng/giờ còn sót lại sau khi xuất bản TKB.<br>- Mức độ tự tin khi xác nhận xuất bản. | **0 lỗi sót**<br>$\mathbf{\ge 8.5/10}$ điểm tự tin | Khẳng định độ tin cậy tuyệt đối của thuật toán; giải tỏa áp lực lo sợ trách nhiệm hành chính của cán bộ. |
 
 ---
 
-# TỔNG KẾT BÀN GIAO & LIÊN KẾT TÀI LIỆU
-
-> [!NOTE]
-> Báo cáo này đã hoàn thành trọn vẹn **100% yêu cầu 5 bài tập thực hành cốt lõi** của Buổi 1 môn học IT3120 theo đúng bối cảnh chuyển đổi sang học chế tín chỉ tại Học viện Bách Nghệ Hà Nội.
-> 
-> Hai phần mở rộng nâng cao gồm:
-> 1. **Hồ sơ Đề xuất Hệ thống (System Request 11 mục theo chuẩn Planning Phase - Slide 43–49)**
-> 2. **Báo cáo Phương pháp Nghiên cứu, Phản biện & Bảng Tự đánh giá (Slide 20, 50–55)**
-> 
-> Đã được lưu trữ và hoàn thiện độc lập tại tài liệu:  
-> 👉 [`bai-tap-1/TAI-LIEU-BO-TRO-SYSTEM-REQUEST-VA-REPORT.md`](file:///d:/SourceCodes/Java_SourceCodes/IT3120_QuanLyDaoTao/bai-tap-1/TAI-LIEU-BO-TRO-SYSTEM-REQUEST-VA-REPORT.md)
