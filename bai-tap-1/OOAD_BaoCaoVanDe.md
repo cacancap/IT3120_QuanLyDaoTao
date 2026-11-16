@@ -118,16 +118,17 @@ Dùng **H1 tại ô 6 của Lean UX Canvas**. Nguyên mẫu kiểm tra khả nă
 | --- | --- |
 | **Người tham gia** | Dự kiến 20 sinh viên ĐHBK Hà Nội hiện tại thực hiện tác vụ mô phỏng. Nếu tiếp cận được cựu sinh viên K52, dùng phỏng vấn hồi cứu để kiểm chứng quy trình lịch sử. |
 | **Kịch bản** | Mỗi người nhận một lịch có sẵn và danh mục lớp để bổ sung. Mục tiêu giao cho người tham gia là chốt tổng cộng 6 học phần, 18 tín chỉ. Kịch bản B cố ý không có phương án đạt mục tiêu để kiểm tra cách người tham gia hiểu kết quả. Mỗi bộ dữ liệu có một lựa chọn trùng giờ và một lớp chuyển sang hết chỗ lúc xác nhận. Ở kịch bản A có lớp thay thế hợp lệ. Ở kịch bản B không có lớp phù hợp trong thời gian cho phép. Mỗi người thực hiện cả hai kịch bản trên cả hai luồng, với các bộ tương đương theo từng kịch bản. |
-| **Đối chiếu** | Mỗi người thử cả nguyên mẫu và luồng mô phỏng theo giả định với hai bộ dữ liệu tương đương. Chia 20 người thành hai nhóm 10 người, đảo thứ tự hai luồng và hoán đổi bộ dữ liệu giữa hai nhóm. Ấn định tối đa 20 phút cho mỗi lượt. Cả hai lượt bắt đầu khi mở danh mục và kết thúc khi nhận kết quả hoặc hết thời gian thử. |
+| **Luồng đối chiếu** | Trong luồng mô phỏng theo giả định, người tham gia nhận thời khóa biểu có sẵn và danh mục có mã lớp, số tín chỉ, lịch học và số chỗ ban đầu. Họ tự đối chiếu lịch rồi gửi phương án cho người điều phối. Trên cả hai luồng, lớp được định sẵn còn chỗ lúc tra cứu và chuyển sang hết chỗ ở lần đầu người tham gia gửi yêu cầu xác nhận có lớp đó. Nguyên mẫu hiển thị kết quả. Trong luồng đối chiếu, người điều phối báo kết quả theo tình huống định sẵn và để người tham gia tự tìm phương án. |
+| **Thứ tự và thời lượng** | Mỗi người thực hiện bốn lượt, gồm kịch bản A và B trên cả hai luồng. Chia 20 người thành hai nhóm 10 người, đảo thứ tự hai luồng và hoán đổi hai bộ dữ liệu tương đương của mỗi kịch bản giữa hai nhóm. Mỗi lượt bắt đầu khi mở danh mục và kéo dài tối đa 20 phút. Kịch bản A kết thúc khi người tham gia nhận xác nhận cho một phương án đạt yêu cầu hoặc hết giờ. Kịch bản B kết thúc khi người tham gia nêu kết quả và bước tiếp theo hoặc hết giờ. |
 
 ### **8.5. Chỉ số và tiêu chí đánh giá**
 
 | Chỉ số | Cách đo và tiêu chí đề xuất |
 | --- | --- |
-| **Hoàn thành đúng UN-03** | Ở kịch bản A, ít nhất **18/20** người dùng nguyên mẫu tự chốt được lịch không trùng và nhận xác nhận cho các lớp hợp lệ còn chỗ. Báo cáo tỷ lệ tương ứng của luồng mô phỏng theo giả định. |
+| **Hoàn thành UN-03 — Kịch bản A** | Tính đạt khi người tham gia tự chốt được thời khóa biểu có **tổng cộng 6 học phần, 18 tín chỉ**, không trùng giờ và tất cả lớp bổ sung đều được xác nhận khi còn chỗ. Mục tiêu đề xuất là **ít nhất 18/20 người đạt trên nguyên mẫu**. Báo cáo tỷ lệ đạt của luồng đối chiếu theo cùng cách chấm. |
 | **Thời gian hoàn thành** | Bấm giờ theo cùng điểm đầu và cuối ở hai luồng của từng kịch bản. Mục tiêu thử nghiệm là trung bình **dưới 15 phút** cho các lượt hoàn thành kịch bản A trên nguyên mẫu. Báo cáo riêng số lượt không hoàn thành. |
 | **Lỗi thao tác và lỗi xác nhận** | Đếm riêng các lần chọn sai hoặc phải thử lại. Trong các kịch bản mô phỏng, tiêu chí là **0 lượt xác nhận** lớp trùng giờ hoặc hết chỗ. |
-| **Hiểu kết quả** | Sau mỗi lượt, yêu cầu sinh viên chỉ ra lớp nào đã được xác nhận và giải thích bước tiếp theo nếu một lớp chưa được chấp nhận. Ghi số câu trả lời đúng theo kịch bản. Ở kịch bản B, chấm đúng khi sinh viên nhận ra chưa có lớp phù hợp được xác nhận và xác định bước kiểm tra hướng dẫn của đợt. Báo cáo riêng số đúng trên 20 cho mỗi luồng. |
+| **Hiểu kết quả — Kịch bản B** | Khi người tham gia kết thúc thao tác, hỏi “Kết quả đăng ký của bạn là gì và bạn sẽ làm gì tiếp theo?”. Tính đúng khi người tham gia xác định được học phần cần bổ sung **chưa được xác nhận** và nêu được rằng cần kiểm tra hướng dẫn mô phỏng của đợt để biết cách xử lý. Nếu hết giờ mà chưa nêu đủ hai ý, lượt đó chưa đạt. Báo cáo số người trả lời đúng trên 20 ở từng luồng. |
 
 ### **8.6. Điều chỉnh sau thử nghiệm**
 
