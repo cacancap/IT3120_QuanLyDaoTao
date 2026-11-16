@@ -9,7 +9,7 @@
 | Đối tượng chính | Sinh viên chính quy K52 đủ điều kiện đăng ký bổ sung tại HUST trong đợt điều chỉnh, giai đoạn 2007–2008. |
 | Điểm bắt đầu | Sinh viên có lịch sẵn và bắt đầu tra cứu lớp để bổ sung. |
 | Điểm kết thúc | Sinh viên biết lớp đã được xác nhận hoặc dừng khi chưa bổ sung được lớp. Nếu đã gửi yêu cầu, sinh viên theo dõi kết quả. Việc biết lý do cụ thể phụ thuộc vào thông tin được cung cấp. |
-| Điều kiện đầu vào | Điều kiện tiên quyết, giới hạn tín chỉ, nghĩa vụ học phí và các điều kiện đăng ký áp dụng. Ca này bắt đầu khi sinh viên đã đủ điều kiện. |
+| Điều kiện đầu vào | Sinh viên đã có quyền tham gia đợt điều chỉnh, bao gồm tình trạng nghĩa vụ học phí theo quy định áp dụng. Điều kiện tiên quyết và giới hạn tín chỉ là quy tắc đầu vào để kiểm tra lựa chọn cụ thể ở TO-02. |
 | Bên liên quan | Sinh viên là người thực hiện đăng ký. Phòng Đào tạo là đầu mối kiểm chứng nghiệp vụ. Vai trò tiếp nhận và xử lý từng bước trong đợt lịch sử cần xác minh. |
 | Ngoài phạm vi | Đợt đăng ký chính, xử lý công nợ, tổ chức mở thêm lớp và bàn giao danh sách sau khi đợt kết thúc. |
 
