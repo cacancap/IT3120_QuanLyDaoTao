@@ -1,88 +1,51 @@
-# QUY TẮC BẮT BUỘC DÀNH CHO AGENT (PROJECT RULES - IT3120)
-## Giai đoạn: Bài tập 1 — Problem Discovery, Lean UX Canvas & System Request
-### Hệ thống Quản trị Đào tạo Đại học theo Học chế Tín chỉ (HBA SIS)
-### Bối cảnh nghiệp vụ: Học viện Bách Nghệ Hà Nội (Chuyển đổi mô hình từ Niên chế sang Tín chỉ)
+# Quy tắc làm việc cho agent — IT3120
 
-> Tài liệu này thiết lập các nguyên tắc và chỉ dẫn bắt buộc cho AI Agent khi hỗ trợ nhóm 4 sinh viên thực hiện **Bài tập 1** môn **Phân tích và Thiết kế Hệ thống (IT3120)** bám sát 62 slides bài giảng trong [`docs/OOAD_Lab_B1-5.md`](./docs/OOAD_Lab_B1-5.md).
+## 1. Phạm vi đề tài và nguồn tham chiếu
 
----
+- **Đối tượng chính** là sinh viên chính quy K52 đủ điều kiện đăng ký bổ sung trong đợt điều chỉnh tại Trường Đại học Bách khoa Hà Nội (HUST), giai đoạn 2007–2008. Quy trình bắt đầu khi sinh viên tra cứu lớp để bổ sung vào lịch hiện có và kết thúc khi biết kết quả hoặc lý do yêu cầu chưa được chấp nhận. Chỉ phân tích một đợt cụ thể khi xác định được học kỳ và mốc thời gian từ nguồn.
+- **UN-03** là một nhu cầu duy nhất. Sinh viên hoàn thành nhu cầu khi vừa ghép được lớp bổ sung vào thời khóa biểu hiện có mà không trùng giờ, vừa nhận xác nhận vào lớp còn chỗ. Điều kiện tiên quyết, giới hạn tín chỉ và nghĩa vụ học phí là điều kiện đầu vào.
+- Dùng Phòng Đào tạo làm đầu mối kiểm chứng tác động vận hành. Mô tả các vai trò khác tại điểm tiếp xúc có căn cứ hoặc nêu rõ giả định cần xác minh. Phân công bốn thành viên theo đầu ra của nhóm. [Báo cáo vấn đề](bai-tap-1/OOAD_BaoCaoVanDe.md) · [Kế hoạch và phân công](docs/huong-dan-ke-hoach-bai-tap-1.md)
+- Đối chiếu yêu cầu của thầy với hướng dẫn của từng Lab. Dùng báo cáo vấn đề và kế hoạch nhóm để xác định phạm vi, thuật ngữ và quy ước của đề tài. Ghi rõ căn cứ khi một tiêu chí do nhóm chọn, chẳng hạn Problem Canvas tám ô và các ngưỡng thử nghiệm MVP. [Lab 01](docs/Lab01_OOAD.md) · [Lab 02](docs/Lab02_OOAD.md) · [Lab 03](docs/Lab03_OOAD.md)
 
-### 1. Vai trò của Agent (Agent Persona)
-* **Vai trò:** Trợ lý Quản lý Dự án & Chuyên viên Phân tích Nghiệp vụ Cấp cao (**Project Manager / Lead Business Analyst**).
-* **Ngôn ngữ giao tiếp và tài liệu:** Tiếng Việt học thuật chuẩn mực (kèm thuật ngữ kỹ thuật chuyên ngành chuẩn OOAD/Lean UX/Product Discovery).
-* **Tác phong:** Chặt chẽ, định lượng, bám sát tư duy phản biện, hướng dẫn từng bước và cung cấp khung làm việc có cấu trúc cao.
+## 2. Giải thích khái niệm môn học
 
----
+Áp dụng khi hướng dẫn, trả lời câu hỏi hoặc nhận xét tài liệu. Nhóm gồm sinh viên mới học phân tích và thiết kế hướng đối tượng (OOAD).
 
-### 2. Bối Cảnh Toàn Cục & Cú Sốc Vận Hành (The Global Context & Operational Shock)
-* **Tổ chức giả định:** **Học viện Bách Nghệ Hà Nội (Hanoi Polytechnic Academy - HBA)**.
-* **Quy mô:** ~35.000 sinh viên, ~1.500 giảng viên, đào tạo đa ngành công nghệ và kỹ thuật ứng dụng.
-* **Cú sốc chuyển đổi (Core Trigger):** Học viện vừa quyết định chuyển đổi toàn diện mô hình đào tạo từ **Học chế Niên chế** (cố định lớp sinh hoạt, nhà trường xếp sẵn thời khóa biểu trọn gói, học phí thu phẳng theo năm) sang **Học chế Tín chỉ** (sinh viên tự đăng ký môn học, tự chọn tiến độ, học phí tính động theo số tín chỉ thực tế, phụ thuộc ràng buộc môn tiên quyết phức tạp).
-* **Trục xung đột trung tâm:** **"Tư duy niên chế đối đầu quy chế tín chỉ"**
-  - *Sinh viên:* Quen tâm lý thụ động được xếp lịch sẵn $\rightarrow$ Bỡ ngỡ, không biết tự xếp TKB, không nắm được cây tiên quyết, hoảng loạn khi lớp hết chỗ.
-  - *Cán bộ Đào tạo:* Quen quản lý vài chục lớp hành chính cố định $\rightarrow$ Bùng nổ hàng nghìn lớp học phần; các công cụ Excel và quy trình thủ công thời niên chế hoàn toàn "vỡ trận".
-  - *Cán bộ Tài chính:* Quen thu phẳng học phí một lần mỗi kỳ $\rightarrow$ Nay phải tính tiền linh hoạt theo tín chỉ, giải quyết hoàn trả khi rút môn/hủy lớp, đối soát ngân hàng theo thời gian thực.
-  - *Giảng viên:* Quen dạy một tập thể lớp cố định gắn bó cả khóa $\rightarrow$ Nay tiếp nhận các lớp học phần pha trộn nhiều khóa/ngành, danh sách biến động liên tục trong 3 tuần đầu.
+- Khi giới thiệu thuật ngữ hoặc chữ viết tắt lần đầu, nêu tên chuẩn, giải thích ngắn bằng tiếng Việt dễ hiểu và nói rõ khái niệm trả lời câu hỏi gì, dùng ở đầu ra nào.
+- Khi cần minh họa, dùng một tình huống ngắn từ UN-03. Trong Lab 02, **AS-IS** là mô hình quy trình đang được nghiên cứu, chẳng hạn cách sinh viên K52 tra cứu lớp, gửi yêu cầu và biết kết quả. **TO-BE** là mô hình quy trình đề xuất, chẳng hạn cho sinh viên kiểm tra phương án thay thế trước khi gửi lại yêu cầu. Đánh dấu ví dụ minh họa và gắn `[Assumption]` cho bước lịch sử chưa xác minh.
+- Giải thích các khái niệm dễ nhầm qua cùng một tình huống. Ví dụ minh họa cho Lab 02 gồm **Business Requirement (BR)** là kết quả nghiệp vụ cần đạt, như giảm lượt đăng ký phải làm lại do trùng lịch. **Functional Requirement (FR)** nêu hành vi hệ thống phải đáp ứng, như cảnh báo khi lớp chọn trùng lịch. **Use Case** mô tả cách sinh viên tương tác với hệ thống để hoàn thành mục tiêu gửi yêu cầu bổ sung. **System Function** mô tả phần việc hệ thống thực hiện trong luồng đó, như kiểm tra xung đột thời khóa biểu.
+- Khi hướng dẫn lập bảng hoặc sơ đồ, chỉ rõ **đầu vào cần đọc, việc cần làm và cách tự kiểm tra kết quả**. Giữ thuật ngữ và mã truy vết trong hồ sơ nộp để nhóm đối chiếu với slide. Điều chỉnh độ sâu theo câu hỏi và kiến thức đã giới thiệu.
 
----
+## 3. Quy tắc phân tích và bằng chứng
 
-### 3. Các Ràng buộc Bất biến (Non-Negotiable Constraints)
+- Phát biểu vấn đề theo mục tiêu người dùng, rào cản và tác động có thể đo. Trình bày phương án giải quyết trong Lean UX hoặc TO-BE.
+- Gắn `[Evidence]` trong đúng phạm vi nguồn chứng minh, kèm thời điểm và điều khoản hoặc đoạn liên quan. Phân biệt quy chế ban hành năm 2007, bản bổ sung tháng 7/2008, hồ sơ vận hành cùng đợt, lời kể hồi cứu và tư liệu năm 2026. Với đợt trước bản bổ sung, xác minh văn bản áp dụng tại thời điểm đó.
+- Gắn `[Assumption]` cho từng bước hoặc mắt xích lịch sử chưa xác minh, kể cả trong chuỗi *hết chỗ → chọn lại → rà soát lại → chậm chốt danh sách*. Ghi **chưa đo được** cho chỉ số thiếu dữ liệu và **không xác định** cho ca thiếu căn cứ phân loại.
+- Trình bày hồ sơ bằng Markdown, bảng và sơ đồ. Lab 01 có thể dùng nguyên mẫu tương tác để thử nghiệm. Lab 02–03 dùng UML (ngôn ngữ mô hình hóa thống nhất) và đặc tả theo đề bài. Lab 03 mô tả kiểu dữ liệu và chữ ký phương thức ở mức thiết kế. Giữ sản phẩm ở mức mô hình, đặc tả và nguyên mẫu phục vụ thử nghiệm.
 
-#### 3.1. Chính sách Không Mã nguồn (No-Code Policy)
-* Tuyệt đối **KHÔNG sinh mã nguồn ứng dụng** (không viết mã Java Spring Boot, React, Node.js, SQL DDL, HTML/CSS thực tế).
-* Sản phẩm đầu ra giai đoạn Bài tập 1 chỉ bao gồm:
-  1. Các tài liệu đặc tả Markdown (`.md`) theo mẫu chuẩn bài tập môn học.
-  2. Bảng biểu canvas phân tích (Problem Statement Canvas, Lean UX Canvas, Kế hoạch thử nghiệm MVP, System Request, Problem Discovery Report).
-  3. Biểu đồ tư duy / luồng tổng quan (Flowchart Mermaid) trực quan hóa luồng phối hợp.
+## 4. Đầu ra và kiểm tra theo Lab
 
-#### 3.2. Nguyên tắc "Không nhảy bổ vào Solution" (Slide 3, 11, 21)
-* Nghiêm cấm phát biểu Problem dưới dạng "thiếu tính năng" hoặc "nhu cầu xây phần mềm" (ví dụ: cấm viết *"Vấn đề là trường chưa có app mobile"* hoặc *"Học viện cần xây website mới"*).
-* Problem Statement bắt buộc phải tập trung vào:
-  * **Nỗi đau (Pain):** Điều khó chịu, bế tắc mà người dùng/tổ chức đang gánh chịu.
-  * **Rào cản (Barrier):** Yếu tố khách quan hoặc quy trình cản trở đạt được mục tiêu.
-  * **Tác động định lượng (Quantifiable Impact):** Đo lường bằng thời gian lãng phí (phút/giờ), tỷ lệ sai sót (%), chi phí công sức (người-giờ).
+### Lab 01 — Khám phá vấn đề
 
-#### 3.3. Tách bạch Bằng chứng (Evidence) và Giả định (Assumption) (Slide 23, 28)
-* Mọi nhận định, nhu cầu hoặc tác động phải được dán nhãn minh bạch:
-  * `[Evidence]`: Thông tin đã có dữ liệu thực tế chứng minh, quy chế đào tạo hiện hành hoặc khảo sát thực tế.
-  * `[Assumption]`: Giả thuyết ban đầu của nhóm cần được kiểm chứng thông qua nghiên cứu/thử nghiệm (không được tự ý xem giả định là sự thật hiển nhiên).
+- Bám UN-03 trong User Problem Statement và Problem Canvas tám ô theo quy ước nhóm.
+- Viết Business Problem đủ năm phần gồm bối cảnh, hiện trạng, vấn đề, tác động và trạng thái mong muốn. Kiểm tra chuỗi bốn cấp từ vấn đề của sinh viên, tác động vận hành, vấn đề của Phòng Đào tạo đến kết quả mong muốn.
+- Hoàn thiện Lean UX Canvas tám ô. Viết giả thuyết H1 theo mẫu *“Chúng tôi tin rằng [Business Outcome] sẽ đạt được nếu [đối tượng người dùng] đạt được [User Outcome] nhờ vào [phương án giải quyết].”*
+- Kiểm tra nguyên mẫu khả thi tối thiểu (MVP) và kế hoạch thử nghiệm. Với tình huống còn lớp thay thế, chấm hoàn thành UN-03 khi đạt đồng thời hai điều kiện. Với tình huống không còn lớp phù hợp, chấm khả năng hiểu trạng thái và xác định bước tiếp theo. Ghi rõ ngưỡng đề xuất và kết quả mô phỏng.
+- Kiểm tra System Request theo mẫu 11 mục và Problem Discovery Report năm phần kèm câu hỏi phản biện.
 
-#### 3.4. Chuỗi Liên kết Nhân quả Xuyên Tác nhân (Slide 25)
-Mọi phân tích phải tuân theo chuỗi liên kết nhân quả 4 cấp:
-$$\text{User Problem (Sinh viên)} \longrightarrow \text{Operational Impact (CBĐT / CBTC)} \longrightarrow \text{Business Problem (Học viện)} \longrightarrow \text{Desired Outcomes}$$
+### Lab 02 — Quy trình, yêu cầu và chức năng
 
-#### 3.5. Cấu trúc Chuẩn của Business Problem (Slide 30–32)
-Mọi Business Problem khi viết ra phải tuân thủ đúng 5 thành phần:
-1. **Context (Bối cảnh):** Hoạt động hay quy trình nào đang diễn ra trong cuộc chuyển đổi sang tín chỉ?
-2. **Current State (Hiện trạng):** Thực tế đang xử lý như thế nào bằng công cụ cũ thời niên chế (kèm số liệu)?
-3. **Problem (Vấn đề chính):** Điểm nghẽn/nỗi đau cốt lõi là gì?
-4. **Impact (Tác động):** Gây thiệt hại gì cho hoạt động vận hành, tài chính, uy tín Học viện?
-5. **Desired State (Trạng thái mong muốn):** Học viện muốn đạt trạng thái nào sau khi số hóa chuẩn tín chỉ?
+- Kế thừa phạm vi, UN-03, Business Problem và bảng nguồn. Mô tả việc người dùng cần hoàn thành (Jobs-to-be-Done, JTBD), các bên liên quan và tác nhân tương tác với hệ thống.
+- Gắn từng điểm nghẽn (Pain Point) với bước AS-IS và giải thích thay đổi tương ứng trong TO-BE. Kiểm tra ranh giới hệ thống, danh mục BR, yêu cầu chức năng và phi chức năng (FR/NFR), danh sách Use Case và sơ đồ Use Case UML.
+- Kiểm tra cây phân rã có tối thiểu 10 System Functions và danh mục chức năng có mã, mục đích. Đối chiếu các mã trong ma trận truy vết từ BR qua yêu cầu hệ thống, Use Case đến chức năng.
 
-#### 3.6. Định dạng Giả thuyết Lean UX chuẩn (Slide 36, 39)
-Mọi giả thuyết trong Lean UX Canvas bắt buộc dùng cấu trúc:
-> *"Chúng tôi tin rằng **[Business Outcome]** sẽ đạt được nếu **[Đối tượng người dùng]** đạt được **[Lợi ích/User Outcome]** nhờ vào **[Tính năng/Solution]**."*
+### Lab 03 — Phân tích miền và thiết kế lớp
 
----
+- Kế thừa BR, System Functions và luồng chọn để thiết kế. Đối chiếu khái niệm miền, lớp phân tích (Analysis Class) và sơ đồ đối tượng (Object Diagram) với chức năng.
+- Kiểm tra sáu tài liệu nộp gồm danh sách lớp thiết kế và lý do chuyển đổi, bảng lớp–trách nhiệm–cộng tác (CRC), đặc tả thuộc tính và phương thức, sơ đồ lớp thiết kế UML, bảng cộng tác lớp, bảng tự đánh giá thiết kế.
+- Bảng cộng tác cần có luồng chính và tối thiểu hai luồng ngoại lệ. Bảng tự đánh giá cần ít nhất ba vấn đề, cách điều chỉnh và lý do kỹ thuật. Đối chiếu trách nhiệm lớp và thông điệp cộng tác với luồng và phương thức tương ứng.
 
-### 4. Ngữ cảnh Nghiệp vụ & Kịch bản Neo Đồng bộ
-Toàn bộ 4 thành viên cùng neo vào một kịch bản trọng tâm xuyên suốt:
-* **Kịch bản Neo:** **"Đăng ký học phần, Kiểm tra điều kiện tiên quyết & Đối soát công nợ học phí đầu kỳ trong giai đoạn chuyển đổi sang tín chỉ tại Học viện Bách Nghệ Hà Nội"**.
-* **4 Tác nhân tham gia tương tác:**
-  * **Sinh viên (SV - TV1):** Quen niên chế, nay phải tự tra cứu lớp, vật lộn với cây môn tiên quyết, chọn môn, đối mặt với lỗi trùng lịch/hết chỗ/khóa đăng ký do nợ học phí tín chỉ.
-  * **Cán bộ Đào tạo (CBĐT - TV2):** Dùng công cụ quản lý niên chế cũ để điều phối hàng nghìn lớp tín chỉ mới, ngập trong 4.000 đơn giấy xin học vượt/cải thiện/mở lớp, kiểm tra điều kiện học vụ thủ công.
-  * **Cán bộ Tài chính (CBTC - TV3):** Quen thu trọn gói theo kỳ, nay phải tính học phí biến đổi theo từng tín chỉ, đối soát giao dịch ngân hàng phức tạp, quản lý danh sách nợ và gửi yêu cầu khóa/mở quyền đăng ký.
-  * **Giảng viên (GV - TV4):** Quen dạy lớp sinh hoạt cố định, nay bỡ ngỡ với lớp học phần hỗn hợp sinh viên nhiều khóa, danh sách lớp biến động kéo dài trong 3 tuần đầu.
+## 5. Phối hợp giữa các Lab
 
----
-
-### 5. Kiểm soát Chất lượng Đầu ra (Quality Gate)
-Trước khi bàn giao bất kỳ tài liệu nào cho các thành viên, Agent tự kiểm tra:
-1. Phát biểu vấn đề có phản ánh đúng bối cảnh chuyển đổi Niên chế $\rightarrow$ Tín chỉ của Học viện Bách Nghệ Hà Nội không?
-2. Có rơi vào bẫy "nhảy vào giải pháp" không?
-3. Có phân biệt rõ `[Evidence]` vs `[Assumption]` không?
-4. Bảng Problem Canvas có đủ 8 ô chuẩn không?
-5. Lean UX Canvas có đủ 8 ô và đúng cú pháp giả thuyết không?
-6. Kế hoạch MVP có kịch bản kiểm thử đo lường rõ ràng không?
-7. Bản System Request có đầy đủ 11 mục chuẩn theo hướng dẫn của môn học không?
-8. Báo cáo Problem Discovery Report có đủ 5 phần và giải quyết bộ câu hỏi phản biện không?
+- Bắt đầu AS-IS nháp khi phạm vi và vấn đề đã rõ, kể cả khi MVP đang hoàn thiện. Gắn nhãn cho những bước còn chờ bằng chứng.
+- Phác từ điển miền khi thuật ngữ và phạm vi ổn định. Chốt Lab 02 sau khi đối chiếu yêu cầu, Use Case và chức năng. Chốt thiết kế lớp của Lab 03 sau khi đối chiếu BR, chức năng và luồng tương ứng.
