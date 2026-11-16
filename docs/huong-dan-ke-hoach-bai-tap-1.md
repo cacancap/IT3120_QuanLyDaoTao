@@ -20,10 +20,10 @@ Sơ đồ là khung khảo sát. Kênh tiếp nhận, chủ thể xử lý từn
 
 | Thành viên | Đầu ra theo Lab 01 | Trọng tâm |
 | --- | --- | --- |
-| [TV1](../bai-tap-1/TV1-SinhVien.md) | TH1, TH2, TH4, TH5 | Phát biểu vấn đề, Problem Canvas và Lean UX Canvas tám ô, H1, thiết kế MVP theo hai tình huống hết chỗ. |
-| [TV2](../bai-tap-1/TV2-CanBoDaoTao.md) | TH1, TH2, TH3 | Khảo sát đầu mối đào tạo, Business Problem năm thành phần, chuỗi nhân quả bốn cấp và dữ liệu đo từng mắt xích. |
-| [TV3](../bai-tap-1/TV3-CanBoTaiChinh.md) | System Request 11 mục | Xác định giới hạn của điều kiện học phí, tổng hợp yêu cầu cấp cao và điều kiện để xem xét thí điểm. |
-| [TV4](../bai-tap-1/TV4-GiangVien.md) | Problem Discovery Report 5 phần | Tổng hợp nguồn, kiểm tra điểm bàn giao danh sách và trả lời câu hỏi phản biện của slide 54. |
+| TV1 | TH1, TH2, TH4, TH5 | Phát biểu vấn đề, Problem Canvas và Lean UX Canvas tám ô, H1, thiết kế MVP theo hai tình huống hết chỗ. |
+| TV2 | TH3 | Business Problem năm thành phần, chuỗi nhân quả bốn cấp và dữ liệu kiểm chứng tác động của UN-03 lên Phòng Đào tạo. |
+| TV3 | System Request 11 mục | Tổng hợp yêu cầu cấp cao và điều kiện để xem xét thí điểm cho UN-03. |
+| TV4 | Problem Discovery Report 5 phần | Tổng hợp nguồn về UN-03 và trả lời câu hỏi phản biện của slide 54. |
 
 ## Trình tự thực hiện
 
@@ -37,4 +37,4 @@ Sơ đồ là khung khảo sát. Kênh tiếp nhận, chủ thể xử lý từn
 - Hai Canvas đủ tám ô, Business Problem đủ năm thành phần và chuỗi bốn cấp.
 - Dẫn nguồn theo đúng thời điểm. Kết luận về tần suất, công sức cán bộ và chậm chốt danh sách cần hồ sơ vận hành tương ứng.
 - Các ngưỡng MVP là tiêu chí đề xuất. Kết quả mô phỏng và số liệu vận hành được báo cáo riêng.
-- Kiểm tra [báo cáo tổng hợp](../bai-tap-1/BAO-CAO-TONG-HOP-NHOM.md) và [System Request cùng Problem Discovery Report](../bai-tap-1/TAI-LIEU-BO-TRO-SYSTEM-REQUEST-VA-REPORT.md) theo [Lab 01](Lab01_OOAD.md).
+- Kiểm tra [báo cáo vấn đề](../bai-tap-1/OOAD_BaoCaoVanDe.md) và [System Request cùng Problem Discovery Report](../bai-tap-1/TAI-LIEU-BO-TRO-SYSTEM-REQUEST-VA-REPORT.md) theo [Lab 01](Lab01_OOAD.md).
