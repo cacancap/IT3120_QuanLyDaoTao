@@ -1,161 +1,135 @@
-# **Sinh Viên Đăng Ký Học Phần**
+# Khám phá vấn đề đăng ký bổ sung học phần tại HUST
+
+## 1. Phạm vi và nguồn
+
+Nghiên cứu sinh viên chính quy K52 đủ điều kiện đăng ký bổ sung trong đợt điều chỉnh tại Trường Đại học Bách khoa Hà Nội (HUST), giai đoạn 2007–2008. Điểm bắt đầu là tra cứu lớp để bổ sung vào lịch đã có. Điểm kết thúc là biết kết quả xác nhận hoặc lý do yêu cầu chưa được chấp nhận. Ba học kỳ đầu là phạm vi đối tượng theo quy chế. Nhóm chỉ phân tích một đợt thực tế khi có nguồn xác định được học kỳ và các mốc của đợt.
+
+| Mã | Nguồn và vị trí | Nhãn và phạm vi chứng minh |
+| --- | --- | --- |
+| E01 | [Quy chế đào tạo tín chỉ HUST](https://hust.edu.vn/uploads/sys/quality-assurance/2019/04/tme-10-01-01-qcdttc2007-quy-che-dao-tao-tin-chi2007.397247.16681.pdf), Quyết định 804 ngày 17/08/2007, bản bổ sung theo Quyết định 710 ngày 15/07/2008, Điều 9 và 11 | [Evidence] về quy định sĩ số tối thiểu và tối đa, kế hoạch giảng dạy và công bố thời khóa biểu. |
+| E02 | Cùng quy chế, Điều 12 khoản 1–6 | [Evidence] về đăng ký đồng loạt ở đợt chính trong ba học kỳ đầu, quyền đăng ký bổ sung học phần còn nợ hoặc học vượt nếu điều kiện cho phép, việc cố vấn và duyệt kế hoạch, giới hạn tín chỉ, điều kiện học phần và nghĩa vụ học phí. Phiếu học tập thông báo kết quả đăng ký. |
+| E03 | [Hội thảo tổng kết đào tạo tín chỉ HUST năm 2016](https://hust.edu.vn/vi/news/tuyen-sinh-dao-tao-cong-tac-sinh-vien/hoi-thao-ve-cong-tac-dao-tao-theo-hoc-che-tin-chi-tai-truong-dhbk-ha-noi-34777.html), phần tổng kết triển khai | [Evidence] hồi cứu chính thức về việc triển khai học chế tín chỉ từ năm 2007 với K52. |
+| E04 | [Thông báo HUST kỳ 2026.1](https://ctt.hust.edu.vn/DisplayWeb/DisplayKehoach?kehoach=29240), mục Kiểm tra trạng thái | [Evidence] về hướng dẫn kiểm tra kết quả sau khi đăng ký và đổi lớp khi báo hết chỗ ở kỳ 2026.1. Dùng để xây dựng câu hỏi nghiên cứu. |
+| E05 | [Kế hoạch đăng ký kỳ hè 2026](https://ctt.hust.edu.vn/DisplayWeb/DisplayKehoach?kehoach=29239), mục 5 và hướng dẫn kiểm tra trạng thái | [Evidence] về hướng dẫn đổi lớp khi hết chỗ và gửi đề nghị mở thêm lớp ở kỳ hè 2026. Dùng để phân biệt hai tình huống khảo sát. |
+| E06 | [Hồ sơ góp ý chương trình đào tạo HUST](https://hust.edu.vn/uploads/sys/quality-assurance/2019/04/tme-03-02-04-cv-gop-y-cua-thay-co-ve-ctdt-tu-2011-2013.393388.19769.pdf), Công văn 384/CV-CKĐL ngày 03/02/2012 | [Evidence] về lỗi điều kiện học phần ảnh hưởng đến đăng ký của sinh viên K52/K53 tại Viện Cơ khí Động lực. |
+| E07 | Cùng hồ sơ, Công văn 09/CV-Oto ngày 16/05/2012 của Bộ môn Ô tô và Xe chuyên dụng | [Evidence] về trường hợp sinh viên lớp Ô tô K52 đăng ký sai cơ cấu tín chỉ giữa hai nhóm tự chọn. |
+
+Về **vận hành cùng thời**, nhóm chưa có hồ sơ đủ để xác định một đợt cụ thể hoặc kiểm chứng chuỗi xử lý. Cần làm rõ nhà trường công bố lịch ở đâu, tiếp nhận yêu cầu qua kênh nào, duyệt kế hoạch bằng cách nào, và có bước nhập lại dữ liệu hay không. Phiếu học tập trong E02 là chứng từ thông báo kết quả. Kênh nộp yêu cầu cần tư liệu riêng. Khi gắn quy định cho một đợt trước 15/07/2008, đối chiếu bản ban hành năm 2007 hoặc văn bản áp dụng tại đợt đó.
+
+## 2. Nhu cầu sinh viên
+
+| Mã | Đối tượng và thời điểm | Nhu cầu | Rào cản hoặc hệ quả cần kiểm chứng | Căn cứ |
+| --- | --- | --- | --- | --- |
+| UN-01 | Sinh viên K52 khi chuẩn bị đăng ký bổ sung | Tra cứu học phần mở, lớp và lịch học. | [Assumption] Tìm hoặc đối chiếu thông tin lớp mất thời gian. | E01 xác nhận nội dung công bố theo quy định. |
+| UN-02 | Sinh viên K52 trước khi gửi yêu cầu | Xác định mình đủ điều kiện đăng ký học phần. | [Assumption] Sinh viên có thể hiểu sai điều kiện và phải sửa yêu cầu. | E02 xác nhận các điều kiện áp dụng theo quy chế. |
+| UN-03 | Sinh viên K52 có lịch sẵn trong đợt điều chỉnh | **Ghép lớp bổ sung vào thời khóa biểu hiện có mà không trùng giờ, đồng thời nhận xác nhận vào lớp còn chỗ.** | [Assumption] Biết lớp đầy khi đã ghép lịch có thể buộc sinh viên chọn lại. | E01–E02 xác lập ràng buộc và việc theo dõi kết quả. E04–E05 là tư liệu đối chiếu năm 2026. |
+| UN-04 | Sinh viên K52 sau khi gửi yêu cầu | Kiểm tra kết quả ghi nhận có khớp lớp được xác nhận. | [Assumption] Sai lệch có thể phát sinh và cần đối chiếu. | E02 quy định theo dõi kết quả qua Phiếu học tập. |
+
+### 2.1. Điểm nghẽn theo bước đăng ký
+
+E06–E07 ghi nhận các trường hợp cụ thể của K52 trong năm 2012. Với đợt điều chỉnh giai đoạn 2007–2008, E01–E02 cung cấp căn cứ về quy chế. Tần suất sự cố và tác động vận hành trong giai đoạn này vẫn cần tư liệu cùng thời.
+
+| Bước | Điểm nghẽn hoặc tình huống cần kiểm chứng | Bằng chứng và phạm vi |
+| --- | --- | --- |
+| Kiểm tra điều kiện học phần (UN-02) | Điều kiện học phần trong chương trình đào tạo có sai sót khiến sinh viên không đăng ký được. Viện đề nghị Phòng Đào tạo Đại học hiệu chỉnh. | **[Evidence] E06.** Trường hợp K52/K53 tại Viện Cơ khí Động lực, tháng 02/2012. |
+| Chọn học phần theo kế hoạch (UN-01, UN-02) | Sinh viên đăng ký sai cơ cấu tín chỉ giữa hai nhóm tự chọn. Bộ môn đề nghị điều chỉnh để hỗ trợ tiến độ tốt nghiệp. | **[Evidence] E07.** Trường hợp lớp Ô tô K52, tháng 05/2012. |
+| Ghép lịch và chọn lớp còn chỗ (UN-03) | Nếu lớp đã chọn hết chỗ, sinh viên có thể phải ghép lại lịch khi lớp thay thế trùng với lịch hiện có. | **[Evidence] E01–E02** về giới hạn sĩ số và điều kiện đăng ký bổ sung. **[Assumption] A1–A2** về việc biết lớp đầy muộn, khả năng tìm lớp thay thế và việc phải chọn lại. |
+| Đối chiếu kết quả đăng ký (UN-04) | Khi lớp đã chọn chưa xuất hiện trong kết quả, sinh viên cần xác minh trạng thái trước khi đổi lớp hoặc gửi lại yêu cầu. Nếu kết quả ghi nhận sai lệch, cán bộ có thể phải đối chiếu thêm. | **[Evidence] E02** về việc thông báo kết quả qua Phiếu học tập. **[Assumption] A4** về sai lệch và công sức đối chiếu. |
+
+Phần phân tích tiếp theo tập trung vào **UN-03**, gồm ghép lớp bổ sung vào lịch hiện có mà không trùng giờ và nhận xác nhận vào lớp còn chỗ.
+
+## 3. User Problem Statement
+
+**[Assumption]** Trong đợt điều chỉnh, sinh viên K52 đủ điều kiện đăng ký bổ sung có thể phải xếp lại lịch nếu lớp đã chọn hết chỗ sau khi họ đã ghép lớp vào thời khóa biểu. Khi phương án khác xung đột với lịch sẵn có hoặc thời gian đổi lớp đã thu hẹp, sinh viên có thể mất thêm thời gian và khó nhận xác nhận trước hạn. Mức độ và tần suất **chưa đo được**.
+
+## 4. Giả định cần kiểm chứng
+
+- **A1 [Assumption]** Việc biết lớp hết chỗ muộn dẫn đến chọn lại dù từng có lớp thay thế hợp lệ trong cửa sổ đổi lớp.
+- **A2 [Assumption]** Một số ca hết chỗ không có lớp thay thế phù hợp trong cửa sổ đổi lớp, kể cả khi thông tin đến kịp.
+- **A3 [Assumption]** Một số lượt đổi lớp buộc cán bộ rà lại yêu cầu và có thể làm tăng thời gian chốt danh sách.
+- **A4 [Assumption]** Kết quả ghi nhận đôi khi khác với lớp đã xác nhận, phát sinh lượt đối chiếu.
+
+## 5. User Problem Statement Canvas
+
+| Ô | Nội dung |
+| --- | --- |
+| 1. Who | Sinh viên K52 đã có lịch và đủ điều kiện đăng ký bổ sung. |
+| 2. Context | Đợt đăng ký điều chỉnh tại HUST trong giai đoạn nghiên cứu. |
+| 3. Goal & Root Problem | Mục tiêu UN-03. [Assumption] Chỗ học có thể thay đổi trong lúc sinh viên ghép lịch và chờ kết quả. |
+| 4. Current Alternatives | [Assumption] Đối chiếu nhiều phương án lịch trước, đổi sang lớp khác hoặc hỏi đơn vị phụ trách khi chưa được xác nhận. |
+| 5. Alternative Shortcomings | [Assumption] Đổi lớp có thể gây trùng giờ hoặc phát sinh thêm lượt tra cứu và gửi yêu cầu. |
+| 6. Emotional Impact | [Assumption] Sinh viên có thể lo không kịp đăng ký trước hạn. |
+| 7. Quantifiable Impact | Thời gian ghép lại lịch, tỷ lệ yêu cầu phải xử lý lại, phút xử lý của cán bộ và thời gian chốt danh sách **chưa đo được**. |
+| 8. Evidence vs Assumptions | [Evidence] E01–E03 về quy chế và bối cảnh. [Assumption] A1–A4 về vận hành K52. E04–E05 chỉ áp dụng trực tiếp cho kỳ tương ứng năm 2026. |
+
+## 6. Business Problem
+
+| Thành phần | Nội dung |
+| --- | --- |
+| Context | HUST triển khai đào tạo tín chỉ từ K52. Ca nghiên cứu giới hạn ở đợt điều chỉnh, nơi sinh viên đủ điều kiện bổ sung lớp vào lịch đã có. |
+| Current State | [Evidence] E01–E02 mô tả công bố lịch, điều kiện bổ sung và thông báo kết quả. Kênh tiếp nhận thực tế chưa xác minh. Các chỉ số hiện trạng **chưa đo được** từ hồ sơ của một đợt xác định. |
+| Problem | [Assumption] Khi lớp ban đầu hết chỗ, việc chọn lại có thể làm xáo trộn lịch và phát sinh một vòng kiểm tra yêu cầu. |
+| Impact | [Assumption] Sinh viên mất thêm thời gian, cán bộ có thể tăng công rà soát và Phòng Đào tạo có thể chốt danh sách muộn. Mức tác động **chưa đo được**. |
+| Desired State | Tăng tỷ lệ đăng ký hợp lệ được xác nhận trước hạn, giảm lượt xử lý lại và rút ngắn thời gian chốt danh sách. Chốt mục tiêu định lượng sau khi đo hiện trạng. |
+
+**Chuỗi bốn cấp [Assumption]** Sinh viên phải ghép lại lịch và chọn lớp → cán bộ đào tạo có thể phải kiểm tra lại yêu cầu → Phòng Đào tạo có thể mất thêm công và chậm chốt danh sách → tăng tỷ lệ xác nhận hợp lệ trước hạn và giảm lượt xử lý lại. Kiểm tra A4 như nhánh sai lệch ghi nhận riêng.
+
+### Kiểm chứng theo từng đợt
+
+1. Xác định học kỳ và thời điểm mở, đóng đợt từ lịch năm học hoặc thông báo cùng thời. Đối chiếu danh mục lớp, lịch, sĩ số theo thời điểm, yêu cầu điều chỉnh, Phiếu học tập và mốc chốt danh sách. Nếu hồ sơ thiếu, phỏng vấn hồi cứu cựu sinh viên K52 và cán bộ phụ trách. Ghi rõ học kỳ, căn cứ còn lưu và mức chắc chắn. Dùng mã ẩn danh khi ghi nhận ca.
+2. Lấy một yêu cầu bổ sung lớp làm đơn vị theo dõi, liên kết các lần sửa với yêu cầu ban đầu. Ghi thời điểm biết kết quả, thời gian còn lại để đổi, điều kiện, lịch và chỗ của phương án thay thế. Mã **A** khi có căn cứ cho thấy sinh viên biết muộn và có lớp thay thế cùng học phần, đủ điều kiện, còn chỗ, không trùng lịch trong thời gian được đổi. Mã **B** khi hồ sơ cho thấy không có lớp phù hợp trong cửa sổ đó. Dùng **không xác định** nếu thiếu dữ liệu. Ghi riêng các trường hợp trùng lịch hoặc sai lệch ghi nhận.
+3. Đo tỷ lệ yêu cầu phải sửa hoặc nộp lại trên tổng yêu cầu trong đợt, số phút cán bộ thực sự xử lý mỗi yêu cầu và thời gian từ lúc đóng đợt đến lúc xác nhận danh sách chính thức. So mốc chốt thực tế với mốc dự kiến và kiểm tra các nguyên nhân cạnh tranh trước khi quy chậm chốt cho lượt xử lý lại. Một ca xác minh được chỉ chứng minh ca đó. Chỉ báo cáo tần suất khi có dữ liệu đủ bao quát và mẫu số rõ ràng.
+
+## **7. Lean UX Canvas (Phân hệ Đăng ký Học phần)**
+
+| Ô | Nội dung |
+| --- | --- |
+| **1. Business Problem** | **[Assumption]** Các lượt phải chọn lại do trùng lịch hoặc phát hiện hết chỗ muộn làm tăng công sức rà soát và có thể làm chậm việc chốt danh sách lớp trong đợt điều chỉnh. |
+| **2. Business Outcomes** | Tăng tỷ lệ đăng ký hợp lệ được xác nhận trước hạn. Giảm tỷ lệ phải xử lý lại và thời gian chốt danh sách lớp. |
+| **3. Users and Customers** | Sinh viên thuộc diện tự đăng ký bổ sung là người dùng chính. Phòng Đào tạo là đầu mối khảo sát nghiệp vụ. Giáo viên chủ nhiệm cố vấn và duyệt kế hoạch theo E02. Đầu mối tiếp nhận và chốt kết quả của từng đợt cần xác minh. |
+| **4. User Benefits** | Sinh viên ghép được lớp bổ sung vào lịch hiện có và biết chính xác lớp nào đã được xác nhận. Cán bộ giảm lượt kiểm tra lại do trùng lịch hoặc hết chỗ. |
+| **5. Solution Ideas** | Tra cứu lớp và số chỗ, cảnh báo trùng lịch, gợi ý lớp thay thế và hiển thị kết quả xác nhận theo từng lớp. |
+| **6. Hypothesis — H1** | **[Assumption]** Chúng tôi tin rằng việc tăng tỷ lệ đăng ký hợp lệ được xác nhận trước hạn sẽ đạt được nếu sinh viên tự ghép được lịch không trùng và xác nhận được chỗ học, kể cả khi lớp chọn ban đầu đã đầy và còn lớp thay thế hợp lệ, nhờ vào luồng tra cứu chỗ trống, cảnh báo xung đột và chọn lớp thay thế. |
+| **7. What We Need to Learn** | Khi gặp lớp trùng lịch hoặc hết chỗ, sinh viên có tự tìm được phương án hợp lệ và phân biệt được lớp đang chọn với lớp đã được xác nhận hay không? |
+| **8. MVP and Experiment** | So sánh nguyên mẫu tương tác với luồng mô phỏng theo giả định bằng hai bộ dữ liệu tương đương. Đo tỷ lệ hoàn thành đúng cả hai vế UN-03, thời gian hoàn thành và lỗi thao tác. |
 
 ---
 
-## **1\. Tình huống & Nguồn dữ liệu Case Study**
+## **8. MVP và Experiment Plan**
 
-### **1.1. Bối cảnh lịch sử (ĐHBK Hà Nội giai đoạn 2007–2008)**
+### **8.1. Mục tiêu thử nghiệm**
 
-* **Bước ngoặt chuyển đổi quy chế:** Thfực hiện Quyết định số **43/2007/QĐ-BGDĐT** (ký ngày 15/08/2007) của Bộ Giáo dục & Đào tạo, nhà trường chính thức chuyển đổi từ đào tạo **Niên chế** (học cố định theo lớp hành chính từ năm nhất đến năm cuối, nhà trường xếp sẵn 100% lịch) sang **Học chế Tín chỉ** (áp dụng từ khóa K52), đòi hỏi sinh viên phải tự chọn học phần, tự xếp thời khóa biểu và đáp ứng yêu cầu tự học khắt khe (1 tín chỉ lý thuyết cần tối thiểu 30 giờ tự học chuẩn bị).  
-* **Hạ tầng CNTT sơ khai:** Chưa tồn tại cổng thông tin trực tuyến cho hàng vạn sinh viên tự chọn lịch học. Phòng máy của trường và các quán Internet khu vực Tạ Quang Bửu, Lê Thanh Nghị luôn quá tải; dữ liệu quản lý chỉ nằm trên phần mềm cơ sở dữ liệu nội bộ sơ khai và các bảng tính Excel rời rạc tại Phòng Đào tạo.  
-* **Quy trình "Đăng ký tín chỉ bằng tay" qua 5 bước thủ công:**  
-  1. **Xem lịch "bằng mắt":** Phòng Đào tạo in danh sách học phần dự kiến mở (mã học phần, số tín chỉ, thời gian, giảng đường) dán tại bảng tin tòa nhà **C1, C2** hoặc gửi bản in về Văn phòng Khoa. Sinh viên phải chen chúc chép tay từng dòng vào sổ cá nhân.  
-  2. **Tự kẻ bảng và dò trùng lịch:** Sinh viên tự kẻ khung thời khóa biểu Thứ Hai – Thứ Bảy ra giấy, tự lắp ghép môn học sao cho không trùng giờ, không trùng giảng đường và tự đếm tổng số tín chỉ trong giới hạn tối thiểu/tối đa của Quy chế 2007\.  
-  3. **Khai phiếu đăng ký giấy:** Mua/nhận *Phiếu đăng ký học phần* bằng giấy, tự viết tay Mã học phần, Tên môn, Thứ, Tiết, Giảng đường và ký cam kết.  
-  4. **Xin chữ ký Cố vấn học tập:** Cầm phiếu giấy đi gặp Cố vấn học tập để kiểm tra thủ công lộ trình và điều kiện môn tiên quyết, xin chữ ký phê duyệt.  
-  5. **Xếp hàng nộp phiếu và nhập liệu tay:** Xếp hàng dài nộp phiếu tại **giảng đường D3** hoặc Văn phòng Khoa. Khi đến lượt nộp, nếu lớp đã hết chỗ hoặc đổi giảng đường, sinh viên phải hủy phiếu làm lại từ đầu. Sau đó, cán bộ phải gõ nhập liệu thủ công hàng vạn tờ phiếu vào máy tính nội bộ.
+Kiểm tra liệu sinh viên có thể tự chọn lớp bổ sung, xử lý trùng lịch hoặc hết chỗ, rồi nhận xác nhận đăng ký hợp lệ trong kịch bản mô phỏng.
 
-### **1.2. Nguồn minh chứng (Data Origins)**
+### **8.2. Giả thuyết kiểm chứng**
 
-* **Văn bản pháp lý:** *Quy chế đào tạo đại học và cao đẳng hệ chính quy theo học chế tín chỉ* (Quyết định số 43/2007/QĐ-BGDĐT ngày 15/08/2007 của Bộ GD&ĐT) và Quy chế đào tạo tín chỉ nội bộ áp dụng từ khóa K52.  
-* **Tài liệu nghiên cứu giáo dục:** Các công trình tổng kết chuyển đổi học chế tín chỉ tại các trường đại học kỹ thuật lớn ở Việt Nam giai đoạn 2007–2009 (ghi nhận cuộc khủng hoảng điều phối học vụ do thiếu hạ tầng CNTT trước khi các hệ thống quản lý đào tạo ra đời).  
-* **Tư liệu cộng đồng & Lịch sử hệ thống:** Ký ức sinh viên khóa K52 ĐHBK Hà Nội (về cảnh "chợ vỡ" chép lịch tại bảng tin C1–C2, thức trắng đêm kẻ lịch giấy, xếp hàng nộp phiếu ở giảng đường D3).
+Dùng **H1 tại ô 6 của Lean UX Canvas**. Nguyên mẫu kiểm tra khả năng hoàn thành tác vụ của sinh viên. Tỷ lệ đăng ký đúng hạn trong thực tế, số lượt cán bộ xử lý lại và thời gian chốt danh sách cần dữ liệu vận hành riêng.
 
----
+### **8.3. Phạm vi nguyên mẫu**
 
-## **2\. Danh sách User Needs**
+1. Tra cứu các lớp đã công bố, lịch học và số chỗ còn trống.
+2. Chọn lớp bổ sung và kiểm tra trùng lịch với cả lớp đã có và lớp đang chọn. Kiểm tra tổng số tín chỉ theo quy tắc của hồ sơ mô phỏng khi chốt.
+3. Mô phỏng tình huống lớp còn chỗ khi chọn nhưng đã đầy lúc xác nhận. Hiển thị lý do. Kịch bản A có lớp thay thế hợp lệ để sinh viên kiểm tra lại lịch. Kịch bản B không còn lớp phù hợp, sinh viên cần nhận biết yêu cầu chưa được xác nhận và kiểm tra hướng dẫn của đợt.
+4. Hiển thị rõ lớp đang chọn và lớp đã được xác nhận. Dữ liệu mô phỏng giả định sinh viên đã đáp ứng điều kiện tiên quyết, quyền đăng ký và duyệt kế hoạch trước khi vào luồng thử nghiệm chính.
 
-| Mã | User Need (Tập trung vào hành động & mục tiêu của sinh viên) | Minh chứng (Phân loại theo chuẩn Slide 7, 15 & 57\) |
-| :---- | :---- | :---- |
-| **UN-01** | **Tra cứu đầy đủ thông tin các lớp học phần mở trong kỳ** (mã học phần, số tín chỉ, thời gian, giảng đường) một cách thuận tiện. | • **Đã có bằng chứng:** Danh sách lớp mở chỉ được in giấy dán tại bảng tin tòa C1, C2 hoặc để ở Văn phòng Khoa; sinh viên phải đến tận nơi chen chúc chép tay vào sổ.                                             • **Chưa xác minh – Giả định ban đầu:** Mức độ sai sót khi sinh viên chép tay mã học phần/mã lớp và thời gian di chuyển, chờ đợi tại bảng tin. |
-| **UN-02** | **Kiểm tra chính xác điều kiện ràng buộc của học phần** (môn tiên quyết, khung tín chỉ tối thiểu/tối đa theo Quy chế 2007\) trước khi chốt danh sách môn. | • **Đã có bằng chứng:** Quy chế 43/2007/QĐ-BGDĐT áp đặt ràng buộc tín chỉ và môn tiên quyết; sinh viên phải tự đếm tín chỉ và mang phiếu giấy đi xin chữ ký duyệt của Cố vấn học tập (vốn cũng đang bỡ ngỡ và quá tải).     • **Chưa xác minh – Giả định ban đầu:** Tỷ lệ sinh viên tự xác định sai môn tiên quyết trước khi gặp Cố vấn học tập. |
-| **UN-03** | **Tìm, ghép lịch các lớp học phần không bị trùng giờ và xác nhận đăng ký thành công vào lớp còn chỗ trống.** | • **Đã có bằng chứng:** Sinh viên phải tự kẻ bảng Thứ 2 – Thứ 7 ra giấy để dò trùng lịch và xếp hàng nộp phiếu tại giảng đường D3; nhiều trường hợp làm xong phiếu, xếp hàng đến nơi mới biết lớp đã đủ người hoặc đổi giảng đường, buộc phải hủy phiếu làm lại từ đầu. |
-| **UN-04** | **Đảm bảo thông tin học phần mình đã đăng ký được ghi nhận chính xác** vào danh sách lớp chính thức của nhà trường. | • **Đã có bằng chứng:** Cán bộ Đào tạo/Khoa phải gõ nhập liệu thủ công từng dòng từ hàng vạn tờ phiếu giấy vào máy tính nội bộ, dẫn đến hiện tượng nhập nhầm mã lớp, thất lạc phiếu hoặc xếp vượt sức chứa giảng đường.                                             • **Chưa xác minh – Giả định ban đầu:** Tỷ lệ phiếu giấy bị nhập sai hoặc thất lạc trong mỗi đợt đăng ký. |
+### **8.4. Thiết kế thử nghiệm**
 
----
+| Thành phần | Cách thực hiện |
+| --- | --- |
+| **Người tham gia** | Dự kiến 20 sinh viên ĐHBK Hà Nội hiện tại thực hiện tác vụ mô phỏng. Nếu tiếp cận được cựu sinh viên K52, dùng phỏng vấn hồi cứu để kiểm chứng quy trình lịch sử. |
+| **Kịch bản** | Mỗi người nhận một lịch có sẵn và danh mục lớp để bổ sung. Mục tiêu giao cho người tham gia là chốt tổng cộng 6 học phần, 18 tín chỉ. Kịch bản B cố ý không có phương án đạt mục tiêu để kiểm tra cách người tham gia hiểu kết quả. Mỗi bộ dữ liệu có một lựa chọn trùng giờ và một lớp chuyển sang hết chỗ lúc xác nhận. Ở kịch bản A có lớp thay thế hợp lệ. Ở kịch bản B không có lớp phù hợp trong thời gian cho phép. Mỗi người thực hiện cả hai kịch bản trên cả hai luồng, với các bộ tương đương theo từng kịch bản. |
+| **Đối chiếu** | Mỗi người thử cả nguyên mẫu và luồng mô phỏng theo giả định với hai bộ dữ liệu tương đương. Chia 20 người thành hai nhóm 10 người, đảo thứ tự hai luồng và hoán đổi bộ dữ liệu giữa hai nhóm. Ấn định tối đa 20 phút cho mỗi lượt. Cả hai lượt bắt đầu khi mở danh mục và kết thúc khi nhận kết quả hoặc hết thời gian thử. |
 
-## **3\. User Problem Statement**
+### **8.5. Chỉ số và tiêu chí đánh giá**
 
-* **User Need ưu tiên:** Tìm, ghép lịch các lớp học phần không bị trùng giờ và xác nhận đăng ký thành công vào lớp còn chỗ trống.  
-* **Context:** Vào đầu mỗi học kỳ khi sinh viên (từ khóa K52) phải tự lập thời khóa biểu cá nhân và hoàn tất thủ tục đăng ký học phần theo Quy chế tín chỉ 2007\.  
-* **Barrier:** Thông tin lớp mở chỉ được dán bằng văn bản giấy tại bảng tin (C1, C2), không có dữ liệu cập nhật chỗ trống theo thời gian thực; sinh viên phải chép tay, tự kẻ bảng dò trùng lịch trên giấy, xin chữ ký Cố vấn học tập rồi xếp hàng nộp phiếu trực tiếp tại giảng đường D3.  
-* **Consequence:** Khi xếp hàng đến lượt nộp phiếu thì lớp đã hết chỗ hoặc đổi lịch, khiến toàn bộ thời khóa biểu tự kẻ trên giấy bị phá vỡ, buộc sinh viên phải hủy phiếu và lặp lại toàn bộ quy trình tra cứu, xin chữ ký từ đầu.  
-* **User Problem Statement):**  
-  > *"Sinh viên Đại học Bách khoa Hà Nội (giai đoạn chuyển đổi tín chỉ năm 2007–2008) gặp khó khăn khi tự sắp xếp thời khóa biểu không trùng giờ và xác nhận chỗ học thành công vào đầu mỗi học kỳ, vì thông tin lịch mở lớp chỉ được dán tĩnh tại bảng tin và thiếu cập nhật sĩ số còn trống trong lúc chờ nộp phiếu giấy tại giảng đường D3, dẫn đến việc lớp học bị đầy trước khi nộp được phiếu và buộc sinh viên phải làm lại toàn bộ thủ tục từ đầu."*
+| Chỉ số | Cách đo và tiêu chí đề xuất |
+| --- | --- |
+| **Hoàn thành đúng UN-03** | Ở kịch bản A, ít nhất **18/20** người dùng nguyên mẫu tự chốt được lịch không trùng và nhận xác nhận cho các lớp hợp lệ còn chỗ. Báo cáo tỷ lệ tương ứng của luồng mô phỏng theo giả định. |
+| **Thời gian hoàn thành** | Bấm giờ theo cùng điểm đầu và cuối ở hai luồng của từng kịch bản. Mục tiêu thử nghiệm là trung bình **dưới 15 phút** cho các lượt hoàn thành kịch bản A trên nguyên mẫu. Báo cáo riêng số lượt không hoàn thành. |
+| **Lỗi thao tác và lỗi xác nhận** | Đếm riêng các lần chọn sai hoặc phải thử lại. Trong các kịch bản mô phỏng, tiêu chí là **0 lượt xác nhận** lớp trùng giờ hoặc hết chỗ. |
+| **Hiểu kết quả** | Sau mỗi lượt, yêu cầu sinh viên chỉ ra lớp nào đã được xác nhận và giải thích bước tiếp theo nếu một lớp chưa được chấp nhận. Ghi số câu trả lời đúng theo kịch bản. Ở kịch bản B, chấm đúng khi sinh viên nhận ra chưa có lớp phù hợp được xác nhận và xác định bước kiểm tra hướng dẫn của đợt. Báo cáo riêng số đúng trên 20 cho mỗi luồng. |
 
----
+### **8.6. Điều chỉnh sau thử nghiệm**
 
-## **4\. Giả định cần kiểm chứng (Assumptions to Validate)**
-
-* **Giả định 1 (Về nguyên nhân phải làm lại phiếu nhiều lần):** Lý do lớn nhất khiến sinh viên bị vỡ kế hoạch đăng ký là do không biết sĩ số lớp đã đầy trong lúc chờ hoàn tất chữ ký Cố vấn học tập và xếp hàng tại D3 (chứ không phải do sinh viên không biết cách kẻ bảng thời khóa biểu).  
-* **Giả định 2 (Về thời gian và công sức tiêu hao):** Một sinh viên trung bình phải mất nhiều buổi (từ khâu chép lịch ở C1–C2, kẻ bảng giấy, hẹn gặp Cố vấn học tập đến xếp hàng ở D3) mới hoàn tất được một phiếu đăng ký hợp lệ.  
-* **Giả định 3 (Về khả năng tự kiểm tra điều kiện):** Nếu thông tin môn tiên quyết và giới hạn tín chỉ (theo QĐ 43/2007/QĐ-BGDĐT) được hiển thị rõ ràng kèm theo từng môn học, sinh viên có thể tự chọn đúng môn mà không cần phụ thuộc hoàn toàn vào việc kiểm tra bằng mắt của Cố vấn học tập.  
-* **Giả định 4 (Về khả năng tiếp cận công nghệ của sinh viên):** Dù máy tính cá nhân năm 2007–2008 chưa phổ cập đến 100% sinh viên, người học vẫn sẵn sàng sử dụng phòng máy của trường hoặc quán Internet (khu vực Tạ Quang Bửu, Lê Thanh Nghị) để đăng ký trực tuyến thay vì phải xếp hàng nộp phiếu giấy.
-
----
-
-## **5\. User Problem Statement Canvas (Cho User Need nổi bật nhất)**
-
-| CONTEXT (Bối cảnh xảy ra) | PROBLEM / ROOT CAUSE (Vấn đề cốt lõi) | ALTERNATIVES (Cách SV tự xoay sở lúc bấy giờ) |
-| :---- | :---- | :---- |
-| Đầu mỗi học kỳ (giai đoạn 2007–2008), khi hàng vạn sinh viên phải tự chọn môn, ghép lịch và nộp phiếu đăng ký học phần theo học chế tín chỉ mới. | Thông tin lớp mở và sĩ số không được cập nhật tức thời: lịch học dán giấy tại bảng tin C1–C2, còn việc ghi nhận chỗ học lại diễn ra trễ sau khi sinh viên xin chữ ký Cố vấn học tập và xếp hàng nộp phiếu giấy tại giảng đường D3. | • Chen chúc tại bảng tin C1–C2 để chép tay danh sách môn học vào sổ.                                              • Thức đêm tự kẻ bảng Thứ 2 – Thứ 7 ra giấy để thử ghép các phương án không trùng giờ.        • Xin chữ ký Cố vấn học tập rồi đến giảng đường D3 xếp hàng thật sớm để nộp phiếu giấy. |
-| **CUSTOMERS (Đối tượng chịu tác động)** | **EMOTIONAL IMPACT (Tác động cảm xúc)** | **ALTERNATIVE SHORTCOMINGS (Hạn chế của cách cũ)** |
-| Sinh viên ĐHBK Hà Nội giai đoạn đầu áp dụng tín chỉ (đặc biệt là khóa K52), vừa rời bỏ mô hình lớp niên chế cố định và lần đầu phải tự lập lộ trình học tập cá nhân. | Mệt mỏi vì cảnh chen chúc như "chợ vỡ" ở bảng tin; hoang mang, bất lực và ức chế khi xếp hàng dài đến lượt nộp phiếu thì được báo lớp đã hết chỗ, phải hủy phiếu làm lại. | • Bản chép tay tại bảng tin C1–C2 dễ nhầm mã lớp và không phản ánh được lớp nào đã đầy.   • Khi 1 môn bị hết chỗ tại bàn thu phiếu D3, dây chuyền thời khóa biểu kẻ sẵn trên giấy bị hỏng, phải quay lại tìm Cố vấn học tập ký lại phiếu mới.                             • Cán bộ gõ nhập liệu lại từ phiếu giấy dễ gây nhầm mã học phần hoặc thất lạc phiếu của sinh viên. |
-
-QUANTIFIABLE IMPACT (Tác động định lượng \- dữ kiện & chỉ số cần đo):
-
-* Quy trình thủ công kéo dài qua **5 bước bắt buộc** (Chép lịch C1/C2 $\rightarrow$ Kẻ lịch giấy $\rightarrow$ Điền phiếu $\rightarrow$ Xin chữ ký Cố vấn $\rightarrow$ Xếp hàng nộp tại D3).  
-  * Khối lượng xử lý lên tới **hàng vạn tờ phiếu giấy** mỗi đầu học kỳ (mỗi sinh viên đăng ký trung bình 5–8 học phần để đạt chuẩn khối lượng tín chỉ theo Quy chế 43/2007/QĐ-BGDĐT).
-
----
-
-## **6\. Liên kết User Problem → Business Problem**
-
-* **Chuỗi lập luận:**  
-  * User Problem → Operational Impact → Business Problem → Desired Outcome.
-
----
-
-### **Chuỗi 1: Hết chỗ / đổi lịch khi nộp phiếu đăng ký tại giảng đường D3**
-
-* **User Problem:** Sinh viên mất nhiều công sức chép lịch ở bảng tin C1–C2, kẻ lịch giấy và xin chữ ký Cố vấn học tập, nhưng khi xếp hàng nộp phiếu tại D3 thì lớp đã đủ người hoặc đổi giảng đường, phải làm lại từ đầu.  
-* **Operational Impact:** Cán bộ tiếp nhận tại D3 và Văn phòng Khoa phải liên tục kiểm tra sĩ số thủ công, trả lại phiếu, giải thích và thu nhận lại phiếu sửa đổi nhiều lần; Cố vấn học tập bị quá tải vì phải ký duyệt lại.  
-* **Business Problem:** Quy trình điều phối và tiếp nhận đăng ký học phần bằng phiếu giấy gây tắc nghẽn vận hành đầu kỳ và tiêu tốn nguồn lực nhân sự khổng lồ của Phòng Đào tạo cùng các Khoa/Viện.  
-* **Desired Outcome:** Giảm thời gian tiếp nhận mỗi lượt đăng ký học phần và loại bỏ tình trạng sinh viên phải nộp lại phiếu nhiều lần do thiếu thông tin sĩ số lớp.
-
----
-
-### **Chuỗi 2: Nhập liệu thủ công từ hàng vạn tờ phiếu giấy vào máy tính nội bộ**
-
-* **User Problem:** Sinh viên lo lắng bị vào nhầm lớp, thiếu môn hoặc mất kết quả đăng ký sau khi đã nộp phiếu giấy về Văn phòng Khoa/Phòng Đào tạo.  
-* **Operational Impact:** Cán bộ quản lý đào tạo phải ôm hàng chồng phiếu giấy cao ngất ngưởng để gõ nhập liệu từng mã môn của từng sinh viên vào cơ sở dữ liệu nội bộ và bảng tính Excel, dẫn đến nhập nhầm mã lớp, thất lạc phiếu hoặc xếp vượt sức chứa giảng đường.  
-* **Business Problem:** Khâu hậu xử lý dữ liệu đăng ký thủ công có độ trễ lớn và rủi ro sai lệch dữ liệu học vụ cao, làm gián đoạn việc chốt danh sách lớp học phần và phân bổ giảng đường đầu kỳ.  
-* **Desired Outcome:** Tự động hóa việc ghi nhận dữ liệu đăng ký vào cơ sở dữ liệu trung tâm, giảm tối đa lỗi nhập liệu thủ công và đảm bảo 100% lớp học phần không vượt sức chứa giảng đường.
-
----
-
-## **7\. Lean UX Canvas (Phân hệ Đăng ký Học phần)**
-
-| 1\. Business Problem (Vấn đề kinh doanh & vận hành) | 2\. Business Outcomes (Kết quả kinh doanh/vận hành mong muốn) | 3\. Users and customers (Người dùng & Các bên liên quan) |
-| :---- | :---- | :---- |
-| Trong giai đoạn chuyển sang Học chế Tín chỉ (theo QĐ 43/2007/QĐ-BGDĐT):                   • **Tắc nghẽn tiếp nhận:** Quy trình dán lịch giấy (C1, C2), ký duyệt tay và xếp hàng thu phiếu tại giảng đường D3 khiến bộ máy Phòng Đào tạo, Văn phòng Khoa và Cố vấn học tập quá tải.            • **Rủi ro nhập liệu thủ công:** Cán bộ phải gõ tay hàng vạn tờ phiếu giấy vào database nội bộ và Excel, gây chậm trễ chốt lớp, nhập nhầm mã lớp, mất phiếu hoặc xếp tràn giảng đường. | • Giảm tối đa (tiến tới xóa bỏ 100%) khối lượng phiếu đăng ký giấy phải nhập liệu thủ công tại Phòng Đào tạo và Văn phòng Khoa.• Rút ngắn thời gian hoàn tất một lượt đăng ký và chốt danh sách lớp học phần từ nhiều ngày chờ đợi xuống tính bằng phút.• Giảm tỷ lệ sai sót mã lớp, thất lạc phiếu và lỗi xếp vượt sức chứa giảng đường xuống **0%**. | • **Sinh viên (khóa K52 trở đi):** Người trực tiếp tra cứu lịch mở lớp, tự xếp thời khóa biểu và đăng ký học phần mỗi đầu kỳ.• **Cán bộ Phòng Đào tạo & Văn phòng Khoa:** Người lập lịch mở lớp, kiểm soát sức chứa giảng đường và tổng hợp danh sách lớp.• **Cố vấn học tập (Giảng viên):** Người tư vấn lộ trình và kiểm soát việc tuân thủ quy chế của sinh viên. |
-| **4\. User Benefits (Kết quả & Lợi ích của người dùng)** | **5\. Solution ideas (Ý tưởng giải pháp)** | **6\. Hypotheses (Giả thuyết kiểm chứng)** |
-| • **Đối với Sinh viên:**/n  \- Xem được lịch mở lớp và số chỗ còn trống mà không phải chen chúc chép tay tại bảng tin C1–C2.• Tự ghép lịch không sợ trùng giờ và biết ngay kết quả vào lớp thành công mà không phải xếp hàng nộp phiếu ở D3.• **Đối với Cán bộ Đào tạo & Cố vấn học tập**: \- Không còn phải gõ nhập liệu lại từ hàng vạn tờ phiếu giấy.  \- Giảm áp lực ký duyệt tay từng phiếu và giải quyết đổi/hủy lớp thủ công. | • **Giải pháp 1:** Công bố danh mục lớp học phần mở, thời khóa biểu, giảng đường và **sĩ số còn trống trực tuyến** (thay thế bảng tin giấy C1–C2).• **Giải pháp 2:** Công cụ chọn mã lớp trực tiếp trên giao diện web, tự động kiểm tra trùng tiết học và giới hạn tín chỉ theo Quy chế 2007\.• **Giải pháp 3:** Cơ chế tự động khóa slot khi lớp đạt trần sức chứa giảng đường và ghi nhận thẳng vào cơ sở dữ liệu (loại bỏ khâu nộp phiếu giấy ở D3 và gõ nhập liệu lại). | • **Giả thuyết 1 (Xóa bỏ nghẽn cổ chai tại C1–C2 & D3):** *Chúng tôi tin rằng* việc giảm tải xếp hàng tại giảng đường D3 và loại bỏ tình trạng hủy phiếu làm lại *sẽ đạt được* nếu *sinh viên* biết ngay sĩ số lớp còn trống và tự kiểm tra trùng lịch *với* giao diện tra cứu và chọn lớp học phần trực tuyến.• **Giả thuyết 2 (Loại bỏ nhập liệu tay):** *Chúng tôi tin rằng* việc xóa bỏ lỗi nhập nhầm mã lớp và rút ngắn thời gian chốt danh sách lớp đầu kỳ *sẽ đạt được* nếu *Cán bộ Đào tạo & Sinh viên* kết nối chung một nguồn dữ liệu *với* tính năng ghi nhận phiếu đăng ký điện tử tự động kiểm tra ràng buộc Quy chế 2007\. |
-| **7\. What's the most important things we need to learn first? (Điều quan trọng nhất cần học trước)** | **8\. What's the least amount of work we need to do to learn the next most important thing? (MVP & Experiments)** |  |
-| • Sinh viên (vốn vừa quen học niên chế và thao tác trên giấy) có dễ dàng tự nhập mã học phần, chọn mã lớp và đọc hiểu bảng kiểm tra trùng lịch trên màn hình máy tính không?• Khi một lớp học phần bị đầy, giao diện hiển thị các lớp thay thế cùng môn học có giúp sinh viên đổi phương án lịch học nhanh chóng không?• Hạ tầng phòng máy của trường và quán Internet quanh trường (Tạ Quang Bửu, Lê Thanh Nghị) có đáp ứng được thao tác khi mở đăng ký theo từng đợt không? | • **Mục tiêu thử nghiệm:** Kiểm chứng xem luồng tra cứu lịch mở lớp, tự động báo trùng giờ và xác nhận chỗ trống trên máy tính có giúp sinh viên lập xong thời khóa biểu nhanh và chính xác hơn quy trình 5 bước viết phiếu giấy hay không.• **MVP đề xuất:** Nguyên mẫu tương tác cho phép tra cứu mã học phần, chọn lớp, báo lỗi trùng tiết/hết chỗ và xuất Bảng kết quả đăng ký.• **Cách thức thử nghiệm:** Thử nghiệm có giám sát tại phòng máy tính với một nhóm sinh viên K52, đối chiếu trực tiếp thời gian và tỷ lệ lỗi giữa cách làm trên Prototype và cách kẻ phiếu giấy truyền thống. |  |
-
----
-
-## **8\. MVP và Experiment Plan (Kế hoạch Thử nghiệm & Kiểm chứng)**
-
----
-
-### **8.1. Mục tiêu thử nghiệm (Experiment Objective)**
-
-* **Mục tiêu cốt lõi:** Kiểm chứng xem việc hiển thị trực tiếp sĩ số chỗ trống của từng lớp học phần kèm cơ chế tự động kiểm tra trùng tiết học và giới hạn tín chỉ (theo Quy chế 43/2007/QĐ-BGDĐT) có giúp sinh viên hoàn tất đăng ký học phần nhanh chóng, chính xác mà không cần chép lịch tại C1–C2 hay xếp hàng nộp phiếu giấy tại D3 hay không.
-
----
-
-### **8.2. Giả thuyết rủi ro cao nhất cần kiểm chứng (Riskiest Hypothesis)**
-
-> **Giả thuyết H1:**  
-> *"Chúng tôi tin rằng việc loại bỏ tình trạng phải hủy phiếu làm lại nhiều lần và giảm tải xếp hàng tại giảng đường D3 sẽ đạt được nếu sinh viên có thể xem trực tiếp số chỗ còn trống của từng lớp mở và được cảnh báo trùng tiết học tức thời thông qua giao diện đăng ký học phần trực tuyến."*
-
----
-
-### **8.3. Mô tả MVP (Minimum Viable Product)**
-
-* **Định dạng MVP:** Một nguyên mẫu tương tác trên máy tính (Clickable Prototype / Giao diện Web tối giản băng thông thấp phù hợp với hạ tầng mạng năm 2007–2008), tập trung duy nhất vào luồng **Đăng ký học phần của Sinh viên**:  
-  1. **Bảng tra cứu danh mục lớp mở trong kỳ:** Hiển thị Mã học phần, Tên môn, Số tín chỉ, Mã lớp, Thứ/Tiết, Giảng đường và cột **Sĩ số (Đã đăng ký / Tối đa)** (thay thế giấy dán tại bảng tin C1–C2).  
-  2. **Khung nhập Mã lớp đăng ký & Kiểm tra tự động:** Sinh viên chọn hoặc nhập Mã lớp; nguyên mẫu lập tức kiểm tra 3 điều kiện: *(1) Lớp còn chỗ trống, (2) Không trùng Thứ/Tiết với môn đã chọn trong giỏ, (3) Tổng số tín chỉ nằm trong khung tối thiểu/tối đa của Quy chế 2007*.  
-  3. **Màn hình xử lý tình huống "Hết chỗ":** Khi sinh viên bấm vào một lớp đã đầy (ví dụ: 120/120), nguyên mẫu tự động gợi ý các lớp học phần khác của cùng môn đó đang còn chỗ trống.  
-  4. **Màn hình Xác nhận kết quả (Phiếu đăng ký điện tử):** Hiển thị thời khóa biểu hoàn chỉnh từ Thứ 2 đến Thứ 7 để sinh viên và Cố vấn học tập cùng tra cứu mà không cần nộp phiếu giấy để gõ nhập liệu lại.
-
----
-
-### **8.4. Thiết kế phương pháp thử nghiệm (Experiment Design)**
-
-| Thành phần | Chi tiết triển khai |
-| :---- | :---- |
-| **Phương pháp thử nghiệm** | Kiểm thử khả năng sử dụng có giám sát (Moderated Usability Testing) kết hợp so sánh đối chứng với quy trình kẻ bảng giấy. |
-| **Đối tượng tham gia (Participants)** | **20 sinh viên khóa K52** (nhóm sinh viên đầu tiên áp dụng Quy chế tín chỉ 2007, đã từng trải qua đợt chép lịch tại C1–C2 và nộp phiếu giấy tại D3). |
-| **Địa điểm & Thời lượng** | Thực hiện tại Phòng máy tính của trường (20–30 phút / sinh viên). |
-| **Kịch bản nhiệm vụ (Scenario Tasks)** | Giao cho sinh viên danh mục môn học học kỳ mới và yêu cầu: *"Em hãy đăng ký hoàn chỉnh 6 học phần (tổng cộng 18 tín chỉ), trong đó cố tình thiết kế kịch bản có 1 lớp bị trùng tiết và 1 lớp vừa đầy sĩ số để quan sát cách sinh viên điều chỉnh thời khóa biểu trên nguyên mẫu."* |
-
----
-
-### **8.5. Chỉ số đo lường hiệu quả (Metrics & Indicators)**
-
-| Chỉ số đo lường (Metrics) | Cách thức thu thập | Tiêu chí đánh giá thành công (Success Criteria) |
-| :---- | :---- | :---- |
-| **1\. Tỷ lệ hoàn thành nhiệm vụ (Task Completion Rate)** | Quan sát tỷ lệ sinh viên chốt được thời khóa biểu 6 môn hợp lệ (đủ tín chỉ, không trùng giờ, vào được lớp còn chỗ). | **≥ 90%**  sinh viên hoàn thành đúng quy chế mà không cần cán bộ can thiệp. |
-| **2\. Thời gian thực hiện (Time on Task)** | Bấm giờ từ lúc sinh viên bắt đầu tra cứu môn học đến khi xuất được Phiếu kết quả đăng ký hợp lệ. | Trung bình **\<15** **phút** (so với nhiều ngày đi chép lịch, kẻ giấy và xếp hàng tại D3). |
-| **3\. Số lỗi phát sinh (Error Rate)** | Đếm số lần sinh viên chọn nhầm mã lớp, lúng túng khi gặp thông báo lớp đầy hoặc trùng tiết học. | **0%** trường hợp lọt phiếu đăng ký bị trùng giờ hoặc vượt sĩ số giảng đường vào danh sách chốt. |
-| **4\. Mức độ tự tin & Hài lòng (User Feedback)** | Phỏng vấn nhanh sau thử nghiệm về độ rõ ràng của trạng thái "Đã đăng ký thành công" so với việc nộp phiếu giấy. | Sinh viên hiểu rõ trạng thái lớp học và tin tưởng kết quả đã được lưu mà không cần nộp thêm bản giấy. |
-
----
-
-### **8.6. Quy định cách điều chỉnh sau thử nghiệm (Next Steps)**
-
-* **Nếu kết quả ủng hộ giả thuyết (Đạt tiêu chí):** Tiến hành xây dựng phân hệ Đăng ký học phần chính thức trên cổng **SIS HUST** (giao diện HTML nhẹ, tối ưu cho đường truyền mạng tại phòng máy trường và các quán Internet khu vực Tạ Quang Bửu, Lê Thanh Nghị) và phân chia khung giờ đăng ký theo từng khóa/khoa để tránh nghẽn mạng.  
-* **Nếu kết quả phát sinh trở ngại:** Nếu sinh viên vẫn gặp khó khăn khi tự chọn từng mã lớp rời rạc, nhóm thiết kế sẽ bổ sung tính năng **"Đăng ký theo gói thời khóa biểu gợi ý"** hoặc cải tiến giao diện lưới thời khóa biểu trực quan trước khi đưa vào vận hành thực tế.
+* Nếu đạt các ngưỡng kịch bản A và không có xác nhận sai ở cả hai kịch bản, giữ luồng nguyên mẫu để kiểm chứng tiếp. Dùng kết quả hiểu trạng thái ở kịch bản B để xác định nội dung cần sửa trước khi thử lại.
+* Nếu sinh viên vẫn gặp vướng mắc, phân loại theo bước đọc xung đột, chọn lớp thay thế hoặc hiểu trạng thái xác nhận, rồi sửa bước tương ứng và thử lại.
