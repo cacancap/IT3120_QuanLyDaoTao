@@ -1,0 +1,22 @@
+@startuml
+!pragma layout smetana
+left to right direction
+skinparam handwritten false
+skinparam shadowing false
+skinparam defaultFontName "Arial"
+skinparam defaultFontSize 12
+skinparam roundcorner 8
+
+title Sơ đồ Use Case — Đăng ký bổ sung học phần
+actor "Sinh viên K52" as SinhVien
+
+rectangle "Hệ thống đăng ký bổ sung học phần" {
+    usecase "UC01 — Tra cứu lớp mở" as UC01
+    usecase "UC02 — Gửi đăng ký bổ sung" as UC02
+    usecase "UC03 — Xem kết quả đăng ký" as UC03
+}
+
+SinhVien -- UC01
+SinhVien -- UC02
+SinhVien -- UC03
+@enduml
