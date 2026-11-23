@@ -4,7 +4,7 @@ Phần này kế thừa phạm vi đăng ký bổ sung của sinh viên K52 và 
 
 ## 1. Cây phân rã chức năng
 
-Cây cho thấy các chức năng được nhóm theo mục đích. Có bốn nhóm và **12 chức năng cấp lá** có mã từ `F01` đến `F12`. Trình tự thực hiện và các nhánh xem ở mô tả Use Case và bảng đối chiếu cuối tài liệu.
+Cây cho thấy các chức năng được nhóm theo mục đích. Có bốn nhóm và **13 chức năng cấp lá** có mã từ `F01` đến `F13`. Trình tự thực hiện và các nhánh xem ở mô tả Use Case và bảng đối chiếu cuối tài liệu.
 
 ```text
 Hệ thống đăng ký bổ sung học phần
@@ -23,7 +23,8 @@ Hệ thống đăng ký bổ sung học phần
 │   ├── F10 Kiểm tra chỗ tại thời điểm xác nhận
 │   └── F11 Ghi nhận kết quả theo từng lớp
 └── Tra cứu kết quả
-    └── F12 Truy xuất và hiển thị kết quả theo mã lớp
+    ├── F12 Truy xuất và hiển thị kết quả theo mã lớp
+    └── F13 Gợi ý lớp thay thế
 ```
 
 ## 2. Danh mục chức năng
@@ -44,6 +45,7 @@ Hệ thống đăng ký bổ sung học phần
 | F10 | Kiểm tra chỗ tại thời điểm xác nhận | Xác định lớp còn khả năng tiếp nhận sinh viên. | Kiểm tra chỗ của từng lớp tại thời điểm xác nhận và cung cấp kết quả kiểm tra cho `F11`. | FR05 | UC02 |
 | F11 | Ghi nhận kết quả theo từng lớp | Tạo căn cứ để sinh viên biết lớp nào đã được xác nhận. | Gắn kết quả với từng mã lớp. Chỉ ghi **Thành công** khi lớp đáp ứng điều kiện, lịch không trùng và còn chỗ tại thời điểm xác nhận. Ghi **Hết chỗ** nếu lớp bị từ chối vì đã đầy. | FR05, NFR02 | UC02 xử lý xác nhận. UC03 dùng kết quả làm nguồn tra cứu. |
 | F12 | Truy xuất và hiển thị kết quả theo mã lớp | Giúp sinh viên biết trạng thái của từng lớp. | Hiển thị đúng mã lớp và kết quả đã ghi ở `F11`. Nếu yêu cầu đã gửi nhưng lớp chưa có kết quả, thể hiện lớp chưa được xác nhận. | FR06, NFR01, NFR02 | UC03 |
+| F13 | Gợi ý lớp thay thế | Giúp sinh viên tìm phương án sau kết quả Hết chỗ. | Khi đợt còn mở và sinh viên muốn điều chỉnh, lọc lớp khác cùng học phần theo chỗ hiện tại, lịch và điều kiện đăng ký của phương án thay thế. Hiển thị mã lớp và lịch, hoặc thông báo chưa có lớp phù hợp. | FR07 | UC03 |
 
 ## 3. Ánh xạ yêu cầu và ma trận truy vết
 
@@ -57,6 +59,7 @@ Hệ thống đăng ký bổ sung học phần
 | FR04 | F08, F09 | Cho rà soát và tiếp nhận phương án hợp lệ trong thời gian đợt mở. |
 | FR05 | F04, F05, F06, F10, F11 | Kiểm tra điều kiện, lịch và chỗ khi xác nhận, rồi ghi kết quả từng lớp. |
 | FR06 | F12 | Truy xuất và hiển thị đúng kết quả từng lớp để sinh viên tra cứu. |
+| FR07 | F13 | Tìm và hiển thị lớp thay thế phù hợp tại thời điểm tra cứu. |
 | NFR01 | F09, F12 | Phân biệt mốc đã gửi với kết quả xác nhận từng lớp. |
 | NFR02 | F11, F12 | Đối chiếu kết quả hiển thị với kết quả đã ghi theo cùng mã lớp và yêu cầu. |
 
@@ -74,6 +77,7 @@ Hệ thống đăng ký bổ sung học phần
 | BR4 | FR01 | UC01 | FR01 → F01, F02 |
 | BR4 | FR02, FR03, FR04, FR05 | UC02 | FR02 → F03, F04, F05, F06. FR03 → F07. FR04 → F08, F09. FR05 → F04, F05, F06, F10, F11. |
 | BR4 | FR05, FR06, NFR02 | UC03 | FR05 → F11 (nguồn kết quả). FR06 → F12. NFR02 → F11, F12. |
+| BR2, BR4 | FR07 | UC03 | FR07 → F13. Khi sinh viên chọn lớp, UC02 tiếp tục kiểm tra và tiếp nhận theo FR02–FR05. |
 
 ## 4. Điểm cần xác minh
 
@@ -98,7 +102,10 @@ Các ca sau dùng để rà độ bao phủ của **bản đặc tả**. Kết q
 | Thiếu tiên quyết hoặc vượt giới hạn tín chỉ | F05, F06, F07, F09 | Rà từng nguyên nhân riêng. Thông báo đúng điều kiện vi phạm. Phương án còn lỗi chưa được tiếp nhận. |
 | Đợt đóng trước lúc gửi | F08, F09 | Phương án đã rà soát nhưng thao tác gửi không tạo yêu cầu mới. |
 | Đã gửi và chưa có kết quả | F09, F12 | Sinh viên thấy yêu cầu đã gửi và lớp chưa được xác nhận. |
-| Cùng một yêu cầu có một lớp hợp lệ còn chỗ và một lớp hợp lệ đã hết chỗ tại thời điểm xác nhận | F04–F06, F10–F12 | Hai mã lớp lần lượt hiển thị **Thành công** và **Hết chỗ**. Với lớp hết chỗ, sinh viên có thể tự tra cứu lại qua F01–F02 nếu đợt còn mở, hoặc dừng nếu chưa tìm được lớp phù hợp. |
+| Cùng một yêu cầu có một lớp hợp lệ còn chỗ và một lớp hợp lệ đã hết chỗ tại thời điểm xác nhận | F04–F06, F10–F12 | Hai mã lớp lần lượt hiển thị **Thành công** và **Hết chỗ**. Chỉ lớp hết chỗ dẫn đến nhánh gợi ý nếu đợt còn mở và sinh viên muốn điều chỉnh. |
+| Có lớp thay thế | F13, F03–F06, F09–F11 | Với A hết chỗ, chỉ gợi ý B cùng học phần, còn chỗ, đủ điều kiện và vừa lịch. Loại lớp khác học phần, đầy, trùng lịch hoặc vi phạm điều kiện. Nếu B đầy sau khi được gợi ý, lần xác nhận mới trả Hết chỗ. |
+| Không có lớp thay thế | F13 | Thông báo chưa tìm được lớp phù hợp tại thời điểm tra cứu. Không tạo yêu cầu mới. |
+| Đợt đã đóng hoặc sinh viên đang chờ kết quả | F12, F13 | Sinh viên xem trạng thái hiện có. Nhánh gợi ý chưa được kích hoạt. |
 | Đo hoàn thành UN-03 | F04, F10–F12 | Chỉ tính đạt theo BR4 khi trước hạn sinh viên có lịch không trùng và được xác nhận vào lớp còn chỗ. Với yêu cầu nhiều lớp, đối chiếu kết quả theo mã lớp. |
 | Kiểm tra khả năng sử dụng và tính nhất quán | F09, F11, F12 | Với NFR01, yêu cầu sinh viên giải thích trạng thái của từng lớp và phân biệt đã gửi với đã xác nhận. Với NFR02, đối chiếu từng mã lớp và kết quả hiển thị với kết quả đã ghi. |
 

@@ -1,6 +1,6 @@
 # Lab 02 — Thực hành 2: Mô hình hóa yêu cầu
 
-Bước 1 kế thừa nhu cầu **UN-03**, bốn điểm nghẽn `PP-01`–`PP-04` và quy trình đề xuất `TO-01`–`TO-06`. Các bước vận hành và điểm nghẽn lịch sử chưa xác minh vẫn mang nhãn `[Assumption]`. Hướng dẫn HUST năm 2026 là căn cứ cho quy trình đề xuất. [Báo cáo Lab 01](../lab-01/OOAD_BaoCaoVanDe.md) · [Mô hình nghiệp vụ](01-MoHinhNghiepVu.md) · [Hướng dẫn Thực hành 2](../docs/Lab02_OOAD.md#nhiệm-vụ-thực-hành-2-requirement-modeling)
+Bước 1 kế thừa nhu cầu **UN-03**, bốn điểm nghẽn `PP-01`–`PP-04` và quy trình đề xuất `TO-01`–`TO-07`. Các bước vận hành và điểm nghẽn lịch sử chưa xác minh vẫn mang nhãn `[Assumption]`. Hướng dẫn HUST năm 2026 là căn cứ cho quy trình đề xuất. [Báo cáo Lab 01](../lab-01/OOAD_BaoCaoVanDe.md) · [Mô hình nghiệp vụ](01-MoHinhNghiepVu.md) · [Hướng dẫn Thực hành 2](../docs/Lab02_OOAD.md#nhiệm-vụ-thực-hành-2-requirement-modeling)
 
 ## 1. Phạm vi và ranh giới hệ thống
 
@@ -11,9 +11,9 @@ Bước 1 kế thừa nhu cầu **UN-03**, bốn điểm nghẽn `PP-01`–`PP-0
 | Tra cứu lớp mở và lịch học | Hệ thống cung cấp danh sách lớp và lịch. Sinh viên tra cứu để tìm mã lớp phù hợp (`TO-01`). |
 | Chọn lớp và kiểm tra lựa chọn | Sinh viên chọn mã lớp. Hệ thống đối chiếu với lịch hiện có và kiểm tra các điều kiện áp dụng cho lựa chọn, chẳng hạn điều kiện tiên quyết hoặc giới hạn tín chỉ (`TO-02`). Nếu phát hiện trùng lịch hoặc chưa đủ điều kiện, hệ thống chỉ thông báo lý do (`TO-06`). |
 | Gửi đăng ký | Sinh viên rà soát và gửi đăng ký bổ sung (`TO-03`). |
-| Xem kết quả từng lớp | Hệ thống hiển thị kết quả khi sinh viên tra cứu (`TO-04`). Kết quả **Thành công** cho biết lớp đã được xác nhận (`TO-05`). Khi thấy **Hết chỗ**, sinh viên tự quay về `TO-01` nếu đợt còn mở và muốn điều chỉnh. |
+| Xem kết quả từng lớp | Hệ thống hiển thị kết quả khi sinh viên tra cứu (`TO-04`). Kết quả **Thành công** cho biết lớp đã được xác nhận (`TO-05`). Khi thấy **Hết chỗ**, sinh viên có thể xem gợi ý nếu đợt còn mở và muốn điều chỉnh (`TO-07`). |
 
-**Ngoài phạm vi** gồm đăng ký đợt chính, mở thêm lớp hoặc tăng sức chứa, xử lý công nợ, quản lý quy chế học vụ và gợi ý lớp thay thế.
+**Ngoài phạm vi** gồm đăng ký đợt chính, mở thêm lớp hoặc tăng sức chứa, xử lý công nợ và quản lý quy chế học vụ.
 
 **Đầu vào và trách nhiệm.** Ca nghiên cứu giả định quyền tham gia đợt điều chỉnh của sinh viên đã được xác lập, bao gồm tình trạng nghĩa vụ học phí theo quy định áp dụng. Ở `TO-02`, hệ thống dùng lịch hiện có, danh sách lớp mở và các quy tắc đã thiết lập để kiểm tra lựa chọn cụ thể. Ví dụ, sinh viên có quyền tham gia đợt vẫn có thể thiếu điều kiện tiên quyết của học phần vừa chọn. Sinh viên K52 trực tiếp tương tác với hệ thống. Phòng Đào tạo là bên liên quan để kiểm chứng tác động vận hành. Danh sách tác nhân ở bước sau chỉ đưa cán bộ vào khi xác định được tương tác cụ thể trong phạm vi trên.
 
@@ -24,9 +24,9 @@ Bước 1 kế thừa nhu cầu **UN-03**, bốn điểm nghẽn `PP-01`–`PP-0
 | Mã | Kết quả nghiệp vụ mong muốn | Căn cứ từ Thực hành 1 | Chỉ số kiểm chứng đề xuất |
 | --- | --- | --- | --- |
 | BR1 | Giảm tỷ lệ yêu cầu bổ sung đã gửi phải sửa hoặc gửi lại do trùng lịch. | `PP-01` → `TO-01`, `TO-02`, `TO-06` | Số yêu cầu đã gửi phải sửa hoặc gửi lại do trùng lịch chia cho tổng số yêu cầu bổ sung đã gửi trong đợt. Ghi riêng số lần phát hiện trùng lịch ở bước chọn lớp để đánh giá cảnh báo trước khi gửi. |
-| BR2 | Tăng khả năng sinh viên biết kết quả từng lớp để chủ động điều chỉnh trước khi đợt đóng. | `PP-02`, `PP-03` → `TO-03`, `TO-04`, `TO-05` và vòng về `TO-01` | Số lượt đăng ký lớp mà sinh viên xác định đúng trạng thái trước hạn chia cho tổng số lượt đăng ký lớp được theo dõi. Yêu cầu gồm ba lớp đóng góp ba lượt. Với lớp hết chỗ, đo thêm thời gian từ lúc gửi đến lúc sinh viên biết kết quả. |
+| BR2 | Tăng khả năng sinh viên biết kết quả từng lớp để chủ động điều chỉnh trước khi đợt đóng. | `PP-02`, `PP-03` → `TO-03`, `TO-04`, `TO-05` và `TO-07` | Số lượt đăng ký lớp mà sinh viên xác định đúng trạng thái trước hạn chia cho tổng số lượt đăng ký lớp được theo dõi. Yêu cầu gồm ba lớp đóng góp ba lượt. Với lớp hết chỗ, đo thêm thời gian từ lúc gửi đến lúc sinh viên biết kết quả. |
 | BR3 | `[Assumption]` Giảm số lượt cán bộ phải rà soát lại vì lựa chọn trùng lịch hoặc chưa đủ điều kiện. | `PP-04` → `TO-02`, `TO-06` | Xác minh cán bộ có thực hiện lượt rà soát lại vì hai nguyên nhân trên hay không. Nếu có, ghi số lượt và số phút xử lý phát sinh. |
-| BR4 | Tăng tỷ lệ sinh viên hoàn tất đăng ký bổ sung trước hạn với lịch không trùng và lớp còn chỗ được xác nhận, khi có phương án phù hợp. | `UN-03`, `PP-01`–`PP-03` → `TO-01`–`TO-05` | Số sinh viên đạt cả hai điều kiện trước hạn chia cho số sinh viên được theo dõi có nhu cầu bổ sung và có phương án phù hợp trong thời gian được đăng ký. Chỉ đưa vào mẫu số khi có căn cứ rằng phương án đúng học phần, đủ điều kiện, không trùng lịch và còn chỗ. Ghi riêng các ca không có phương án và các ca chưa xác định được. |
+| BR4 | Tăng tỷ lệ sinh viên hoàn tất đăng ký bổ sung trước hạn với lịch không trùng và lớp còn chỗ được xác nhận, khi có phương án phù hợp. | `UN-03`, `PP-01`–`PP-03` → `TO-01`–`TO-05`, `TO-07` | Số sinh viên đạt cả hai điều kiện trước hạn chia cho số sinh viên được theo dõi có nhu cầu bổ sung và có phương án phù hợp trong thời gian được đăng ký. Chỉ đưa vào mẫu số khi có căn cứ rằng phương án đúng học phần, đủ điều kiện, không trùng lịch và còn chỗ. Ghi riêng các ca không có phương án và các ca chưa xác định được. |
 
 Với `PP-03`, kết quả **Hết chỗ** cho sinh viên biết tình trạng của lớp đã chọn để tự quyết định tra cứu tiếp hay dừng. Việc tăng sức chứa thuộc quy trình mở lớp. Các số đo hiện trạng **chưa đo được**. Đặt mục tiêu định lượng sau khi có dữ liệu.
 
@@ -36,7 +36,7 @@ Với `PP-03`, kết quả **Hết chỗ** cho sinh viên biết tình trạng c
 | --- | --- |
 | Chưa tìm được lớp để chọn | Sinh viên dừng ở `TO-01` trước khi gửi yêu cầu. |
 | Trùng lịch hoặc thiếu điều kiện trước khi gửi | Sinh viên đã có quyền tham gia đợt. `TO-02` phát hiện lựa chọn trùng lịch hoặc chưa đủ điều kiện cho học phần cụ thể. `TO-06` thông báo lý do. Sinh viên tự quyết định có quay lại tra cứu qua `TO-01` trong thời gian còn mở hay không. |
-| Hết chỗ sau khi gửi | `TO-04` hiển thị **Hết chỗ**. Sinh viên có thể tự tra cứu lại nếu đợt còn mở. Nếu chưa tìm được lớp phù hợp, sinh viên vẫn chưa bổ sung được lớp. |
+| Hết chỗ sau khi gửi | `TO-04` hiển thị **Hết chỗ**. Nếu đợt còn mở và sinh viên muốn điều chỉnh, `TO-07` tìm lớp thay thế. Nếu chưa tìm được lớp phù hợp, sinh viên vẫn chưa bổ sung được lớp. |
 | Đăng ký thành công | `TO-05` cho sinh viên biết lớp đã được xác nhận. Khi đo **BR4**, chỉ tính hoàn thành **UN-03** nếu trước hạn sinh viên có lịch không trùng và lớp còn chỗ đã được xác nhận. |
 
 ## 3. Yêu cầu hệ thống
@@ -53,6 +53,7 @@ Với `PP-03`, kết quả **Hết chỗ** cho sinh viên biết tình trạng c
 | FR04 | Cho sinh viên rà soát mã lớp đã chọn và gửi lựa chọn hợp lệ trong thời gian đợt điều chỉnh còn mở. | `TO-03` | Phương án hợp lệ gửi được khi đợt còn mở. Phương án còn vi phạm điều kiện hoặc thao tác gửi sau khi đợt đóng không tạo yêu cầu bổ sung mới. Việc gửi được ghi nhận riêng với kết quả xác nhận lớp. |
 | FR05 | Ghi nhận kết quả đăng ký theo từng lớp. Chỉ xác nhận **Thành công** nếu lớp đáp ứng điều kiện đăng ký, lịch không trùng và lớp còn chỗ tại thời điểm xác nhận. Nếu việc xác nhận bị từ chối vì lớp đã đầy, ghi nhận **Hết chỗ** cho lớp đó. | `TO-04`, `TO-05` | Gửi một yêu cầu có hai lớp hợp lệ ở bước chọn. Nếu tại thời điểm xác nhận cả hai lớp vẫn hợp lệ về lịch và điều kiện nhưng chỉ một lớp còn chỗ, lớp còn chỗ có kết quả **Thành công** và lớp đã đầy có kết quả **Hết chỗ**. |
 | FR06 | Khi sinh viên tra cứu, hiển thị kết quả của từng lớp theo mã lớp, bao gồm **Thành công** và **Hết chỗ** khi đã có kết quả tương ứng. | `TO-04`, `TO-05` | Sinh viên tra cứu và thấy đúng kết quả của từng lớp trong cùng yêu cầu. Khi yêu cầu mới được gửi và chưa có kết quả xác nhận, thông tin hiển thị thể hiện rõ lớp chưa được xác nhận. |
+| FR07 | Sau kết quả **Hết chỗ**, khi đợt còn mở và sinh viên muốn điều chỉnh, gợi ý các lớp khác cùng học phần còn chỗ tại thời điểm tra cứu. Kiểm tra lịch hiện có, các lớp giữ lại trong phương án, điều kiện tiên quyết và giới hạn tín chỉ theo phương án thay thế. | `TO-07` | Chỉ hiển thị mã lớp và lịch của phương án thỏa mọi điều kiện. Nếu danh sách rỗng, thông báo chưa có lớp phù hợp tại thời điểm tra cứu. Sinh viên tự chọn để quay về `TO-02`. Gợi ý không giữ chỗ hoặc tự gửi đăng ký. |
 
 ### 3.2. Yêu cầu phi chức năng
 
@@ -76,7 +77,7 @@ Các tiêu chí trên dùng để kiểm tra bản đặc tả và chuẩn bị 
 | --- | --- | --- | --- |
 | UC01 | Tra cứu lớp mở | Sinh viên K52 | `FR01` |
 | UC02 | Gửi đăng ký bổ sung | Sinh viên K52 | `FR02`, `FR03`, `FR04`, `FR05`, `NFR01`, `NFR02` |
-| UC03 | Xem kết quả đăng ký | Sinh viên K52 | `FR05`, `FR06`, `NFR01`, `NFR02` |
+| UC03 | Xem kết quả đăng ký | Sinh viên K52 | `FR05`, `FR06`, `FR07`, `NFR01`, `NFR02` |
 
 ### UC01 — Tra cứu lớp mở
 
@@ -94,7 +95,7 @@ Các tiêu chí trên dùng để kiểm tra bản đặc tả và chuẩn bị 
 
 - **Bắt đầu** khi sinh viên đã gửi đăng ký và muốn kiểm tra kết quả.
 - **Luồng chính.** Sinh viên tra cứu. Hệ thống hiển thị kết quả theo từng lớp. Sinh viên nhận biết lớp đã được xác nhận dựa trên kết quả **Thành công**.
-- **Ngoại lệ.** Nếu chưa có kết quả xác nhận, sinh viên biết lớp chưa được xác nhận. Nếu kết quả là **Hết chỗ**, sinh viên có thể tự quay về UC01 khi đợt còn mở và muốn điều chỉnh. Sinh viên có thể dừng khi chưa tìm được lớp phù hợp hoặc khi hết hạn.
+- **Ngoại lệ.** Nếu chưa có kết quả xác nhận, sinh viên biết lớp chưa được xác nhận. Khi kết quả là **Hết chỗ**, đợt còn mở và sinh viên muốn điều chỉnh, hệ thống hiển thị gợi ý theo FR07 hoặc thông báo chưa có lớp phù hợp. Sinh viên có thể chọn lớp gợi ý để kiểm tra và gửi qua UC02, tự tra cứu qua UC01 hoặc dừng. Nếu đợt đã đóng, luồng kết thúc ở kết quả đã biết.
 
 Sơ đồ Use Case dùng UML (ngôn ngữ mô hình hóa thống nhất) để thể hiện mục tiêu tương tác của sinh viên với hệ thống. Đường nối giữa tác nhân và Use Case biểu thị sự tham gia của tác nhân. Thứ tự và các nhánh của quy trình được ghi trong mô tả luồng ở trên. [Sơ đồ Use Case PlantUML](../diagrams/03-reg/lab02-dang-ky-bo-sung-use-case.puml)
 
@@ -112,3 +113,4 @@ Ma trận nối yêu cầu nghiệp vụ với yêu cầu hệ thống và Use C
 | BR4 | `FR01` | `UC01` | Sinh viên có thông tin lớp và lịch để tìm phương án phù hợp. |
 | BR4 | `FR02`, `FR03`, `FR04`, `FR05` | `UC02` | Phương án phải hợp lệ về lịch và điều kiện. Việc xác nhận còn phụ thuộc vào chỗ của từng lớp. |
 | BR4 | `FR05`, `FR06`, `NFR02` | `UC03` | Kết quả ghi nhận và hiển thị giúp xác định lớp nào đã được xác nhận trước hạn. UN-03 đạt khi lịch không trùng và lớp còn chỗ đã được xác nhận. |
+| BR2, BR4 | `FR07` | `UC03` | Khi còn thời gian điều chỉnh, sinh viên thấy phương án thay thế cho lớp hết chỗ và có thể chọn để gửi lại qua UC02. |
