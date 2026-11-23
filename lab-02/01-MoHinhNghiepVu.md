@@ -27,22 +27,28 @@ flowchart TD
     D1{"Có phương án lịch phù hợp?"}
     A3["AS-03 · Sinh viên gửi yêu cầu bổ sung"]
     A4["AS-04 · Đầu mối phụ trách đợt xử lý đăng ký vào lớp sinh viên đã chọn [Assumption]"]
-    A5["AS-05 · Sinh viên xem kết quả đã công bố"]
-    D2{"Kết quả có xác nhận lớp không?"}
-    D3{"Còn thời gian và muốn tiếp tục tra cứu?"}
-    D4{"Sinh viên đã gửi yêu cầu trong luồng bổ sung này?"}
+    A5["AS-05 · Sinh viên theo dõi kết quả của yêu cầu vừa gửi"]
+    Known{"Sinh viên đã biết kết quả của yêu cầu này?"}
+    Confirmed{"Sinh viên được xác nhận vào lớp đã chọn?"}
+    Open{"Đợt còn cho phép điều chỉnh đăng ký?"}
+    Retry{"Sinh viên chọn tìm lớp khác?"}
+    Sent{"Sinh viên đã gửi yêu cầu nào trong đợt bổ sung này?"}
     Y(["Sinh viên biết lớp đã được xác nhận"])
-    N1(["Chưa tìm được phương án, chưa gửi yêu cầu"])
-    N2(["Đã gửi yêu cầu, chưa có lớp bổ sung được xác nhận"])
+    N1(["Sinh viên dừng khi chưa gửi yêu cầu"])
+    N2(["Sinh viên đã gửi yêu cầu nhưng chưa bổ sung được lớp"])
     S --> A1 --> A2 --> D1
-    D1 -->|Có| A3 --> A4 --> A5 --> D2
-    D1 -->|Chưa tìm được| D3
-    D2 -->|Có| Y
-    D2 -->|Chưa có lớp được xác nhận| D3
-    D3 -->|Có| A1
-    D3 -->|Không| D4
-    D4 -->|Chưa gửi| N1
-    D4 -->|Đã gửi| N2
+    D1 -->|Có| A3 --> A4 --> A5 --> Known
+    D1 -->|Chưa tìm được| Open
+    Known -->|Chưa biết · theo dõi tiếp| A5
+    Known -->|Đã biết| Confirmed
+    Confirmed -->|Được xác nhận| Y
+    Confirmed -->|Không được chấp nhận| Open
+    Open -->|Còn| Retry
+    Open -->|Đã hết hạn| Sent
+    Retry -->|Tìm tiếp| A1
+    Retry -->|Dừng| Sent
+    Sent -->|Chưa gửi| N1
+    Sent -->|Đã gửi| N2
 ```
 
 | Bước | Căn cứ và điểm cần xác minh |
@@ -51,8 +57,8 @@ flowchart TD
 | AS-02 | [Assumption] Sinh viên đối chiếu lớp dự kiến với lịch hiện có trước khi gửi yêu cầu. Công cụ và cách thực hiện cần xác minh. |
 | AS-03 | [Evidence] E02 quy định quyền đăng ký bổ sung nếu điều kiện cho phép. [Assumption] Kênh gửi, trình tự tiếp nhận và khả năng gửi lại ở từng đợt. |
 | AS-04 | [Evidence] Điều 12 khoản 2 giao giáo viên chủ nhiệm lớp cố vấn và duyệt kế hoạch học tập trước khi sinh viên đăng ký lớp. Khoản 4 quy định việc bổ sung hoặc bỏ bớt học phần trong đợt điều chỉnh phụ thuộc vào điều kiện tổ chức lớp và giới hạn khối lượng học tập. [Assumption] AS-04 mô tả khâu xử lý sau khi sinh viên gửi đăng ký. Chưa xác minh được cá nhân, đơn vị hoặc cơ chế xử lý của đợt, cũng như trường hợp phải duyệt lại kế hoạch khi thêm học phần hoặc đổi lớp cùng học phần. |
-| AS-05 | [Evidence] E02 quy định thông báo kết quả qua Phiếu học tập. [Assumption] Thời điểm sinh viên biết kết quả và việc họ có được thông báo lý do cụ thể khi chưa có lớp được xác nhận. |
-| Vòng lặp | [Assumption] Sinh viên còn thời gian và có thể thử lớp khác. Chỉ kết luận **không còn lớp phù hợp** nếu có dữ liệu về lớp thay thế trong thời gian được đổi. Ghi **không xác định** nếu thiếu căn cứ. |
+| AS-05 | [Evidence] E02 quy định thông báo kết quả qua Phiếu học tập. [Assumption] Cần xác minh khi nào sinh viên biết kết quả của yêu cầu và lý do nào được thông báo nếu yêu cầu không được chấp nhận. Trong sơ đồ, sinh viên tiếp tục theo dõi cùng yêu cầu khi chưa biết kết quả. |
+| Vòng lặp | [Assumption] Sinh viên có thể tìm lớp khác khi đợt còn cho phép điều chỉnh và họ chọn tìm tiếp. Sau khi đã gửi, nhánh này chỉ mở khi sinh viên biết yêu cầu không được chấp nhận. Chỉ kết luận **không còn lớp phù hợp** nếu có dữ liệu về lớp thay thế trong thời gian được đổi. Ghi **không xác định** nếu thiếu căn cứ. |
 
 E01–E02 mô tả quy định theo bản bổ sung tháng 7/2008. Cần xác minh văn bản áp dụng trước khi dùng cho một đợt trước bản bổ sung. Sơ đồ ghi lại trình tự cần kiểm chứng theo từng đợt. Nguồn từ 2012 và 2026 hỗ trợ đặt câu hỏi nghiên cứu.
 
@@ -62,7 +68,7 @@ E01–E02 mô tả quy định theo bản bổ sung tháng 7/2008. Cần xác mi
 | --- | --- | --- | --- |
 | PP-01 · AS-02 | [Assumption] Sinh viên phải thử nhiều phương án lịch. | Lớp dự kiến hoặc lớp thay thế xung đột với lịch đã có. | Đo số lần chọn lại và thời gian ghép lịch. Hiện **chưa đo được**. |
 | PP-02 · AS-05 quay lại AS-01 | [Assumption] A1. Sinh viên phải chọn lại sau khi biết lớp đã đầy. | Trạng thái hết chỗ đến muộn, trong khi từng có lớp cùng học phần đủ điều kiện, còn chỗ và không trùng lịch trong thời gian được đổi. | Đo thời điểm biết kết quả, số lượt phải gửi lại và thời gian còn lại để đổi. Hiện **chưa đo được**. |
-| PP-03 · AS-04 đến AS-05 | [Assumption] A2. Sinh viên chưa có lớp để đăng ký dù đã biết lớp ban đầu hết chỗ. | Không có phương án đáp ứng đồng thời điều kiện, sức chứa và lịch trong thời gian được đổi. | Đếm yêu cầu chưa được xác nhận vì thiếu phương án phù hợp. Hiện **chưa đo được**. |
+| PP-03 · AS-05 và bước tra cứu lớp thay thế AS-01 | [Assumption] A2. Sinh viên chưa có lớp để đăng ký dù đã biết lớp ban đầu hết chỗ. | Không có phương án đáp ứng đồng thời điều kiện, sức chứa và lịch trong thời gian được đổi. | Đối chiếu lịch, điều kiện và chỗ của các lớp cùng học phần trong thời gian được đổi. Đếm các ca không có phương án phù hợp. Hiện **chưa đo được**. |
 | PP-04 · AS-03 đến AS-04 | [Assumption] A3. Cán bộ có thể phải rà soát lại yêu cầu. | Việc đổi lớp phát sinh lượt gửi hoặc kiểm tra lại. | Đếm lượt rà lại và phút xử lý phát sinh. Đối chiếu mốc dự kiến và thực tế trước khi quy kết chậm chốt danh sách. Hiện **chưa đo được**. |
 
 ## 4. TO-BE — Quy trình đề xuất theo HUST năm 2026
