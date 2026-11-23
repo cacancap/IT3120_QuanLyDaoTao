@@ -55,7 +55,7 @@ Phần phân tích tiếp theo tập trung vào **UN-03**, gồm ghép lớp b�
 | --- | --- |
 | 1. Who | Sinh viên K52 đã có lịch và đủ điều kiện đăng ký bổ sung. |
 | 2. Context | Đợt đăng ký điều chỉnh tại HUST trong giai đoạn nghiên cứu. |
-| 3. Goal & Root Problem | Mục tiêu UN-03. [Assumption] Chỗ học có thể thay đổi trong lúc sinh viên ghép lịch và chờ kết quả. |
+| 3. Goal & Root Problem | **Mục tiêu (UN-03)** — Sinh viên K52 đủ điều kiện muốn ghép lớp bổ sung vào thời khóa biểu hiện có mà không trùng giờ và nhận được xác nhận vào lớp còn chỗ trước hạn. <br>**Trở ngại gốc** — [Assumption] (A1) Từng có lớp thay thế phù hợp, nhưng sinh viên có thể biết lớp đã chọn hết chỗ quá muộn để kịp đổi. (A2) Ngay cả khi biết kết quả kịp thời, sinh viên vẫn có thể không đổi được vì trong thời gian cho phép không có lớp nào cùng học phần vừa còn chỗ vừa không trùng lịch. |
 | 4. Current Alternatives | [Assumption] Đối chiếu nhiều phương án lịch trước, đổi sang lớp khác hoặc hỏi đơn vị phụ trách khi chưa được xác nhận. |
 | 5. Alternative Shortcomings | [Assumption] Đổi lớp có thể gây trùng giờ hoặc phát sinh thêm lượt tra cứu và gửi yêu cầu. |
 | 6. Emotional Impact | [Assumption] Sinh viên có thể lo không kịp đăng ký trước hạn. |
