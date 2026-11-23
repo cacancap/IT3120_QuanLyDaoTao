@@ -26,7 +26,7 @@ flowchart TD
     A2["AS-02 · Sinh viên đối chiếu với lịch hiện có"]
     D1{"Có phương án lịch phù hợp?"}
     A3["AS-03 · Sinh viên gửi yêu cầu bổ sung"]
-    A4["AS-04 · Xem xét yêu cầu bổ sung (đầu mối cần xác minh)"]
+    A4["AS-04 · Đầu mối phụ trách đợt xử lý đăng ký vào lớp sinh viên đã chọn [Assumption]"]
     A5["AS-05 · Sinh viên xem kết quả đã công bố"]
     D2{"Kết quả có xác nhận lớp không?"}
     D3{"Còn thời gian và muốn tiếp tục tra cứu?"}
@@ -50,7 +50,7 @@ flowchart TD
 | AS-01 | [Evidence] E01 quy định về kế hoạch giảng dạy và công bố thời khóa biểu. [Assumption] Cách sinh viên tra cứu và nguồn họ thực sự sử dụng ở từng đợt. |
 | AS-02 | [Assumption] Sinh viên đối chiếu lớp dự kiến với lịch hiện có trước khi gửi yêu cầu. Công cụ và cách thực hiện cần xác minh. |
 | AS-03 | [Evidence] E02 quy định quyền đăng ký bổ sung nếu điều kiện cho phép. [Assumption] Kênh gửi, trình tự tiếp nhận và khả năng gửi lại ở từng đợt. |
-| AS-04 | [Evidence] E01–E02 quy định giới hạn sĩ số và điều kiện bổ sung. [Assumption] Ai xử lý, kiểm tra ở thời điểm nào và có phải rà lại khi sinh viên đổi lớp hay không. |
+| AS-04 | [Evidence] Điều 12 khoản 2 giao giáo viên chủ nhiệm lớp cố vấn và duyệt kế hoạch học tập trước khi sinh viên đăng ký lớp. Khoản 4 quy định việc bổ sung hoặc bỏ bớt học phần trong đợt điều chỉnh phụ thuộc vào điều kiện tổ chức lớp và giới hạn khối lượng học tập. [Assumption] AS-04 mô tả khâu xử lý sau khi sinh viên gửi đăng ký. Chưa xác minh được cá nhân, đơn vị hoặc cơ chế xử lý của đợt, cũng như trường hợp phải duyệt lại kế hoạch khi thêm học phần hoặc đổi lớp cùng học phần. |
 | AS-05 | [Evidence] E02 quy định thông báo kết quả qua Phiếu học tập. [Assumption] Thời điểm sinh viên biết kết quả và việc họ có được thông báo lý do cụ thể khi chưa có lớp được xác nhận. |
 | Vòng lặp | [Assumption] Sinh viên còn thời gian và có thể thử lớp khác. Chỉ kết luận **không còn lớp phù hợp** nếu có dữ liệu về lớp thay thế trong thời gian được đổi. Ghi **không xác định** nếu thiếu căn cứ. |
 
